@@ -1,1 +1,0 @@
-D:\myte2_turkmmo\myte2_srcs\client\extern\projects\GameLib\Release\GameLib.lib
