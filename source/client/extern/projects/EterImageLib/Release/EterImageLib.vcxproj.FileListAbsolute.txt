@@ -1,0 +1,1 @@
+D:\myte2_turkmmo\myte2_srcs\client\extern\projects\EterImageLib\Release\EterImageLib.lib

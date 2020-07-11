@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C456250-B6FF-4A8B-B435-1452AC2C9428}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <DebugInformationFormat />
+      <StringPooling>true</StringPooling>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\eterlib\AttributeData.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\AttributeInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\BlockTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Camera.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\CollisionData.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\ColorTransitionHelper.cpp" />
+    <ClCompile Include="..\..\..\source\EterLib\CRenderTarget.cpp" />
+    <ClCompile Include="..\..\..\source\EterLib\CRenderTargetManager.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\CullingManager.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Decal.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\DibBar.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\EnvironmentMap.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\FileLoaderThread.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpBase.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpCollisionObject.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpColor.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpColorInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpD3DXBuffer.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpDetector.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpDevice.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpDIB.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpExpandedImageInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpFontTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpImage.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpImageInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpImageTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpIndexBuffer.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpLightManager.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpMarkInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpMath.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpObjectInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpPixelShader.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpRatioInstance.cpp" />
+    <ClCompile Include="..\..\..\source\EterLib\GrpRenderTargetTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpScreen.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpShadowTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpSubImage.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpText.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpTextInstance.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpTexture.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpVertexBuffer.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpVertexBufferDynamic.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpVertexBufferStatic.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\GrpVertexShader.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\IME.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Input.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\JpegFile.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\LensFlare.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\lineintersect_utils.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\MSApplication.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\MSWindow.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Mutex.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetAddress.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetDatagram.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetDatagramReceiver.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetDatagramSender.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetDevice.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetPacketHeaderMap.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\NetStream.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\parser.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\PathStack.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\ReferenceObject.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Resource.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\ResourceManager.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\ScreenFilter.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\SkyBox.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\StateManager.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\eterlib\TargaResource.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\TextBar.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\TextFileLoader.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\TextTag.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Thread.cpp" />
+    <ClCompile Include="..\..\..\source\eterlib\Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\eterlib\AttributeData.h" />
+    <ClInclude Include="..\..\..\source\eterlib\AttributeInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\BlockTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Camera.h" />
+    <ClInclude Include="..\..\..\source\eterlib\CollisionData.h" />
+    <ClInclude Include="..\..\..\source\eterlib\ColorTransitionHelper.h" />
+    <ClInclude Include="..\..\..\source\EterLib\CRenderTarget.h" />
+    <ClInclude Include="..\..\..\source\EterLib\CRenderTargetManager.h" />
+    <ClInclude Include="..\..\..\source\eterlib\CullingManager.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Decal.h" />
+    <ClInclude Include="..\..\..\source\eterlib\DibBar.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Dynamic.h" />
+    <ClInclude Include="..\..\..\source\eterlib\EnvironmentMap.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Event.h" />
+    <ClInclude Include="..\..\..\source\eterlib\FileLoaderThread.h" />
+    <ClInclude Include="..\..\..\source\eterlib\FuncObject.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpBase.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpCollisionObject.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpColor.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpColorInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpD3DXBuffer.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpDetector.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpDevice.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpDIB.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpExpandedImageInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpFontTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpImage.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpImageInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpImageTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpIndexBuffer.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpLightManager.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpMarkInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpMath.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpObjectInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpPixelShader.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpRatioInstance.h" />
+    <ClInclude Include="..\..\..\source\EterLib\GrpRenderTargetTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpScreen.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpShadowTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpSubImage.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpText.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpTextInstance.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpTexture.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpVertexBuffer.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpVertexBufferDynamic.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpVertexBufferStatic.h" />
+    <ClInclude Include="..\..\..\source\eterlib\GrpVertexShader.h" />
+    <ClInclude Include="..\..\..\source\eterlib\IME.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Input.h" />
+    <ClInclude Include="..\..\..\source\eterlib\JpegFile.h" />
+    <ClInclude Include="..\..\..\source\eterlib\LensFlare.h" />
+    <ClInclude Include="..\..\..\source\eterlib\lineintersect_utils.h" />
+    <ClInclude Include="..\..\..\source\eterlib\MSApplication.h" />
+    <ClInclude Include="..\..\..\source\eterlib\MSWindow.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Mutex.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetAddress.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetDatagram.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetDatagramReceiver.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetDatagramSender.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetDevice.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetPacketHeaderMap.h" />
+    <ClInclude Include="..\..\..\source\eterlib\NetStream.h" />
+    <ClInclude Include="..\..\..\source\eterlib\parser.h" />
+    <ClInclude Include="..\..\..\source\eterlib\PathStack.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Pool.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Profiler.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Ray.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Ref.h" />
+    <ClInclude Include="..\..\..\source\eterlib\ReferenceObject.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Resource.h" />
+    <ClInclude Include="..\..\..\source\eterlib\ResourceManager.h" />
+    <ClInclude Include="..\..\..\source\eterlib\ScreenFilter.h" />
+    <ClInclude Include="..\..\..\source\eterlib\SkyBox.h" />
+    <ClInclude Include="..\..\..\source\eterlib\StateManager.h" />
+    <ClInclude Include="..\..\..\source\eterlib\StdAfx.h" />
+    <ClInclude Include="..\..\..\source\eterlib\TargaResource.h" />
+    <ClInclude Include="..\..\..\source\eterlib\TextBar.h" />
+    <ClInclude Include="..\..\..\source\eterlib\TextFileLoader.h" />
+    <ClInclude Include="..\..\..\source\eterlib\TextTag.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Thread.h" />
+    <ClInclude Include="..\..\..\source\eterlib\Util.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

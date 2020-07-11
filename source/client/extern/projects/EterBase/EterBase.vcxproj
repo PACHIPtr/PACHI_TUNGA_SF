@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{919F835B-548D-4D13-B8D4-14563AB7660A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <DebugInformationFormat />
+      <StringPooling>true</StringPooling>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\EterBase\cipher.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\CPostIt.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\CRC32.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\Debug.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\error.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\FileBase.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\FileDir.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\FileLoader.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\lzo.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\MappedFile.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\poly\Base.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\poly\Poly.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\poly\Symbol.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\poly\SymTable.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\Random.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\eterbase\Stl.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\tea.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\TempFile.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\Timer.cpp" />
+    <ClCompile Include="..\..\..\source\eterbase\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\EterBase\cipher.h" />
+    <ClInclude Include="..\..\..\source\eterbase\CPostIt.h" />
+    <ClInclude Include="..\..\..\source\eterbase\CRC32.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Debug.h" />
+    <ClInclude Include="..\..\..\source\eterbase\error.h" />
+    <ClInclude Include="..\..\..\source\eterbase\FileBase.h" />
+    <ClInclude Include="..\..\..\source\eterbase\FileDir.h" />
+    <ClInclude Include="..\..\..\source\eterbase\FileLoader.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Filename.h" />
+    <ClInclude Include="..\..\..\source\eterbase\lzo.h" />
+    <ClInclude Include="..\..\..\source\eterbase\MappedFile.h" />
+    <ClInclude Include="..\..\..\source\eterbase\poly\Base.h" />
+    <ClInclude Include="..\..\..\source\eterbase\poly\Poly.h" />
+    <ClInclude Include="..\..\..\source\eterbase\poly\Symbol.h" />
+    <ClInclude Include="..\..\..\source\eterbase\poly\SymTable.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Random.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Singleton.h" />
+    <ClInclude Include="..\..\..\source\eterbase\StdAfx.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Stl.h" />
+    <ClInclude Include="..\..\..\source\eterbase\tea.h" />
+    <ClInclude Include="..\..\..\source\eterbase\TempFile.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Timer.h" />
+    <ClInclude Include="..\..\..\source\eterbase\Utils.h" />
+    <ClInclude Include="..\..\..\source\eterbase\vk.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

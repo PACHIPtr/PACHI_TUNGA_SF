@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FB0823A5-63C9-48CC-A769-FA4ACEA8AAF3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <TargetName>Metin2_DebugMode</TargetName>
+    <OutDir>$(SolutionDir)out\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)out\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <TargetName>Metin2_releaseMode</TargetName>
+    <LinkIncremental>
+    </LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)extern\lib\boost\debug;$(SolutionDir)extern\lib\devil\debug;$(SolutionDir)extern\lib\directx\debug;$(SolutionDir)extern\lib\granny\debug;$(SolutionDir)extern\lib\jpeg\debug;$(SolutionDir)extern\lib\lzo\debug;$(SolutionDir)extern\lib\milesound\debug;$(SolutionDir)extern\lib\python\debug;$(SolutionDir)extern\lib\speedtree\debug;$(SolutionDir)extern\lib\cryptopp;$(SolutionDir)extern\lib\foxfs;$(SolutionDir)extern\lib\crash_reporter;$(SolutionDir)extern\lib\cython;$(SolutionDir)extern\lib\urielac;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libci.lib</IgnoreSpecificDefaultLibraries>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalDependencies>urielac.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USE_32BIT_TIME_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)extern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <DebugInformationFormat />
+      <StringPooling>true</StringPooling>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)extern\lib\boost\release;$(SolutionDir)extern\lib\devil\release;$(SolutionDir)extern\lib\directx\release;$(SolutionDir)extern\lib\granny\release;$(SolutionDir)extern\lib\jpeg\release;$(SolutionDir)extern\lib\lzo\release;$(SolutionDir)extern\lib\milesound\release;$(SolutionDir)extern\lib\python\release;$(SolutionDir)extern\lib\speedtree\release;$(SolutionDir)extern\lib\cryptopp;$(SolutionDir)extern\lib\crash_reporter;$(SolutionDir)extern\lib\foxfs;$(SolutionDir)extern\lib\bandivid;$(SolutionDir)extern\lib\cython;$(SolutionDir)extern\lib\urielac;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers />
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libci.lib</IgnoreSpecificDefaultLibraries>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <StripPrivateSymbols>$(SolutionDir)Out\Metin2_releaseMode.exe</StripPrivateSymbols>
+      <LargeAddressAware>true</LargeAddressAware>
+      <GenerateMapFile>false</GenerateMapFile>
+      <MapExports>false</MapExports>
+      <AssemblyDebug>
+      </AssemblyDebug>
+      <AdditionalDependencies>urielac.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\userinterface\AccountConnector.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\AffectFlagContainer.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\BandiVideoLibrary.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\BandiVideoPlayer.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\CameraProcedure.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CCpuId.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CHddData.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CMacAddr.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CMachineGuid.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CNetworkAdapter.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\CPythonRenderTargetModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\GameType.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\GuildMarkDownloader.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\GuildMarkUploader.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\HWIDManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBase.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseBattle.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseEffect.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseEvent.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseMotion.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseMovement.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InstanceBaseTransform.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\InsultChecker.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\Locale.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\MarkImage.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\MarkManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\NetworkActorManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplication.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationCamera.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationCursor.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationEvent.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationProcedure.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonApplicationWebPage.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonAura.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonBackground.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonBackgroundModule.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonChangeLook.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonCharacterManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonCharacterManagerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonCharacterModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonChat.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonChatModule.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonCombatZone.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonDynamicModuleNames.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonEffectModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonEventManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonEventManagerMoudle.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonExchange.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonExchangeModule.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonFeatures.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonFlyModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonGameEventManagerModule.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonGameEvents.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonGuild.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonIME.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonIMEModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonItem.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonItemModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonMessenger.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonMiniMap.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonMiniMapModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStream.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamCommand.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamEvent.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseGame.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseGameActor.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseGameItem.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseHandShake.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseLoading.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseLogin.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseOffline.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNetworkStreamPhaseSelect.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNonPlayer.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonNonPlayerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPackModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayer.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerEventHandler.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerInput.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerInputKeyboard.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerInputMouse.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonPlayerSkill.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonPrivateShopSearch.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonProfilerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonQuest.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonrootlibManager.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonSafeBox.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonSash.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonShop.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonSkill.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonSkillPet.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonSoundManagerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonSystem.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonSystemModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonTextTail.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\PythonTextTailModule.cpp" />
+    <ClCompile Include="..\..\..\source\UserInterface\PythonWhisper.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\ServerStateChecker.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\ServerStateCheckerModule.cpp" />
+    <ClCompile Include="..\..\..\source\userinterface\StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\userinterface\UserInterface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\userinterface\AbstractApplication.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AbstractCharacterManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AbstractChat.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AbstractPlayer.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AbstractSingleton.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AccountConnector.h" />
+    <ClInclude Include="..\..\..\source\userinterface\AffectFlagContainer.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\BandiVideoLibrary.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\BandiVideoPlayer.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\CCpuId.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\CHddData.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\CMacAddr.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\CMachineGuid.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\CNetworkAdapter.h" />
+    <ClInclude Include="..\..\..\source\userinterface\GameType.h" />
+    <ClInclude Include="..\..\..\source\userinterface\GuildMarkDownloader.h" />
+    <ClInclude Include="..\..\..\source\userinterface\GuildMarkUploader.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\HWIDManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\InstanceBase.h" />
+    <ClInclude Include="..\..\..\source\userinterface\InsultChecker.h" />
+    <ClInclude Include="..\..\..\source\userinterface\Locale.h" />
+    <ClInclude Include="..\..\..\source\userinterface\MarkImage.h" />
+    <ClInclude Include="..\..\..\source\userinterface\MarkManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\NetworkActorManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\Packet.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonApplication.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonAura.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonBackground.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonChangeLook.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonCharacterManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonChat.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonCombatZone.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonDynamicModuleNames.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonEventManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonExchange.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonFeatures.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonGameEvents.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonGuild.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonIME.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonItem.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonMessenger.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonMiniMap.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonNetworkStream.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonNonPlayer.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonPlayer.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonPlayerEventHandler.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonPrivateShopSearch.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonQuest.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonrootlibManager.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonSafeBox.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonSash.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonShop.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonSkill.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonSkillPet.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonSystem.h" />
+    <ClInclude Include="..\..\..\source\userinterface\PythonTextTail.h" />
+    <ClInclude Include="..\..\..\source\UserInterface\PythonWhisper.h" />
+    <ClInclude Include="..\..\..\source\userinterface\resource.h" />
+    <ClInclude Include="..\..\..\source\userinterface\ServerStateChecker.h" />
+    <ClInclude Include="..\..\..\source\userinterface\StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\source\userinterface\UserInterface.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CWebBrowser\CWebBrowser.vcxproj">
+      <Project>{10f61c5c-6dbc-46db-bfc8-0103df5120b9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EffectLib\EffectLib.vcxproj">
+      <Project>{18cc8036-0502-4bc9-85c0-825819c1c98d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterBase\EterBase.vcxproj">
+      <Project>{919f835b-548d-4d13-b8d4-14563ab7660a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterGrnLib\EterGrnLib.vcxproj">
+      <Project>{b8663968-e1c0-4f61-af65-c0682a5e145e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterImageLib\EterImageLib.vcxproj">
+      <Project>{329d612e-a8fd-4d15-b14b-d5ef2950fce5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterLib\EterLib.vcxproj">
+      <Project>{5c456250-b6ff-4a8b-b435-1452ac2c9428}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterLocale\EterLocale.vcxproj">
+      <Project>{fb09c484-c805-479a-b90d-cdf5d50b0f7d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterPack\EterPack.vcxproj">
+      <Project>{c52b0f9a-04ac-43d5-92dc-80e1f2279f55}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\EterPythonLib\EterPythonLib.vcxproj">
+      <Project>{3756c0ab-1b8d-456a-8df7-9f5ff814de65}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GameLib\GameLib.vcxproj">
+      <Project>{f92d1f24-c0e1-47ca-b6fe-66b332dc833f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MilesLib\MilesLib.vcxproj">
+      <Project>{f4370be8-3f63-485a-a11a-4eda4881dc4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ScriptLib\ScriptLib.vcxproj">
+      <Project>{88508f4f-fa39-4904-bc9f-17f53a9aa3e7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SpeedTreeLib\SpeedTreeLib.vcxproj">
+      <Project>{cebec074-b986-4dbb-af85-d6d280e2816b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SphereLib\SphereLib.vcxproj">
+      <Project>{af7f5401-4324-4232-9f27-062c709f6e60}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TerrainLib\TerrainLib.vcxproj">
+      <Project>{06a3281b-124b-4100-88fc-64702d13ee57}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
