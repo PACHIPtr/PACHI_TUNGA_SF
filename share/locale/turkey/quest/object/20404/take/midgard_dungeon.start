@@ -1,0 +1,42 @@
+if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and item . vnum == 30368 then d . setf ( "lock_stone_new" , d . getf ( "lock_stone_new" ) - 1 ) 
+if d . getf ( "lock_stone_new" ) <= 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . clear_regen ( ) 
+d . jump_all ( 846 + 21000 , 851 + 17000 ) 
+d . setf ( "md2_level" , 3 ) 
+d . setf ( "kill_1192" , 4 ) 
+d . regen_file ( "data/dungeon/midgard_dungeon/regen_3_1.txt" ) 
+d . spawn_mob ( 4910 , 750 , 893 ) 
+d . spawn_mob ( 4910 , 676 , 829 ) 
+d . spawn_mob ( 4910 , 675 , 889 ) 
+d . spawn_mob ( 4910 , 758 , 828 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(5.Görev) Tüm patronları ve yaratıkları yok et! - Kalan Patron : " .. d . getf ( "kill_1192" ) .. "" ) 
+d . setf ( "lock_stone_new" , 0 ) 
+return 
+end 
+if d . getf ( "lock_stone_new" ) == 2 then 
+d . setf ( "kill_104" , 0 ) 
+d . regen_file ( "data/dungeon/midgard_dungeon/regen_2_2.txt" ) 
+end 
+npc . purge ( ) 
+item . remove ( ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(4.Görev) Anahtar düşürerek tüm sandıkları yok et! - Kalan Sandık : " .. d . getf ( "lock_stone_new" ) .. "" ) 
+if d . getf ( "lock_stone_new" ) <= 0 then 
+d . clear_regen ( ) 
+d . jump_all ( 846 + 21000 , 851 + 17000 ) 
+d . setf ( "md2_level" , 3 ) 
+d . setf ( "kill_1192" , 4 ) 
+d . regen_file ( "data/dungeon/midgard_dungeon/regen_3_1.txt" ) 
+d . spawn_mob ( 4910 , 750 , 893 ) 
+d . spawn_mob ( 4910 , 676 , 829 ) 
+d . spawn_mob ( 4910 , 675 , 889 ) 
+d . spawn_mob ( 4910 , 758 , 828 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(5.Görev) Tüm patronları ve yaratıkları yok et! - Kalan Patron : " .. d . getf ( "kill_1192" ) .. "" ) 
+d . setf ( "lock_stone_new" , 0 ) 
+return 
+end 
+ return end 

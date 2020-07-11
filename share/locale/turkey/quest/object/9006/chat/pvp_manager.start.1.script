@@ -1,0 +1,19 @@
+if not pc . is_gm ( ) then 
+setskin ( NOWINDOW ) 
+return 
+end 
+say_reward ( "Turnuvayý baþlatmak istiyor musun?" ) 
+local s = select ( "Turnuvayý baþlat" , "Turnuvayý kapat" , "Vazgeç " ) 
+if s == 1 then 
+game . set_event_flag ( "pvp_minlevel" , 55 ) 
+game . set_event_flag ( "pvp_maxlevel" , 120 ) 
+game . set_event_flag ( "pvp_price_count" , 1 ) 
+game . set_event_flag ( "pvp_price_vnum" , 80017 ) 
+pvp_manager . open_registrations ( ) 
+game . set_event_flag ( "vs_ac" , 1 ) 
+server_timer ( "vs_kayit" , 10 * 60 ) 
+notice_all ( "Sayokan Turnuvasý kayýtlarý 10 dakika sonra kapanacak." ) 
+else 
+game . set_event_flag ( "vs_ac" , 0 ) 
+notice_all ( "Sayokan Turnuvasý sona erdi." ) 
+end 

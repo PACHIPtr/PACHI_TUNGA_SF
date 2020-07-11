@@ -1,0 +1,81 @@
+say_title ( item_name ( 40002 ) ) 
+if pc . get_skill_group ( ) == 0 then 
+say ( "Henüz bir eğitim'e başlamadın." ) 
+say ( "" ) 
+return 
+end 
+say ( "" ) 
+say_reward ( "Hangi becerini perfect master yapmak istiyorsun ?" ) 
+local s = select ( "Korunma" , "Güçlendirme" , "Vazgeç " ) 
+if s == 1 then 
+local check_learned = 0 
+local new_skill_list = { 221 , 222 , 223 , 224 , 225 , 226 , 227 , 228 , 229 } 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+check_learned = 1 
+end 
+end 
+if check_learned == 0 then 
+say ( "Herhangi bir korunma becerin yok." ) 
+say ( "" ) 
+return 
+end 
+if pc . is_busy ( ) == true then 
+say ( "Meşgul durumdayken bunu gerçekleştiremezsin." ) 
+say ( "" ) 
+return 
+end 
+if pc . is_dead ( ) == true then 
+say ( "Ölü durumdayken bunu gerçekleştiremezsin." ) 
+say ( "" ) 
+return 
+end 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+pc . set_skill_level ( skill_vnum , 40 ) 
+end 
+end 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 
+elseif s == 2 then 
+local check_learned = 0 
+local new_skill_list = { 236 , 237 , 238 , 239 , 240 , 241 , 242 , 243 , 244 } 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+check_learned = 1 
+end 
+end 
+if check_learned == 0 then 
+say ( "Herhangi bir güçlendirme becerin yok." ) 
+say ( "" ) 
+return 
+end 
+if pc . is_busy ( ) == true then 
+say ( "Meşgul durumdayken bunu gerçekleştiremezsin." ) 
+say ( "" ) 
+return 
+end 
+if pc . is_dead ( ) == true then 
+say ( "Ölü durumdayken bunu gerçekleştiremezsin." ) 
+say ( "" ) 
+return 
+end 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+pc . set_skill_level ( skill_vnum , 40 ) 
+end 
+end 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 
+else 
+end 

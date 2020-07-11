@@ -1,0 +1,26 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"NEED_TARGET" "WEAPON_LIMITATION"
+NeedWeapon		"BOW"
+Range			2500
+
+Name			"기궁"
+Description		"화살에 강력한 기를 모아 쏜다"
+
+IconFileName	"skill/assassin/gigung.sub"
+MotionIndex		1
+
+List ConditionData
+{
+	"스플래쉬 공격"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f배"	"(SkillPoint * 5 + 100) / 100" ""
+}
+
+MaxLevel			"20"
+NeedSPFormula		"20"
+CoolTimeFormula		"5"

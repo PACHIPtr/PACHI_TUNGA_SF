@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_md_dryade00\attack00.GR2"
+MotionDuration           1.833333
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.037689
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01-R-Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/md_dryade00_attack00a.mse"
+        EffectPosition       0.000000 -15.000000 5.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.937689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/md_dryade00_attack00b.mse"
+        EffectPosition       0.000000 -130.000000 170.000000
+    }
+}

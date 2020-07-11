@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\npc_pet\valentine_angel\run.GR2"
+MotionDuration           0.8
+Accumulation             0.00   -360.0  0.00
+

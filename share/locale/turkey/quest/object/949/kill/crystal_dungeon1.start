@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) then local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 5 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 6 ) 
+d . notice ( "Kristal Dino öldürüldü !" ) 
+d . notice ( "10 saniye içinde sizi bir sonraki seviyeye ýþýnlayacaðýz ." ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 10 ) 
+else 
+return 
+end 
+ return end 

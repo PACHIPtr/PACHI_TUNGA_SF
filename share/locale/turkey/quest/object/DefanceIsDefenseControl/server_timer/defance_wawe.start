@@ -1,0 +1,13 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . get_mast ( ) <= 0 then 
+server_timer ( "DefanceExit" , 2 , d . get_map_index ( ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "<Gemi savunmasý> Gemi savunmasý tamamlanamadý!" ) 
+clear_server_timer ( "DefanceIsDefenseControl" , d . get_map_index ( ) ) 
+defance_wawe . Clear ( d . get_map_index ( ) ) 
+d . exit_all_to_start_position ( ) 
+else 
+server_timer ( "DefanceIsDefenseControl2" , 10 , d . get_map_index ( ) ) 
+clear_server_timer ( "DefanceIsDefenseControl" , d . get_map_index ( ) ) 
+end 
+end 

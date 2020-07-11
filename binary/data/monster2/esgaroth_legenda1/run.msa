@@ -1,0 +1,67 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_legenda1/run.GR2"
+MotionDuration           1.966667
+Accumulation           0.00	-705.65	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.808838
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Xtra01Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/esgaroth_legenda1/crank.mse"
+        EffectPosition       -100.000000 -190.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.648713
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Xtra01Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/esgaroth_legenda1/crank.mse"
+        EffectPosition       100.000000 180.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.322060
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Xtra01Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/esgaroth_legenda1/crank.mse"
+        EffectPosition       100.000000 -180.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.882742
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Xtra01Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/esgaroth_legenda1/crank.mse"
+        EffectPosition       -100.000000 180.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      2
+        StartingTime         0.956646
+        
+        DuringTime           0.100000
+        Power                200
+        AffectingRange       200
+    }
+}

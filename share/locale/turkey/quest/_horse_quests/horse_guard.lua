@@ -1,0 +1,60 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest horse_guard begin
+        state start begin
+                when 20349.chat."Atlar hakkında bilgi" begin
+					say_title("Seyis:")
+                        local s=number(1, 7)
+                        if 1>=s then -- 14.29% (1/7)
+                                ---                                                   l
+                                say("At üzerine görev yapmak için, At madalyonu")
+                                say("gerekli. Onu Maymun zindanından alabilirsin.")
+                                say("")
+                        elseif 2>=s then -- 14.29% (1/7)
+                                say("Atlar üç seviyedir: Acemi, ileri seviye ve uzman.")
+                                say("Yeterince çalışıp bir sonraki seviyeye geçmek")
+                                say("istediğinde, bir sınav vermen gerekir.")
+                                say("")
+                        elseif 3>=s then -- 14.29% (1/7)
+                                say("Atlar binicinin çalıştırma şekilleri")
+                                say("nedeniyle seviyelerine uygun yeme ihtiyaç duyar.")
+                                say("Acemi atlar saman yer, ileri seviye atlar havuç,")
+                                say("uzman atlarsa yalnız kırmızı ginseng. Ağızlarının")
+                                say("tadını iyi biliyorlar.")
+                                say("")
+                        elseif 4>=s then -- 14.29% (1/7)
+                                say("Atın sağlıklıysa, gösterge yeşil görünüyor, aç ")
+                                say("olursa sarı, ölmek üzereyse kırmızı. Kırmızı veya")
+                                say("sarıdan yeşile çıkması için onu beslemelisin. Bu")
+                                say("ciddi bir konu, ya atın ölürse!")
+                                say("")
+                        elseif 5>=s then -- 14.29% (1/7)
+                                say("Ata bindiğin zaman, yorgunluğu artıyor ve sağlığı ")
+                                say("da düşüyor. Sağlıksız ata binemeyeceğin için,")
+                                say("arada onu dinlendirmelisin.")
+                                say("")
+                        elseif 6>=s then -- 14.29% (1/7)
+                                say("Bir rivayete göre, ölü atlar tekrar")
+                                say("canlandırılabiliyor. Ama Maymunlar bunun için")
+                                say("gerekli bitkileri koruyor ve onu almak çok zor.")
+                                say("Maymunlar seni yakalarsa, seni de lanetleyip")
+                                say("maymuna dönüştürüyorlar.")
+                                say("")
+                        elseif 7>=s then -- 14.29% (1/7)
+                                say("Değişik binicilik seviyeleri var ve atının")
+                                say("seviyesini de yükseltebilirsin. Ama bir ata ")
+                                say("sadece at madalyonuna sahip olan kişi seviye")
+                                say("atlatabilir.")
+                                say("")
+                        end
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

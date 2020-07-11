@@ -1,0 +1,29 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_otter2\attack01.GR2"
+MotionDuration           1.533333
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.680000
+        AttackingEndTime     0.800000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.680000 0.000000 -180.000000 100.000000 0.000000 -0.000000 100.000000
+            0.740000 0.000000 -320.000000 100.000000 0.000000 -0.000000 100.000000
+		}
+   }
+}

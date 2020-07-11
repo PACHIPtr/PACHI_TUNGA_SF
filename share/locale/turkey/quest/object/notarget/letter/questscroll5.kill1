@@ -1,0 +1,2 @@
+send_letter ( questscroll5 . get_title ( ) ) 
+q . set_counter ( questscroll5 . get_mob1_name ( ) , questscroll5 . get_mob1_rest_kill_count ( ) ) 

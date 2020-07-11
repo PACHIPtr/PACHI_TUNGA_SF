@@ -1,0 +1,24 @@
+local pet_info = pet_system . get_pet_info ( item . get_vnum ( ) ) 
+if null ~= pet_info then 
+local mobVnum = pet_info [ 1 ] 
+local petName = pet_info [ 2 ] 
+local spawn_effect_file_name = pet_system . get_spawn_effect_file ( pet_info [ 3 ] ) 
+if true == pet . is_summon ( mobVnum ) then 
+if spawn_effect_file_name ~= nil then 
+pet . spawn_effect ( mobVnum , spawn_effect_file_name ) 
+end 
+pet . unsummon ( mobVnum ) 
+pc . setqf ( "pet_item_vnum" , 0 ) 
+else 
+if pet . count_summoned ( ) < 1 then 
+pet . summon ( mobVnum , petName , false ) 
+if item . get_socket ( 2 ) == 0 then item . set_socket ( 2 , 1 ) end 
+pc . setqf ( "pet_item_vnum" , item . get_vnum ( ) ) 
+else 
+syschat ( " Zaten bir evcil hayvan çaðýrdýn. " ) 
+end 
+if spawn_effect_file_name ~= nil then 
+pet . spawn_effect ( mobVnum , spawn_effect_file_name ) 
+end 
+end 
+end 

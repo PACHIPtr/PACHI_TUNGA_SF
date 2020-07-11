@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "public_effect_03.dds"
+left 128
+top 0
+right 256
+bottom 128

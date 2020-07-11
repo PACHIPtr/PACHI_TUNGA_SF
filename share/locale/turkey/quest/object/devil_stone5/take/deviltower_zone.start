@@ -1,0 +1,20 @@
+if item . vnum == 50084 then npc . purge ( ) 
+item . remove ( ) 
+d . setf ( "stone_count" , d . getf ( "stone_count" ) - 1 ) 
+if d . getf ( "stone_count" ) <= 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . notice ( "Mührü açtýn. 6. Kata çýkýyorsunuz!" ) 
+clear_server_timer ( "devil_stone5_fail1" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devil_stone5_fail2" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devil_stone5_fail3" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devil_stone5_fail" , get_server_timer_arg ( ) ) 
+d . setf ( "level" , 6 ) 
+d . jump_all ( special . devil_tower [ 5 ] [ 1 ] , special . devil_tower [ 5 ] [ 2 ] ) 
+d . regen_file ( "data/dungeon/deviltower6_regen.txt" ) 
+d . notice ( "Þeytan Krala ulaþmak için tüm " ) 
+d . notice ( "þeytanlarý öldür!" ) 
+else 
+d . notice ( "Mührü açtýn! " .. d . getf ( "stone_count" ) .. " kaldý." ) 
+end 
+ return end 

@@ -1,0 +1,39 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc_pet\halloween_2017_ghost\halloween_2017_ghost.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc_pet\halloween_2017_ghost\halloween_2017_ghost.GR2"
+		SourceSkin			"D:\Ymir Work\npc_pet\halloween_2017_ghost\halloween_2017_ghost_1.dds"
+		TargetSkin			"D:\Ymir Work\npc_pet\halloween_2017_ghost\halloween_2017_ghost_2.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       1
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           36.000000
+            Position         0.000000 0.000000 20.000000
+        }
+    }
+}

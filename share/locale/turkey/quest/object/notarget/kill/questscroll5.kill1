@@ -1,0 +1,10 @@
+test_chat ( "questscroll5.kill_race:" .. npc . get_race ( ) ) 
+test_chat ( "questscroll5.dest_race:" .. questscroll5 . get_mob1_vnum ( ) ) 
+if npc . get_race ( ) == questscroll5 . get_mob1_vnum ( ) then 
+local mob1_kill_count = questscroll5 . get_mob1_cur_kill_count ( ) + 1 
+questscroll5 . set_mob1_cur_kill_count ( mob1_kill_count ) 
+q . set_counter ( questscroll5 . get_mob1_name ( ) , questscroll5 . get_mob1_rest_kill_count ( ) ) 
+if mob1_kill_count >= questscroll5 . get_mob1_max_kill_count ( ) then 
+set_state ( "reward" ) 
+end 
+end 

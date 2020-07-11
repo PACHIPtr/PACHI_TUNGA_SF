@@ -1,0 +1,48 @@
+if pc . getqf ( "inserted" ) == 0 then 
+mysql . query ( "insert into log.halloween_event values('" .. pc . get_player_id ( ) .. "', '" .. pc . get_name ( ) .. "', '0', '0', '0')" ) 
+pc . setqf ( "inserted" , 1 ) 
+end 
+if event_halloween . get_round_reward ( pc . get_player_id ( ) ) == 0 and event_halloween . get_rank_reward ( pc . get_player_id ( ) ) == 0 then 
+say ( "Hey! Ne? Beni sürekli korkutmayý KES artýk! Zaten" ) 
+say ( "yeterince korkuyorum. Beni koruyacak olan" ) 
+say ( "fenerler nerede? Bunlardan bana yeteri kadar" ) 
+say ( "getirirsen seni cömertçe ödüllendiririm." ) 
+return 
+end 
+if event_halloween . get_round_reward ( pc . get_player_id ( ) ) > 0 then 
+say ( "Vay canýna! " .. event_halloween . get_round_reward ( pc . get_player_id ( ) ) .. " adet þekerleme poþeti kazandýn!" ) 
+say ( "" ) 
+say_item_vnum ( 71191 ) 
+say ( "Ödülünü þimdi almak ister misin?" ) 
+say ( "" ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+pc . give_item2 ( "71191" , event_halloween . get_round_reward ( pc . get_player_id ( ) ) ) 
+event_halloween . delete_round_reward ( pc . get_player_id ( ) ) 
+if game . get_event_flag ( "halloween_reward" ) == 0 then 
+return 
+end 
+else 
+if game . get_event_flag ( "halloween_reward" ) == 0 then 
+return 
+end 
+end 
+end 
+if event_halloween . get_rank_reward ( pc . get_player_id ( ) ) > 0 then 
+if game . get_event_flag ( "halloween_reward" ) - get_time ( ) < 0 then 
+say ( "Hey! Ne? Beni sürekli korkutmayý KES artýk! Zaten" ) 
+say ( "yeterince korkuyorum. Beni koruyacak olan" ) 
+say ( "fenerler nerede? Bunlardan bana yeteri kadar" ) 
+say ( "getirirsen seni cömertçe ödüllendiririm." ) 
+return 
+end 
+say ( "Oooo! Çizelge konumun için " .. event_halloween . get_rank_reward ( pc . get_player_id ( ) ) .. " bal kabaðý kutusu" ) 
+say ( "kazandýn!" ) 
+say ( "" ) 
+say_item_vnum ( 71190 ) 
+say ( "Ödülünü þimdi almak ister misin?" ) 
+say ( "" ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+pc . give_item2 ( "71190" , event_halloween . get_rank_reward ( pc . get_player_id ( ) ) ) 
+event_halloween . delete_rank_reward ( pc . get_player_id ( ) ) 
+end 
+end 

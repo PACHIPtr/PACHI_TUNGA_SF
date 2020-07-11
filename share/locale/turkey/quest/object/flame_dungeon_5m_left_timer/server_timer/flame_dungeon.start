@@ -1,0 +1,5 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+notice_multiline ( string . format ( "Kalan zaman: %d dakika" , 5 ) , d . notice ) 
+notice_multiline ( "Süre bitince kale'nin dýþýna atýlacaksýnýz." , d . notice ) 
+server_timer ( "flame_dungeon_1m_left_timer" , 4 * 60 , get_server_timer_arg ( ) ) 
+end 

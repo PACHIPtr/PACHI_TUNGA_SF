@@ -1,0 +1,16 @@
+if pc . is_busy ( ) == true then 
+say_title ( "Octavio: " ) 
+say ( "Meşgul durumda iken bu işlemi gerçekleştiremezsin." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "Octavio: " ) 
+say ( "Ölü durumda iken bu işlemi gerçekleştiremezsin." ) 
+elseif pc . count_item ( 50016 ) < 1 and pc . count_item ( 50019 ) < 1 then 
+say_title ( "Octavio: " ) 
+say ( "Envanterinde yeterli malzeme bulamadım." ) 
+else 
+say_title ( "Octavio:" ) 
+say ( "Tamam, Fasulyeli malzeme ve pirinçli krema ile tatlı yapacağım." ) 
+pc . removeitem ( 50016 , 1 ) 
+pc . removeitem ( 50019 , 1 ) 
+pc . give_item2 ( 50020 , 1 ) 
+end 

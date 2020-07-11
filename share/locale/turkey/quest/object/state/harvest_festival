@@ -1,0 +1,71 @@
+harvest_festival={["start"]=0,["information"]=695801987,["mob_kill1"]=-762785884,["mob_kill2"]=1266785822,reset_flags= function ()if game . get_event_flag ( "harvest_festival" ) == 0 then 
+q . setstate ( "information" ) 
+pc . setqf ( "harvest_festival_count" , 0 ) 
+pc . setqf ( "harvest_festival_mob_complete" , 0 ) 
+pc . setqf ( "cake_count" , 0 ) 
+pc . setqf ( "rice_count" , 0 ) 
+pc . setqf ( "mob_kill1_count" , 0 ) 
+pc . setqf ( "mob_kill2_count" , 0 ) 
+pc . setqf ( "mob2_info" , 0 ) 
+pc . setqf ( "mob1_info" , 0 ) 
+end 
+end ,kill_action= function (mob_vnum,kill_state)local kill_count 
+if kill_state == 1 then 
+kill_count = pc . getqf ( "mob_kill1_count" ) + 1 
+pc . setqf ( "mob_kill1_count" , kill_count ) 
+kill_finish = 30 
+else 
+kill_count = pc . getqf ( "mob_kill2_count" ) + 1 
+pc . setqf ( "mob_kill2_count" , kill_count ) 
+kill_finish = 60 
+end 
+if kill_count < 0 then 
+return 
+end 
+if kill_count >= kill_finish then 
+q . set_counter ( "Kalan Sayı " , 0 ) 
+else 
+q . set_counter ( "Kalan Sayı " , kill_finish - kill_count ) 
+end 
+if kill_count == kill_finish then 
+local random_rice = harvest_festival . get_random_rice ( 2 ) 
+notice_multiline ( string . format ( "Yağmacıları yendin ve %s pirinç patlağı[ENTER]aldın. Şimdi Handu-Up'a geri dön." , random_rice ) , notice ) 
+local cake_count = pc . getqf ( "cake_count" ) + random_rice 
+pc . setqf ( "cake_count" , cake_count ) 
+pc . setqf ( "harvest_festival_mob_complete" , 1 ) 
+clear_letter ( ) 
+if kill_state == 2 then 
+q . setstate ( "information" ) 
+end 
+end 
+end ,get_random_rice= function (type)if ( type == 1 ) then 
+if ( pc . get_level ( ) >= 90 ) then 
+random_rice = number ( 4 , 7 ) 
+elseif ( pc . get_level ( ) >= 70 ) then 
+random_rice = number ( 3 , 6 ) 
+elseif ( pc . get_level ( ) >= 50 ) then 
+random_rice = number ( 2 , 4 ) 
+elseif ( pc . get_level ( ) >= 30 ) then 
+random_rice = number ( 1 , 3 ) 
+elseif ( pc . get_level ( ) >= 10 ) then 
+random_rice = number ( 1 , 2 ) 
+else 
+random_rice = number ( 1 , 2 ) 
+end 
+elseif ( type == 2 ) then 
+if ( pc . get_level ( ) >= 90 ) then 
+random_rice = number ( 7 , 10 ) 
+elseif ( pc . get_level ( ) >= 70 ) then 
+random_rice = number ( 6 , 8 ) 
+elseif ( pc . get_level ( ) >= 50 ) then 
+random_rice = number ( 4 , 6 ) 
+elseif ( pc . get_level ( ) >= 30 ) then 
+random_rice = number ( 2 , 5 ) 
+elseif ( pc . get_level ( ) >= 10 ) then 
+random_rice = number ( 2 , 4 ) 
+else 
+random_rice = number ( 2 , 3 ) 
+end 
+end 
+return random_rice 
+end }

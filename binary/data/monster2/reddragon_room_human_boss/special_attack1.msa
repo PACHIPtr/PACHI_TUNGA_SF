@@ -1,0 +1,56 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/reddragon_room_human_boss/special_attack1.GR2"
+MotionDuration           4.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         2.003650
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_human_sattack1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.131387
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_human_sattack1_start.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         3.277372
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           120.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+}

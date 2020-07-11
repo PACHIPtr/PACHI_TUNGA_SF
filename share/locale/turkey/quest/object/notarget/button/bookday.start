@@ -1,0 +1,7 @@
+say ( "Sevgili oyuncular, bu gün dünya kitap günü." ) 
+say ( "Ve elinizdeki artmýþ beceri kitaplarýnýzý " ) 
+say ( "Hong-Hae'ye götürerek takas edebileceksiniz." ) 
+say ( "O size rastgele bir beceri kýlavuzu verecek." ) 
+say ( "" ) 
+say_reward ( "Dünya Kitap Gününüz kutlu olsun!" ) 
+say ( "" ) 

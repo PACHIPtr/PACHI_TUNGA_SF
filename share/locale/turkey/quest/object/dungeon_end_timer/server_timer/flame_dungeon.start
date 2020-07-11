@@ -1,0 +1,6 @@
+local setting = flame_dungeon . setting ( ) 
+if d . select ( get_server_timer_arg ( ) ) then 
+flame_dungeon . clear_timer ( d . get_map_index ( ) ) 
+d . set_warp_location ( 62 , setting . outside_entry_pos [ 1 ] , setting . outside_entry_pos [ 2 ] ) 
+d . exit_all ( ) 
+end 

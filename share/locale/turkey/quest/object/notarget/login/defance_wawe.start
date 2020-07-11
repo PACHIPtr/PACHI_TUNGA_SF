@@ -1,0 +1,11 @@
+if pc . get_map_index ( ) == 305 then 
+pc . warp ( 168600 , 611700 ) 
+return 
+end 
+if pc . get_map_index ( ) >= 3.05e+06 and pc . get_map_index ( ) < 3.06e+06 then 
+pc . remove_item ( "31323" , 1 ) 
+pc . setf ( "defensewave" , "dungeon_last_login_time" , get_time ( ) + ( 60 * 60 * 6 ) ) 
+cmdchat ( "BINARY_Update_Mast_Window 1 2700" ) 
+else 
+cmdchat ( "BINARY_Update_Mast_Window 0 0" ) 
+end 

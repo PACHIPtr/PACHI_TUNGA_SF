@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"투기"
+Description		"최대 정신력 증가"
+
+IconFileName	"skill/warrior/tugi.sub"
+List AffectData
+{
+	"최대 정신력 +%.0f"	"SkillPoint * 15"	""
+}

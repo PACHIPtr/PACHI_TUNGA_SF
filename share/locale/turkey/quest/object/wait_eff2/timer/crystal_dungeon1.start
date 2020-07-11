@@ -1,0 +1,8 @@
+d . notice ( "Bu taþ çok deðerli !" ) 
+d . notice ( "Bir sonraki göreve gönderiliyorsun ." ) 
+d . kill_unique ( 9212 ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 5 ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 12 ) 

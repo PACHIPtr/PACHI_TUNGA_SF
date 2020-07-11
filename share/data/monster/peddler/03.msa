@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/npc/peddler/run.gr2"
+MotionDuration           0.600000
+Accumulation           0.00	-240.25	0.00
+

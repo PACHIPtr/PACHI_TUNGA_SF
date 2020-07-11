@@ -1,0 +1,57 @@
+if pc . getqf ( "turnuvadasin" ) == 1 then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Zaten turnuvaya kayýt oldun. Savaþ zamanýný " ) 
+say ( "bekle." ) 
+say ( "" ) 
+return 
+else 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Hey, loncana güveniyor musun? Dostlarýn gerçekten" ) 
+say ( "güçlü mü? Seni yarý yolda býrakmayacaklarýna" ) 
+say ( "emin misin? O zaman Lonca Savaþlarý Turnuvasý'na" ) 
+say ( "katýlarak en güçlünün " .. guild . name ( pc . get_guild ( ) ) .. " loncasý " ) 
+say ( "olduðunu ispatla!" ) 
+say ( "" ) 
+wait ( ) 
+if guild . level ( pc . get_guild ( ) ) < 20 and not pc . is_gm ( ) then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Lonca seviyesinin 20 olmasý gerekiyor." ) 
+say ( "Bu haldeyken turnuvaya katýlmanýza gerek yok." ) 
+say ( "Zaten kazanma þansýnýzýn olmadýðý açýkça" ) 
+say ( "görülüyor. Belki loncanýz için biraz daha" ) 
+say ( "fedakârlýk etmelisiniz." ) 
+elseif guild . get_member_count ( pc . get_guild ( ) ) < 30 and not pc . is_gm ( ) then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Loncanýn en az 30 üyeye sahip olmasý gerekir." ) 
+say ( "" ) 
+else 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Herhangi bir engel görünmüyor. Dilersen" ) 
+say ( "loncaný turnuvaya hemen kaydedebilirim." ) 
+say ( "Gerçekten katýlmak istiyor musun?" ) 
+say ( "" ) 
+local gardas = select ( "Evet, istiyorum." , "Hayýr, katýlmayacaðým." ) 
+if gardas == 1 then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say_reward ( "Lonca savaþýna en az 10 oyuncu katýlmalý." ) 
+say_reward ( "5 dakika oyuncularýn alana giriþ yapmasý " ) 
+say_reward ( "için beklenir. Eðer 10 kiþi tamamlanmazsa" ) 
+say_reward ( "lonca turnuvadan elenir." ) 
+say ( "" ) 
+if not pc . is_gm ( ) then 
+pc . setqf ( "turnuvadasin" , 1 ) 
+end 
+lonca_turnuva . guild_tournement_create ( ) 
+notice_all ( "" .. guild . name ( pc . get_guild ( ) ) .. ", Lonca Savaþlarý Turnuvasý'na katýlýyor!" ) 
+return 
+else 
+return 
+end 
+end 
+end 

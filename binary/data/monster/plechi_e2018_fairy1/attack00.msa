@@ -1,0 +1,32 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_fairy1\attack00.GR2"
+MotionDuration           1.166667
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.470000
+        AttackingEndTime     0.700000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.471000 -80.000000 -50.000000 200.000000 0.000000 -0.000000 150.000000
+            0.486000 -60.000000 -90.000000 200.000000 0.000000 -0.000000 150.000000
+            0.500000 -20.000000 -110.000000 200.000000 0.000000 -0.000000 150.000000
+            0.510000 60.000000 -90.000000 200.000000 0.000000 -0.000000 150.000000
+            0.521000 80.000000 -50.000000 200.000000 0.000000 -0.000000 150.000000
+		}
+   }
+}

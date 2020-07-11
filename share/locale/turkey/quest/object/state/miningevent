@@ -1,0 +1,23 @@
+miningevent={["start"]=0,buildRanking= function ()if get_time ( ) < pc . getqf ( "mining_event_time" ) then 
+say_title ( "  " .. mob_name ( 20015 ) ) 
+say ( "" ) 
+say ( "Madencilik sıralamasını 5 dakikada bir açabilirsin." ) 
+say ( "" ) 
+return 
+else 
+say_title ( "  " .. mob_name ( 20015 ) ) 
+say ( "" ) 
+say ( "Madencilik sıralaması: " ) 
+pc . setqf ( "mining_event_time" , get_time ( ) + 60 * 5 ) 
+local res1 , rankingPositions = mysql . query ( "SELECT * FROM log.mining_event ORDER BY total_points DESC LIMIT 10;" ) 
+for saye = 1 , 10 begin 
+if rankingPositions [ saye ] . name ~= 0 then 
+say ( "" .. saye .. ".	" .. rankingPositions [ saye ] . name .. " - " .. rankingPositions [ saye ] . total_points .. " Puan." ) 
+else 
+say ( "" .. saye .. ".	Boş." ) 
+end 
+end 
+say ( "" ) 
+say ( "" ) 
+end 
+end }

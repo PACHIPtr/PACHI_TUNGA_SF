@@ -1,0 +1,20 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc_pet\christmas_2018_nutcracker\christmas_2018_nutcracker.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+    Group ShapeData00
+    {
+        ShapeIndex 		 0
+        Model 		 "D:\Ymir Work\npc_pet\christmas_2018_nutcracker\christmas_2018_nutcracker.GR2"
+        SourceSkin 		 "D:\Ymir Work\npc_pet\christmas_2018_nutcracker\christmas_2018_nutcracker_01.dds"
+        TargetSkin 		 "D:\Ymir Work\npc_pet\christmas_2018_nutcracker\christmas_2018_nutcracker_02.dds"
+    }
+}
+Group AttachingData
+{
+    AttachingDataCount       0
+}

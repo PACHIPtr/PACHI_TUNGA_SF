@@ -1,0 +1,15 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . count_monster ( ) <= 5 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(2.Görev) Tüm canavarlarý ve metin taþlarýný yok et ! " ) 
+d . notice ( "<Lanetli Ucube> Hahahaha piyonlarýmý yenmeyi baþardýn, " ) 
+d . notice ( "<Lanetli Ucube> Bana ulaþmak için sana gönderdiðim Kayalara karþý gücünü kanýtla ! " ) 
+d . notice ( "(Onlarý haritanýn 4 farklý bölgesinde bulabilirsin)" ) 
+d . clear_regen ( ) 
+d . regen_file ( "data/dungeon/Nephrit_dungeon/regen_1_1.txt" ) 
+d . regen_file ( "data/dungeon/Nephrit_dungeon/regen_1_2.txt" ) 
+server_timer ( "ncfloor1_3_eli_check_timer" , 5 , d . get_map_index ( ) ) 
+else 
+server_timer ( "ncfloor1_2_eli_check_timer_2" , 5 , d . get_map_index ( ) ) 
+end 
+end 

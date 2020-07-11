@@ -1,0 +1,34 @@
+if pc . getqf ( "katakombfix" ) == 1 then 
+pc . setqf ( "katakombfix" , 0 ) 
+end 
+local setting = devilcatacomb_zone . setting ( ) 
+local idx = pc . get_map_index ( ) 
+if idx >= ( setting . map_idx * 10000 ) and idx < ( ( setting . map_idx + 1 ) * 10000 ) then 
+local level = d . getf ( "level" ) 
+d . set_warp_location ( 0 , 0 , 0 ) 
+if level == 2 then 
+say ( "3. kata ulaþmak için bu kapýlarýn mühürlerini sök!" ) 
+say ( "60 dakikan daha var." ) 
+pc . setqf ( "katakombfix" , 1 ) 
+elseif level >= 3 then 
+if pc . getqf ( "katakombfix" ) ~= 1 then 
+chat ( "Karakter atýp bug yaptýðýn için köye ýþýnlanacaksýn !" ) 
+warp_to_village ( ) 
+return 
+end 
+elseif level == pc . getqf ( "level" ) then 
+else 
+end 
+end 
+if idx == setting . map_idx then 
+pc . setf ( "devilcatacomb_zone" , "last_exit_time" , get_global_time ( ) ) 
+if pc . get_x ( ) < setting . floor1_s . x + setting . base . x or pc . get_y ( ) < setting . floor1_s . y + setting . base . y or pc . get_x ( ) > setting . floor1_e . x + setting . base . x or pc . get_y ( ) > setting . floor1_e . y + setting . base . y then 
+timer ( "devilcatacomb_ban_timer" , 5 ) 
+else 
+say ( "Ruh Kristali Anahtarý'ný ele geçirmek için " ) 
+say ( "yaratýklarý yok et. Bu " ) 
+say ( "sana sonraki katýn kapýsýný açar. " ) 
+pc . remove_item ( 30311 , pc . count_item ( 30311 ) ) 
+pc . remove_item ( 30312 , pc . count_item ( 30312 ) ) 
+end 
+end 

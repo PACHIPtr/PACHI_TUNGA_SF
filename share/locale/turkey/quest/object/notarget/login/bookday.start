@@ -1,0 +1,6 @@
+if game . get_event_flag ( "worldbookday" ) == 1 then send_letter ( "*Dünya Kitap Günü!" ) 
+local v = find_npc_by_vnum ( 20094 ) 
+if v ~= 0 then 
+target . vid ( "__TARGETWBD__" , v , "HongHae" ) 
+end 
+ return end 

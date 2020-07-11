@@ -1,0 +1,3 @@
+d . setf ( "level" , 9 ) 
+d . jump_all ( 2048 + 590 , 6656 + 155 ) 
+d . regen_file ( "data/dungeon/deviltower9_regen.txt" ) 

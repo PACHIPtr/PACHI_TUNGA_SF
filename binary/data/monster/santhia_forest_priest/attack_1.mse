@@ -1,0 +1,108 @@
+BoundingSphereRadius   0.000000
+BoundingSpherePosition 0.000000 0.000000 0.000000
+
+Group Mesh
+{
+    StartTime           0.080000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"D:\ymir work\effect\monster2\impact3.mde"
+    MeshAnimationLoopEnable    	1
+    MeshAnimationLoopCount     	1
+    MeshAnimationFrameDelay    	0.020000
+    
+    MeshElementCount           	1
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	4
+        ColorFactor                	0.443137 0.321569 0.105882 1.000000
+        List TimeEventAlpha
+        {
+            0.020000 1.000000
+            0.110000 0.300000
+            0.500000 0.000000
+        }
+    }
+}
+Group Mesh
+{
+    StartTime           0.000000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"D:\ymir work\effect\monster2\impact3.mde"
+    MeshAnimationLoopEnable    	1
+    MeshAnimationLoopCount     	1
+    MeshAnimationFrameDelay    	0.020000
+    
+    MeshElementCount           	1
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	5
+        ColorFactor                	0.560784 0.392157 0.058824 1.000000
+        List TimeEventAlpha
+        {
+            0.020000 1.000000
+            0.080000 0.300000
+            0.150000 0.000000
+        }
+    }
+}
+Group Mesh
+{
+    StartTime           0.040000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"D:\ymir work\effect\monster2\impact3.mde"
+    MeshAnimationLoopEnable    	1
+    MeshAnimationLoopCount     	1
+    MeshAnimationFrameDelay    	0.020000
+    
+    MeshElementCount           	1
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	5
+        ColorFactor                	0.368627 0.305882 0.000000 1.000000
+        List TimeEventAlpha
+        {
+            0.020000 1.000000
+            0.110000 0.300000
+            0.200000 0.000000
+        }
+    }
+}

@@ -1,0 +1,41 @@
+if not npc . lock ( ) then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Biraz bekle, Eþinle konuþuyorum." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Düðünü bitirmek istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+local u_vid = marriage . find_married_vid ( ) 
+if u_vid == 0 then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Eþinin düðüne devam etmeyi kabul etmesi gerekli." ) 
+say ( "" ) 
+say ( "düðün devam edemiyor çünkü eþin" ) 
+say ( "online deðil." ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Eþinin onayý için beklemeliyiz." ) 
+say ( "Henüz cevabý almadýk." ) 
+say ( "" ) 
+local ok_sign = confirm ( u_vid , "düðüne devam etmek istiyor musun? " , 30 ) 
+if ok_sign == CONFIRM_OK then 
+marriage . end_wedding ( ) 
+else 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Eþin onaylamadý!" ) 
+say ( "" ) 
+end 
+npc . unlock ( ) 
+end 

@@ -1,0 +1,1 @@
+return ( game . get_event_flag ( "enable_defance_wave_system" ) == 0 )

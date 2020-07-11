@@ -1,0 +1,12 @@
+say ( "Atini sadece Normal Maymun zindanından bulabileceğin " ) 
+say ( "bitkilerle canlandırabilirsin. " ) 
+say ( "Bitkileri maymunlar korudukları için, " ) 
+say ( "bu gerçekten çok zor. Maymunlar çok öfkeli. " ) 
+say ( "Bitkileri almak isteyen herkesi " ) 
+say ( "lanetleyerek maymuna çeviriyorlar.. " ) 
+say ( "" ) 
+if pc . countitem ( "50059" ) >= 1 then 
+say ( "Bilgi: Güçlü Maymun zindanından olan bitkiler sadece ileri düzeydeki atlar içindir. " ) 
+elseif pc . countitem ( "50057" ) >= 1 then 
+say ( "Bilgi: Zayıf Maymun zindanından olan bitkiler sadece acemi atlar içindir. " ) 
+end 

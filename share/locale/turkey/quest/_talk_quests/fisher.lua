@@ -1,0 +1,99 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest fisher begin
+    state start begin
+                when 9009.chat."Marketi aç " begin
+                    npc.open_shop()
+                        setskin(NOWINDOW)
+                end
+
+                when 9009.chat."Balıkçı oltasını geliştirmek" begin
+                        say_title("Balıkçı :")
+                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say("Sen balıkçı oltasını daha iyi hale getirmenin")
+                        say("sırlarını biliyor musun? Yani, bu büyük bir sır")
+                        say("değil. Ne kadar uzun süre balık tutarsan, oltanda")
+                        say("o kadar çok puan birikir. Oltan maksimum değere")
+                        say("ulaştığında onu bana getir. Ben de senin için")
+                        say("geliştireyim.")
+                        say("Pekala. Şimdi gelişmesini istediğin oltayı seç ve")
+                        say("onu bana ver.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum < 27400 or item.vnum > 27590 begin
+                        say_title("Balıkçı:")
+                        say("Bunu neden yapayım ki? Ben yalnızca balıkçı ")
+                        say("oltalarını geliştirebilirim!")
+						say("")
+                end
+
+                when 9009.take with item.vnum == 27590 begin
+                        say_title("Balıkçı:")
+                        say("")
+                        say("Oltan zaten maksimum seviyeye ulaşmış.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0)!= item.get_value(2) begin
+                        say_title("Balıkçı:")
+                        say("")
+                        say("Henüz oltada yeterince puan toplanmamış. Bunu")
+                        say("geliştiremem. Oltanda maksimum puan toplandığında")
+                        say("geri gel.")
+						say("")
+                end
+
+                when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0) == item.get_value(2) begin
+                        say_title("Balıkçı:")
+                        say("")
+                        say("Bu Oltayı daha iyi yapmak istiyor musun?")
+                        say("Onu bana göster ...")
+                        say(string.format("Balıkçı oltanın leveli  %d.", item.get_value(0) / 10))
+                        say("Mmmhhh, benim bilgim bunu daha iyi yapmak için, ")
+                        say("yeterli değil. Ama ")
+                        say("deneyeyim mi?")
+                        say(string.format("Bazen Balıkçı oltaları %d 100 de", 100 - item.get_value(3)))
+                        say("düşüyorlar.")
+                        say("Yine de deneyeyim mi?")
+                        say("")
+
+                        local s = select("Evet", "Hayır")
+
+                        if s == 1 then
+                                local f = __fish_real_refine_rod(item.get_cell())
+                                if f == 2 then
+                                        say_title("Balıkçı:")
+                                        say("")
+                                        ----"12345678901234567890123456789012345678901234567890"|
+                                        say("Balikçı oltanı daha iyi yapamadım")
+                                        say("ama daha kötü de ")
+                                        say("olmadı.")
+                                        say("Sana onu olduğu gibi geri veriyorum. ")
+                                        say("Belki daha sonra.")
+                                        say("")
+                                elseif f == 1 then
+                                        say_title("Balikçi:")
+                                        say("")
+                                        say("Hey, harika olta daha iyi oldu!")
+                                        say("Al sana daha iyi bir olta!")
+                                        say("")
+                                else
+                                        say("Aman! öff! Ne yazık ki olmadı!")
+                                        say("Kusura bakma. şimdi balıkçı oltan")
+                                        say("bir derece düstü, sana söylemiştim...")
+                                        say("")
+                                end
+                        else
+                                say_title("Balıkçı:")
+                                say("")
+                                say("Sonra bir daha gel.")
+                                say("")
+                        end
+                end
+    end
+end

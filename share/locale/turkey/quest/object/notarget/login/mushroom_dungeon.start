@@ -1,0 +1,20 @@
+if ( pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 ) then 
+if pc . getqf ( "join_mashroom_dung" ) > 0 then 
+pc . setqf ( "join_mashroom_dung" , 0 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Bir sonraki kata ulaşmak için tüm canavarları yok et !" ) 
+d . setqf2 ( "mashroom_dung" , "last_exit_time" , get_global_time ( ) ) 
+d . setf ( "level" , 1 ) 
+d . regen_file ( "data/dungeon/mushroom_dungeon_regens/regen_1.txt" ) 
+server_timer ( "mushroom1" , 5 , d . get_map_index ( ) ) 
+server_timer ( "floor1_eli_check_timer" , 5 , d . get_map_index ( ) ) 
+end 
+end 
+local idx = pc . get_map_index ( ) 
+if idx >= ( 244 * 10000 ) and idx < ( ( 244 + 1 ) * 10000 ) then 
+local level = d . getf ( "level" ) 
+end 
+if idx == 244 then 
+pc . setf ( "mashroom_dung" , "last_exit_time" , get_global_time ( ) ) 
+pc . warp ( 1.1144e+06 , 53400 ) 
+end 

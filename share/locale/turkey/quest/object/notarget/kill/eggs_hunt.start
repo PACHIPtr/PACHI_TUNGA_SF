@@ -1,0 +1,13 @@
+if not npc . is_pc ( ) and game . get_event_flag ( "enable_easter_event" ) >= 1 then if eggs_hunt . isMetinStone ( npc . get_race ( ) ) then 
+if eggs_hunt . checkLevelLimit ( npc . get_level ( ) , 15 ) then 
+local rNumber = number ( 1 , 10000 ) 
+if rNumber <= 1000 then 
+game . drop_item_with_ownership ( 71150 , 1 ) 
+end 
+if rNumber <= 9000 then 
+local eggVnum = number ( 50160 , 50179 ) 
+game . drop_item_with_ownership ( eggVnum , 1 ) 
+end 
+end 
+end 
+ return end 

@@ -1,0 +1,4 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+clear_server_timer ( "mushroomfail" , d . get_map_index ( ) ) 
+d . exit_all_to_start_position ( ) 
+end 

@@ -1,0 +1,26 @@
+if pc . get_map_index ( ) == 500 and ( pvp_attenders == nil or pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] == nil or ( pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode ~= 1 and pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode ~= 2 ) ) then if pvp_attenders == nil then 
+pvp_manager . guard_check_position ( ) 
+timer ( "pvp_guard_1" , 10 ) 
+return 
+end 
+if pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] == nil then 
+pvp_manager . guard_check_position ( ) 
+timer ( "pvp_guard_1" , 10 ) 
+return 
+end 
+if pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode ~= 1 and pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode ~= 2 then 
+pvp_manager . guard_check_position ( ) 
+timer ( "pvp_guard_1" , 10 ) 
+end 
+ return end if pc . get_map_index ( ) == 500 and game . get_event_flag ( "pvp" ) == 2 and pvp_manager . get_fight_mode ( ) == 1 then affect . add ( apply . MOV_SPEED , - 10000 , 2 ) 
+affect . add_collect ( apply . HP_REGEN , 5000 , 15 ) 
+affect . add_collect ( apply . SP_REGEN , 5000 , 15 ) 
+pvp_manager . set_fight_mode ( 2 ) 
+if arena [ pvp_manager . get_arena ( ) ] [ 3 ] == 2 then 
+arena [ pvp_manager . get_arena ( ) ] [ 5 ] = 15 
+loop_timer ( "fight_start_countdown" , 1 ) 
+else 
+timer ( "partner_timeout" , 40 ) 
+end 
+arena [ pvp_manager . get_arena ( ) ] [ 3 ] = 2 
+ return end 

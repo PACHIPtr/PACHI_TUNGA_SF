@@ -1,0 +1,5 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . set_warp_location ( 353 , 8288 , 14186 ) 
+d . notice ( "Zaman Doldu Iþýnlanacaksýnýz.. " ) 
+server_timer ( "frt_exit_timer" , 3 , get_server_timer_arg ( ) ) 
+end 

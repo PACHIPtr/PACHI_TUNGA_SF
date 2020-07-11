@@ -1,0 +1,53 @@
+ScriptType			RaceDataScript
+BaseModelFileName	"D:\ymir work\monster2\defensewave_naga\defensewave_naga.GR2"
+
+Group ShapeData
+{
+	PathName		""
+	ShapeDataCount	1
+
+	Group ShapeData00
+	{
+		ShapeIndex	0
+		Model		"D:\ymir work\monster2\defensewave_naga\defensewave_naga.GR2"
+		SourceSkin	"D:\ymir work\monster2\defensewave_naga\defensewave_naga_1.dds"
+		TargetSkin	"D:\ymir work\monster2\defensewave_naga\defensewave_naga_2.dds"
+	}
+}
+
+Group AttachingData
+{
+	AttachingDataCount		2
+
+	Group AttachingData00
+	{
+		AttachingDataType	1
+		isAttaching			1
+		AttachingModelIndex	0
+		AttachingBoneName	"Bip01"
+		CollisionType		1
+		SphereDataCount		1
+
+		Group SphereData00
+		{
+			Radius		110.000000
+			Position	0.000000 10.000000 20.000000
+		}
+	}
+
+	Group AttachingData01
+	{
+		AttachingDataType	1
+		isAttaching			1
+		AttachingModelIndex	0
+		AttachingBoneName	"Bip01"
+		CollisionType		3
+		SphereDataCount		1
+
+		Group SphereData00
+		{
+			Radius		120.000000
+			Position	0.000000 10.000000 20.000000
+		}
+	}
+}

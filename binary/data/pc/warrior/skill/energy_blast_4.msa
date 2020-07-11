@@ -1,0 +1,77 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc\warrior\intro\selected.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.366154
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "equip_right_hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc/warrior/effect/energy_sword_4.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.366154
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc/warrior/effect/energy_charge_4.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.126923
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc/warrior/effect/energy_blast_4.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         0.992701
+        DuringTime           0.600000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        1.000000
+        ExternalForce        10.000000
+        HitLimitCount        18
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    Group Event04
+    {
+        MotionEventType      2
+        StartingTime         0.978102
+        
+        DuringTime           0.600000
+        Power                450
+        AffectingRange       350
+    }
+}

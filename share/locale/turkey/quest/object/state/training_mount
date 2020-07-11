@@ -1,0 +1,38 @@
+training_mount={["start"]=0,["main_point"]=351879266,check_list= function (material,pc_level,horse_level)if pc . count_item ( material ) <= 0 then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Üzgünüm, parþömen olmadan sana yardýmcý olamam. " ) 
+return 0 
+elseif pc . level < pc_level then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Üzgünüm, sana yardýmcý olamam.[ENTER]Bunun için en azýndan Asker At lisansýna sahip olmalýsýn. " ) 
+return 0 
+elseif horse . get_level ( ) < horse_level then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( string . format ( "Binek geliþtirmek için uygun mühür yok.[ENTER]En azýndan Asker At sahibi olmalýsýn." , horse_level ) ) 
+return 0 
+else 
+return 1 
+end 
+end ,extraTime= function (typ)local n = number ( 1 , 100 ) 
+if typ == 1 then 
+if n <= 50 then 
+return 86400 
+elseif n <= 80 then 
+return 86400 * 2 
+elseif n <= 95 then 
+return 86400 * 3 
+else 
+return 86400 * 4 
+end 
+elseif typ == 2 then 
+if n <= 30 then 
+return 0 
+elseif n <= 70 then 
+return 86400 
+elseif n <= 90 then 
+return 86400 * 2 
+else 
+return 86400 * 3 
+end 
+end 
+end }

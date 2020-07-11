@@ -1,0 +1,9 @@
+say_title ( "Sura Ruhu;" ) 
+say ( "Sýfýrlamak istediðinden emin misin ?" ) 
+local cyvercha = select ( "Evet" , "Hayýr" ) 
+if cyvercha == 2 then 
+return 
+elseif cyvercha == 1 then 
+say ( "Soguma süren sýfýrlandý." ) 
+pc . setf ( "dragonlair" , "dragonlair_soguma_suresi" , 0 ) 
+end 

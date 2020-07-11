@@ -1,0 +1,75 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_mouse_boss/special_attack1.GR2"
+MotionDuration           1.133333
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      8
+        StartingTime         0.981671
+    }
+    Group Event01
+    {
+        MotionEventType      7
+        StartingTime         0.011030
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.940308
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Prop1"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_mou_s1_start.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      2
+        StartingTime         0.934793
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       200
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.372263
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Prop1"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_mou_s1_spin.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         1.133333
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        10
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"NEED_TARGET"
+Name			"저주"
+Description		"상대의 공격력을 떨어뜨린다"
+Range			"2500"
+
+IconFileName	"skill/sura/jeoju.sub"
+MotionIndex		4
+
+List AffectData
+{
+	"공격력 : -%.0f" "SkillPoint / 2" ""
+	"지속시간 15초" "" ""
+}
+
+MaxLevel			"20"
+LevelUpPoint		"2"
+CoolTimeFormula		"5"
+NeedSPFormula 		"80"

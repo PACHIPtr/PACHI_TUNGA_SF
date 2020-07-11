@@ -1,0 +1,22 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster\yellow_tigerman\36.GR2"
+MotionDuration           2.333333
+Accumulation           0.00	-500.01	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.019485
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_jump.mse"
+        EffectPosition       0.000000 0.000000 20.000000
+    }
+}

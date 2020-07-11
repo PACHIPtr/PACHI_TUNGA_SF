@@ -1,0 +1,11 @@
+say_title ( "PvP Turnuvasýna Katýl:" ) 
+if party . is_party ( ) == true then 
+say ( "Grup ile giremezsin." ) 
+return 
+end 
+say ( "Ne yapmak istiyorsun?" ) 
+local s = select ( "PvP Arenasýna Iþýnlan " , "Kapat " ) 
+if s == 1 then 
+pc . warp ( 6.5984e+06 , 6.5898e+06 ) 
+else return 
+end 

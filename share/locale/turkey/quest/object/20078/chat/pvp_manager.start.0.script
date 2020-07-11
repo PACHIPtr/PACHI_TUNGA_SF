@@ -1,0 +1,8 @@
+say_title ( "Savaþ Ustasý: " ) 
+say ( "" ) 
+say ( "Arenadan ayrýlýp þehre dönmek istiyormusun?" ) 
+say ( "" ) 
+local s = select ( "Evet " , "Hayýr " ) 
+if s == 1 then 
+warp_to_village ( ) 
+end 

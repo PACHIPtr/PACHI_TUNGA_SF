@@ -1,0 +1,28 @@
+say_title ( "Statü Sýfýrlama Kaðýdý: " ) 
+say ( "" ) 
+say ( "Bu kaðýt her þeyi unutmayý mümkün kýlýyor." ) 
+say ( "Bu senin tüm statü puanlarýný sýfýrlayacak." ) 
+say ( "Geri dönüþü mümkün deðil. " ) 
+say ( "" ) 
+say ( "Kullanmak istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if 2 == s then 
+return 
+end 
+say_title ( "Statünü Sýfýrla Onay:" ) 
+say ( "" ) 
+say ( "Tüm statü puanlarýn sýfýrlanacak ve " ) 
+say ( "baþtan baþlayacaksýn. " ) 
+say ( "" ) 
+say ( "Statü sýfýrlama iþlemini onaylýyor musun?" ) 
+say ( "" ) 
+local c = select ( "Onaylýyorum" , "Sýfýrlamayý iptal et" ) 
+if 2 == c then 
+return 
+end 
+char_log ( 0 , "RESET_ALL" , "USE_ITEM(71002)" ) 
+pc . remove_item ( 71002 ) 
+char_log ( 0 , "RESET_ALL" , "RESET_STAT_POINTS" ) 
+pc . reset_point ( ) 
+char_log ( 0 , "RESET_ALL" , "RESET_END" ) 

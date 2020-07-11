@@ -1,0 +1,51 @@
+local kill_count = pc . getqf ( "mob_kill1_count" ) 
+if kill_count < 30 then 
+say_title ( "Handu-Up: " ) 
+say ( "Bize stoklarımızı geri getir lütfen! " ) 
+else 
+say_title ( "Handu-Up: " ) 
+say ( "Sen gittikten sonra köyümüz yine yağmalandı! " ) 
+local mob2_name = "" 
+if pc . get_level ( ) >= 91 then 
+pc . setqf ( "mob2_info" , 8 ) 
+mob2_name = "Cehennem Deniz Anası " 
+elseif pc . get_level ( ) >= 81 then 
+pc . setqf ( "mob2_info" , 7 ) 
+mob2_name = "Zombi " 
+elseif pc . get_level ( ) >= 71 then 
+pc . setqf ( "mob2_info" , 6 ) 
+mob2_name = "Alev Savaşçı " 
+elseif pc . get_level ( ) >= 61 then 
+pc . setqf ( "mob2_info" , 5 ) 
+mob2_name = "Kurbağa Generali " 
+elseif pc . get_level ( ) >= 51 then 
+pc . setqf ( "mob2_info" , 4 ) 
+mob2_name = "Karanlık Haberci " 
+elseif pc . get_level ( ) >= 41 then 
+pc . setqf ( "mob2_info" , 3 ) 
+mob2_name = "Mistik Arahan Savaşçısı " 
+elseif pc . get_level ( ) >= 31 then 
+pc . setqf ( "mob2_info" , 2 ) 
+mob2_name = "Yabani Uşak " 
+elseif pc . get_level ( ) >= 20 then 
+pc . setqf ( "mob2_info" , 1 ) 
+mob2_name = "Kahverengi Ayı " 
+elseif pc . get_level ( ) >= 10 then 
+pc . setqf ( "mob2_info" , 9 ) 
+mob2_name = "Ayı " 
+else 
+pc . setqf ( "mob2_info" , 10 ) 
+mob2_name = "Kırmızı Yaban Domuzu " 
+end 
+say ( string . format ( "Bu sefer %s tarafından baskına uğradık.[ENTER]Bizi ortada bırakma şimdi lütfen! " , mob2_name ) ) 
+local sub_set = select ( "Bana güvenebilirsiniz! " , "Ödülümü istiyorum. " ) 
+if sub_set == 2 then 
+say_title ( "Handu-Up: " ) 
+say ( "Yardımların için teşekkür ederiz. Şimdi[ENTER]Wonda-Rim'e git ve ele geçirilen pirinç[ENTER]patlaklarının karşılığında ödülünü al. " ) 
+set_state ( "information" ) 
+return 
+end 
+say_title ( "Handu-Up: " ) 
+say ( string . format ( "%s için ava git![ENTER]Ama bu tehlikeli yalnız başına gitme.[ENTER]Grup olarak giderseniz düşmanı yenebilirsiniz. " , mob2_name ) ) 
+set_state ( "mob_kill2" ) 
+end 

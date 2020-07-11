@@ -1,0 +1,3 @@
+send_letter ( "&Taþlarý yok et" ) 
+q . set_counter ( "Kalan sayý " , 5 - pc . getqf ( "stone_4" ) ) 
+loop_timer ( "kill_4" , 1 ) 

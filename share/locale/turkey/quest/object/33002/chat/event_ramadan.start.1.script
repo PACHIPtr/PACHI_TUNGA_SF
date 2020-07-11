@@ -1,0 +1,38 @@
+local setting = event_ramadan . setting ( ) 
+if pc . count_item ( setting . bread ) == 0 then 
+say_title ( "Tarihçi: " ) 
+say ( "Tatlý gördün mü hiç?[ENTER]Baklava tatlýsý derler." ) 
+local s = select ( "Evet, gördüm. " , "Maalesef. " ) 
+if 2 == s then 
+say_title ( "Tarihçi: " ) 
+say ( "Tüh. Neyse, tekrar görüþmek üzere. " ) 
+return 
+end 
+say_title ( "Tarihçi: " ) 
+say ( "Demek ne olduðunu biliyorsun?[ENTER]Bu tatlýlarý istiyorsan,[ENTER]bana on tane simit getirmelisin.  " ) 
+wait ( ) 
+say_title ( "Tarihçi: " ) 
+say ( "10 simit karþýlýðýnda sana bir tatlý verebilirim.[ENTER]Anlaþtýk mý? " ) 
+local s = select ( "Seve seve. " , "Uðraþamam. " ) 
+if 2 == s then 
+say_title ( "Tarihçi: " ) 
+say ( "Tüh. Neyse, tekrar görüþmek üzere. " ) 
+return 
+end 
+say_title ( "Tarihçi: " ) 
+say ( "Her 10 simit karþýlýðýnda sana bir tane tatlý[ENTER]vereceðim. " ) 
+elseif pc . count_item ( setting . bread ) > 0 and pc . count_item ( setting . bread ) < 10 then 
+say_title ( "Tarihçi: " ) 
+say ( "10 simit bulduðunda gel. " ) 
+elseif pc . count_item ( setting . bread ) >= 10 then 
+say_title ( "Tarihçi: " ) 
+say ( "Ahh harikasýn 10 simit buldun demek.[ENTER]Ýþte sana nefis baklava tatlýsý.[ENTER]Afiyet olsun. " ) 
+wait ( ) 
+say_title ( "Tarihçi: " ) 
+say ( "Her 10 simit karþýlýðýnda sana bir tane tatlý[ENTER]vereceðim. " ) 
+pc . give_item2 ( setting . candy , 1 ) 
+pc . remove_item ( setting . bread , 10 ) 
+end 
+if not event_ramadan . is_running ( ) then 
+npc . purge ( ) 
+end 

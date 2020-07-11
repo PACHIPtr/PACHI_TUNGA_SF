@@ -1,0 +1,20 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"STADING_SKILL" "TOGGLE"
+NeedWeapon		"SWORD" "TWO_HANDED"
+
+Name			"화염참"
+Description		"자신의 검을 불로 감싼다"
+
+IconFileName	"skill/warrior/hwayeom.sub"
+
+List AffectData
+{
+	"파괴력 : +%.0f%%" "SkillPoint" ""
+}
+
+MaxLevel				"30"
+LevelUpPoint			"5"
+NeedSPFormula			"100"
+ContinuationSPFormula 	"8" 

@@ -1,0 +1,30 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/CZ_Typhoon_a/normal_attack2.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         0.605839
+        
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FlyFileName       "d:/ymir work/effect/monster2/12_a03_na1_arrow.msf"
+        FlyPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      6
+        StartingTime         0.952555
+        
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FlyFileName       "d:/ymir work/effect/monster2/12_a03_na1_arrow.msf"
+        FlyPosition       0.000000 0.000000 0.000000
+    }
+}

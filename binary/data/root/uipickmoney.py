@@ -1,0 +1,242 @@
+import app
+import chat
+import ime
+
+import wndMgr
+import ui
+import localeInfo
+
+class PickMoneyDialog(ui.ScriptWindow):
+	def __init__(self):
+		ui.ScriptWindow.__init__(self)
+
+		self.unitValue = 1
+		self.maxValue = 0
+		self.eventAccept = 0
+		if app.ENABLE_CHEQUE_SYSTEM:
+			self.chequeMaxValue = 0
+
+	def __del__(self):
+		ui.ScriptWindow.__del__(self)
+
+	def LoadDialog(self):
+		try:
+			pyScrLoader = ui.PythonScriptLoader()
+			pyScrLoader.LoadScriptFile(self, "UIScript/PickMoneyDialog.py")
+		except:
+			import exception as exception
+			exception.Abort("MoneyDialog.LoadDialog.LoadScript")
+
+		try:
+			self.board = self.GetChild("board")
+			self.maxValueTextLine = self.GetChild("max_value")
+			self.pickValueEditLine = self.GetChild("money_value")
+			if app.ENABLE_CHEQUE_SYSTEM:
+				self.chequeMaxValueTextLine = self.GetChild("cheque_max_value")
+				self.pickChequeValueEditLine = self.GetChild("cheque_value")
+			self.acceptButton = self.GetChild("accept_button")
+			self.cancelButton = self.GetChild("cancel_button")
+		except:
+			import exception as exception
+			exception.Abort("MoneyDialog.LoadDialog.BindObject")
+
+		self.pickValueEditLine.SetReturnEvent(ui.__mem_func__(self.OnAccept))
+		self.pickValueEditLine.SetEscapeEvent(ui.__mem_func__(self.Close))
+		if app.ENABLE_CHEQUE_SYSTEM:
+			self.pickChequeValueEditLine.SetReturnEvent(ui.__mem_func__(self.OnAccept))
+			self.pickChequeValueEditLine.SetEscapeEvent(ui.__mem_func__(self.Close))
+		self.acceptButton.SetEvent(ui.__mem_func__(self.OnAccept))
+		self.cancelButton.SetEvent(ui.__mem_func__(self.Close))
+		self.board.SetCloseEvent(ui.__mem_func__(self.Close))
+
+	def Destroy(self):
+		self.ClearDictionary()
+		self.eventAccept = 0
+		self.maxValue = 0
+		self.pickValueEditLine = 0
+		if app.ENABLE_CHEQUE_SYSTEM:
+			self.chequeMaxValue = 0
+			self.pickChequeValueEditLine = 0
+		self.acceptButton = 0
+		self.cancelButton = 0
+		self.board = None
+
+	def SetTitleName(self, text):
+		self.board.SetTitleName(text)
+
+	def SetAcceptEvent(self, event):
+		self.eventAccept = event
+
+	def SetMax(self, max):
+		self.pickValueEditLine.SetMax(max)
+
+	def Open(self, maxValue, chequeMaxValue = None, unitValue=1):
+
+
+		width = self.GetWidth()
+		(mouseX, mouseY) = wndMgr.GetMousePosition()
+
+		if mouseX + width/2 > wndMgr.GetScreenWidth():
+			xPos = wndMgr.GetScreenWidth() - width
+		elif mouseX - width/2 < 0:
+			xPos = 0
+		else:
+			xPos = mouseX - width/2
+
+		self.SetPosition(xPos, mouseY - self.GetHeight() - 20)
+
+		if chequeMaxValue is None:
+			self.chequeMaxValueTextLine.Hide()
+			self.pickChequeValueEditLine.Hide()
+
+		self.maxValueTextLine.SetText(" / " + str(maxValue))
+		if app.ENABLE_CHEQUE_SYSTEM and chequeMaxValue is not None:
+			self.chequeMaxValueTextLine.SetText(" / " + str(chequeMaxValue))
+
+		if app.ENABLE_CHEQUE_SYSTEM:
+			self.pickChequeValueEditLine.SetText("0")
+		self.pickValueEditLine.SetText(str(unitValue))
+		self.pickValueEditLine.SetFocus()
+
+		ime.SetCursorPosition(1)
+
+		self.unitValue = unitValue
+		self.maxValue = maxValue
+		if app.ENABLE_CHEQUE_SYSTEM and chequeMaxValue is not None:
+			self.chequeMaxValue = chequeMaxValue
+		self.Show()
+		self.SetTop()
+
+	def Close(self):
+		self.pickValueEditLine.KillFocus()
+		if app.ENABLE_CHEQUE_SYSTEM:
+			self.pickChequeValueEditLine.KillFocus()
+		self.Hide()
+
+	def OnAccept(self):
+		text = self.pickValueEditLine.GetText()
+		if app.ENABLE_CHEQUE_SYSTEM:
+			text2 = self.pickChequeValueEditLine.GetText()
+			if (len(text) > 0 and text.isdigit()) or (len(text2) > 0 and text2.isdigit()):
+				money = int(text)
+				money = min(money, self.maxValue)
+				cheque = int(text2)
+				cheque = min(cheque, self.chequeMaxValue)
+				if self.eventAccept and (money > 0 or cheque > 0):
+					self.eventAccept(money, cheque)
+		else:
+			if len(text) > 0 and text.isdigit():
+
+				money = int(text)
+				money = min(money, self.maxValue)
+
+				if money > 0:
+					if self.eventAccept:
+						self.eventAccept(money, 0)
+				else:
+					chat.AppendChat(chat.CHAT_TYPE_INFO, "<Muhasebe> Lütfen 0'dan yüksek deðer giriniz.")
+			else:
+				chat.AppendChat(chat.CHAT_TYPE_INFO, "<Muhasebe> Lütfen 0'dan yüksek deðer giriniz.")
+
+		self.Close()
+
+class PickMoneyDialog2(ui.ScriptWindow):
+	def __init__(self):
+		ui.ScriptWindow.__init__(self)
+
+		self.unitValue = 1
+		self.maxValue = 0
+		self.eventAccept = 0
+
+	def __del__(self):
+		ui.ScriptWindow.__del__(self)
+
+	def LoadDialog(self):
+		try:
+			pyScrLoader = ui.PythonScriptLoader()
+			pyScrLoader.LoadScriptFile(self, "UIScript/PickMoneyDialog2.py")
+		except:
+			import exception as exception
+			exception.Abort("MoneyDialog.LoadDialog.LoadScript")
+
+		try:
+			self.board = self.GetChild("board")
+			self.maxValueTextLine = self.GetChild("max_value")
+			self.pickValueEditLine = self.GetChild("money_value")
+			self.acceptButton = self.GetChild("accept_button")
+			self.cancelButton = self.GetChild("cancel_button")
+		except:
+			import exception as exception
+			exception.Abort("MoneyDialog.LoadDialog.BindObject")
+
+		self.pickValueEditLine.SetReturnEvent(ui.__mem_func__(self.OnAccept))
+		self.pickValueEditLine.SetEscapeEvent(ui.__mem_func__(self.Close))
+		self.acceptButton.SetEvent(ui.__mem_func__(self.OnAccept))
+		self.cancelButton.SetEvent(ui.__mem_func__(self.Close))
+		self.board.SetCloseEvent(ui.__mem_func__(self.Close))
+
+	def Destroy(self):
+		self.ClearDictionary()
+		self.eventAccept = 0
+		self.maxValue = 0
+		self.pickValueEditLine = 0
+		self.acceptButton = 0
+		self.cancelButton = 0
+		self.board = None
+
+	def SetTitleName(self, text):
+		self.board.SetTitleName(text)
+
+	def SetAcceptEvent(self, event):
+		self.eventAccept = event
+
+	def SetMax(self, max):
+		self.pickValueEditLine.SetMax(max)
+
+	def Open(self, maxValue, unitValue=1):
+
+
+		width = self.GetWidth()
+		(mouseX, mouseY) = wndMgr.GetMousePosition()
+
+		if mouseX + width/2 > wndMgr.GetScreenWidth():
+			xPos = wndMgr.GetScreenWidth() - width
+		elif mouseX - width/2 < 0:
+			xPos = 0
+		else:
+			xPos = mouseX - width/2
+
+		self.SetPosition(xPos, mouseY - self.GetHeight() - 20)
+
+		self.maxValueTextLine.SetText(" / " + str(maxValue))
+
+		self.pickValueEditLine.SetText(str(unitValue))
+		self.pickValueEditLine.SetFocus()
+
+		ime.SetCursorPosition(1)
+
+		self.unitValue = unitValue
+		self.maxValue = maxValue
+		self.Show()
+		self.SetTop()
+
+	def Close(self):
+		self.pickValueEditLine.KillFocus()
+		self.Hide()
+
+	def OnAccept(self):
+		text = self.pickValueEditLine.GetText()
+
+		if len(text) > 0 and text.isdigit():
+			money = int(text)
+			money = min(money, self.maxValue)
+
+			if money > 0:
+				if self.eventAccept:
+					self.eventAccept(money)
+			else:
+				chat.AppendChat(chat.CHAT_TYPE_INFO, "<Muhasebe> Lütfen 0'dan yüksek deðer giriniz.")
+		else:
+			chat.AppendChat(chat.CHAT_TYPE_INFO, "<Muhasebe> Lütfen 0'dan yüksek deðer giriniz.")
+
+		self.Close()

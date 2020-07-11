@@ -1,0 +1,24 @@
+say_title ( "Yu-Hwan" ) 
+say ( "" ) 
+say_reward ( "Devam etmek istiyor musun?" ) 
+local s = select ( "Evet, istiyorum." , "Hayýr, istemiyorum." ) 
+if s == 2 then 
+return 
+else 
+if pc . is_busy ( ) == true then 
+say_title ( "Yu-Hwan" ) 
+say ( "" ) 
+say_reward ( "Üzgünümki meþgul görünüyorsun." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "Yu-Hwan" ) 
+say ( "" ) 
+say_reward ( "Ölü bir adamdan futbol topu alamam herhalde." ) 
+elseif pc . count_item ( 50096 ) < 20 then 
+say_title ( "Yu-Hwan" ) 
+say ( "" ) 
+say_reward ( "Envanterinde yeterli miktarda bulamadým." ) 
+else 
+pc . remove_item ( 50096 , 20 ) 
+pc . give_item2 ( 50265 , 1 ) 
+end 
+end 

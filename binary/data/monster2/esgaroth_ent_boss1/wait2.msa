@@ -1,0 +1,22 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_ent_boss1/wait2.gr2"
+MotionDuration           3.533333
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.590118
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip001-L-Finger42"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/kula_lasu.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

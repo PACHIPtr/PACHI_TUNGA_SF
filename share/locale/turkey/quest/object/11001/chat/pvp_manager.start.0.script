@@ -1,0 +1,45 @@
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Hey Evet Sen." ) 
+say ( "Sen gerçekten çok güçü görünüyorsun." ) 
+say ( "Turnuva'da senin gibi oyuncularla savaþacaksýn." ) 
+say ( "PvP Arenasý'nda Tunuva Sorumlusu'nu bul ve " ) 
+say ( "Turnuva'ya kayýt ol." ) 
+if game . get_event_flag ( "pvp" ) == 0 then 
+wait ( ) 
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Turnuvaya katýlmana izin veriyorum. " ) 
+say ( "Baþlama zamaný henüz kararlaþtýrýlmadý. " ) 
+say ( "Zaman geldiðinde seni bilgilendireceðim. " ) 
+say ( "Tetikte kal!" ) 
+else 
+wait ( ) 
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Turnuvaya katýlmak istiyormusun?" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+if pc . get_level ( ) < game . get_event_flag ( "pvp_minlevel" ) or pc . get_level ( ) > game . get_event_flag ( "pvp_maxlevel" ) then 
+say ( "Turnuvaya katýlabilmek için  ; " ) 
+say ( "Levelin  " .. game . get_event_flag ( "pvp_minlevel" ) .. " ile " .. game . get_event_flag ( "pvp_maxlevel" ) .. " arasýnda olmasý gerekli." ) 
+else 
+if pc . is_polymorphed ( ) then 
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Dönüþmüþ haldeyken turnuvaya katýlamazsýn." ) 
+else 
+if pc . is_riding ( ) then 
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Binek veya at kullanýrken OX yarýþmasýna giremezsin." ) 
+else 
+say_title ( "Savaþ Sorumlusu: " ) 
+say ( "Tamam þimdi seni ýþýnlýyorum. " ) 
+wait ( ) 
+local sans = number ( 1 , 2 ) 
+if sans == 1 then 
+pc . warp ( 6.5984e+06 , 6.6072e+06 ) 
+else 
+pc . warp ( 6.5984e+06 , 6.5984e+06 ) 
+end 
+end 
+end 
+end 
+end 
+end 

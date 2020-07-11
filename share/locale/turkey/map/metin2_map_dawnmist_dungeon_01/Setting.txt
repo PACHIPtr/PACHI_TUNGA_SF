@@ -1,0 +1,11 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	3	4
+BasePosition	768000	1408000
+TextureSet	textureset\metin2_DawnMistWood_dungeon.txt
+Environment	DawnMistWood_dungeon.msenv

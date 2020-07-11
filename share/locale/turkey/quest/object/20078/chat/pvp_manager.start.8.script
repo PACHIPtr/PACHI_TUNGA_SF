@@ -1,0 +1,20 @@
+say_title ( "Ödül:" ) 
+say ( "Þuanki Ödül " .. game . get_event_flag ( "pvp_price_count" ) .. "x " .. item_name ( game . get_event_flag ( "pvp_price_vnum" ) ) .. " (vnum: " .. game . get_event_flag ( "pvp_price_vnum" ) .. ")" ) 
+say ( "" ) 
+local s = select ( "Ödülü Deðiþtir " , "Kapat " ) 
+if s == 2 then 
+return 
+end 
+say_title ( "Ödül:" ) 
+say ( "Yeni ödülün kodunu gir:" ) 
+say ( "" ) 
+local vnum = input ( ) 
+say_title ( "Ödül:" ) 
+say ( "Yeni ödülün adetini gir:" ) 
+say ( "" ) 
+local count = input ( ) 
+game . set_event_flag ( "pvp_price_count" , count ) 
+game . set_event_flag ( "pvp_price_vnum" , vnum ) 
+say_title ( "Ödül deðiþtirildi:" ) 
+say ( "Ödül deðiþtirildi." ) 
+say ( "Yeni ödül : " .. count .. "x " .. item_name ( vnum ) .. " (vnum: " .. vnum .. ")" ) 

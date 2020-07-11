@@ -1,0 +1,13 @@
+local set = snow_dungeon . get_settings ( ) 
+local next_jump_time = set . NextJumpTime local level = d . getf ( "level" ) 
+local stone_level_6 = set . MobVnum_level_6 local stone_level_9 = set . NpcVnum_level_9 local boss_vnum = set . BossVnum local wait_time = set . WaitBeforOutAllOnExit local mobvnum = npc . get_race ( ) 
+say ( "Nemere Taht Salonu'na girmek istiyor musun?" ) 
+local s = select ( "Gir" , "Belki sonra" ) 
+if s == 2 then 
+return 
+end 
+server_timer ( "Jp_Boss" , next_jump_time , d . get_map_index ( ) ) 
+local v = set . BossVnumGroup d . regen_file ( "data/dungeon/ice_dungeon/zone_boss.txt" ) 
+d . spawn_group ( v , 928 , 335 , 5 , 1 , 1 ) 
+npc . purge ( ) 
+setskin ( NOWINDOW ) 

@@ -1,0 +1,23 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"NEED_TARGET"
+Range			2500
+
+Name			"파법술"
+Description		"모든 이로운 술법을 무효화 시킨다"
+Requirement		"저주" 6
+
+IconFileName	"skill/sura/pabeop.sub"
+MotionIndex		10
+
+List AffectData
+{
+	"성공확률 : 약 %.0f%%" "15 * (10 + SkillPoint) / 10" ""
+	"지속시간 : 15초" "" ""
+}
+
+MaxLevel			"20"
+LevelUpPoint		"2"
+CoolTimeFormula		"25"
+NeedSPFormula		"100"

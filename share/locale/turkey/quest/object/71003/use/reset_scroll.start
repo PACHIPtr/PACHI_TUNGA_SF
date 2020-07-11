@@ -1,0 +1,54 @@
+say_title ( "Beceri Sýfýrlama Kaðýdý: " ) 
+say_reward ( "Seçilen beceri sýfýrlanacak," ) 
+say_reward ( "puanlarýný tekrar düzenleyebileceksin." ) 
+say_reward ( "Þu ana kadar topladýðýn tüm puanlarýný " ) 
+say_reward ( "kaybedeceksin ve seçtiðin beceri için " ) 
+say_reward ( "kullandýðýn puanýn sadece 17'sini " ) 
+say_reward ( "geri kazanacaksýn." ) 
+local result = BuildSkillList ( pc . get_job ( ) , pc . get_skill_group ( ) ) 
+local vnum_list = result [ 1 ] 
+local name_list = result [ 2 ] 
+if table . getn ( vnum_list ) < 2 then 
+say ( "Sýfýrlanacak beceri yok." ) 
+say ( "" ) 
+return 
+end 
+say ( "Sýfýrlamak istediðin beceriyi seç. " ) 
+say ( "" ) 
+local i = select_table ( name_list ) 
+if table . getn ( name_list ) == i then 
+return 
+end 
+local name = name_list [ i ] 
+local vnum = vnum_list [ i ] 
+say_title ( "Beceri Sýfýrlama Kaðýdý:" ) 
+say_reward ( "Seçilen beceri sýfýrlanacak," ) 
+say_reward ( "puanlarýný tekrar düzenleyebileceksin." ) 
+say_reward ( "Þu ana kadar topladýðýn tüm puanlarýný " ) 
+say_reward ( "kaybedeceksin ve seçtiðin beceri için " ) 
+say_reward ( "kullandýðýn puanýn sadece 17'sini " ) 
+say_reward ( "geri kazanacaksýn." ) 
+say ( string . format ( "%s becerini sýfýrlamak istiyor musun?" , name ) ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if 2 == s then 
+return 
+end 
+say_title ( "Becerini Sýfýrla Onay:" ) 
+say ( "" ) 
+say ( "Beceri sýfýrlama iþlemini onaylýyor musun?" ) 
+say ( "" ) 
+local c = select ( "Onaylýyorum" , "Sýfýrlamayý iptal et" ) 
+if 2 == c then 
+return 
+end 
+char_log ( 0 , "RESET_ONE_SKILL" , "USE_ITEM(71003)" ) 
+pc . remove_item ( 71003 ) 
+char_log ( 0 , "RESET_ONE_SKILL" , string . format ( "RESET_SKILL[%s]" , name ) ) 
+pc . clear_one_skill ( vnum ) 
+char_log ( 0 , "RESET_ONE_SKILL" , "APPLY_17MASTER_BONUS" ) 
+pc . setqf ( "force_to_master_skill" , 1 ) 
+say_title ( "Beceri Sýfýrlama Kaðýdý:" ) 
+say ( string . format ( "%s Becerisi Sýfýrlandý." , name ) ) 
+say ( "" ) 
+say ( "" ) 

@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "newskillcommon.dds"
+left 192
+top 224
+right 224
+bottom 255

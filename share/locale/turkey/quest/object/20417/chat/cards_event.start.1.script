@@ -1,0 +1,7 @@
+say_title ( mob_name ( 20417 ) ) 
+say ( "" ) 
+say_reward ( "Ýlk 10 sýralama aþaðýdaki gibidir." ) 
+say ( pc . get_okay_rund_rank ( ) ) 
+if game . get_event_flag ( "cards_event" ) == 0 then 
+npc . purge ( ) 
+end 

@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_owl_metin\stay00.GR2"
+MotionDuration           0.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.004444
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "metinstone02_00"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/background/metinstone_splash.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

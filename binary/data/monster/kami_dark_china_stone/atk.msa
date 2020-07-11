@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_dark_china_stone\wait_forest.GR2"
+MotionDuration           0.500000
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.010438
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Dummy001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_china_stone/wait.mse"
+        EffectPosition       50.000000 0.000000 170.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.010438
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Dummy001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_china_stone/atk.mse"
+        EffectPosition       0.000000 0.000000 10.000000
+    }
+}

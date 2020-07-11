@@ -1,0 +1,22 @@
+if party . is_leader ( ) and d . getf ( "dalga" ) == 0 then 
+say_npc ( ) 
+say ( "" ) 
+say ( "Savunmayý baþlatmak istiyor musun ?" ) 
+if select ( "Evet" , "Hayýr" ) == 2 then 
+return 
+end 
+local config = defance_wawe . Settings ( ) 
+local cord = config . cord local start_pos = config . start_pos d . setf ( "hidracount" , 3 ) 
+defance_wawe . SpawnHidras ( ) 
+d . jump_all ( config . map_index , ( cord [ 1 ] + start_pos [ 1 ] ) , ( cord [ 2 ] + start_pos [ 2 ] ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "1. Dalga: 120 sn. Boyunca tüm gücünüzle Gemi direði öðesini savunun." ) 
+server_loop_timer ( "DefanceCheckSecond" , 10 , d . get_map_index ( ) ) 
+server_timer ( "DefanceIsDefenseControl" , 1 , d . get_map_index ( ) ) 
+d . setf ( "sn" , 20 ) 
+d . setf ( "dalga" , 1 ) 
+else 
+say_npc ( ) 
+say ( "" ) 
+say ( "Grup lideri sen degilsin !" ) 
+end 

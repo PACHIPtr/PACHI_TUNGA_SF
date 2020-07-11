@@ -1,0 +1,94 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:/YMIR WORK/npc/ostrich_mount/ostrich_mount.GR2"
+
+Group ShapeData
+{
+    PathName 		 "D:\Ymir Work\"
+    ShapeDataCount		 1
+	
+	Group ShapeData00
+    {
+        ShapeIndex 		 0
+        Model 			 "npc\ostrich_mount\ostrich_mount.gr2"
+        SourceSkin 		 "atreya_textures\mounts\vehicle_ostrich_b_diff.dds"
+        TargetSkin 		 "atreya_textures\mounts\vehicle_ostrich_b_diff.tga"
+    }
+}
+Group AttachingData
+{
+    AttachingDataCount       5
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Dummy_root"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Dummy_root"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           110.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01-Tail1"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\yellowred1_x.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "wing02"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\yellowred1_x.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "wing04"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\yellowred1_x.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

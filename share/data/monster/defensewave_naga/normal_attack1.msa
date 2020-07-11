@@ -1,0 +1,53 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/defensewave_naga/normal_attack1.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         0.558394
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           200.000000
+            Position         0.000000 -150.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.580292
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/defense_naga_n1_impact.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      2
+        StartingTime         0.572993
+        
+        DuringTime           0.100000
+        Power                100
+        AffectingRange       200
+    }
+}

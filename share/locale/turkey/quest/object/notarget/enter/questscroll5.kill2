@@ -1,0 +1,2 @@
+pc . setqf ( "mob1_kill_count" , 0 ) 
+pc . setqf ( "mob2_kill_count" , 0 ) 

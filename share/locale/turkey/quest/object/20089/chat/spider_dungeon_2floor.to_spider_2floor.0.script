@@ -1,0 +1,12 @@
+say_title ( "Pung-Ho: " ) 
+say ( "Birinci kata gerçekten dönmek istiyor musun?" ) 
+local a = select ( "Evet " , "Hayýr " ) 
+if 1 == a then 
+say_title ( "Pung-Ho: " ) 
+say ( "Akýllýca bir seçim.[ENTER]Burada uzun süre kalmak çok tehlikeli.[ENTER]Git ve yaralarýný sar. " ) 
+wait ( ) 
+pc . warp ( 91700 , 525300 ) 
+return 
+end 
+say_title ( "Pung-Ho: " ) 
+say ( "Nasýl dilersen...[ENTER]Dikkat et![ENTER]Burasý çok tehlikeli." ) 

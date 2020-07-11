@@ -1,0 +1,1 @@
+return horse . get_grade ( ) == 3 and horse . is_dead ( ) and pc . countitem ( "50059" ) < 1

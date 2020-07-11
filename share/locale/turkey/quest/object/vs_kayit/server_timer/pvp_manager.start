@@ -1,0 +1,2 @@
+pvp_manager . close_registrations ( ) 
+notice_all ( "Turnuva Ödülü " .. game . get_event_flag ( "pvp_price_count" ) .. "x " .. item_name ( game . get_event_flag ( "pvp_price_vnum" ) ) .. " (vnum: " .. game . get_event_flag ( "pvp_price_vnum" ) .. ")" ) 

@@ -1,0 +1,9 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+
+Name			"화린무"
+Description		"지나간 자리에 불꽃을 남겨 적을 없앤다"
+
+IconFileName		"items/27000.sub"
+MotionIndex		7

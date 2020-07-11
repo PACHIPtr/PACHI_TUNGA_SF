@@ -1,0 +1,1 @@
+return pc . is_gm ( ) and game . get_event_flag ( "pvp" ) == 2

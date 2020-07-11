@@ -1,0 +1,9 @@
+q . set_counter ( "Kalan sayý " , 5 - pc . getqf ( "stone_4" ) ) 
+if pc . getqf ( "stone_4" ) >= 5 then 
+notice ( "Tüm Aðaç Yaratýðý Metinleri'ni yok ettin. Orman" ) 
+notice ( "Casusu'na rapor ver." ) 
+cleartimer ( "kill_4" ) 
+clear_letter ( ) 
+pc . setqf ( "stone_4" , 0 ) 
+set_state ( "return_4" ) 
+end 

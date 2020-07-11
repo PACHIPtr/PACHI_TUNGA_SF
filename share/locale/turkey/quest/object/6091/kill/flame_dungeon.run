@@ -1,0 +1,10 @@
+if flame_dungeon . is_flamed ( d . get_map_index ( ) ) and d . getf ( "level" ) == 17 then char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "BOSS KILLED" ) 
+notice_all ( "Razador " .. pc . get_name ( ) .. " tarafýndan yok edildi." ) 
+notice_multiline ( "Ejderha Tapýnaðý içindeki Tüm Savaþcýlar [ENTER]Bir dakika içerisinde ýþýnlanacaktýr." , d . notice ) 
+d . notice ( "Razadör yok edildi." ) 
+d . notice ( "Bütün savaþçýlar 60 saniye içerisinde Ejderha" ) 
+d . notice ( "Tapýnaðý'ndan dýþarý ýþýnlanacak." ) 
+server_timer ( "dungeon_end_timer" , 60 , d . get_map_index ( ) ) 
+flame_dungeon . level_clear ( ) 
+d . setf ( "level" , 8 ) 
+ return end 

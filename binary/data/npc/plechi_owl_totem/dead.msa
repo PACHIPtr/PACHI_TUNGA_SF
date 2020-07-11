@@ -1,0 +1,22 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\plechi_owl_totem\dead.GR2"
+MotionDuration           1.000000
+
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.550000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "B_Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/npc/owltotem_dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

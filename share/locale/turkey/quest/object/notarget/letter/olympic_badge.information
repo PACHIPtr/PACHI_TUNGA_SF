@@ -1,0 +1,6 @@
+if pc . level >= 30 and game . get_event_flag ( "ex_olympic_drop" ) >= 1 then local v = find_npc_by_vnum ( 20017 ) 
+if 0 ~= v then 
+target . vid ( "__TARGET__" , v , "" ) 
+end 
+send_letter ( "Kahramanlık Madalyası " ) 
+ return end 

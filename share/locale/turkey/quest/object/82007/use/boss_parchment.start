@@ -1,0 +1,15 @@
+if pc . is_busy ( ) == true then 
+syschat ( "Meşgul durumda iken bunu kullanamazsın." ) 
+elseif pc . is_dead ( ) == true then 
+syschat ( "Ölü durumda iken bunu kullanamazsın." ) 
+else 
+if item . get_count ( ) >= 25 then 
+if item . get_count ( ) == 25 then 
+item . remove ( ) 
+pc . give_item2 ( 82107 , 1 ) 
+else 
+item . set_count ( item . get_count ( ) - 25 ) 
+pc . give_item2 ( 82107 , 1 ) 
+end 
+end 
+end 

@@ -1,0 +1,2 @@
+new_christmas_2012={["start"]=0,["__COMPLETE__"]=668443392,has_santa= function ()return ( game . get_event_flag ( "ex_xmas_drop" ) > 0 ) 
+end }

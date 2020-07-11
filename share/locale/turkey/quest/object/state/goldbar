@@ -1,0 +1,7 @@
+goldbar={["start"]=0,check_item= function (vnum)if pc . count_item ( vnum ) < 1 then return false end 
+return true 
+end ,check_pc= function ()if pc . is_busy ( ) == true then return false end 
+return true 
+end ,check_gold= function (value)if pc . get_gold ( ) + value >= 2e+09 then return false end 
+return true 
+end }

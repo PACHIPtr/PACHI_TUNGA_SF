@@ -1,0 +1,12 @@
+local setting = event_ramadan . setting ( ) 
+if get_time ( ) > pc . getqf ( "duration" ) then 
+say_title ( "Tarihçi: " ) 
+say ( "" ) 
+say ( "Senin karnýný doyurmadým mý ben bugün?!  " ) 
+say_reward ( "Bereket meyvesini 6 saatte bir alabilirsin." ) 
+pc . give_item2 ( setting . fruit ) 
+pc . setqf ( "duration" , get_time ( ) + 60 * 60 * 6 ) 
+else 
+say_title ( "Tarihçi: " ) 
+say ( "Bak sana[ENTER]çok önemli bir þey söyleyeceðim, kulaðýný dört aç:[ENTER]Sabreden derviþ muradýna ermiþ! " ) 
+end 

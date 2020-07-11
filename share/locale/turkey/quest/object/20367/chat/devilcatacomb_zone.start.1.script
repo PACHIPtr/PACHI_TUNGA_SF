@@ -1,0 +1,9 @@
+say_title ( "Katakomb Bekçisi:" ) 
+say ( "" ) 
+say ( "Savaþmaktan vazgeçip Karanlýk Tapýnaða dönmek" ) 
+say ( "istediðine emin misin?" ) 
+say ( "" ) 
+local s = select ( "Evet, çok güçsüzüm." , "Hayýr, savaþmaya devam edeceðim!" ) 
+if s == 1 then 
+pc . warp ( 591400 , 99900 ) 
+end 

@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"WEAPON_LIMITATION"	"TOGGLE" "STANDING_SKILL"
+NeedWeapon		"SWORD"
+
+Name			"귀검"
+Description		"검에 귀신의 힘을 불어 넣는다"
+
+IconFileName	"skill/sura/gwigeom.sub"
+MotionIndex		5
+
+List AffectData
+{
+	"공격력 : +%.0f"	"4 + (SkillPoint / 5)"	""
+}
+
+MaxLevel				"20"
+LevelUpPoint			"5"
+NeedSPFormula			"50"
+ContinuationSPFormula	"3"

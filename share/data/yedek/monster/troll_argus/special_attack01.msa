@@ -1,0 +1,78 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster2\troll_argus\special_attack01.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.705596
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone_tooth00"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/gas_emission1.mse"
+        EffectPosition       2.117000 -100.000000 157.662994
+    }
+    Group Event01
+    {
+        MotionEventType      4
+        StartingTime         0.754258
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        1.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -150.000000 50.000000
+        }
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.794809
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        1.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -430.000000 50.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.871857
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone_tooth00"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/gas_emission1.mse"
+        EffectPosition       2.117000 -100.000000 157.662994
+    }
+}

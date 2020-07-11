@@ -1,0 +1,6 @@
+if pc . in_dungeon ( ) then local setting = enchanted_forest_zone . setting ( ) 
+d . set_warp_location ( 353 , 8288 , 14186 ) 
+d . notice ( "Övgüler, Efsunlu Orman'a Barýþ Getirdiniz.. " ) 
+d . notice ( "Birazdan Iþýnlanacaksýnýz.. " ) 
+server_timer ( "frt_exit_timer" , 30 , d . get_map_index ( ) ) 
+ return end 

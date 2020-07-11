@@ -1,0 +1,104 @@
+local s = 0 
+local t = select ( "Aa" , "Ab" , "Ba" , "Bb" , "Bc" , "Ca" , "Cb" , "Cc" , "Cd" , "Da" , "Db" , "Dc" ) 
+if 1 == t then 
+s = select ( 
+questscroll5 . get_menu ( 1 ) , 
+questscroll5 . get_menu ( 2 ) , 
+questscroll5 . get_menu ( 3 ) , 
+questscroll5 . get_menu ( 4 ) , 
+questscroll5 . get_menu ( 5 ) , 
+questscroll5 . get_menu ( 6 ) 
+) + 1 - 1 
+elseif 2 == t then 
+s = select ( 
+questscroll5 . get_menu ( 7 ) , 
+questscroll5 . get_menu ( 8 ) , 
+questscroll5 . get_menu ( 9 ) , 
+questscroll5 . get_menu ( 10 ) , 
+questscroll5 . get_menu ( 11 ) 
+) + 7 - 1 
+elseif 3 == t then 
+s = select ( 
+questscroll5 . get_menu ( 12 ) , 
+questscroll5 . get_menu ( 13 ) , 
+questscroll5 . get_menu ( 14 ) , 
+questscroll5 . get_menu ( 15 ) 
+) + 12 - 1 
+elseif 4 == t then 
+s = select ( 
+questscroll5 . get_menu ( 16 ) , 
+questscroll5 . get_menu ( 17 ) , 
+questscroll5 . get_menu ( 18 ) , 
+questscroll5 . get_menu ( 19 ) , 
+questscroll5 . get_menu ( 20 ) , 
+questscroll5 . get_menu ( 21 ) 
+) + 16 - 1 
+elseif 5 == t then 
+s = select ( 
+questscroll5 . get_menu ( 22 ) , 
+questscroll5 . get_menu ( 23 ) , 
+questscroll5 . get_menu ( 24 ) , 
+questscroll5 . get_menu ( 25 ) 
+) + 22 - 1 
+elseif 6 == t then 
+s = select ( 
+questscroll5 . get_menu ( 26 ) , 
+questscroll5 . get_menu ( 27 ) , 
+questscroll5 . get_menu ( 28 ) , 
+questscroll5 . get_menu ( 29 ) , 
+questscroll5 . get_menu ( 30 ) , 
+questscroll5 . get_menu ( 31 ) 
+) + 26 - 1 
+elseif 7 == t then 
+s = select ( 
+questscroll5 . get_menu ( 32 ) , 
+questscroll5 . get_menu ( 33 ) , 
+questscroll5 . get_menu ( 34 ) , 
+questscroll5 . get_menu ( 35 ) 
+) + 32 - 1 
+elseif 8 == t then 
+s = select ( 
+questscroll5 . get_menu ( 36 ) , 
+questscroll5 . get_menu ( 37 ) , 
+questscroll5 . get_menu ( 38 ) , 
+questscroll5 . get_menu ( 39 ) , 
+questscroll5 . get_menu ( 40 ) , 
+questscroll5 . get_menu ( 41 ) 
+) + 36 - 1 
+elseif 9 == t then 
+s = select ( 
+questscroll5 . get_menu ( 42 ) , 
+questscroll5 . get_menu ( 43 ) , 
+questscroll5 . get_menu ( 44 ) , 
+questscroll5 . get_menu ( 45 ) , 
+questscroll5 . get_menu ( 46 ) , 
+questscroll5 . get_menu ( 47 ) , 
+questscroll5 . get_menu ( 48 ) , 
+questscroll5 . get_menu ( 49 ) 
+) + 42 - 1 
+elseif 10 == t then 
+s = select ( 
+questscroll5 . get_menu ( 50 ) , 
+questscroll5 . get_menu ( 51 ) , 
+questscroll5 . get_menu ( 52 ) , 
+questscroll5 . get_menu ( 53 ) 
+) + 50 - 1 
+elseif 11 == t then 
+s = select ( 
+questscroll5 . get_menu ( 54 ) , 
+questscroll5 . get_menu ( 55 ) , 
+questscroll5 . get_menu ( 56 ) , 
+questscroll5 . get_menu ( 57 ) 
+) + 54 - 1 
+elseif 12 == t then 
+s = select ( 
+questscroll5 . get_menu ( 58 ) , 
+questscroll5 . get_menu ( 59 ) 
+) + 58 - 1 
+end 
+questscroll5 . set_mission ( s ) 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 

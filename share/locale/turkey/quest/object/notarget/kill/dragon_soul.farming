@@ -1,0 +1,13 @@
+if not npc . is_pc ( ) then if pc . get_level ( ) < 30 then 
+return 
+end 
+if pc . get_level ( ) < npc . get_level ( ) - 25 then 
+return 
+end 
+pc . setqf ( "ds_points" , pc . getqf ( "ds_points" ) + 1 ) 
+if pc . getqf ( "ds_points" ) >= 165 then 
+pc . give_item2 ( "50255" , 1 ) 
+syschat ( string . format ( "<Ejderha Taþý Simyasý> Cor puanýn yükseldiði için %s adet %s kazandýn." , 1 , item_name ( 50255 ) ) ) 
+pc . setqf ( "ds_points" , pc . getqf ( "ds_points" ) - 165 ) 
+end 
+ return end 

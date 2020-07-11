@@ -1,0 +1,4 @@
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 4 then 
+game . drop_item ( setting [ "keys" ] [ 3 ] , 1 ) 
+end 

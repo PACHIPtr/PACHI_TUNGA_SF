@@ -1,0 +1,31 @@
+say_title ( mob_name ( 20017 ) ) 
+say ( "Sonunda! Geri döndün![ENTER]Kahramanlýk Madalyasý'ný bulduðunu söyle bana." ) 
+wait ( ) 
+if count_item_range ( 30265 , 30269 ) == 0 then 
+say ( "Oh, hayýr! Elin boþ mu geldin?[ENTER]Kendimi umutsuz hissetmeye baþladým![ENTER]Sen bile bana yardýmcý olamazsan[ENTER]derdime kim derman olur? Lütfen[ENTER]git ve onu benim için ara! " ) 
+return 
+elseif olympic_badge . has_it ( ) == 0 then 
+say ( "Kahramanlýk Madalya'mý buldun![ENTER]Ama bekle... bu sadece bir parçasý.[ENTER]Beþ bölüme ayrýlmýþ olan parçalarýndan[ENTER]eksikler var! Bana tüm[ENTER]parçalarý getir lütfen! [ENTER]Belki sonra yeniden bir madalya[ENTER]oluþturabiliriz! " ) 
+return 
+else 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Bu berbat suçlular benim deðerli[ENTER]eþyamý çaldýlar![ENTER]Ama sen bana bütün parçalarý getirerek[ENTER]yeniden bir Madalya yapmama olanak[ENTER]saðlýyorsun.Biraz bekle tek tek[ENTER]parçalarý birleþtiril madalya yapmayý[ENTER]deneyeceðim..." ) 
+wait ( ) 
+pc . remove_item ( 30265 ) 
+pc . remove_item ( 30266 ) 
+pc . remove_item ( 30267 ) 
+pc . remove_item ( 30268 ) 
+pc . remove_item ( 30269 ) 
+if pc . getqf ( "medal_done" ) == 0 then 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Bir milyon kere teþekkür[ENTER]Bana yeniden madalya yapmam için[ENTER]bütün parçalarý getirdin.[ENTER]Ve madalyamý yaptým.Teþekkürler[ENTER]savaþçý! Ýþte ödülün. " ) 
+say_item_vnum ( 71158 ) 
+pc . give_item2 ( 71158 ) 
+pc . setqf ( "medal_done" , 1 ) 
+return 
+end 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Bir milyon kere teþekkür[ENTER]Bana yeniden madalya yapmam için[ENTER]bütün parçalarý getirdin.[ENTER]Ve madalyamý yaptým.Teþekkürler[ENTER]savaþçý! Ýþte ödülün. " ) 
+say_item_vnum ( 50249 ) 
+pc . give_item2 ( 50249 ) 
+end 

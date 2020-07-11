@@ -1,0 +1,2 @@
+d . setqf2 ( "orcmaze_dungeon" , "last_exit_time" , get_global_time ( ) ) 
+d . exit_all_to_start_position ( ) 

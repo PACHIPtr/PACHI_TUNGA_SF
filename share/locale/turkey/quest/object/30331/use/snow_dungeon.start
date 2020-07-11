@@ -1,0 +1,20 @@
+if snow_dungeon . is_nemeres_dungeon ( ) == true then local set = snow_dungeon . get_settings ( ) 
+local next_jump_time = set . NextJumpTime local job = pc . get_job ( ) 
+local level = d . getf ( "level" ) 
+if level == 2 then 
+if ( is_test_server ( ) and snow_dungeon . is_TestServerMode ( ) == true ) then 
+job = 3 
+end 
+if number ( 1 , 3 ) == 1 then 
+d . notice ( "Az sonra üçüncü kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_3" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_3.txt" ) 
+item . remove ( ) 
+else 
+d . notice ( "Doðru anahtarý aramaya devam edin." ) 
+item . remove ( ) 
+end 
+end 
+ return end 

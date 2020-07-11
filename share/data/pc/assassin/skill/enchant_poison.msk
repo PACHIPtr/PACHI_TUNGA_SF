@@ -1,0 +1,24 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
+Name			"독바르기"
+Description		"무기에 독을 바른다"
+
+IconFileName	"skill/assassin/enchant_poison.sub"
+MotionIndex		7
+
+List ConditionData
+{
+	"독병 1개 필요"
+}
+
+List AffectData
+{
+	"타격당 2%% 확률로 중독" "" ""
+	"300초간 지속" "" ""
+}
+
+MaxLevel			"15"
+LevelUpPoint		"3"
+NeedSPFormula		"150"

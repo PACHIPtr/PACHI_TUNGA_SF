@@ -1,0 +1,6 @@
+say_title ( "Paketler: " ) 
+say ( "" ) 
+say ( "Karakterini güçlendirecek paketler nesne markette." ) 
+say ( "Karakterinin geliþimini saðlayacak ekstra güçlendirmeler" ) 
+say ( "120. seviyeye ulaþmana yardýmcý olacak." ) 
+set_state ( "_COMPLETE" ) 

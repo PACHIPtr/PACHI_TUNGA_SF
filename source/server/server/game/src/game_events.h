@@ -1,0 +1,98 @@
+#pragma once
+
+enum
+{
+#ifdef ENABLE_MOON_DROP_EVENT
+	EVENT_MOON_DROP = 0,
+#endif
+#ifdef ENABLE_HEXAGON_DROP_EVENT
+	EVENT_HEXAGON_DROP = 1,
+#endif
+#ifdef ENABLE_CARVING_STONE_EVENT
+	EVENT_CARVING_STONE_DROP = 2,
+#endif
+#ifdef ENABLE_RAMADAN_EVENT
+	EVENT_RAMADAN = 3,
+#endif
+#ifdef ENABLE_XMAS_EVENT
+	EVENT_XMAS = 4,
+#endif
+#ifdef ENABLE_EASTER_EVENT
+	EVENT_EASTER = 5,
+#endif
+#ifdef ENABLE_FOOTBALL_EVENT
+	EVENT_FOOTBALL_DROP = 6,
+#endif
+#ifdef ENABLE_VALENTINE_EVENT
+	EVENT_VALENTINE_DROP = 7,
+#endif
+#ifdef ENABLE_PET_EVENT
+	EVENT_PET_DROP = 8,
+#endif
+#ifdef ENABLE_KIDS_DAY_EVENT
+	EVENT_KIDS_DAY_DROP = 9,
+#endif
+#ifdef ENABLE_HALLOWEEN_EVENT
+	EVENT_HALLOWEEN = 10,
+#endif
+#ifdef ENABLE_OLYMPIC_EVENT
+	EVENT_OLYMPIC_BADGE = 11,
+#endif
+#ifdef ENABLE_MINIGAME_RUMI_EVENT
+	EVENT_OKEY_CARD = 12,
+#endif
+#ifdef ENABLE_MOUNT_EVENT
+	EVENT_MOUNT_DROP = 13,
+#endif
+#ifdef ENABLE_ALIGNMENT_EVENT
+	EVENT_ALIGNMENT = 14,
+#endif
+#ifdef ENABLE_YEAR_ROUND_EVENT
+	EVENT_YEAR_ROUND = 15,
+#endif
+#ifdef ENABLE_ATTENDANCE_EVENT
+	EVENT_BOSS_HUNTERS = 16,
+#endif
+#ifdef ENABLE_FISH_JIGSAW_EVENT
+	EVENT_NEW_FISH = 17,
+#endif
+#ifdef ENABLE_MINING_EVENT
+	EVENT_MINING = 18,
+#endif
+#ifdef ENABLE_HARVEST_FESTIVAL_EVENT
+	EVENT_HARVEST_FESTIVAL = 19,
+#endif
+#ifdef ENABLE_MAKE_WONSO_EVENT
+	EVENT_MAKE_WONSO = 20,
+#endif
+#ifdef ENABLE_MINI_GAME_CATCH_KING
+	EVENT_CATCH_KING = 21,
+#endif
+#ifdef ENABLE_GOLDEN_RAIN_EVENT
+	EVENT_GOLDEN_RAIN = 22,
+#endif
+#ifdef ENABLE_SUPER_METIN_EVENT
+	EVENT_SUPER_METIN = 23,
+#endif
+#ifdef ENABLE_LUCKYBOX_EVENT
+	EVENT_LUCKY_BOX = 24,
+#endif
+	EVENT_MAX_NUM = 25,
+};
+
+class CGameEventsManager : public singleton<CGameEventsManager>
+{
+public:
+	CGameEventsManager();
+	~CGameEventsManager();
+
+	void	SendEventCharacter(LPCHARACTER ch);
+	void	SetActivateEvent(BYTE bEventID, bool isActivate);
+	void	SetEventTime(BYTE bEventID, DWORD eventTime);
+	bool	IsActivateEvent(BYTE bEventID);
+	DWORD	GetEventTime(BYTE bEventID);
+protected:
+	bool	m_pkActivateEvents[EVENT_MAX_NUM];
+	DWORD	m_dwEventEndTime[EVENT_MAX_NUM];
+private:
+};

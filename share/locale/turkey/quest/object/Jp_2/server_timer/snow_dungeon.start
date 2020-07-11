@@ -1,0 +1,7 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+local v = set . key_level_2 d . setf ( "level" , 2 ) 
+local cord = set . base_cord local pos = set . Position_level_2 d . jump_all ( ( cord [ 1 ] + pos [ 1 ] ) , ( cord [ 2 ] + pos [ 2 ] ) ) 
+d . notice ( "Bazý canavarlarýn üzerinde buz anahtarý var." ) 
+d . notice ( "Buz anahtarlarý ellerinden alýn ve uyan anahtarý bulun! " ) 
+end 

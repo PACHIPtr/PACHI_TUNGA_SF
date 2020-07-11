@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"WEAPON_LIMITATION" "CAN_CHANGE_DIRECTION"
+NeedWeapon		"SWORD" "TWO_HANDED"
+Name			"기혈취명"
+Description		"강력한 베기로 적에게 치명타를 입힌다"
+Range			500
+
+IconFileName	"skill/warrior/gihyeol.sub"
+MotionIndex		8
+Requirement		"격산타우" 5
+
+List AffectData
+{
+	"파괴력 : %.1f 배"	"(SkillPoint * 20 + 100) / 100" ""
+}
+
+CoolTimeFormula		"8"
+NeedSPFormula		"100"
+MaxLevel			"30"

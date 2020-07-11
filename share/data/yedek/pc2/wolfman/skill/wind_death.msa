@@ -1,0 +1,71 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc3\wolfman\skill\wind_death.GR2"
+MotionDuration           1.66667
+Accumulation             0.00   0.00    0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.482563
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wind_death_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.547445
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wind_death_02.mse"
+        EffectPosition       0.000000 -300.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.486618
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      4
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -100.000000 100.000000
+        }
+        Group SphereData01
+        {
+            Radius           150.000000
+            Position         0.000000 -300.000000 100.000000
+        }
+        Group SphereData02
+        {
+            Radius           180.000000
+            Position         0.000000 -530.000000 100.000000
+        }
+        Group SphereData03
+        {
+            Radius           200.000000
+            Position         0.000000 -800.000000 100.000000
+        }
+    }
+}

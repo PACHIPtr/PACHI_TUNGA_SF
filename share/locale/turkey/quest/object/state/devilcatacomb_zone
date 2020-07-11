@@ -1,0 +1,99 @@
+devilcatacomb_zone={["start"]=0,setting= function ()return 
+{ 
+[ "base" ] = { [ "x" ] = 3072 , [ "y" ] = 12032 , } , 
+[ "floor1_s" ] = { [ "x" ] = 20 , [ "y" ] = 20 , } , 
+[ "floor1_e" ] = { [ "x" ] = 500 , [ "y" ] = 470 , } , 
+[ "floor2_s" ] = { [ "x" ] = 510 , [ "y" ] = 18 , } , 
+[ "floor2_e" ] = { [ "x" ] = 978 , [ "y" ] = 470 , } , 
+[ "floor1_entry" ] = { [ "x" ] = 73 , [ "y" ] = 63 , } , 
+[ "floor2_entry" ] = { [ "x" ] = 550 , [ "y" ] = 45 , } , 
+[ "floor3_entry" ] = { [ "x" ] = 1378 , [ "y" ] = 249 , } , 
+[ "floor4_entry" ] = { [ "x" ] = 70 , [ "y" ] = 592 , } , 
+[ "floor5_entry" ] = { [ "x" ] = 846 , [ "y" ] = 898 } , 
+[ "floor6_entry" ] = { [ "x" ] = 1362 , [ "y" ] = 666 } , 
+[ "floor7_entry" ] = { [ "x" ] = 73 , [ "y" ] = 1156 } , 
+[ "map_idx" ] = 216 , 
+[ "rag" ] = 30311 , 
+[ "devil_king" ] = 2591 , 
+[ "reapers_credit1" ] = 30319 , 
+[ "reapers_credit2" ] = 30320 , 
+[ "reapers_credit3" ] = 76002 , 
+[ "reapers_credit4" ] = 79001 , 
+[ "floor3_stone" ] = 8038 , 
+[ "floor3_stone_pos" ] = { 
+{ 1366 , 150 } , 
+{ 1366 , 351 } , 
+{ 1234 , 365 } , 
+{ 1234 , 140 } , 
+{ 1150 , 135 } , 
+{ 1130 , 365 } , 
+{ 1135 , 253 } 
+} , 
+[ "mob_regen_file_path" ] = "data/dungeon/devilcatacomb/" , 
+[ "floor4_regen_file" ] = { "devilcatacomb_floor4_regen1.txt" , 
+"devilcatacomb_floor4_regen2.txt" , 
+"devilcatacomb_floor4_regen3.txt" , 
+"devilcatacomb_floor4_regen4.txt" , 
+"devilcatacomb_floor4_regen5.txt" } , 
+[ "credit_stone" ] = 30101 , 
+[ "credit_stone_pos" ] = { 307 , 323 } , 
+[ "floor2_stone" ] = 30103 , 
+[ "floor2_stone_pos" ] = { 741 , 217 } , 
+[ "floor2_merchant_npc" ] = 20368 , 
+[ "floor2_merchant_npc_pos" ] = { 734 , 214 } , 
+[ "floor4_npc" ] = 30104 , 
+[ "floor4_npc_pos" ] = { 500 , 717 } , 
+[ "devil_king_pos" ] = { { 673 , 829 } , { 691 , 638 } , { 848 , 568 } , { 1026 , 642 } , { 1008 , 862 } } , 
+[ "unlock_stone" ] = 30312 , 
+[ "floor5_stone" ] = 30102 , 
+[ "floor5_stone_pos" ] = { 848 , 735 } , 
+[ "devil_great_king" ] = 2597 , 
+[ "devil_great_king_pos" ] = { 1303 , 704 } , 
+[ "devil_emperor" ] = 2598 , 
+[ "devil_emperor_pos" ] = { 74 , 1103 } , 
+[ "dc2_door_set_size" ] = { 4 , 2 , 3 , 2 } , 
+[ "dc2_door_set1" ] = { 
+{ { 30111 , 566 , 117 , 5 } , { 30112 , 562 , 311 , 5 , } , { 30118 , 663 , 434 , 7 } , { 30119 , 881 , 434 , 7 } } , 
+{ { 30116 , 743 , 390 , 3 } , { 30119 , 612 , 251 , 1 , } } , 
+{ { 30113 , 654 , 211 , 5 } , { 30111 , 707 , 338 , 7 , } , { 30112 , 775 , 336 , 7 } } , 
+{ { 30117 , 733 , 294 , 3 } , { 30113 , 694 , 271 , 1 , } } 
+} , 
+[ "dc2_door_set2" ] = { 
+{ { 30115 , 942 , 141 , 5 } , { 30116 , 942 , 245 , 5 } , { 30117 , 942 , 321 , 5 } , { 30115 , 763 , 64 , 7 } } , 
+{ { 30118 , 643 , 116 , 3 } , { 30114 , 900 , 167 , 1 } } , 
+{ { 30114 , 850 , 293 , 5 } , { 30113 , 715 , 164 , 7 } , { 30114 , 817 , 162 , 7 } } , 
+{ { 30111 , 802 , 277 , 1 } , { 30112 , 800 , 241 , 1 } } 
+} , 
+} 
+end ,spawn_doors= function ()local setting = devilcatacomb_zone . setting ( ) 
+for i = 1 , 4 begin 
+local mob_set = setting . dc2_door_set1 [ i ] 
+local set_size = setting . dc2_door_set_size [ i ] 
+for j = 1 , set_size begin 
+d . set_unique ( i .. "_1_" .. j , d . spawn_mob_dir ( mob_set [ j ] [ 1 ] , mob_set [ j ] [ 2 ] , mob_set [ j ] [ 3 ] , mob_set [ j ] [ 4 ] ) ) 
+end 
+mob_set = setting . dc2_door_set2 [ i ] 
+for j = 1 , set_size begin 
+d . set_unique ( i .. "_2_" .. j , d . spawn_mob_dir ( mob_set [ j ] [ 1 ] , mob_set [ j ] [ 2 ] , mob_set [ j ] [ 3 ] , mob_set [ j ] [ 4 ] ) ) 
+end 
+end 
+end ,is_dc2_doors_clear= function ()local setting = devilcatacomb_zone . setting ( ) 
+local clear = true 
+for i = 1 , 4 begin 
+local set_clear = true 
+local mob_set = setting . dc2_door_set1 [ i ] 
+local set_size = setting . dc2_door_set_size [ i ] 
+for j = 1 , set_size begin 
+set_clear = set_clear and d . is_unique_dead ( i .. "_1_" .. j ) 
+end 
+if not set_clear then 
+set_clear = true 
+mob_set = setting . dc2_door_set2 [ i ] 
+for j = 1 , set_size begin 
+set_clear = set_clear and d . is_unique_dead ( i .. "_2_" .. j ) 
+end 
+end 
+clear = clear and set_clear 
+end 
+return clear 
+end }

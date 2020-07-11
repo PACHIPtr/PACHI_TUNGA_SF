@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "public_check.dds"
+left 0
+top 360
+right 72
+bottom 420

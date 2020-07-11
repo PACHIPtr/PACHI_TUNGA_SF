@@ -1,0 +1,29 @@
+skill_book_chests={["start"]=0,give_books= function (x)local a = { } 
+if x == 71203 or x == 71204 then 
+a = special . active_skill_list [ 1 ] [ 1 ] 
+elseif x == 71205 or x == 71206 then 
+a = special . active_skill_list [ 1 ] [ 2 ] 
+elseif x == 71207 or x == 71208 then 
+a = special . active_skill_list [ 2 ] [ 1 ] 
+elseif x == 71209 or x == 71210 then 
+a = special . active_skill_list [ 2 ] [ 2 ] 
+elseif x == 71211 or x == 71212 then 
+a = special . active_skill_list [ 3 ] [ 1 ] 
+elseif x == 71213 or x == 71214 then 
+a = special . active_skill_list [ 3 ] [ 2 ] 
+elseif x == 71215 or x == 71216 then 
+a = special . active_skill_list [ 4 ] [ 1 ] 
+elseif x == 71217 or x == 71218 then 
+a = special . active_skill_list [ 4 ] [ 2 ] 
+end 
+local n = number ( 1 , table . getn ( a ) ) 
+pc . give_item2_select ( "50300" , 1 ) 
+item . set_socket ( 0 , a [ n ] ) 
+end ,is_big_chest= function ()local x = { 71204 , 71206 , 71208 , 71210 , 71212 , 71214 , 71216 , 71218 } 
+for i = 1 , table . getn ( x ) begin 
+if item . get_vnum ( ) == x [ i ] then 
+return true 
+end 
+end 
+return false 
+end }

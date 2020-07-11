@@ -1,0 +1,18 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Name			"기투치환"
+Description		"생명력을 정신력으로 바꾼다"
+
+IconFileName		"skill/warrior/gitu.sub"
+MotionIndex		10
+
+List AffectData
+{
+	"소모 생명력 20%%" "" ""
+	"변환 정신력 20%%" "" ""
+}
+
+MaxLevel		"5"
+LevelUpPoint		"5"
+CoolTimeFormula		"10"

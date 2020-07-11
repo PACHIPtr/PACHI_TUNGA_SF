@@ -1,0 +1,203 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_dragon_boss/special_attack2.GR2"
+MotionDuration           2.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     13
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.517032
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_bead.mse"
+        EffectPosition       0.000000 -150.000000 700.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead04"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead02"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead03"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead06"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event07
+    {
+        MotionEventType      1
+        StartingTime         1.642336
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "bead07"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dra_s2_throw.mse"
+        EffectPosition       0.000000 0.000000 -300.000000
+    }
+    Group Event08
+    {
+        MotionEventType      2
+        StartingTime         1.660584
+        
+        DuringTime           0.100000
+        Power                300
+        AffectingRange       500
+    }
+    Group Event09
+    {
+        MotionEventType      4
+        StartingTime         1.914761
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -450.000000 300.000000
+        }
+    }
+    Group Event10
+    {
+        MotionEventType      4
+        StartingTime         1.914761
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -900.000000 300.000000
+        }
+    }
+    Group Event11
+    {
+        MotionEventType      4
+        StartingTime         1.914761
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -450.000000 300.000000
+        }
+    }
+    Group Event12
+    {
+        MotionEventType      4
+        StartingTime         1.914761
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -900.000000 300.000000
+        }
+    }
+}

@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+
+Name			"연사"
+Attribute		"NEED_TARGET" "WEAPON_LIMITATION"
+NeedWeapon		"BOW"
+Range			2500
+
+Description		"여러 발의 화살을 연속으로 쏜다"
+IconFileName	"skill/assassin/2.sub"
+MotionIndex		1
+
+List AffectData
+{
+	"%.0f 발의 화살을 연속으로 쏜다"	"2 + floor(SkillLevel / 5)"	""
+}
+
+CoolTimeFormula			"20"
+MotionLoopCountFormula	"2 + floor(SkillLevel / 5)"
+NeedSPFormula			"40 + (2 + floor(SkillLevel / 5)) * 12"

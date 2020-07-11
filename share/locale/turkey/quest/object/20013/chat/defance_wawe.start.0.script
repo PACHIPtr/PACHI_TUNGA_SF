@@ -1,0 +1,130 @@
+addimage ( 35 , 35 , "hidra.tga" ) 
+if not party . is_leader ( ) then 
+say_title ( "Balıkcı :" ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say_reward ( "Cesaretini taktir ediyorum fakat" ) 
+say_reward ( "Bir grubun lideri olman gerekiyor !" ) 
+say ( "" ) 
+say_reward ( "Tüm grup üyelerinin yanında oldugundan emin ol." ) 
+return 
+end 
+if party . get_near_count ( ) < 2 then 
+say_title ( "Balıkcı :" ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say_reward ( "Bu gemiye en az 2 kişi gelmelisin." ) 
+say ( "" ) 
+say_reward ( "Yanında bulunan üye sayısı : " .. party . get_near_count ( ) ) 
+return 
+end 
+local pids = { party . get_member_pids ( ) } 
+local noTicketMembers = { } 
+local notEnoughLevelMembers = { } 
+local notLoginTimeMembers = { } 
+local repeatDungeontime = true 
+local ticketCheck = true 
+local levelCheck = true 
+local ticketGroup = { 31323 , 1 , 31323 , 1 } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local canPass = false 
+for idx = 1 , table . getn ( ticketGroup ) , 2 begin 
+if pc . count_item ( ticketGroup [ idx ] ) >= ticketGroup [ idx + 1 ] then 
+canPass = true 
+break 
+end 
+end 
+if not canPass then 
+table . insert ( noTicketMembers , pc . get_name ( ) ) 
+ticketCheck = false 
+end 
+if pc . level < 100 then 
+table . insert ( notEnoughLevelMembers , pc . get_name ( ) ) 
+levelCheck = false 
+end 
+if ( get_time ( ) < pc . getf ( "defensewave" , "dungeon_last_login_time" ) ) then 
+table . insert ( notLoginTimeMembers , pc . get_name ( ) ) 
+repeatDungeontime = false 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not repeatDungeontime then 
+say_title ( mob_name ( 20013 ) ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Uyarı! Gemi savunmasından yeni çıkmış grup[ENTER]üyeleri mevcut aşağıdaki üyeler 6 saat[ENTER]sonra giriş yapabilir" ) 
+for i , name in next , notLoginTimeMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+if not ticketCheck then 
+say_title ( mob_name ( 20013 ) ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Uyarı! Gemi savunmasına girebilmek için,[ENTER]bütün grup üyelerinin[ENTER]geçit biletine sahip olması gereklidir." ) 
+for i , name in next , noTicketMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+if levelCheck then 
+return 
+else 
+wait ( ) 
+end 
+end 
+if not levelCheck then 
+say_title ( mob_name ( 20013 ) ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+if not ticketCheck then 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Uyarı! Gemi savunmasına girebilmek için,[ENTER]bütün grup üyelerinin[ENTER]geçit biletine sahip olması gereklidir." ) 
+end 
+say ( "Uyarı! Gemi savunmasına girebilmek için,[ENTER]bütün grup üyelerinin[ENTER]100.Seviye'ye ulaşmış olması gereklidir." ) 
+for i , name in next , notEnoughLevelMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+say ( "Meley'i takip etmek için şimdi gemi yolculuğuna" ) 
+say ( "başlamak istiyor musun?" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+if select ( "Evet" , "Hayır" ) == 2 then 
+return 
+end 
+if game . get_event_flag ( "enable_defance_wave_system" ) == 1 then 
+say_title ( mob_name ( 20013 ) ) 
+addimage ( 35 , 35 , "hidra.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say_reward ( "Harita şuanda bakım modunda." ) 
+return 
+end 
+timer ( "Defancemake_dungeon" , 1 ) 

@@ -1,0 +1,20 @@
+enchanted_forest_zone={["start"]=0,setting= function ()return 
+{ 
+[ "map_index" ] = 353 , 
+[ "ticket_vnum" ] = 30613 , 
+[ "dungeon_entry_pos" ] = { 7824 , 15021 } , 
+[ "boss1" ] = 6408 , 
+[ "boss2" ] = 6192 , 
+[ "spawn" ] = { 70 , 941 } , 
+} 
+end ,make_dungeon= function (ld_vid,channel)local setting = enchanted_forest_zone . setting ( ) 
+local event_flag = string . format ( "frt_dungeon_status_%d" , channel ) 
+game . set_event_flag ( event_flag , get_time ( ) + 60 * 60 ) 
+d . new_jump_party ( setting . map_index , setting . dungeon_entry_pos [ 1 ] , setting . dungeon_entry_pos [ 2 ] ) 
+d . setf ( "frt_party_leader_pid" , ld_vid ) 
+party . setf ( "frt_dungeon_index" , d . get_map_index ( ) ) 
+d . spawn_mob ( setting . boss1 , setting . spawn [ 1 ] , setting . spawn [ 2 ] ) 
+clear_server_timer ( "frt_2h_left_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "frt_exit_timer" , get_server_timer_arg ( ) ) 
+server_timer ( "frt_2h_left_timer" , 60 * 60 , d . get_map_index ( ) ) 
+end }

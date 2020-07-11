@@ -1,0 +1,2 @@
+send_letter ( "Yağmacıları kovala! " ) 
+q . set_counter ( "Kalan Sayı " , 30 - pc . getqf ( "mob_kill1_count" ) ) 

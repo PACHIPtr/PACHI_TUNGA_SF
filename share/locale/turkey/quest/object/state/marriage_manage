@@ -1,0 +1,34 @@
+marriage_manage={["start"]=0,give_wedding_gift= function ()local male_item = { 71072 , 71073 , 71074 } 
+local female_item = { 71069 , 71070 , 71071 } 
+if pc . get_sex ( ) == MALE then 
+pc . give_item2 ( male_item [ number ( 1 , 3 ) ] , 1 ) 
+else 
+pc . give_item2 ( female_item [ number ( 1 , 3 ) ] , 1 ) 
+end 
+end ,check_divorce_time= function ()local DIVORCE_LIMIT_TIME = 86400 
+if is_test_server ( ) then 
+DIVORCE_LIMIT_TIME = 60 
+end 
+if marriage . get_married_time ( ) < DIVORCE_LIMIT_TIME then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Daha imzandaki mürekkep yeterince kurumadý!" ) 
+say ( "Kendine biraz zaman ver." ) 
+say ( "" ) 
+return false 
+end 
+return true 
+end ,is_equip_wedding_dress= function ()local a = pc . get_armor ( ) 
+return a >= 11901 and a <= 11904 
+end ,get_wedding_dress= function (pc_job)if 0 == pc_job then 
+return 11901 
+elseif 1 == pc_job then 
+return 11903 
+elseif 2 == pc_job then 
+return 11902 
+elseif 3 == pc_job then 
+return 11904 
+else 
+return 0 ; 
+end 
+end }

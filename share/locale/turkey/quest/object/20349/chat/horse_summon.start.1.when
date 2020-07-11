@@ -1,0 +1,1 @@
+return horse . get_grade ( ) == 2 and pc . countitem ( "50052" ) < 1

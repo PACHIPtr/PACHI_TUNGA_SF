@@ -1,0 +1,11 @@
+servis={["start"]=0,TeleportIsAvailable= function ()local maps = { 5 , 7 , 25 , 27 , 28 , 45 , 47 , 79 , 81 , 112 , 206 , 211 , 212 , 213 } 
+if pc . in_dungeon ( ) then 
+return true 
+end 
+for i = 1 , table . getn ( maps ) begin 
+if pc . get_map_index ( ) == maps [ i ] then 
+return true 
+end 
+end 
+return true 
+end }

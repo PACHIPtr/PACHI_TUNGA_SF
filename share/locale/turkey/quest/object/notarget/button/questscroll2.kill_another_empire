@@ -1,0 +1,12 @@
+setstate ( "start" ) 
+local rt = special . questscroll_reward [ pc . getqf ( "idx" ) ] 
+say ( locale . questscroll . finish ) 
+say ( rt [ 2 ] , locale . gold ) 
+pc . changegold ( rt [ 2 ] ) 
+say ( locale . exp , " " , rt [ 3 ] ) 
+pc . give_exp2 ( rt [ 3 ] ) 
+if rt [ 4 ] ~= 0 then say ( item_name ( rt [ 4 ] ) ) pc . give_item2 ( rt [ 4 ] ) end 
+if rt [ 5 ] ~= 0 then say ( item_name ( rt [ 5 ] ) ) pc . give_item2 ( rt [ 5 ] ) end 
+if rt [ 6 ] ~= 0 then say ( item_name ( rt [ 6 ] ) ) pc . give_item2 ( rt [ 6 ] ) end 
+q . done ( ) 
+pc . setqf ( "idx" , 0 ) 

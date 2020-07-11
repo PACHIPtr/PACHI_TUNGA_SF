@@ -1,0 +1,20 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\Ymir Work\pc3\wolfman\fishing\fishing_wait.GR2"
+MotionDuration           1.5
+Accumulation             -0.14  -1.78   0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      10
+        StartingTime         0.000000
+        
+        EffectFileName       "d:/ymir work/effect/etc/fishing/fishing_wait_react.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        FollowingEnable      0
+        FishingEffectFlag    1
+    }
+}

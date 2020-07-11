@@ -1,0 +1,14 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"STANDING_SKILL" "TOGGLE"
+Name			"공포"
+Description		"약한 몬스터들의 전의를 상실 시킨다"
+
+IconFileName	"skill/sura/gongpo.sub"
+MotionIndex		3
+
+MaxLevel				"5"
+LevelUpPoint			"5"
+NeedSPFormula			"50" 
+ContinuationSPFormula	"3"

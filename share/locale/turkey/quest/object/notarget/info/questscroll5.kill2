@@ -1,0 +1,9 @@
+say_title ( questscroll5 . get_title ( ) ) 
+say ( questscroll5 . get_desc ( ) ) 
+say ( "" ) 
+say_reward ( questscroll5 . get_summ ( ) ) 
+say_reward ( string . format ( "(Kalan %s : %d, %s : %d)" , 
+questscroll5 . get_mob1_name ( ) , questscroll5 . get_mob1_rest_kill_count ( ) , 
+questscroll5 . get_mob2_name ( ) , questscroll5 . get_mob2_rest_kill_count ( ) ) ) 
+say ( "" ) 
+questscroll5 . show_mission_menu ( ) 

@@ -1,0 +1,1 @@
+return pc . get_map_index ( ) == 73

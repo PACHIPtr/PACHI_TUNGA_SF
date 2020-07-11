@@ -1,0 +1,2 @@
+newpet . EggRequest ( item . get_vnum ( ) ) 
+cmdchat ( string . format ( "OpenPetIncubator %d " , ( item . get_vnum ( ) - 55401 ) ) ) 

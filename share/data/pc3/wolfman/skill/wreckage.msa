@@ -1,0 +1,112 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc3\wolfman\skill\wreckage.GR2"
+MotionDuration           1.33333
+Accumulation             0.00   0.00    0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.340633
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wreckage_01.mse"
+        EffectPosition       0.000000 150.000000 20.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.399027
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wreckage_02.mse"
+        EffectPosition       0.000000 300.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.431468
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wreckage_03.mse"
+        EffectPosition       0.000000 -200.000000 -30.000000
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         0.337388
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           180.000000
+            Position         0.000000 -50.000000 100.000000
+        }
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         0.340633
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           180.000000
+            Position         0.000000 -220.000000 100.000000
+        }
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         0.376318
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           180.000000
+            Position         0.000000 -400.000000 100.000000
+        }
+    }
+}

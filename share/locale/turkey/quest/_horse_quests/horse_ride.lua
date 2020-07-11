@@ -1,0 +1,41 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest horse_ride begin
+    state start begin
+        when 20349.chat."Bin (Binici kartýný kulan)" with pc.level>10 and not pc.is_mount() begin
+            --local money = 10000
+            if get_global_time() - pc.getqf("Reitzeit") < 3600 then
+                local no_lend_horse_yet =
+                    "Saatlik at kiralayabilirsin.[ENTER]"..
+                    "At kiralamak istediðin zaman geri gel."
+                say(no_lend_horse_yet)
+            else
+                    say_title("Seyis:")
+                    say("At sürmek mi istiyorsun? Sana binicilik kartýyla")
+                    say("at kiralayabiliriz. Binicilik seviyesine baðlý ")
+                    say("olarak 10 dakika kadar at sürebilirsin. At")
+                    say("sürmekle ilgili henüz çok yetenekli deðilsin, bu")
+                    say("sebeple atý sadece sürebilirsin ancak onunla")
+                    say("saldýrý yapamazsýn.")
+                    say("")
+                local no_horse_ticket = "Binicilik biletine ihtiyacýn var."
+                --local horse_ticket_vnum = 50005
+                local horse_ticket_vnum = 50083
+                local s=select("At sürmek","Sürme")
+                if s==1 then
+                    if pc.countitem(horse_ticket_vnum)>0 then
+                        pc.removeitem(horse_ticket_vnum, 1)
+                        pc.mount(20030, 600)
+                        pc.setqf("Reitzeit", get_global_time())
+                    else
+                        say(no_horse_ticket)
+						say("")
+                    end
+                end
+            end
+        end
+    end
+end

@@ -1,0 +1,26 @@
+if pc . in_dungeon ( ) then local count , check_5 = d . getf ( "metins_6" ) + 1 , false ; 
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 6 then 
+if count < 7 and check_5 == false then 
+d . setf ( "metins_6" , count ) 
+local t = 7 - d . getf ( "metins_6" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Metinleri yok et ve Kristal Ejderha ile yüzleþ! Kalan Metin: " .. t .. "" ) 
+else 
+if d . getf ( "crystal_dragon" ) == 0 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "%s göründü ! onu maðlub et !" , mob_name ( 950 ) ) ) 
+d . notice ( "Kýsa sürede tüm metin taþlarý kýrýldý !" ) 
+d . notice ( "Kristal Ejderha yakýnda görünecek !" ) 
+cleartimer ( "level_six_timer" ) 
+cleartimer ( "level_timer" ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 7 ) 
+d . setf ( "crystal_dragon" , 1 ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 7 ) 
+end 
+check_5 = true 
+end 
+end 
+ return end 

@@ -1,0 +1,7 @@
+title subImage
+version 2.0
+image "ox_event.dds"
+left 0
+top 64
+right 544
+bottom 80

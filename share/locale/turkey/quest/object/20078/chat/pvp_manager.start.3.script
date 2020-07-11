@@ -1,0 +1,43 @@
+say_title ( "PvP Turnuvasýný baþlat:" ) 
+say ( "Lütfen minimum level sýnýrýný gir (Min: 15):" ) 
+local str_min_level = input ( ) 
+say_title ( "PvP Turnuvasýný baþlat:" ) 
+local min_level = tonumber ( str_min_level ) 
+if min_level == nil then 
+say ( "Numara girilmedi." ) 
+say ( "" ) 
+return 
+end 
+if tonumber ( str_min_level ) < 15 then 
+min_level = 15 
+end 
+say ( "Minimum level : " .. tostring ( min_level ) .. "." ) 
+say ( "lütfen maksimum level sýnýrýný gir:" ) 
+local str_max_level = input ( ) 
+say_title ( "PvP Turnuvasýný baþlat:" ) 
+local max_level = tonumber ( str_max_level ) 
+if max_level == nil then 
+say ( "Numara girilmedi." ) 
+say ( "" ) 
+return 
+end 
+if tonumber ( str_max_level ) < min_level then 
+say ( "Maks level min levelden yüksek olmalý." ) 
+say ( "" ) 
+return 
+end 
+game . set_event_flag ( "pvp_minlevel" , min_level ) 
+game . set_event_flag ( "pvp_maxlevel" , max_level ) 
+say ( "Minimum Level: " .. tostring ( min_level ) .. " olarak ayarlandý." ) 
+say ( "Maksimum Level: " .. tostring ( max_level ) .. " olarak ayarlandý." ) 
+say ( "" ) 
+local s = select ( "Baþlat " , "Ýptal et " ) 
+if s == 2 then 
+return 
+end 
+say_title ( "PvP Turnuvasýný baþlat:" ) 
+say ( "" ) 
+say ( "PvP Turnuvasý baþladý. " ) 
+say ( "" ) 
+say_reward ( "Level Limiti: " .. game . get_event_flag ( "pvp_minlevel" ) .. " - " .. game . get_event_flag ( "pvp_maxlevel" ) ) 
+pvp_manager . open_registrations ( ) 

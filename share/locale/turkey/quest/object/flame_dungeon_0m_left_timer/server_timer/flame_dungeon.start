@@ -1,0 +1,6 @@
+local setting = flame_dungeon . setting ( ) 
+if d . select ( get_server_timer_arg ( ) ) then 
+notice_multiline ( "Size ayýrýlan süre doldu.10 Saniye[ENTER]içinde kale'nin kapýlarý sizin için açýlacak." , d . notice ) 
+notice_multiline ( "10 Saniye içinde herkes ýþýnlanacak." , d . notice ) 
+server_timer ( "dungeon_end_timer" , 10 , d . get_map_index ( ) ) 
+end 

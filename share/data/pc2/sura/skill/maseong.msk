@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"마성방어"
+Description		"술법에 대한 저항력을 강화한다"
+
+IconFileName	"skill/sura/maseong.sub"
+List AffectData
+{
+	"마법 방어력 +%.1f"	"SkillPoint / 2"	""
+}

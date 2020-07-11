@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+d . setf ( "level" , 3 ) 
+local cord_MQ = set . base_cord local pos = set . Position_level_3 d . jump_all ( ( cord_MQ [ 1 ] + pos [ 1 ] ) , ( cord_MQ [ 2 ] + pos [ 2 ] ) ) 
+d . notice ( "Bütün düþmanlarý maðlup edin!" ) 
+end 

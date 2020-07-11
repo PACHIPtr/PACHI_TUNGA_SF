@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"WEAPON_LIMITATION" "CAN_CHANGE_DIRECTION"
+NeedWeapon		"SWORD" "TWO_HANDED"
+
+Name			"기공참"
+Description		"전방의 적을 공격한다"
+
+IconFileName	"skill/warrior/gigongcham.sub"
+MotionIndex		4
+
+List AffectData
+{
+	"파괴력 : %.1f 배" "(SkillPoint * 15 + 100) / 100" ""
+}
+
+MaxLevel			"30"
+LevelUpPoint		"1"
+NeedSPFormula		"50"
+CoolTimeFormula		"8"

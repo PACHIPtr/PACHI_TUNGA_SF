@@ -1,0 +1,7 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+local v = set . NpcVnum_level_9 d . setf ( "level" , 9 ) 
+local cord = set . base_cord local pos = set . Position_level_9 d . jump_all ( ( cord [ 1 ] + pos [ 1 ] ) , ( cord [ 2 ] + pos [ 2 ] ) ) 
+d . notice ( "Kuzeyli Ejderha Sütunu'nu yok edin!" ) 
+d . spawn_mob ( v , 849 , 655 ) 
+end 

@@ -1,0 +1,215 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\monster2\hanma_boss_kami\hanma_boss_kami.GR2"
+
+Group ShapeData
+{
+	PathName			"d:/ymir work/monster2/hanma_boss_kami/"
+	ShapeDataCount		1
+
+	Group ShapeData00
+	{
+		ShapeIndex		0
+		Model			"hanma_boss_kami.gr2"
+		SourceSkin		"hanma_boss.dds"
+		TargetSkin		"hanma_boss.dds"
+		SourceSkin2		"hanma_boss_weapon.dds"
+		TargetSkin2		"hanma_boss_weapon.dds"
+		Specular		1.0
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       14
+    
+    Group AttachingData00
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        EffectScriptName     ""
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 L Finger0"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 R Toe0"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 L Toe0"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 R Finger0"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 L Hand"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "hanma_boss_weapon"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining_weapon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData08
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "hanma_boss_weapon"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining_weapon_1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData09
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 R Finger01"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining_weapon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData10
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 R UpperArm"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData11
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 L UpperArm"
+        
+        EffectScriptName     "D:\ymir work\monster2\hanma_boss_kami\kami_shining.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    Group AttachingData12
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           228.000000
+            Position         0.000000 -100.000000 0.000000
+        }
+    }
+    
+    Group AttachingData13
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           192.000000
+            Position         0.000000 -100.000000 0.000000
+        }
+    }
+}

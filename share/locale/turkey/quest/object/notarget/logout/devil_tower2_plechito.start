@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) >= 180000 and pc . get_map_index ( ) < 189999 then pc . setf ( "devil_tower2" , "dungeon_turn" , 1 ) 
+ return end 

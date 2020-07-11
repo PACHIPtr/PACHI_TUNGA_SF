@@ -1,0 +1,21 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc_pet\skipia_general_young1\skipia_general_young1.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc_pet\skipia_general_young1\skipia_general_young1.GR2"
+		SourceSkin			"D:\Ymir Work\npc_pet\skipia_general_young1\skipia_general_young1.dds"
+		TargetSkin			"D:\Ymir Work\npc_pet\skipia_general_young1\skipia_general_young2.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       0
+}

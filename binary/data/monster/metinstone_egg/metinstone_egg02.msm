@@ -1,0 +1,82 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\monster\metinstone_egg\metinstone_egg.GR2"
+
+Group ShapeData
+{
+    PathName 		 "D:\Ymir Work\monster\metinstone_egg\"
+    ShapeDataCount 		 1
+    Group ShapeData00
+    {
+        ShapeIndex 		 0
+        Model 		 "metinstone_egg.GR2"
+        SourceSkin 		 "metinstone_egg01.dds"
+        TargetSkin 		 "metinstone_egg02.dds"
+    }
+}
+Group AttachingData
+{
+    AttachingDataCount       4
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "metinstone_egg00"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           90.000000
+            Position         0.000000 0.000000 70.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "metinstone_egg00"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           105.000000
+            Position         0.000000 0.000000 70.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "metinstone_egg00"
+        
+        EffectScriptName     "D:\Ymir Work\effect\background\metinstone_loop_redblack.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "metinstone_egg00"
+        
+        EffectScriptName     "D:\Ymir Work\effect\etc\direction\direction_land_dragonroom.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

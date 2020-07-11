@@ -1,0 +1,9 @@
+if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 then if d . getf ( "level" ) ~= 7 then 
+pc . remove_item ( "30302" , 1 ) 
+return 
+end 
+say ( "Bu haritayla bir sonraki kata çıkabilirim!" ) 
+pc . remove_item ( "30302" , 1 ) 
+timer ( "devil_jump_8" , 6 ) 
+d . clear_regen ( ) 
+ return end 

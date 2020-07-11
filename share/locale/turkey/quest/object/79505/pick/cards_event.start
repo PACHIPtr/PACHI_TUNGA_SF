@@ -1,0 +1,3 @@
+if pc . count_item ( 79505 ) >= 24 then pc . remove_item ( 79505 , 24 ) 
+pc . give_item2 ( 79506 ) 
+ return end 

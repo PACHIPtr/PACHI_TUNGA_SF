@@ -1,0 +1,14 @@
+local pet_info = PetSystems . get_pet_info ( item . vnum ) 
+if null ~= pet_info then 
+local mobVnum = pet_info [ 1 ] 
+local petName = pet_info [ 2 ] 
+if true == newpet . is_summon ( mobVnum ) then 
+newpet . unsummon ( mobVnum ) 
+else 
+if newpet . count_summoned ( ) < 1 then 
+newpet . summon ( mobVnum , petName , false ) 
+else 
+syschat ( "Zaten bir evcil hayvan çaðýrmýþsýn." ) 
+end 
+end 
+end 

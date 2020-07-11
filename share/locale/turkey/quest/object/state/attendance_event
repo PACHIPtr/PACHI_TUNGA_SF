@@ -1,0 +1,10 @@
+attendance_event={["start"]=0,getInfoByMob= function (mobVnum)info_map = { 
+[ 6415 ] = { "beran_hit_points" , 2000 , 1000 , 500 } , 
+[ 6416 ] = { "nemere_hit_points" , 2000 , 1000 , 500 } , 
+[ 6417 ] = { "razador_hit_points" , 2000 , 1000 , 500 } , 
+[ 6418 ] = { "jotun_thrym_hit_points" , 2000 , 1000 , 500 } , 
+[ 6419 ] = { "red_dragon_hit_points" , 2000 , 1000 , 500 } , 
+} 
+mobVnum = tonumber ( mobVnum ) 
+return info_map [ mobVnum ] 
+end }

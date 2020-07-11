@@ -1,0 +1,8 @@
+if pc . getqf ( "boss_1" ) > 0 then target . delete ( "__BOSS__" ) 
+pc . give_item2 ( "31096" , 1 ) 
+pc . setqf ( "boss_1" , 0 ) 
+notice ( "En Tai Hükümdarý'ndan deðerli tahta elde ettin." ) 
+notice ( "Orman Kaþifi'ne git ve rapor ver." ) 
+cleartimer ( "kill_6" ) 
+set_state ( "return_6" ) 
+ return end 

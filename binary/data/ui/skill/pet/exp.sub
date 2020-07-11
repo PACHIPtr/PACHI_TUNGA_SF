@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "skill_pet.dds"
+left 64
+top 256
+right 96
+bottom 288

@@ -1,0 +1,7 @@
+title subImage
+version 2.0
+image "x1.png"
+left 0
+top 0
+right 1366
+bottom 768

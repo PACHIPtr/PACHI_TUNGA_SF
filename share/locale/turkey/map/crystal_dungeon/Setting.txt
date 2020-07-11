@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	4	4
+BasePosition	2099200	2944000
+TextureSet	textureset\crystal_dungeon.txt
+Environment	crystal_dungeon.msenv
+

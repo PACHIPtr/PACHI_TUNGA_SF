@@ -1,0 +1,22 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/ymir work/monster/santhia_forest_zombie/attack01.GR2"
+MotionDuration           1.800000
+Accumulation             0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.037689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "SceneRoot"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/santhia_forest_zombie/attack_1.mse"
+        EffectPosition       50.000000 -200.000000 20.000000
+    }
+}

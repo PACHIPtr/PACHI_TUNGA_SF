@@ -1,0 +1,55 @@
+if pc . is_busy ( ) == true then 
+syschat ( "Meşgul durumda olduğun için bu işlemi gerçekleştiremezsin." ) 
+return 
+elseif pc . is_dead ( ) == true then 
+syschat ( "Ölü durumda olduğun için bu işlemi gerçekleştiremezsin." ) 
+return 
+end 
+if pc . get_empty_inventory_count ( ) >= 1 then 
+pc . remove_item ( "27987" , 1 ) 
+local cikacaklar = { 
+[ 1 ] = { 0 , 0 } , 
+[ 2 ] = { 0 , 0 } , 
+[ 3 ] = { 0 , 0 } , 
+[ 4 ] = { 0 , 0 } , 
+[ 5 ] = { 0 , 0 } , 
+[ 6 ] = { 0 , 0 } , 
+[ 7 ] = { 0 , 0 } , 
+[ 8 ] = { 0 , 0 } , 
+[ 9 ] = { 0 , 0 } , 
+[ 10 ] = { 1 , 0 } , 
+[ 11 ] = { 0 , 0 } , 
+[ 12 ] = { 0 , 0 } , 
+[ 13 ] = { 0 , 0 } , 
+[ 14 ] = { 0 , 0 } , 
+[ 15 ] = { 1 , 27990 } , 
+[ 16 ] = { 1 , 27990 } , 
+[ 17 ] = { 1 , 27990 } , 
+[ 18 ] = { 1 , 27990 } , 
+[ 19 ] = { 1 , 27990 } , 
+[ 20 ] = { 1 , 27990 } , 
+[ 21 ] = { 1 , 27990 } , 
+[ 21 ] = { 1 , 27990 } , 
+[ 22 ] = { 1 , 27992 } , 
+[ 23 ] = { 1 , 27993 } , 
+[ 24 ] = { 1 , 27994 } , 
+} 
+local sans = number ( 1 , table . getn ( cikacaklar ) ) 
+if sans >= 1 and sans <= 14 then 
+syschat ( "İstiridye kayboldu. " ) 
+elseif sans >= 15 and sans <= 21 then 
+pc . give_item2 ( "27990" , 1 ) 
+syschat ( "İstiridyenin içinde sıradan bir taş parçası var. " ) 
+elseif sans == 22 then 
+pc . give_item2 ( "27992" , 1 ) 
+syschat ( "İstiridyenin içinde Beyaz İnci var. " ) 
+elseif sans == 23 then 
+pc . give_item2 ( "27993" , 1 ) 
+syschat ( "İstiridyenin içinde Mavi İnci var. " ) 
+elseif sans == 24 then 
+pc . give_item2 ( "27994" , 1 ) 
+syschat ( "İstiridyenin içinde Kırmızı İnci var. " ) 
+end 
+else 
+syschat ( "Envanterde yeteri kadar yerin yok!" ) 
+end 

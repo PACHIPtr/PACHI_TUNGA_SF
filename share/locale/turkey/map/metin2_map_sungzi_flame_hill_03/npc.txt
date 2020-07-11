@@ -1,0 +1,2 @@
+//type	cx	cy	sx	sy	z	dir	time	percent	count	vnum
+m	225	161	0	0	0	0	1m	100	1	20081

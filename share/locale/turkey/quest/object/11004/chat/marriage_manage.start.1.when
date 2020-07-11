@@ -1,0 +1,1 @@
+return not pc . is_married ( ) and pc . count_item ( 70302 ) > 0

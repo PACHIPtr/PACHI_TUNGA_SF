@@ -1,0 +1,42 @@
+say_title ( mob_name ( 20078 ) .. ":" ) 
+if game . get_event_flag ( "pvp_tournament" ) == pc . getqf ( "pvp_tournament" ) then 
+say ( "Turnuvaya zaten kayýt yaptýrdýn." ) 
+say ( "" ) 
+return 
+end 
+if pc . get_level ( ) < 15 then 
+say ( "Levelin çok düþük." ) 
+say ( "" ) 
+return 
+end 
+if pc . get_level ( ) < game . get_event_flag ( "pvp_minlevel" ) or pc . get_level ( ) > game . get_event_flag ( "pvp_maxlevel" ) then 
+say ( "Levelin  " .. game . get_event_flag ( "pvp_minlevel" ) .. " ile " .. game . get_event_flag ( "pvp_maxlevel" ) .. " arasýnda olmasý gerekli." ) 
+say ( "" ) 
+return 
+end 
+say ( "Budokana hoþgeldin. Turnuvada senin gibi " ) 
+say ( "oyuncularla savaþacaksýn." ) 
+say ( "" ) 
+say ( "Karþýna çýkan her oyuncuyu öldür." ) 
+say ( "" ) 
+say ( "Bu turnuvaya katýlmak istiyormusun?" ) 
+say ( "" ) 
+local s = select ( "Evet, katýlmak istiyorum " , "Hayýr, ben bir korkaðým " ) 
+say_title ( mob_name ( 20078 ) .. ":" ) 
+if s == 1 then 
+say ( "Turnuva baþladýðý zaman seni çaðýracaðým." ) 
+say ( "" ) 
+say ( "Ýyi þanslar evlat!" ) 
+say ( "" ) 
+pvp_attenders [ attender_count + 1 ] = { name = pc . getname ( ) , level = pc . get_level ( ) , partner = nil , winner = true , fight_mode = 0 , arena = 0 } 
+pc . setqf ( "attender_id" , attender_count + 1 ) 
+pc . setqf ( "pvp_tournament" , game . get_event_flag ( "pvp_tournament" ) ) 
+attender_count = attender_count + 1 
+if achievement_manager ~= nil then 
+achievement_manager . on_participatepvpevent ( ) 
+end 
+elseif s == 2 then 
+say ( "Çok zayýf gözüküyorsun evlat " ) 
+say ( "diðer oyunculara karþý hiç þansýn olamaz." ) 
+say ( "" ) 
+end 

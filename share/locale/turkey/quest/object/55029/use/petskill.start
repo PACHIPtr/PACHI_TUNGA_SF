@@ -1,0 +1,25 @@
+if newpet . count_summoned ( ) < 1 then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Evcil hayvanýný çaðýrmýþ olmalýsýn." ) 
+else 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Evcil Hayvanýn Tüm Becerilerini Sýfýrlamak Ýstiyor musun ?" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+if pc . count_item ( 55029 ) < 1 then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Envanterinde Pet Beceri Parþomeni bulamadým." ) 
+else 
+newpet . resetskill ( 0 ) 
+newpet . resetskill ( 1 ) 
+newpet . resetskill ( 2 ) 
+say_reward ( "Evcil Hayvanýnýzýn becerileri sýfýrlandý." ) 
+say_reward ( "Evcil hayvanýnýzý gönderin ve tekrar çaðýrýn." ) 
+pc . remove_item ( 55029 , 1 ) 
+end 
+else 
+end 
+end 

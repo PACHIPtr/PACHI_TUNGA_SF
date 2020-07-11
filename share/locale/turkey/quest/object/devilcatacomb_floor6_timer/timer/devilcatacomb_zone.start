@@ -1,0 +1,7 @@
+local setting = devilcatacomb_zone . setting ( ) 
+d . setf ( "level" , 6 ) 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 6 ) 
+d . jump_all ( setting . floor6_entry . x + setting . base . x , setting . floor6_entry . y + setting . base . y ) 
+d . regen_file ( get_locale_base_path ( ) .. "/map/metin2_map_devilcatacomb/base6_regen.txt" ) 
+d . spawn_mob ( setting . devil_great_king , setting . devil_great_king_pos [ 1 ] , setting . devil_great_king_pos [ 2 ] ) 
+timer ( "warp_timer" , 3 ) 

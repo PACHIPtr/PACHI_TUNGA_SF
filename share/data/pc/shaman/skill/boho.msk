@@ -1,0 +1,20 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"NEED_TARGET" "FOR_ALLIANCE" "USE_FOR_ME"
+
+Name				"보호"
+Description			"돕고자 하는 자의 내성에 대한 저항력을 강화한다"
+Requirement			"호신" 4
+
+IconFileName		"skill/shaman/boho.sub"
+MotionIndex			14
+MotionIndexForMe	13
+
+List AffectData
+{
+	"내성 저항력 : +%.0f" "SkillPoint * (100 + INT) / 100" ""
+	"지속 시간 : 5분" "" ""
+}
+
+NeedSPFormula		"130"

@@ -1,0 +1,27 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"WEAPON_LIMITATION" "NEED_TARGET"
+NeedWeapon		"SWORD" "DAGGER" "DOUBLE_SWORD"
+Range			800
+
+Name			"궁신탄영"
+Description		"빠르게 적에게 접근하여 치명타를 입힌다"
+
+IconFileName	"skill/assassin/gungsin.sub"
+MotionIndex		0
+
+List ConditionData
+{
+	"단검일때 파괴력 50% 증가"
+	"3초간 맞을때 데미지 2배"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f 배"	"(SkillPoint * 30 + 200) / 100"	""
+}
+
+MaxLevel			"25"
+CoolTimeFormula		"15"
+NeedSPFormula		"50"

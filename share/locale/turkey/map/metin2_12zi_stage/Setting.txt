@@ -1,0 +1,19 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	6	6
+BasePosition	307200	1408000
+TextureSet	textureset\metin2_12temple.txt
+Environment	12zi_stage_01_02.msenv
+Environment1	12zi_stage_02_01.msenv
+Environment2	12zi_stage_02_02.msenv
+Environment3	12zi_stage_03_01.msenv
+Environment4	12zi_stage_03_02.msenv
+Environment5	12zi_stage_04_01.msenv
+Environment6	12zi_stage_04_02.msenv
+Environment7	12zi_stage_05_01.msenv
+Environment8	12zi_stage_05_02.msenv

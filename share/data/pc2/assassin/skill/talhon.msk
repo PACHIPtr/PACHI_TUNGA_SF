@@ -1,0 +1,9 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+
+Name			"탈혼검"
+Description		"분신을 만들어 적응 공격한다"
+
+IconFileName		"items/27000.sub"
+MotionIndex		10

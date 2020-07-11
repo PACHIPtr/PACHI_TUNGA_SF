@@ -1,0 +1,12 @@
+if pc . get_map_index ( ) == 352 then 
+pc . warp ( 432000 , 165000 ) 
+return 
+end 
+if snow_dungeon . is_nemeres_dungeon ( ) == true then 
+local set = snow_dungeon . get_settings ( ) 
+local backk = set . outside_entry_pos if pc . get_level ( ) < set . need_level_group then 
+chat ( "Yetersiz seviye!" ) 
+d . exit ( ) 
+return 
+end 
+end 

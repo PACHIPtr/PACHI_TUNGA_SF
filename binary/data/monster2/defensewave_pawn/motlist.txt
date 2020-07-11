@@ -1,0 +1,5 @@
+GENERAL WAIT wait.msa 100
+GENERAL RUN run.msa 100
+GENERAL SPECIAL normal_attack1.msa 100
+GENERAL FRONT_DAMAGE front_damage.msa 100
+GENERAL WALK run.msa 100

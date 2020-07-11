@@ -1,0 +1,26 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"NEED_TARGET"
+Range			2500
+
+Name			"마령"
+Description		"어둠의 힘을 던져 적에게 상처를 입힌다"
+
+IconFileName	"skill/sura/maryeong.sub"
+MotionIndex		1
+
+List ConditionData
+{
+	"일정 확률로 마비효과"
+	"스플래쉬 공격"
+}
+
+List AffectData
+{
+	"파괴력 %.1f"	"((20 + INT*2) * (15 + SkillPoint)) / 15"	""
+}
+
+MaxLevel			"30"
+CoolTimeFormula		"4"
+NeedSPFormula		"50"

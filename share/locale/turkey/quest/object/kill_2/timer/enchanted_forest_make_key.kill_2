@@ -1,0 +1,6 @@
+if pc . getqf ( "entai_killed" ) == 1 then 
+pc . setqf ( "entai_killed" , 0 ) 
+cleartimer ( "kill_2" ) 
+notice ( "En Tai Rahibi'nden bir ilaç çantasý ele geçirdin." ) 
+set_state ( "return_2" ) 
+end 

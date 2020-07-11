@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"증지술"
+Description		"술법의 지속 시간을 증가 시킨다"
+
+IconFileName	"skill/shaman/jeungji.sub"
+List AffectData
+{
+	"지속 시간 +%.0f%%" "SkillPoint * 20" ""
+}

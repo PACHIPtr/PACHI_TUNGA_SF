@@ -1,0 +1,4 @@
+local idx = pc . get_map_index ( ) 
+if idx == 244 or idx >= ( 244 * 10000 ) and idx < ( ( 244 + 1 ) * 10000 ) then 
+pc . setf ( "mushroom" , "dungeon_turn" , 1 ) 
+end 

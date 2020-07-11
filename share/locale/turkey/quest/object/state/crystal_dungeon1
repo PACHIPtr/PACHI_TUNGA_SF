@@ -1,0 +1,115 @@
+crystal_dungeon1={["start"]=0,settings= function ()return 
+{ 
+[ "map_index" ] = 9 , 
+[ "spawm_pos" ] = { 
+[ 1 ] = { 21272 , 29576 } , 
+[ 2 ] = { 663 + 20992 , 248 + 29440 } , 
+[ 3 ] = { 241 + 20992 , 639 + 29440 } , 
+[ 4 ] = { 406 + 20992 , 648 + 29440 } , 
+[ 5 ] = { 776 + 20992 , 740 + 29440 } , 
+} , 
+[ "level_check" ] = { 
+[ "minimum" ] = 85 , 
+[ "maximum" ] = 120 
+} , 
+[ "keys" ] = { 19985 , 19986 , 19987 } , 
+[ "metin_stones" ] = { 8411 , 8412 , 8413 , 8414 } , 
+} ; 
+end ,spawn_boss= function (level)local boss_settings = { 
+[ 3 ] = { 948 , 741 , 191 } , 
+[ 5 ] = { 949 , 431 , 544 } , 
+[ 7 ] = { 950 , 773 , 681 } 
+} ; 
+return d . spawn_mob ( boss_settings [ level ] [ 1 ] , boss_settings [ level ] [ 2 ] , boss_settings [ level ] [ 3 ] ) 
+end ,spawn_metins_4thfloor= function ()local setting = crystal_dungeon1 . settings ( ) 
+local r = number ( 1 , 8 ) 
+if r == 1 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 2 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 3 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 4 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 5 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 6 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 7 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 410 , 714 ) 
+elseif r == 8 then 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 250 , 659 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 239 , 714 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 257 , 745 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 282 , 777 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 321 , 767 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 371 , 770 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 2 ] , 397 , 737 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 3 ] , 410 , 714 ) 
+end 
+end ,make_dungeon= function ()local setting = crystal_dungeon1 . settings ( ) 
+d . new_jump_party ( setting [ "map_index" ] , setting [ "spawm_pos" ] [ 1 ] [ 1 ] , setting [ "spawm_pos" ] [ 1 ] [ 2 ] ) 
+d . setf ( "lair_check" , 1 ) 
+d . setf ( "level_four_login" , 0 ) 
+crystal_dungeon1 . get_regens ( 1 ) 
+end ,get_regens= function (level)local regens = { 
+[ 1 ] = "data/dungeon/crystal_dungeon/regen_1.txt" , 
+[ 2 ] = "data/dungeon/crystal_dungeon/regen_2.txt" , 
+[ 3 ] = "data/dungeon/crystal_dungeon/regen_3.txt" , 
+[ 4 ] = "data/dungeon/crystal_dungeon/regen_4a.txt" , 
+[ 5 ] = "data/dungeon/crystal_dungeon/regen_4b.txt" , 
+[ 6 ] = "data/dungeon/crystal_dungeon/regen_5.txt" , 
+[ 7 ] = "data/dungeon/crystal_dungeon/regen_5_metins.txt" } ; 
+return d . set_regen_file ( regens [ level ] ) 
+end ,party_get_member_pids= function ()local pids = { party . get_member_pids ( ) } 
+return pids 
+end }

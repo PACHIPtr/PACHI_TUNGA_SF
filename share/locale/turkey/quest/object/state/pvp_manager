@@ -1,0 +1,255 @@
+pvp_manager={["start"]=0,guard_check_position= function ()if pc . get_local_x ( ) >= 84 and pc . get_local_y ( ) >= 84 and pc . get_local_x ( ) <= 116 and pc . get_local_y ( ) <= 116 then 
+pvp_manager . guard_reset ( ) 
+end 
+if pc . get_local_x ( ) >= 84 and pc . get_local_y ( ) >= 136 and pc . get_local_x ( ) <= 116 and pc . get_local_y ( ) <= 168 then 
+pvp_manager . guard_reset ( ) 
+end 
+if pc . get_local_x ( ) >= 136 and pc . get_local_y ( ) >= 84 and pc . get_local_x ( ) <= 168 and pc . get_local_y ( ) <= 116 then 
+pvp_manager . guard_reset ( ) 
+end 
+if pc . get_local_x ( ) >= 136 and pc . get_local_y ( ) >= 136 and pc . get_local_x ( ) <= 168 and pc . get_local_y ( ) <= 168 then 
+pvp_manager . guard_reset ( ) 
+end 
+end ,guard_reset= function ()notice_in_map ( "" .. pc . getname ( ) .. " Arenadan uzaklaþtýrýldý!" ) 
+pc . warp ( 6.5984e+06 , 6.5984e+06 ) 
+end ,open_registrations= function ()game . set_event_flag ( "pvp" , 1 ) 
+attender_count = 0 
+game . set_event_flag ( "pvp_tournament" , get_global_time ( ) ) 
+pvp_attenders = nil 
+pvp_attenders = { } 
+arena = { 
+{ 
+{ 113 , 100 } , 
+{ 88 , 100 } , 
+0 , 
+"SLEEPING" , 
+0 , 
+} , 
+{ 
+{ 113 , 152 } , 
+{ 88 , 152 } , 
+0 , 
+"SLEEPING" , 
+0 , 
+} , 
+{ 
+{ 140 , 152 } , 
+{ 164 , 152 } , 
+0 , 
+"SLEEPING" , 
+0 , 
+} , 
+{ 
+{ 164 , 100 } , 
+{ 140 , 100 } , 
+0 , 
+"SLEEPING" , 
+0 , 
+} , 
+} 
+notice_all ( "PvP Turnuvasý baþlamýþtýr.Savaþ Sorumulusu'ndan giriþ yapabilirsiniz." ) 
+notice_all ( "Level limiti: " .. game . get_event_flag ( "pvp_minlevel" ) .. " - " .. game . get_event_flag ( "pvp_maxlevel" ) .. "" ) 
+end ,close_registrations= function ()if attender_count == 0 then 
+notice_all ( "Giriþler kapandý , kayýt yaptýramazsýn." ) 
+game . set_event_flag ( "pvp" , 0 ) 
+pvp_attenders = nil 
+if pvp_manager_callback ~= nil then 
+pvp_manager_callback ( ) 
+end 
+return 
+end 
+game . set_event_flag ( "pvp" , 2 ) 
+pvp_manager . make_duel_list ( ) 
+duel_list_index = 0 
+playerless_mode = false 
+notice_all ( "PvP Turnuvasý baþlýyor!" ) 
+pvp_manager . refresh_arenas ( ) 
+end ,make_duel_list= function ()duel_list = { } 
+local i = 0 
+for ai = 1 , attender_count , 1 begin 
+if pvp_attenders [ ai ] ~= nil and pvp_attenders [ ai ] . partner == nil and pvp_attenders [ ai ] . winner == true then 
+local partner_id = pvp_manager . findpartner ( tostring ( pvp_attenders [ ai ] . name ) , pvp_attenders [ ai ] . level ) 
+if partner_id ~= nil then 
+pvp_attenders [ ai ] . partner = tostring ( pvp_attenders [ partner_id ] . name ) 
+pvp_attenders [ partner_id ] . partner = tostring ( pvp_attenders [ ai ] . name ) 
+duel_list [ i ] = { fighter_id1 = ai , fighter_id2 = partner_id } 
+i = i + 1 
+end 
+end 
+end 
+for ai = 1 , attender_count , 1 begin 
+if pvp_attenders [ ai ] ~= nil and pvp_attenders [ ai ] . partner == nil and pvp_attenders [ ai ] . winner == true then 
+local partner_id = pvp_manager . findpartner_for_partnerless ( tostring ( pvp_attenders [ ai ] . name ) , pvp_attenders [ ai ] . level ) 
+if partner_id ~= nil then 
+pvp_attenders [ ai ] . partner = tostring ( pvp_attenders [ partner_id ] . name ) 
+pvp_attenders [ partner_id ] . partner = tostring ( pvp_attenders [ ai ] . name ) 
+duel_list [ i ] = { fighter_id1 = ai , fighter_id2 = partner_id } 
+i = i + 1 
+end 
+end 
+end 
+end ,findpartner= function (name,level)local closest_level = nil 
+local partner_id = nil 
+for ai = 1 , attender_count , 1 begin 
+if pvp_attenders [ ai ] ~= nil and pvp_attenders [ ai ] . winner == true and tonumber ( pvp_attenders [ ai ] . level ) <= level + 30 and tonumber ( pvp_attenders [ ai ] . level ) >= level - 30 and tostring ( pvp_attenders [ ai ] . name ) ~= name and pvp_attenders [ ai ] . partner == nil and pvp_manager . is_player_in_map ( tostring ( pvp_attenders [ ai ] . name ) ) == true then 
+if closest_level == nil then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif tonumber ( pvp_attenders [ ai ] . level ) == tonumber ( level ) then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif tonumber ( level ) < tonumber ( closest_level ) and tonumber ( pvp_attenders [ ai ] . level ) < tonumber ( closest_level ) then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif tonumber ( level ) > tonumber ( closest_level ) and tonumber ( pvp_attenders [ ai ] . level ) > tonumber ( closest_level ) then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+end 
+end 
+end 
+return partner_id 
+end ,findpartner_for_partnerless= function (name,level)local closest_level = nil 
+local partner_id = nil 
+for ai = 1 , attender_count , 1 begin 
+if pvp_attenders [ ai ] ~= nil and pvp_attenders [ ai ] . winner == true and tostring ( pvp_attenders [ ai ] . name ) ~= name and pvp_attenders [ ai ] . partner == nil and pvp_manager . is_player_in_map ( tostring ( pvp_attenders [ ai ] . name ) ) == true then 
+if closest_level == nil then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif pvp_attenders [ ai ] . level == level then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif tonumber ( level ) < tonumber ( closest_level ) and pvp_attenders [ ai ] . level < closest_level then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+elseif tonumber ( level ) > tonumber ( closest_level ) and pvp_attenders [ ai ] . level > closest_level then 
+closest_level = pvp_attenders [ ai ] . level partner_id = ai 
+end 
+end 
+end 
+return partner_id 
+end ,is_player_in_map= function (name)if pc . getname ( ) == name then 
+return true 
+end 
+local myname = pc . getname ( ) 
+local target = find_pc_by_name ( name ) 
+local t = pc . select ( target ) 
+if pc . getname ( ) == myname then 
+pc . select ( t ) 
+return false 
+end 
+pc . select ( t ) 
+return true 
+end ,refresh_arenas= function ()for aArena = 1 , 4 , 1 begin 
+if duel_list [ duel_list_index ] == nil then 
+if playerless_mode == true then 
+pvp_manager . init_next_round ( ) 
+else 
+pvp_manager . fight_playerless ( ) 
+end 
+return 
+end 
+if arena [ aArena ] [ 3 ] == 0 then 
+arena [ aArena ] [ 3 ] = 1 
+pvp_manager . fight_init ( duel_list [ duel_list_index ] . fighter_id1 , duel_list [ duel_list_index ] . fighter_id2 , aArena ) 
+end 
+end 
+end ,fight_init= function (pid1,pid2,arena_id)duel_list_index = duel_list_index + 1 
+if pvp_manager . is_player_in_map ( tostring ( pvp_attenders [ pid1 ] . name ) ) == false then 
+notice_in_map ( "" .. tostring ( pvp_attenders [ pid1 ] . name ) .. " adlý oyuncu oyunda olmadýðýndan dolayý diskalifiye edildi." , pc . get_map_index ( ) ) 
+pvp_attenders [ pid1 ] . winner = false 
+pvp_attenders [ pid2 ] . partner = nil 
+arena [ arena_id ] [ 3 ] = 0 
+pvp_manager . refresh_arenas ( ) 
+return 
+end 
+if pvp_manager . is_player_in_map ( tostring ( pvp_attenders [ pid2 ] . name ) ) == false then 
+notice_in_map ( "" .. tostring ( pvp_attenders [ pid2 ] . name ) .. " adlý oyuncu oyunda olmadýðýndan dolayý diskalifiye edildi." , pc . get_map_index ( ) ) 
+pvp_attenders [ pid2 ] . winner = false 
+pvp_attenders [ pid1 ] . partner = nil 
+arena [ arena_id ] [ 3 ] = 0 
+pvp_manager . refresh_arenas ( ) 
+return 
+end 
+notice_in_map ( tostring ( pvp_attenders [ pid1 ] . name ) .. " ve " .. tostring ( pvp_attenders [ pid2 ] . name ) .. " 'nýn düellosu birazdan baþlayacak!" , pc . get_map_index ( ) ) 
+pvp_attenders [ pid1 ] . fight_mode = 1 
+pvp_attenders [ pid2 ] . fight_mode = 1 
+pvp_attenders [ pid1 ] . arena = arena_id 
+pvp_attenders [ pid2 ] . arena = arena_id 
+pvp_manager . local_pc_warp ( tostring ( pvp_attenders [ pid1 ] . name ) , arena [ arena_id ] [ 1 ] [ 1 ] , arena [ arena_id ] [ 1 ] [ 2 ] ) 
+pvp_manager . local_pc_warp ( tostring ( pvp_attenders [ pid2 ] . name ) , arena [ arena_id ] [ 2 ] [ 1 ] , arena [ arena_id ] [ 2 ] [ 2 ] ) 
+end ,fight_playerless= function ()for aArena = 1 , 4 , 1 begin 
+if arena [ aArena ] [ 3 ] ~= 0 then 
+return 
+end 
+end 
+playerless_mode = true 
+pvp_manager . make_duel_list ( ) 
+pvp_manager . refresh_arenas ( ) 
+end ,init_next_round= function ()for aArena = 1 , 4 , 1 begin 
+if arena [ aArena ] [ 3 ] ~= 0 then 
+return 
+end 
+end 
+playerless_mode = false 
+local winner_count = 0 
+winner_id = 0 
+for ai = 1 , attender_count , 1 begin 
+pvp_attenders [ ai ] . partner = nil 
+pvp_attenders [ ai ] . fight_mode = 0 
+if pvp_attenders [ ai ] ~= nil and pvp_attenders [ ai ] . winner == true then 
+winner_count = winner_count + 1 
+winner_id = ai 
+end 
+end 
+if winner_count == 1 then 
+notice_all ( "" .. pvp_attenders [ winner_id ] . name .. " turnuvayý kazandý!" ) 
+local target = find_pc_by_name ( pvp_attenders [ winner_id ] . name ) 
+local t = pc . select ( target ) 
+if achievement_manager ~= nil then 
+achievement_manager . on_winpvpevent ( ) 
+end 
+pc . give_item2 ( game . get_event_flag ( "pvp_price_vnum" ) , game . get_event_flag ( "pvp_price_count" ) ) 
+pc . select ( t ) 
+notice_all ( "PvP Turnuvasý bitti." ) 
+warp_all_to_village ( pc . get_map_index ( ) , 5 ) 
+game . set_event_flag ( "pvp" , 0 ) 
+if pvp_manager_callback ~= nil then 
+pvp_manager_callback ( ) 
+end 
+return 
+end 
+pvp_manager . make_duel_list ( ) 
+duel_list_index = 0 
+if winner_count == 2 then 
+notice_all ( "Final roundu baþlýyor." ) 
+elseif winner_count <= 4 then 
+notice_all ( "Yarý final roundu baþlýyor." ) 
+else 
+notice_all ( "Round baþlýyor." ) 
+end 
+pvp_manager . refresh_arenas ( ) 
+end ,local_pc_warp= function (name,x,y)local target = find_pc_by_name ( name ) 
+local t = pc . select ( target ) 
+pc . warp_local ( pc . get_map_index ( ) , x * 100 , y * 100 ) 
+pc . select ( t ) 
+end ,setqf_by_name= function (name,flag,value)local target = find_pc_by_name ( name ) 
+local t = pc . select ( target ) 
+pc . setqf ( flag , value ) 
+pc . select ( t ) 
+end ,getqf_by_name= function (name,flag)local target = find_pc_by_name ( name ) 
+local t = pc . select ( target ) 
+local rflag = pc . getqf ( flag ) 
+pc . select ( t ) 
+return rflag 
+end ,get_attender_id_by_name= function (name)for ai = 1 , attender_count , 1 begin 
+if tostring ( pvp_attenders [ ai ] . name ) == name then 
+return ai 
+end 
+end 
+return 0 
+end ,get_my_attender_id= function ()return pvp_manager . get_attender_id_by_name ( pc . get_name ( ) ) 
+end ,get_duel_partner= function ()if pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] ~= nil and pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . partner ~= nil then 
+return pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . partner else 
+return nil 
+end 
+end ,get_fight_mode= function ()if pvp_attenders ~= nil and pvp_manager . get_my_attender_id ( ) ~= 0 and pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] ~= nil and pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode ~= nil then 
+return pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode else 
+return 0 
+end 
+end ,set_fight_mode= function (fmode)pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . fight_mode = fmode 
+end ,get_arena= function ()return pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . arena end ,set_arena= function (id)pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . arena = id 
+end ,ask_fight= function (asker,target)return confirm ( find_pc_by_name ( target ) , "Trittst du den Kampf gegen " .. asker .. " an?" , 15 ) 
+end }

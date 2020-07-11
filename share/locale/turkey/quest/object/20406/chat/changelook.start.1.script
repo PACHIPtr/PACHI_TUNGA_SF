@@ -1,0 +1,2 @@
+setskin ( NOWINDOW ) 
+pc . open_changelook ( true , true ) 

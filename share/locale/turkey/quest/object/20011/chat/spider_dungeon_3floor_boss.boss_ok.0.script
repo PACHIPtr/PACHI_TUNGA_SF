@@ -1,0 +1,19 @@
+if pc . count_item ( 30025 ) > 0 and pc . count_item ( 30056 ) > 0 and pc . count_item ( 30057 ) > 0 and pc . count_item ( 30058 ) > 0 and pc . count_item ( 30059 ) > 0 and pc . count_item ( 30326 ) > 0 then 
+say_title ( mob_name ( 20011 ) ) 
+say ( "Harika! Arachnida anahtarý üretmek için gerekli[ENTER]olan tüm malzemeler hazýr. Bir saniye bekle. Fazla[ENTER]uzun sürmeyecek..." ) 
+pc . remove_item ( 30025 , 1 ) 
+pc . remove_item ( 30056 , 1 ) 
+pc . remove_item ( 30057 , 1 ) 
+pc . remove_item ( 30058 , 1 ) 
+pc . remove_item ( 30059 , 1 ) 
+pc . remove_item ( 30326 , 1 ) 
+if math . random ( 1 , 2000 ) <= 1000 then 
+say ( "Ah, evet baþardým! Arachnida anahtarý ürettim. Bu[ENTER]Örümcek Barones'e inmenizi saðlayacak.Uzun[ENTER]bacaklý düþmanlarýnýza karþý sana ve silah[ENTER]arkadaþlarýna iyi þanslar dilerim! Ama acele edin[ENTER]anahtar çok kýrýlgan. 24 saat sonra parçalara[ENTER]ayrýlacaktýr." ) 
+pc . give_item2 ( 30324 , 1 ) 
+else 
+say ( "Ah, hayýr... Korkarým ki bu sefer baþaramadým. Bu[ENTER]anahtarýn üretimi son derece karýþýk. En küçük hata[ENTER]pahalýya mal oluyor. Ne yazýk ki anahtar üretmek[ENTER]için topladýðýn tüm malzemeler boþa gitti. Ama[ENTER]eminim bir dahaki sefere baþaracaðýz!" ) 
+end 
+else 
+say_title ( mob_name ( 20011 ) ) 
+say ( "Bir þey eksik, Arachnida Anahtarý'ný bu þekilde[ENTER]üretmem mümkün deðil. Lazým olanlarý bir kez daha[ENTER]hatýrlatayým: bir örümcek zehir kesesi, bir örümcek[ENTER]yumurta kesesi, bir örümcek aðý, örümcek gözleri[ENTER]örümcek bacaklarý ve kraliçe örümcek zehri." ) 
+end 

@@ -1,0 +1,17 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Name			"팔방풍우"
+Description		"칼을 잡고 회전하여 주위의 적을 공격한다"
+
+IconFileName	"skill/warrior/palbang.sub"
+MotionIndex		15
+
+List AffectData
+{
+	"데미지 : %.0f ~ %.0f"	"(AttackPower * 100 + (SkillPoint * 5)) / 100"	"(AttackPower * (100 + (SkillPoint * 15))) / 100"
+}
+
+CoolTimeFormula		"20 - SkillPoint / 2"
+
+NeedSP			200

@@ -1,0 +1,14 @@
+if game . get_event_flag ( "spider_lair_ongoing_" .. get_channel_id ( ) ) == 1 then 
+local starttime = game . get_event_flag ( "spider_lair_start_time_" .. get_channel_id ( ) ) 
+local current_time = get_global_time ( ) 
+if party . get_leader_pid ( ) == game . get_event_flag ( "spider_lair_leader_" .. get_channel_id ( ) ) then 
+if starttime + 300 >= current_time and party . get_leader_pid ( ) == game . get_event_flag ( "spider_lair_leader_" .. get_channel_id ( ) ) and game . get_event_flag ( "spider_lair_ongoing_" .. get_channel_id ( ) ) == 1 then 
+say ( "Grup liderin yuvaya girdi. Sen de içeriye[ENTER]girip Barones ile savaþmak istiyor musun? " ) 
+local warp = select ( locale . confirm , locale . cancel ) 
+if warp == 1 then 
+pc . warp ( 88100 , 614800 ) 
+return 
+end 
+end 
+end 
+end 

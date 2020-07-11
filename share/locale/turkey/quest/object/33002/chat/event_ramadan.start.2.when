@@ -1,0 +1,1 @@
+return pc . getqf ( "first_notice" ) == 1 and event_ramadan . is_running ( )

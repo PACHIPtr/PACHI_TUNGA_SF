@@ -1,0 +1,89 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_boss_elf1/skill2.gr2"
+MotionDuration           3.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.681280
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone95"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/kula_lasu.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         2.671538
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone119"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -600.000000 100.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         2.778706
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone119"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -900.000000 100.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         2.878219
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone119"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -1200.000000 100.000000
+    }
+    Group Event04
+    {
+        MotionEventType      2
+        StartingTime         2.717467
+        
+        DuringTime           0.300000
+        Power                500
+        AffectingRange       300
+    }
+	Group Event05
+    {
+        MotionEventType      4
+        StartingTime         0.846715
+        DuringTime           2.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        3.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

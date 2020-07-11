@@ -1,0 +1,3 @@
+if snow_dungeon . is_nemeres_dungeon ( ) == true then 
+pc . setf ( "snow_dungeon" , "dungeon_turn" , 1 ) 
+end 

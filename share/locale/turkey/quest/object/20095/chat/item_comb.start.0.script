@@ -1,0 +1,8 @@
+say ( "Hoş geldin! " ) 
+say ( "Bende kitap mı takas edeceksin? Harika! Beceri ve " ) 
+say ( "Ustalık kitaplarını her zaman alırım. Bana " ) 
+say ( "bunlardan 10 tane getirirsen sana sınıfına uygun " ) 
+say ( "bir beceri kitabı veririm. Adil bir pazarlık, " ) 
+say ( "değil mi? Ha, neredeyse söylemeyi unutuyordum, bu " ) 
+say ( "Takas için 1.000.000 Yang isterim. " ) 
+say ( ) 

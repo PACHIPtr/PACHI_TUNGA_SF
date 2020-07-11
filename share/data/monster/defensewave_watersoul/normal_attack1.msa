@@ -1,0 +1,51 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/defensewave_watersoul/normal_attack1.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         0.821168
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           230.000000
+            Position         0.000000 -150.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      6
+        StartingTime         0.868613
+        
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FlyFileName       "d:/ymir work/effect/monster2/defense_soul_n1_throw.msf"
+        FlyPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      2
+        StartingTime         0.861314
+        
+        DuringTime           0.100000
+        Power                100
+        AffectingRange       200
+    }
+}

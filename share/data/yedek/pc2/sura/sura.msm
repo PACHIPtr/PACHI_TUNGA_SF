@@ -1,0 +1,125 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:/YMIR WORK/pc/sura/sura_novice.GR2"
+
+Group ShapeData
+{
+	PathName	"d:/ymir Work/pc/sura/"
+
+	ShapeDataCount		11	
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"sura_novice.GR2"
+		SourceSkin			"sura_novice_black.dds"
+		TargetSkin			"sura_novice_black.dds"
+	}
+	Group ShapeData01
+	{
+		ShapeIndex			1
+
+		Model				"sura_novice.GR2"
+		SourceSkin			"sura_novice_black.dds"
+		TargetSkin			"sura_novice_blue.dds"
+	}
+	Group ShapeData02
+	{
+		ShapeIndex			3
+		Model				"sura_jinhon.GR2"
+	}
+	Group ShapeData03
+	{
+		ShapeIndex			4
+		Model				"sura_jinhon.GR2"
+		SourceSkin			"sura_jinhon.dds"
+		TargetSkin			"sura_mageuk.dds"
+	}
+	Group ShapeData04
+	{
+		ShapeIndex			5
+		Model				"sura_jinhon.GR2"
+		SourceSkin			"sura_jinhon.dds"
+		TargetSkin			"sura_biun.dds"
+	}	
+	Group ShapeData05
+	{
+		ShapeIndex			6
+		Model				"sura_saryeong.GR2"
+	}
+	Group ShapeData06
+	{
+		ShapeIndex			7
+		Model				"sura_saryeong.GR2"
+		SourceSkin			"sura_saryeong.dds"
+		TargetSkin			"sura_eumyang.dds"
+	}
+	Group ShapeData07
+	{
+		ShapeIndex			8
+		Model				"sura_saryeong.GR2"
+		SourceSkin			"sura_saryeong.dds"
+		TargetSkin			"sura_heukbi.dds"
+	}
+	Group ShapeData08
+	{
+		ShapeIndex			9
+		Model				"sura_unra.GR2"
+	}
+	Group ShapeData09
+	{
+		ShapeIndex			10
+		Model				"sura_unra.GR2"
+		SourceSkin			"sura_unra.dds"
+		TargetSkin			"sura_gwimyeon.dds"
+	}
+	Group ShapeData10
+	{
+		ShapeIndex			11
+		Model				"sura_unra.GR2"
+		SourceSkin			"sura_unra.dds"
+		TargetSkin			"sura_gwimyeon.dds"
+	}
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           40.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           70.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+}

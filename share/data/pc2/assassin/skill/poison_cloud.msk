@@ -1,0 +1,18 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Attribute		"NEED_TARGET" "MELEE_ATTACK"
+
+Name			"독구름"
+Description		"적의 주위에 독으로 구름을 만든다"
+
+IconFileName	"skill/assassin/poison_cloud.sub"
+MotionIndex		13
+
+List AffectData
+{
+	"%.1f 배의 타격"	"1 + SkillPoint / 4"	""
+}
+
+CoolTimeFormula		"40 - SkillPoint"
+NeedSPFormula		"50"

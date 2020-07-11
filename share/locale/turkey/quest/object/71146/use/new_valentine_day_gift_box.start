@@ -1,0 +1,8 @@
+new_valentine_day_gift_box . gift ( item . get_id ( ) ) 
+local n = item . get_socket ( 0 ) 
+if n == 9 then 
+item . remove ( ) 
+else 
+item . set_socket ( 0 , n + 1 ) 
+end 
+syschat ( string . format ( "%s adet kutudan %s adet açabilirsin." , 10 , 9 - n ) ) 

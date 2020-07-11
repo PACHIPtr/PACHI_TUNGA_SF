@@ -1,0 +1,15 @@
+if get_global_time ( ) < pc . getqf ( "retry_limit_time" ) - 3600 and party . get_leader_pid ( ) == game . get_event_flag ( "spider_lair_leader_" .. get_channel_id ( ) ) then 
+pc . setqf ( "firstIn" , 0 ) 
+elseif pc . getx ( ) >= 827 and pc . getx ( ) <= 937 and pc . gety ( ) >= 6127 and pc . gety ( ) <= 6257 then 
+pc . warp ( 95900 , 571000 ) 
+pc . remove_item ( 30327 , 1 ) 
+else 
+pc . remove_item ( 30327 , 1 ) 
+set_state ( "boss_ok" ) 
+local limit = pc . getqf ( "retry_limit_time" ) 
+if limit > ( get_global_time ( ) + 3600 ) then 
+limit = ( get_global_time ( ) + 3600 ) 
+end 
+pc . setqf ( "retry_limit_time" , limit ) 
+local duration = limit - get_global_time ( ) 
+end 

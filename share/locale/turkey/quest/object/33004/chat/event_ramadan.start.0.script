@@ -1,0 +1,25 @@
+local setting = event_ramadan . setting ( ) 
+if pc . count_item ( setting . iftar ) == 0 then 
+say_title ( " Niyetli Vatandaþ: " ) 
+say ( "" ) 
+say ( "Gerçekten çok açým.[ENTER]Bana merhamet et.[ENTER]Lütfen bana iftar yemeði ver, yoksa açlýktan öleceðim. " ) 
+elseif pc . count_item ( setting . iftar ) > 0 then 
+say_title ( " Niyetli Vatandaþ: " ) 
+say ( "" ) 
+say ( "Aaa, bu iftar yemeði deðil mi? Simitler ne kadar[ENTER]da nefis kokuyor...Karnýmý doyurursan ömür boyu sana dua edeceðim." ) 
+local s = select ( "Tabi, buyur. " , "Malesef veremem. " ) 
+if 2 == s then 
+say_title ( " Niyetli Vatandaþ: " ) 
+say ( "" ) 
+say ( "Çok teþekkür ederim. Hakikaten çok yardýmsever ve merhametli bir insanmýþsýn. " ) 
+return 
+end 
+say_title ( " Niyetli Vatandaþ: " ) 
+say ( "" ) 
+say ( "Bu iyiliðini hiç [ENTER]unutmayacaðým. Bütün dualarýn kabul olsun. " ) 
+pc . give_item2 ( setting . box , 1 ) 
+pc . remove_item ( setting . iftar , 1 ) 
+end 
+if not event_ramadan . is_running ( ) then 
+npc . purge ( ) 
+end 

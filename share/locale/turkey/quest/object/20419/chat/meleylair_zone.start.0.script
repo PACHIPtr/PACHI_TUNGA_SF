@@ -1,0 +1,11 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Ayrýlmak Ýstiyor musun? " ) 
+say ( "" ) 
+local agree = select ( "Evet " , "Hayýr " ) 
+if agree == 1 then 
+MeleyLair . Leave ( ) 
+else 
+setskin ( NOWINDOW ) 
+return 
+end 

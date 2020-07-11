@@ -1,0 +1,19 @@
+ScriptType			SkillDataScript
+
+Type				HIGH
+Attribute			"STANDING_SKILL"
+
+Name				"뇌전령"
+Description			"벼락을 뿜는 바람의 정령을 동행 시킨다"
+
+IconFileName		"skill/shaman/noejeon.sub"
+MotionIndex			23
+
+List AffectData
+{
+	"데미지 : %.0f" "(Level + 5 + (INT / 2)) * ((10 + SkillPoint) / 10)" ""
+}
+
+CoolTimeFormula			"6 * 60"
+NeedSPFormula			"200"
+ContinuationSPFormula	"5"

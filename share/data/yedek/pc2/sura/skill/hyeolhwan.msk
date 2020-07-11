@@ -1,0 +1,20 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"CAN_USE_IF_NOT_ENOUGH"
+Name			"혈환정법"
+Description		"정신력를 이용하여 생명력을 회복시킨다"
+Requirement		"건곤치환" 5
+
+IconFileName	"skill/sura/hyeolhwan.sub"
+MotionIndex		6
+
+List AffectData
+{
+	"최대 생명력의 %.0f%% 회복" "SkillPoint * 10" ""
+}
+
+MaxLevel			"10"
+LevelUpPoint		"5"
+CoolTimeFormula		"8"
+NeedSPFormula		"MaxHP"

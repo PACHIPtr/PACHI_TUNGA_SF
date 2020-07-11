@@ -1,0 +1,3 @@
+say ( "Senin için birþeyleri yükseltebilirim..." ) 
+say ( "Eþyayý sürükle ve yeni bir eþya oluþtur." ) 
+command ( "cube open" ) 

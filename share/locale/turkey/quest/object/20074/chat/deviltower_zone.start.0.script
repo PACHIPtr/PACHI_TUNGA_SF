@@ -1,0 +1,43 @@
+if not npc . lock ( ) then 
+say ( "" ) 
+say ( "Þu anda baþka biriyle konuþuyorum!" ) 
+say ( "Biraz bekle ya da sonra tekrar gel!" ) 
+return 
+end 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( "Kulenin 7. katýna girmek mi istiyorsun?" ) 
+say ( "Bu katla mücadele etmek muhteþem beceriler ve" ) 
+say ( "büyük bir yazgý gerektirir." ) 
+say ( "Sadece 75. seviyeye ulaþtýysan" ) 
+say ( "seni oraya ýþýnlayabilirim." ) 
+wait ( ) 
+if pc . level >= 75 then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( "Üst kata çýkmak için" ) 
+say ( "yeterli deneyime ve güce sahipsin." ) 
+say ( "Girebilirsin!" ) 
+say ( "" ) 
+local gec = select ( "Git!" , "Vazgeç " , "Kuleyi terket!" ) 
+if gec == 1 then 
+timer ( "devil_jump_7" , 6 ) 
+npc . unlock ( ) 
+npc . purge ( ) 
+return 
+elseif gec == 2 then 
+npc . unlock ( ) 
+return 
+elseif gec == 3 then 
+npc . unlock ( ) 
+pc . warp ( 590500 , 110500 ) 
+end 
+else 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( "Üzgünüm sadece" ) 
+say ( "75. seviyeye ulaþanlarý bir" ) 
+say ( "üst kata alabilirim." ) 
+say ( "" ) 
+npc . unlock ( ) 
+wait ( ) 
+pc . warp ( 590500 , 110500 ) 
+return 
+end 

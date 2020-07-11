@@ -1,0 +1,8 @@
+if npc . get_race ( ) == 8059 then local count = pc . getqf ( "stone_4" ) + 1 
+if party . is_party ( ) then 
+party . setqf ( "stone_4" , count ) 
+else 
+pc . setqf ( "stone_4" , count ) 
+end 
+q . set_counter ( "Kalan sayý " , 5 - count ) 
+ return end 

@@ -1,0 +1,119 @@
+if not marriage_manage . check_divorce_time ( ) then 
+return 
+end 
+local u_vid = marriage . find_married_vid ( ) 
+if u_vid == 0 or not npc . is_near_vid ( u_vid , 10 ) then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Bir eþin olmadan boþanamazsýn." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Yasal bir ayrýlýk için" ) 
+say ( "500.000 Yang ve eþinin" ) 
+say ( "onayý gerekli." ) 
+say ( "Gerçekten boþanmak istiyor musun? " ) 
+say ( "" ) 
+local MONEY_NEED_FOR_ONE = 500000 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+local m_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if not m_have_ring then 
+say ( "Nikah yüzüðünü getir." ) 
+return ; 
+end 
+if not u_have_ring then 
+say ( "Eþinin nikah yüzüðü yanýnda deðil." ) 
+return ; 
+end 
+if not m_enough_money then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Bosanmak için yeterli Yang'a sahip deðilsin." ) 
+say ( "" ) 
+say_reward ( string . format ( "Boþanmak için %d Yang gerekli." , MONEY_NEED_FOR_ONE / 10000 ) ) 
+say ( "" ) 
+return ; 
+end 
+if not u_enough_money then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Boþanmak için yeterli Yang'a sahip deðilsin." ) 
+say ( "" ) 
+say_reward ( "Boþanmak için 500.000 Yang'a ihtiyacýn var." ) 
+say ( "" ) 
+return ; 
+end 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Gerçekten bosanmak istiyor musun? Bu çok büyük" ) 
+say ( "bir hata olabilir." ) 
+say ( "" ) 
+say ( "Gerçekten istiyor musun?" ) 
+say ( "" ) 
+local c = select ( "Evet" , "Hayýr" ) 
+if 2 == c then 
+say_pc_name ( ) 
+say ( "" ) 
+say ( "Fikrimi deðiþtirdim." ) 
+say ( "Bosanmak istemiyorum." ) 
+say ( "" ) 
+wait ( ) 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Umarým huzurlu ve uzun bir evliliðiniz olur." ) 
+say ( "" ) 
+say_reward ( "Boþanma gerçekleþmedi." ) 
+say ( "" ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , pc . name .. "Boþanmak istediðine emin misin?" , 30 ) 
+if ok_sign == CONFIRM_OK then 
+local m_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local m_have_ring = pc . countitem ( 70302 ) > 0 
+local old = pc . select ( u_vid ) 
+local u_enough_money = pc . gold > MONEY_NEED_FOR_ONE 
+local u_have_ring = pc . countitem ( 70302 ) > 0 
+pc . select ( old ) 
+if m_have_ring and m_enough_money and u_have_ring and u_enough_money then 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - MONEY_NEED_FOR_ONE ) 
+local old = pc . select ( u_vid ) 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_money ( - MONEY_NEED_FOR_ONE ) 
+pc . select ( old ) 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Eþinden ayrýldýn. Artýk evli deðilsin." ) 
+say ( "Belki de doðru olan budur. Belki de" ) 
+say ( "mutluluðu böyle bulursun." ) 
+say ( "" ) 
+say_reward ( "Boþanma gerçekleþti." ) 
+say ( "" ) 
+marriage . remove ( ) 
+else 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Evraklarýnýz tam deðil." ) 
+say ( "Lütfen sonra tekrar gelin." ) 
+say ( "" ) 
+say_reward ( "Boþanma iptal edildi." ) 
+say ( "" ) 
+end 
+else 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Eþiniz bosanmak istemiyor." ) 
+say ( "Önce anlaþma saðlayýn." ) 
+say ( "" ) 
+say_reward ( "Boþanma iptal edildi." ) 
+say ( "" ) 
+end 
+end 

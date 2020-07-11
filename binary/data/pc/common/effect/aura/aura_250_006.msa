@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc\common\effect\aura\aura_250_006.GR2"
+MotionDuration           0.333333
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.004055
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Spine2rink"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc/common/effect/aura/aura_wing_lv06.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

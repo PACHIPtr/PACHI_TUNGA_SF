@@ -1,0 +1,13 @@
+olympic_badge={["start"]=0,["__GIVEUP__"]=-387375033,["information"]=695801987,["step1"]=-1393546546,has_it= function ()local a = pc . count_item ( 30265 ) 
+local b = pc . count_item ( 30266 ) 
+local c = pc . count_item ( 30267 ) 
+local d = pc . count_item ( 30268 ) 
+local e = pc . count_item ( 30269 ) 
+local perfect = a > 0 and b > 0 and c > 0 and d > 0 and e > 0 
+local notyet = a > 0 or b > 0 or c > 0 or d > 0 or e > 0 
+if perfect then 
+return 1 
+elseif notyet then 
+return 0 
+end 
+end }

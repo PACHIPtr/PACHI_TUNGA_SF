@@ -1,0 +1,8 @@
+flame_dungeon . entry_setting ( ) 
+local idx = pc . get_map_index ( ) 
+if flame_dungeon . is_flamed ( idx ) and flame_dungeon . map_index_compare ( ) then 
+pc . setf ( "flame_dungeon" , "exit_time" , get_global_time ( ) ) 
+end 
+if flame_dungeon . is_flamed ( idx ) then 
+pc . setf ( "flame_dungeon" , "exit_time" , get_global_time ( ) ) 
+end 

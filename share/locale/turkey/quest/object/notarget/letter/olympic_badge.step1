@@ -1,0 +1,2 @@
+if pc . level >= 30 then send_letter ( "Kahramanlık Madalyası " ) 
+ return end 

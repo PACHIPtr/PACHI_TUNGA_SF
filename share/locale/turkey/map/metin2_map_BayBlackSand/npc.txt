@@ -1,0 +1,7 @@
+//type	cx	cy	sx	sy	z	dir	time	percent	count	vnum
+// quest NPC
+m	677	1414	0	0	0	1	1m	100	1	20379
+// ±Ê∏∑¿Ã NPC
+m	641	70	0	0	0	1	1m	100	1	20375
+m	649	70	0	0	0	1	1m	100	1	20375
+m	645	70	0	0	0	1	1m	100	1	20374

@@ -1,0 +1,9 @@
+local idx = pc . get_map_index ( ) 
+local setting = enchanted_forest_zone . setting ( ) 
+if idx >= ( setting . map_index * 10000 ) and idx < ( setting . map_index * 10000 + 10000 ) then 
+pc . setqf ( "exit_time_logout" , get_global_time ( ) + 5 * 60 ) 
+if pc . getqf ( "dungeon_enter" ) > 0 then 
+pc . setqf ( "dungeon_enter" , 0 ) 
+end 
+pc . setf ( "enchanted_forest" , "limit_activity" , get_time ( ) + 10 * 60 ) 
+end 

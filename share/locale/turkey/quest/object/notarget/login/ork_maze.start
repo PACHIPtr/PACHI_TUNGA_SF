@@ -1,0 +1,12 @@
+if pc . get_map_index ( ) == 245 then pc . set_warp_location ( 67 , 2894 , 66 ) 
+d . exit ( ) 
+ return end if pc . get_map_index ( ) >= 2.45e+06 and pc . get_map_index ( ) < 2.46e+06 then if pc . getqf ( "join_orcmaze_dung" ) > 0 then 
+pc . setqf ( "join_orcmaze_dung" , 0 ) 
+d . setqf2 ( "orcmaze_dungeon" , "last_exit_time" , get_global_time ( ) ) 
+d . setf ( "orc_level" , 1 ) 
+d . regen_file ( "data/dungeon/orcmaze/regen_1.txt" ) 
+server_timer ( "orclogintime1" , 5 , d . get_map_index ( ) ) 
+d . set_unique ( "door" , d . spawn_mob_ac_dir ( 20387 , 236 , 229 , 195 ) ) 
+server_timer ( "orcfloor1_eli_check_timer" , 5 , d . get_map_index ( ) ) 
+end 
+ return end 

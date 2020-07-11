@@ -1,0 +1,24 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"STANDING_SKILL" "TOGGLE"
+Name			"경공술"
+Description		"몸을 가볍게 하여 이동 속도를 높인다"
+
+IconFileName	"skill/assassin/gyeonggong.sub"
+MotionIndex		3
+
+List AffectData
+{
+	"이동속도 : +%.0f"	"3 + SkillPoint"	""
+}
+
+List MasterAffectData
+{
+	"마스터 보너스 이동 속도 +2"
+}
+
+MaxLevel 				"15"
+LevelUpPoint			"1"
+NeedSPFormula			"100"
+ContinuationSPFormula 	"6" 

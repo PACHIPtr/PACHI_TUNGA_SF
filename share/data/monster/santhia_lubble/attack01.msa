@@ -1,0 +1,28 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\santhia_lubble\attack01.GR2"
+MotionDuration           1.800000
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.800000
+        AttackingEndTime     0.850000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            1.000000 0.000000 -280.000000 200.000000 -0.000000 0.000000 150.000000
+		}
+   }
+}

@@ -1,0 +1,3 @@
+dragon_charm={["start"]=0,kontrol= function ()if pc . is_busy ( ) == true then return true end 
+return false 
+end }

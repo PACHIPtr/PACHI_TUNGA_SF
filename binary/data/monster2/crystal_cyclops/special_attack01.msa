@@ -1,0 +1,87 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster2\troll_argus\special_attack01.GR2"
+MotionDuration           2.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.939173
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone_tooth00"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/crystal_cyclops/water_emission.mse"
+        EffectPosition       2.117000 -100.000000 157.662994
+    }
+    Group Event01
+    {
+        MotionEventType      4
+        StartingTime         0.987835
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -150.000000 50.000000
+        }
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         1.012165
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -400.000000 50.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.036496
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -650.000000 50.000000
+        }
+    }
+}

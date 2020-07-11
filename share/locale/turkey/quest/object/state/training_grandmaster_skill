@@ -1,0 +1,17 @@
+training_grandmaster_skill={["start"]=0,BuildGrandMasterSkillList= function (job,group)GRAND_MASTER_SKILL_LEVEL = 30 
+PERFECT_MASTER_SKILL_LEVEL = 40 
+local skill_list = special . active_skill_list [ job + 1 ] [ group ] 
+local ret_vnum_list = { } 
+local ret_name_list = { } 
+table . foreach ( skill_list , 
+function ( i , skill_vnum ) 
+local skill_level = pc . get_skill_level ( skill_vnum ) 
+if skill_level >= GRAND_MASTER_SKILL_LEVEL and skill_level < PERFECT_MASTER_SKILL_LEVEL then 
+table . insert ( ret_vnum_list , skill_vnum ) 
+local name = locale . GM_SKILL_NAME_DICT [ skill_vnum ] 
+if name == nil then name = skill_vnum end 
+table . insert ( ret_name_list , name ) 
+end 
+end ) 
+return { ret_vnum_list , ret_name_list } 
+end }

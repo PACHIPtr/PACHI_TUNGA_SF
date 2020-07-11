@@ -1,0 +1,11 @@
+if pc . getqf ( "entai_killed_11" ) == 1 then pc . setqf ( "entai_killed_11" , 0 ) 
+pc . give_item2 ( "31097" , 1 ) 
+q . set_counter ( "Kalan sayý " , 5 - pc . count_item ( "31097" ) ) 
+if pc . count_item ( "31097" ) == 5 then 
+notice ( "En Tai Ýmhacý'larýndan En Tai þebnemi elde ettin." ) 
+notice ( "Bunlarý Orman Casusu'na götür." ) 
+cleartimer ( "kill_5" ) 
+clear_letter ( ) 
+set_state ( "return_5" ) 
+end 
+ return end 

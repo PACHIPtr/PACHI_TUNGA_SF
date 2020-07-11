@@ -1,0 +1,30 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\nephrite_monster\attack00.GR2"
+MotionDuration           1.533333
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.450000
+        AttackingEndTime     1.623173
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            0.450000 0.000000 -180.000000 0.000000 -0.000000 -150.000000 150.000000
+            0.510000 0.000000 -320.000000 150.000000 -0.000000 -180.000000 0.000000
+            0.540000 0.000000 -380.000000 80.000000 -0.000000 -180.000000 0.000000
+		}
+   }
+}

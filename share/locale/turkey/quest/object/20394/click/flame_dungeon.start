@@ -1,0 +1,2 @@
+if pc . get_level ( ) >= 90 then set_state ( "run" ) 
+ return end 

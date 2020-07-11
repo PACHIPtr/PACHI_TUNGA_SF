@@ -1,0 +1,23 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"WEAPON_LIMITATION"	"TOGGLE" "STANDING_SKILL"
+NeedWeapon		"SWORD" "TWO_HANDED"
+
+Name			"검경"
+Description		"공격력과 공격거리를 일정시간 동안 증가시킨다"
+Requirement		"기공술" 6
+
+IconFileName		"skill/warrior/geomgyeong.sub"
+MotionIndex		6
+
+List AffectData
+{
+	"공격력 +%.0f"	"1 + (SkillPoint / 3)" ""
+}
+
+MaxLevel				"15"
+LevelUpPoint			"3"
+NeedSPFormula			"100"
+ContinuationSPFormula	"5"
+

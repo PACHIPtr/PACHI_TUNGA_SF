@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_fishmon\attack00.GR2"
+MotionDuration           1.333333
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.486089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Root"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/fishmon_attack00.mse"
+        EffectPosition       0.000000 -170.000000 80.000000
+    }
+}

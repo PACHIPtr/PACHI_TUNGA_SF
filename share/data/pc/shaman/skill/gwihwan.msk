@@ -1,0 +1,14 @@
+ScriptType			SkillDataScript
+
+Type				LOW
+Attribute			"STANDING_SKILL"
+
+Name				"귀환"
+Description			"귀환의 진을 통해 마을로 돌아간다"
+
+IconFileName		"skill/shaman/gwihwan.sub"
+MotionIndex			7
+
+NeedSPFormula		"50"
+MaxLevel			3
+LevelUpPoint		3

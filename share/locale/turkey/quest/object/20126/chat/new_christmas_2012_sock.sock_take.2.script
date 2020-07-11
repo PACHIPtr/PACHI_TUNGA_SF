@@ -1,0 +1,14 @@
+local n = pc . count_item ( 50010 ) 
+if n < 25 then 
+say_title ( mob_name ( 20126 ) ) 
+say ( "Bana en az 5 çorap getir.[ENTER]Karþýlýðýnda bir ödül vereceðim.[ENTER]Urgh, yýpranmýþ çorap kokusu dayanýlmaz![ENTER]Mutlu noeller! " ) 
+wait ( ) 
+else 
+say_title ( mob_name ( 20126 ) ) 
+say ( "Ha ha ha yeterince birikmiþ çorap var.[ENTER]Sonra bakayým.[ENTER]Urrgh, bu koku ... Bu kesinlikle doðru çorap![ENTER]Mutlu noeller! " ) 
+wait ( ) 
+pc . remove_item ( 50010 , 5 ) 
+say_title ( locale . reward ) 
+pc . give_item2 ( 71144 ) 
+say_reward ( string . format ( "%s : 1%s" , item_name ( 71144 ) , locale . count_postfix ) ) 
+end 

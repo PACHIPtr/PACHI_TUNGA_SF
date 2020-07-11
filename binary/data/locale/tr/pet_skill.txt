@@ -1,0 +1,20 @@
+1	Dayanýklýlýk (Savaþçý)	jijoong	PASSIVE	Savaþçý ataklarýna karþý dayanýklýlýk (pasif)	0
+2	Dayanýklýlýk (Sura)	jijoong	PASSIVE	Sura ataklarýna karþý dayanýklýlýk (pasif)	0
+3	Dayanýklýlýk (Ninja)	jijoong	PASSIVE	Ninja ataklarýna karþý dayanýklýlýk (pasif)	0
+4	Dayanýklýlýk (Þaman)	jijoong	PASSIVE	Þaman ataklarýna karþý dayanýklýlýk (pasif)	0
+5	Dayanýklýlýk (Lycan)	jijoong	PASSIVE	Lycan ataklarýna karþý dayanýklýlýk (pasif)	0
+6	Berserker	pacheon	PASSIVE	Saldýrý deðeri artar (pasif)	0
+7	Büyü Bozma	cheonryeong	PASSIVE	Rakibin büyüsü bozulur (pasif)	0
+8	Hýzlandýrma	banya	PASSIVE	Becerilerin yükleme süresi düþer (pasif)	0
+9	Talim	choehoenbimu	PASSIVE	Delici isabet þansý artar (pasif)	0
+10	Yenileme	heal	AUTO	HP deðeri %20'nin altýna düþtüðü takdirde yenilenir	480
+11	Vampir	stealhp	PASSIVE	Düþmandan HP çeker (pasif)	0
+12	Hayaletler	stealmp	PASSIVE	Düþmanlardan SP çeker (pasif)	0
+13	Engel	block	PASSIVE	Fiziksel hasar engellenir (pasif)	0
+14	Yansýtma	reflect_melee	PASSIVE	Edinilen hasar düþmana yansýtýlýr (pasif)	0
+15	Yang Düþme	gold_drop	PASSIVE	Yang düþme oraný artar (pasif)	0
+16	Menzil	bow_distance	PASSIVE	Yay menzilin artýrýlýr (pasif)	0
+17	Yenilmezlik	invincibility	AUTO	Geçiçi yenilmezlik þansý	600
+18	Ýyileþtirme	removal	AUTO	Kanama, zehir ve yavaþlama etkilerini kaldýrma þansý	480
+19	Metin avcýsý	mob_bonus	PASSIVE	Metinlere karþý güçlü etkisi artar (pasif)	0
+20	Canavar avcýsý	mob_bonus2	PASSIVE	Canavarlara karþý güçlü etkisi artar (pasif)	0

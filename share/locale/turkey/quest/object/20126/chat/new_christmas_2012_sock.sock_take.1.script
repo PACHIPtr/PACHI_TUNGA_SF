@@ -1,0 +1,2 @@
+pc . setqf ( "last_reindeer_give_time" , 0 ) 
+pc . setqf ( "last_sock_cooldown_time" , 0 ) 

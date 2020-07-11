@@ -1,0 +1,31 @@
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "At becerilerini kullanmak istiyorsun, öyle mi?[ENTER]Senin de isteklerin bitmiyor Gerçi onu ben bile[ENTER]sterim... Neyse, onu öðrenebilmek için bir takým[ENTER]kurallara uymalýsýn. " ) 
+wait ( ) 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Ýlk olarak at binmeyi öðrenmelisin, aksi takdirde[ENTER]senin için çok tehlikeli olabilir. Bunun dýþýnda,[ENTER]savaþta kullanmaya elveriþli bir bineðin olmasý[ENTER]gerekir. Ancak o zaman at becerilerini kullanacak[ENTER]durumunda olur. " ) 
+wait ( ) 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Bineðin, at becerilerini kullanabilecek durumda[ENTER]mý? Deðilse eðitime izin veremeyeceðim. Ne[ENTER]yapmayý düþünüyorsun? " ) 
+local s = select ( locale . yes , locale . no ) 
+if 2 == s then 
+return 
+end 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Anlýyorum. Þimdi de gücünü ve binicilik bilgini[ENTER]tahmin edeceðim. Bekle bir saniye. " ) 
+wait ( ) 
+if pc . count_item ( 50068 ) > 0 then 
+if horse . get_level ( ) > 1 then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Korkarým bineðin henüz hazýr deðil. " ) 
+wait ( ) 
+say ( "Savaþmaya daha hevesli olduðunda tekrar gel." ) 
+else 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Ata binmek çok tehlikelidir.[ENTER]Ata binmeyi öðrendiðin zaman gel." ) 
+return 
+end 
+else 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Henüz hazýr deðilsin.[ENTER]Hazýr olduðunda tekrar gel. " ) 
+return 
+end 

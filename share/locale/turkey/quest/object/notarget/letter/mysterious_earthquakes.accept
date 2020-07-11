@@ -1,0 +1,6 @@
+send_letter ( "&Depremlerin sýrrý " ) 
+local x = find_npc_by_vnum ( 20089 ) 
+if 0 == x then 
+else 
+target . vid ( "__TARGET2__" , x , "Pung-Ho" ) 
+end 

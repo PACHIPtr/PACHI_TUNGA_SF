@@ -1,0 +1,5 @@
+local v = find_npc_by_vnum ( 20411 ) 
+if v ~= 0 then 
+target . vid ( "__TARGET__" , v , "Orman Kaþifi" ) 
+end 
+send_letter ( "&En Tai Hükümdarý'ný öldür" ) 

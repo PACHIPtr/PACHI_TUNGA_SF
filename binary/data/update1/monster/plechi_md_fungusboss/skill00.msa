@@ -1,0 +1,52 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_md_fungusBoss\skill00.GR2"
+MotionDuration           2.833333
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.937689
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "SceneRoot"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/md_fungus_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+   Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.937689
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       200
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.937689
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           350.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

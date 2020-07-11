@@ -1,0 +1,87 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/hanma_boss_kami/special_attack.GR2"
+MotionDuration           2.833333
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.271747
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/hanma_boss_kami/kami_icy_beam.mse"
+        EffectPosition       0.000000 -150.000000 200.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.023660
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02 Neck"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/hanma_boss_kami/kami_icy_beam_activate.mse"
+        EffectPosition       0.000000 -100.000000 40.000000
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         1.295407
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -400.000000 0.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      2
+        StartingTime         1.295407
+        
+        DuringTime           0.600000
+        Power                300
+        AffectingRange       200
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         1.277662
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -800.000000 0.000000
+        }
+    }
+}

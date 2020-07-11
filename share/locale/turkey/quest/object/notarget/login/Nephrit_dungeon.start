@@ -1,0 +1,11 @@
+if pc . get_map_index ( ) == 249 then pc . set_warp_location ( 67 , 2894 , 66 ) 
+d . exit ( ) 
+ return end if pc . get_map_index ( ) >= 2.49e+06 and pc . get_map_index ( ) < 2.5e+06 then if pc . getqf ( "join_Nephrit_dung" ) > 0 then 
+pc . setqf ( "join_Nephrit_dung" , 0 ) 
+d . setqf2 ( "Nephrit_dungeon" , "last_exit_time" , d . get_map_index ( ) ) 
+d . setf ( "level" , 1 ) 
+d . regen_file ( "data/dungeon/Nephrit_dungeon/regen_1_1.txt" ) 
+server_timer ( "nclogintime1" , 5 , d . get_map_index ( ) ) 
+server_timer ( "ncfloor1_2_eli_check_timer" , 5 , d . get_map_index ( ) ) 
+end 
+ return end 

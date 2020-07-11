@@ -1,0 +1,137 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "d:/ymir work/npc/fire_dragon_mount/fire_dragon_mount.gr2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 2
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"d:/ymir work/npc/fire_dragon_mount/fire_dragon_mount.gr2"
+		SourceSkin			"d:/ymir work/atreya_textures/mounts/vehicle_kirin_diff.tga"
+		TargetSkin			"d:/ymir work/atreya_textures/mounts/vehicle_kirin_diff.tga"
+	}
+	Group ShapeData01
+	{
+		ShapeIndex			0
+
+		Model				"d:/ymir work/npc/fire_dragon_mount/fire_dragon_mount.gr2"
+		SourceSkin			"d:/ymir work/atreya_textures/mounts/vehicle_kirin01_diff.tga"
+		TargetSkin			"d:/ymir work/atreya_textures/mounts/vehicle_kirin01_diff.tga"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       8
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           28.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           50.000000
+            Position         0.000000 0.000000 0.000000
+        }
+	}	
+	Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip001-R-Foot"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+	Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip001-L-Foot"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+	Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip001-R-Hand"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+	Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip001-L-Hand"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+	Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip001-Spine2"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_neck.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+	Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Tail_Bone07"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\fire_dragon_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

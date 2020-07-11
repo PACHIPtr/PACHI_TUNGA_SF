@@ -1,0 +1,22 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc2/12zi_target_daepo/normal_attack1.GR2"
+MotionDuration           0.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.004866
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Dummy02"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/daepo_na_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

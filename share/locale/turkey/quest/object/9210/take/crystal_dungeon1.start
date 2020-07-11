@@ -1,0 +1,25 @@
+if item . vnum == 19985 and pc . in_dungeon ( ) then local setting = crystal_dungeon1 . settings ( ) 
+local n = number ( 1 , 2 ) 
+if n == 1 then 
+d . clear_regen ( ) 
+pc . remove_item ( setting [ "keys" ] [ 1 ] , 1 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Mühür anýtý açmadý, Þansýný denemeye devam et!" ) 
+d . notice ( "Bu iyi bir mühür deðil ." ) 
+d . notice ( "Git ve iyi bir tane ara !" ) 
+d . spawn_mob ( 9211 , 753 , 172 ) 
+timer ( "effect_purge" , 10 ) 
+d . setf ( "mobs_2" , 1 ) 
+crystal_dungeon1 . get_regens ( 2 ) 
+d . setf ( "crystal_seal" , 0 ) 
+else 
+d . notice ( "Güzel bir mühür !" ) 
+d . kill_unique ( 9210 ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 3 ) 
+pc . remove_item ( setting [ "keys" ] [ 1 ] , 1 ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 12 ) 
+end 
+ return end 

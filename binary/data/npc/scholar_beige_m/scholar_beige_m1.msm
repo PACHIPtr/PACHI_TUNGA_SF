@@ -1,0 +1,61 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc\scholar_beige_M\scholar_beige_M.GR2"
+
+Group ShapeData
+{
+	PathName	"D:\Ymir Work\npc\scholar_beige_M\"
+
+	ShapeDataCount			1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"scholar_beige_M.gr2"
+		SourceSkin			"scholar_beige_M1.dds"
+		TargetSkin			"scholar_beige_M1.dds"
+		SourceSkin2			"scholar_beige_M1_weapon1.dds"
+		TargetSkin2			"scholar_beige_M1_weapon1.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           38.000000
+            Position         0.000000 0.000000 -10.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           50.000000
+            Position         0.000000 0.000000 -10.000000
+        }
+    }
+}

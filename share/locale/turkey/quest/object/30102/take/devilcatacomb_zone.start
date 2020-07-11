@@ -1,0 +1,8 @@
+if item . vnum == 30312 then local setting = devilcatacomb_zone . setting ( ) 
+item . remove ( ) 
+d . notice ( "Þeytan Katakombu'nun derinliklerinden tüyler " ) 
+d . notice ( "ürperten bir çýðlýk duyuldu. Kharoon uyandý! " ) 
+d . clear_regen ( ) 
+d . purge ( ) 
+timer ( "devilcatacomb_floor6_timer" , 2 ) 
+ return end 

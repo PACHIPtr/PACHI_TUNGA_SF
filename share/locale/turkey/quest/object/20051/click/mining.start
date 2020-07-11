@@ -1,0 +1,6 @@
+if pc . is_mount ( ) ~= true then 
+if game . get_event_flag ( "labor_day" ) > 0 then 
+char_log ( 0 , "MINING" , "Log for Labor Day" ) 
+end 
+pc . mining ( ) 
+end 

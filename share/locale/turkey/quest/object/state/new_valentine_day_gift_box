@@ -1,0 +1,35 @@
+new_valentine_day_gift_box={["start"]=0,give_item_with_log= function (vnum,amount,item_id)if vnum == 1 then 
+pc . changegold ( amount ) 
+else 
+pc . give_item2 ( vnum , amount ) 
+end 
+char_log ( tonumber ( item_id ) , "VALENTINE_BOX" , "reward vnum: " .. vnum .. " reward amount: " .. amount ) ; 
+end ,gift= function (item_id)local n = number ( 1 , 100 ) 
+if n <= 4 then 
+new_valentine_day_gift_box . give_item_with_log ( 71025 , 1 , item_id ) 
+elseif n <= 8 then 
+new_valentine_day_gift_box . give_item_with_log ( 71153 , 1 , item_id ) 
+elseif n <= 12 then 
+new_valentine_day_gift_box . give_item_with_log ( 100100 , 1 , item_id ) 
+elseif n <= 16 then 
+new_valentine_day_gift_box . give_item_with_log ( 70005 , 1 , item_id ) 
+elseif n <= 21 then 
+new_valentine_day_gift_box . give_item_with_log ( 70043 , 1 , item_id ) 
+elseif n <= 26 then 
+new_valentine_day_gift_box . give_item_with_log ( 71018 , 1 , item_id ) 
+elseif n <= 31 then 
+new_valentine_day_gift_box . give_item_with_log ( 71019 , 1 , item_id ) 
+elseif n <= 40 then 
+new_valentine_day_gift_box . give_item_with_log ( 100200 , 1 , item_id ) 
+elseif n <= 50 then 
+new_valentine_day_gift_box . give_item_with_log ( 1 , 2e+06 , item_id ) 
+elseif n <= 61 then 
+new_valentine_day_gift_box . give_item_with_log ( 1 , 1e+06 , item_id ) 
+elseif n <= 73 then 
+new_valentine_day_gift_box . give_item_with_log ( 1 , 750000 , item_id ) 
+elseif n <= 86 then 
+new_valentine_day_gift_box . give_item_with_log ( 1 , 500000 , item_id ) 
+else 
+new_valentine_day_gift_box . give_item_with_log ( 1 , 250000 , item_id ) 
+end 
+end }

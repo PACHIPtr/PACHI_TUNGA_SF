@@ -1,0 +1,54 @@
+say_title ( "Uriel:" ) 
+say ( "Hey Evet Sen." ) 
+say ( "Sen gerçekten çok zeki görünüyorsun." ) 
+say ( "Yarýþmanýn ismi Ox Yarýþmasý. " ) 
+say ( "Sorular sorulacak cevap vereceksin," ) 
+say ( "bilirsen süpriz bir hediye kazanacaksýn." ) 
+if game . get_event_flag ( "oxevent_status" ) == 0 then 
+wait ( ) 
+say_title ( "Uriel:" ) 
+say ( "Yarýþmaya katýlmana izin veriyorum." ) 
+say ( "Ýstersen ayrýca izleyici de olabilirsin." ) 
+say ( "Baþlama zamaný henüz kararlaþtýrýlmadý." ) 
+say ( "Zaman geldiðinde seni bilgilendireceðim." ) 
+say ( "Tetikte kal!" ) 
+elseif game . get_event_flag ( "oxevent_status" ) == 1 then 
+wait ( ) 
+say_title ( "Uriel:" ) 
+say ( "Yarýþmaya katýlmak istiyormusun?" ) 
+local s = select ( "Evet" , "Hayýr" , "Ýzlemek istiyorum." ) 
+if s == 1 then 
+if game . get_event_flag ( "oxevent_status" ) == 1 then 
+if pc . get_level ( ) < 1 then 
+say_title ( "Uriel:" ) 
+say ( "OX-Yarýþmasýna katýlabilmen için en az" ) 
+say ( "1. seviyede olmalýsýn." ) 
+say ( "" ) 
+elseif pc . is_riding ( ) then 
+say_title ( "Uriel:" ) 
+say ( "Binek veya at kullanýrken OX yarýþmasýna giremezsin." ) 
+else 
+pc . warp ( 896500 , 24600 ) 
+end 
+elseif game . get_event_flag ( "oxevent_status" ) == 2 then 
+say ( "Yarýþma baþladý, giremezsin!" ) 
+end 
+elseif s == 3 then 
+say_title ( "Uriel:" ) 
+say ( "Ýzleyici olarak mý katýlmak istiyorsun?" ) 
+say ( "Tamam, ýþýnlýyorum seni." ) 
+wait ( ) 
+pc . warp ( 896300 , 28900 ) 
+end 
+elseif game . get_event_flag ( "oxevent_status" ) == 2 then 
+say_title ( "Uriel:" ) 
+say ( "Yarýþma baþladý, giremezsin!" ) 
+say ( "Ancak izleyici olarak katýlabilirsin." ) 
+local s = select ( "Katýl" , "Katýlma" ) 
+if s == 1 then 
+say_title ( "Uriel:" ) 
+say ( "Tamam, ýþýnlýyorum seni." ) 
+wait ( ) 
+pc . warp ( 896300 , 28900 ) 
+end 
+end 

@@ -1,0 +1,22 @@
+local guild_list = game . mysql_query ( "SELECT * FROM player.guild_tournement WHERE guild_tournement.guild_name NOT LIKE '[%]%' ORDER BY guild_tournement.number DESC" ) 
+local inbox_table = { } 
+for i = 1 , table . getn ( guild_list ) , 1 begin 
+table . insert ( inbox_table , guild_list . guild_name [ i ] ) 
+end 
+table . insert ( inbox_table , "Kapat" ) 
+if ( table . getn ( guild_list ) == 0 ) then 
+say_title ( "Savaş Sorumlusu:" ) 
+say ( "Henüz turnuvaya katılan lonca yok." ) 
+return 
+end 
+local m = select_table ( inbox_table ) 
+if ( table . getn ( inbox_table ) == m ) then 
+return 
+elseif ( table . getn ( inbox_table ) >= m ) then 
+say_title ( guild_list . guild_name [ m ] .. " loncası " ) 
+say ( "" ) 
+say ( "Lonca lideri: " .. guild_list . guild_master [ m ] .. ", Krallık: " .. guild_list . empire [ m ] .. "" ) 
+say ( "Üye sayısı: " .. guild . get_member_count ( guild_list . guild_id [ m ] ) .. ", Sıralama: " .. guild . get_rank ( guild_list . guild_id [ m ] ) .. "" ) 
+say ( "" ) 
+return 
+end 

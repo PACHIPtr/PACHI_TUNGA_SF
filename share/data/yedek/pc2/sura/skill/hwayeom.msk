@@ -1,0 +1,18 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Name			"È­¿°Æø"
+Description		"ÁÖº¯ 2M³»ÀÇ ¸ðµç ÀûÀ» ¼¶¸êÇÑ´Ù"
+
+IconFileName	"skill/sura/hwayeom.sub"
+MotionIndex		11
+
+List AffectData
+{
+	"ÆÄ±«·Â : %.0f"	"(INT * 3 + 10) * (10 + SkillPoint) / 10" ""
+}
+
+MaxLevel 		"20"
+LevelUpPoint	"4"
+NeedSPFormula 	"150"
+CoolTimeFormula	"16"

@@ -1,0 +1,29 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"NEED_TARGET" "WEAPON_LIMITATION" "FAN_RANGE"
+NeedWeapon		"BOW"
+Range			2500
+
+Name			"관격술"
+Description		"여러발의 화살을 쏜다"
+
+IconFileName		"skill/assassin/gwangyeok.sub"
+MotionIndex		5
+
+List ConditionData
+{
+	"스플래쉬 공격"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f 배"	"(SkillPoint * 7 + 100) / 100"	""
+	"최대 %.0f 명까지 공격"	"1 + floor(SkillPoint / 5)" ""
+}
+
+MaxLevel			20
+LevelUpPoint		5
+CoolTimeFormula		"10"
+TargetCountFormula	"1 + floor(SkillPoint / 5)"
+NeedSPFormula		"60 * (1 + floor(SkillPoint / 5))"

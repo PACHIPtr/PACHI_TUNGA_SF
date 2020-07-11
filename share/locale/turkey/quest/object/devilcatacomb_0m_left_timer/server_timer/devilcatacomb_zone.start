@@ -1,0 +1,5 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . notice ( "Süre bitti. Kendi güvenliðin için Devil's Catacomb'dan dýþarý ýþýnlanacaksýn." ) 
+d . set_warp_location ( 65 , 5914 , 992 ) 
+server_timer ( "devilcatacomb_exit_timer" , 7 , get_server_timer_arg ( ) ) 
+end 

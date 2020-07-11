@@ -1,0 +1,13 @@
+if utils . is_feature_dc_coupon_enabled ( ) == true then local amount = item . get_value ( 0 ) 
+if pc . is_busy ( ) == true then 
+say_title ( "EP Kuponu: " ) 
+say ( "" ) 
+say_reward ( "Meþgul durumda olduðunuz için EP Kuponunu kullanamazsýnýz." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "EP Kuponu: " ) 
+say ( "" ) 
+say_reward ( "Ölü durumda olduðunuz için EP Kuponunu kullanamazsýnýz." ) 
+else 
+charge_cash_by_voucher . charge ( amount , "cash" ) 
+end 
+ return end 

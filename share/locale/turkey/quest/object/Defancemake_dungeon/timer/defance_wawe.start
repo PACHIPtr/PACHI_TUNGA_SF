@@ -1,0 +1,6 @@
+local config = defance_wawe . Settings ( ) 
+local cord = config . cord local start_pos = config . start_pos d . new_jump_party ( config . map_index , ( cord [ 1 ] + start_pos [ 1 ] ) , ( cord [ 2 ] + start_pos [ 2 ] ) ) 
+d . spawn_mob_ac_dir ( 20436 , 385 , 359 , 0 ) 
+d . spawn_mob ( 20434 , 385 , 400 ) 
+defance_wawe . SpawnHandicap ( 0 ) 
+defance_wawe . SpawnHandicap ( 1 ) 

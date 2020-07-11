@@ -1,0 +1,1 @@
+tar czvf update`date +"%d-%m"`.tgz game db

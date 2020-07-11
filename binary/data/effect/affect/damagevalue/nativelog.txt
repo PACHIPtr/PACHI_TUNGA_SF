@@ -1,0 +1,21 @@
+﻿Set run directory to C:\Program Files (x86)\Minecraft
+Native Launcher Version: 307
+Operating System: Windows 10 Pro
+Application Hash: 40a55daa6845b0e1e797461386a218193b14e7d6
+Application Data directory: C:\Users\Mein Pc\AppData\Roaming
+Executable Path: MinecraftLauncher.exe
+App Directory dir: C:\Program Files (x86)\Minecraft
+Start dir: C:/Program Files (x86)/Minecraft
+Launcher dir: C:/Program Files (x86)/Minecraft/game
+TmpDir dir: C:/Program Files (x86)/Minecraft/game
+Java Launcher hash: 407f9dc73d62d9ecd36b8954f30d70507e5ad8e7
+Java Version: 1.8.0_25
+x64: 1
+LauncherConfiguration from: https://launchermeta.mojang.com/mc/launcher.json
+Downloaded config
+Native update needed
+Native launcher outdated!
+Hash should be 7dbb83a4ffb116a3c37230ec727e30298990c365
+Native update needed
+Check to see if we can run the launcher
+Native update needed

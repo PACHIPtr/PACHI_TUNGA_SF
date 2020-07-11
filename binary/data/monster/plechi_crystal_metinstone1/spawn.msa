@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_crystal_metinstone1\spawn.GR2"
+MotionDuration           0.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.559487
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_metinstone1_spawn.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.484185
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_metinstone1_spawn2.mse"
+        EffectPosition       -50.000000 0.000000 0.000000
+    }
+}

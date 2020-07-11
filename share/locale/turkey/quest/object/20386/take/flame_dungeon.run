@@ -1,0 +1,116 @@
+if flame_dungeon . is_flamed ( pc . get_map_index ( ) ) and item . vnum == 30329 and d . getf ( "level" ) == 12 then local i = number ( 1 , 3 ) 
+if i == 1 then 
+npc . purge ( ) 
+item . remove ( ) 
+notice_multiline ( "Maat mekanýzmasýný açýldý," , d . notice ) 
+notice_multiline ( "Am-heh ile görüþün..." , d . notice ) 
+flame_dungeon . level_clear ( ) 
+else 
+item . remove ( ) 
+say ( "Bu parça yanlýþ yok oldu.[ENTER]Doðru Altýn Diþli Çarký bul." ) 
+end 
+ return end if flame_dungeon . is_flamed ( d . get_map_index ( ) ) and item . vnum == 30330 and d . getf ( "level" ) == 15 then local setting = flame_dungeon . setting ( ) 
+if npc . get_vid ( ) == d . get_unique_vid ( "stone5_1" ) then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi diðerlerinide yok et." ) 
+d . setf ( "stonekill" , 2 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+elseif npc . get_vid ( ) == d . get_unique_vid ( "stone5_2" ) then 
+if d . getf ( "stonekill" ) == 2 then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi diðerlerinide yok et." ) 
+d . setf ( "stonekill" , 3 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý yok oldu." ) 
+if is_test_server ( ) then 
+say ( "2" ) 
+end 
+end 
+elseif npc . get_vid ( ) == d . get_unique_vid ( "stone5_3" ) then 
+if d . getf ( "stonekill" ) == 3 then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi diðer mühürleri yok et." ) 
+d . setf ( "stonekill" , 4 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý Yok Oldu." ) 
+if is_test_server ( ) then 
+say ( "3" ) 
+end 
+end 
+elseif npc . get_vid ( ) == d . get_unique_vid ( "stone5_4" ) then 
+if d . getf ( "stonekill" ) == 4 then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi diðer mühürleri yok et." ) 
+d . setf ( "stonekill" , 5 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý Yok Oldu." ) 
+if is_test_server ( ) then 
+say ( "4" ) 
+end 
+end 
+elseif npc . get_vid ( ) == d . get_unique_vid ( "stone5_5" ) then 
+if d . getf ( "stonekill" ) == 5 then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi diðer mühürleri yok et." ) 
+d . setf ( "stonekill" , 6 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý Yok Oldu." ) 
+if is_test_server ( ) then 
+say ( "5" ) 
+end 
+end 
+elseif npc . get_vid ( ) == d . get_unique_vid ( "stone5_6" ) then 
+if d . getf ( "stonekill" ) == 6 then 
+npc . purge ( ) 
+item . remove ( ) 
+say ( "Bu akýllýca bir seçim oldu.[ENTER]Þimdi son mührü yok et." ) 
+d . setf ( "stonekill" , 7 ) 
+if d . count_monster ( ) < 100 then 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+end 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý Yok Oldu." ) 
+if is_test_server ( ) then 
+say ( "6" ) 
+end 
+end 
+else 
+if d . getf ( "stonekill" ) == 7 then 
+npc . purge ( ) 
+item . remove ( ) 
+notice_multiline ( "Maat taþlarý yok edildi!" , d . notice ) 
+notice_multiline ( "Am-heh ile görüþün..." , d . notice ) 
+flame_dungeon . level_clear ( ) 
+else 
+item . remove ( ) 
+say ( "Yanlýþ seçim. Maat Taþý Yok Oldu." ) 
+if is_test_server ( ) then 
+say ( "7" ) 
+end 
+end 
+end 
+ return end 

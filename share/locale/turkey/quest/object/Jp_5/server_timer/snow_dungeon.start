@@ -1,0 +1,10 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+local v = set . NpcVnum_level_5 d . setf ( "level" , 5 ) 
+local cord = set . base_cord local pos = set . Position_level_5 d . jump_all ( ( cord [ 1 ] + pos [ 1 ] ) , ( cord [ 2 ] + pos [ 2 ] ) ) 
+d . notice ( "Bir sonraki kata geçmek için Arktos Küpleri'ndeki" ) 
+d . notice ( "mühürleri sýrasýyla kýrýn." ) 
+d . notice ( "Buz canavarlarýný maðlup edin ve ellerinden kuzey" ) 
+d . notice ( "yýldýzlarýný alýp mühürleri kýrýn!" ) 
+snow_dungeon . _Create_Stones_level5 ( ) 
+end 

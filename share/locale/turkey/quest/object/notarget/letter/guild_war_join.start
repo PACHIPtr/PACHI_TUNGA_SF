@@ -1,0 +1,5 @@
+local e = guild . get_any_war ( ) 
+if e ~= 0 and pc . get_war_map ( ) == 0 then 
+setskin ( NOWINDOW ) 
+makequestbutton ( "Giriþ izni iste" ) 
+end 

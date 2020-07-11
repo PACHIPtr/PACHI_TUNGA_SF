@@ -1,0 +1,78 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\YMIR WORK\monster\fox_ninetail\24.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	-423.93	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         1.074113
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           1
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -300.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.194155
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/fox_ninetail/kami_skill_energy.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.074113
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/fox_ninetail/kami_skill_1.mse"
+        EffectPosition       0.000000 -300.000000 20.000000
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.074113
+        DuringTime           2.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        1.000000
+        ExternalForce        2.000000
+        HitLimitCount        5
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -300.000000 0.000000
+        }
+    }
+}

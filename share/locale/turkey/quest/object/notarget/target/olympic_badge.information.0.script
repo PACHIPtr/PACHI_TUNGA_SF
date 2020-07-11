@@ -1,0 +1,30 @@
+target . delete ( "__TARGET__" ) 
+say ( "" ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( " Yardým! " ) 
+say ( " Sefil hýrsýzlar...[ENTER]Dün gece benimle kaldýlar.[ENTER]Kahramanlýk Madalyasýný çaldýlar.O madalya imparatorluk [ENTER]savaþýnda büyük babama zafer ödülü[ENTER]olarak verilmiþti. [ENTER]Ama þimdi o madalya çalýndý ve[ENTER]hýrsýzlar kayýp oldu! " ) 
+wait ( ) 
+say ( "" ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( "O madalya ailem için paha biçilmez![ENTER]ne yapmalýyým? " ) 
+say ( " Bana yardým edecek misin? " ) 
+local s = select ( locale . yes , locale . no ) 
+if 2 == s then 
+say ( " Þimdi bana bir daha hayýr dersen[ENTER]sana bir daha yardým teklifinde[ENTER]bulunmayacaðým.Emin misin? " ) 
+local a = select ( locale . yes , locale . no ) 
+if 2 == a then 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Zamanýn yok anlýyorum! Daha uygun bir zamanda[ENTER]gel.Ama beni çok bekletme! " ) 
+say ( "" ) 
+return 
+end 
+say ( "" ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Ne yazýk ki çok geç! Artýk bana yardým edemezsin.[ENTER]Sana izlediðin yolda baþarýlar! " ) 
+set_state ( "__GIVEUP__" ) 
+return 
+end 
+say ( "" ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( "Beni soyan canavarlarý avla! Ama[ENTER] çok dikkatli olmalýsýn.Onlar çok güçlü.[ENTER]30.Seviyeden sonra bana Kahramanlýk Madalyasý[ENTER]getirir isen, seni ödüllendireceðim. " ) 
+set_state ( "step1" ) 

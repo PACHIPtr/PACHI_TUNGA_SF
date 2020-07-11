@@ -1,0 +1,72 @@
+if party . is_leader ( ) or party . is_party ( ) then 
+say_reward ( "Bu zindana grup halinde giremezsin" ) 
+say_reward ( "lütfen önce bulundugun grupdan ayril !" ) 
+return 
+end 
+if not pc . get_channel_id ( ) == 1 then 
+say_title ( "Ork Zindani:" ) 
+say ( "Sadece 1. kanaldan giriþ yapabilirsin." ) 
+return 
+end 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Ork Zindaný yeraltýndaki en tehlikeli[ENTER]yaratýklarýn bulundugu bir yeraltý zindaný[ENTER]giriþ yapabilmek için 40 ila 70 seviye arasýnda olman gerekiyor" ) 
+say_item ( item_name ( 90005 ) , 90005 , "" ) 
+wait ( ) 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Giriþ yaptýðýnda eþya yok olacak. " ) 
+say ( "" ) 
+say_reward ( "Devam etmek istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+if not pc . can_warp ( ) then 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Henüz ýþýnlanamazsýn." ) 
+say ( "" ) 
+return 
+elseif pc . count_item ( 90005 ) < 1 then 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Envanterinde yeterli miktarda yok:" ) 
+say ( string . format ( "%s." , item_name ( 90005 ) ) ) 
+say ( "" ) 
+return 
+elseif pc . level < 40 or pc . level > 70 then 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Seviyen giriþ gereksinimlerini karþýlamýyor. " ) 
+say ( "Gereksinimler:" ) 
+say ( string . format ( "Minimum Seviye: %d." , 40 ) ) 
+say ( string . format ( "Maksimum Seviye: %d." , 70 ) ) 
+say ( "" ) 
+return 
+elseif get_time ( ) < pc . getqf ( "ork_player_time_110" ) then 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Soguma sureniz henuz dolmadi!" ) 
+say ( "Kalan süre: " .. dungeon_get_duration ( pc . getqf ( "ork_player_time_110" ) - get_global_time ( ) ) .. "" ) 
+say ( "" ) 
+if ( game . get_event_flag ( "enable_time_orkmaze" ) == 1 ) then 
+say ( "Beta Server; süreyi sýfýrlamak mý istiyorsun?" ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+pc . setqf ( "ork_player_time_110" , 0 ) 
+return 
+end 
+end 
+return 
+elseif game . get_event_flag ( "enable_orcmaze_dungeon" ) == 1 then 
+say_title ( mob_name ( 20403 ) ) 
+say ( "" ) 
+say ( "Ork Zindaný henüz aktif durumda deðildir." ) 
+say ( "" ) 
+return 
+else 
+pc . remove_item ( 90005 , 1 ) 
+pc . setqf ( "ork_player_time_110" , get_time ( ) + 60 * 60 * 1 ) 
+pc . setqf ( "join_orcmaze_dung" , 1 ) 
+d . new_jump ( 245 , 12143 * 100 , 7273 * 100 ) 
+end 
+end 

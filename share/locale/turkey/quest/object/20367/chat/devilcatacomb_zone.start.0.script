@@ -1,0 +1,26 @@
+addimage ( 35 , 35 , "catacomb.tga" ) 
+local setting = devilcatacomb_zone . setting ( ) 
+if pc . get_level ( ) < 75 then 
+say_title ( "Katakomb Bekçisi:" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "75. seviyenin altýnda olduðun için " ) 
+say ( "Katakomb'a giremezsin..." ) 
+else 
+say_title ( "Katakomb Bekçisi:" ) 
+addimage ( 35 , 35 , "catacomb.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Þeytan Katakombu'na girmek" ) 
+say ( "istiyor musun?" ) 
+local s = select ( "Evet, býrak içeri gireyim!" , "Hayýr, girmek istemiyorum." ) 
+if s == 1 then 
+pc . warp ( ( setting . floor1_entry . x + setting . base . x ) * 100 , ( setting . floor1_entry . y + setting . base . y ) * 100 ) 
+end 
+end 

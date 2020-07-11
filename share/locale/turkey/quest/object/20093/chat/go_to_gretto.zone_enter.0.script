@@ -1,0 +1,33 @@
+if pc . level < 75 then 
+say_title ( "Koe-Pung:" ) 
+say ( "" ) 
+say ( "75. seviyenin altýnda oldugun için" ) 
+say ( "seni buz zindanýna ýþýnlayamam.." ) 
+return 
+end 
+say_title ( "Koe-Pung:" ) 
+say ( "Dur! Ben Ejderha Mezhebinden Koe-Pung," ) 
+say ( "bu kapýnýn bekçisiyim. Sadece eðer bana" ) 
+say ( "Kan Taþýný gösterirsen ve mezhebin" ) 
+say ( "iznini alýrsan geçebilirsin!" ) 
+wait ( ) 
+if pc . count_item ( 30190 ) > 0 then 
+say_title ( "" .. pc . name .. "" ) 
+say ( "Adým " .. pc . name .. " ve Ejderha Mezhebinin iradesi" ) 
+say ( "altýnda buradayým! Bunu kanýtlamak için " ) 
+say ( "kutsal Kan Taþým var. Þimdi geri çekil!" ) 
+say ( "" ) 
+say ( "" ) 
+pc . remove_item ( 30190 ) 
+wait ( ) 
+say_title ( "" .. mob_name ( 20093 ) .. "" ) 
+say ( "Ejderha Tanrý seni seçti." ) 
+say ( "O her zaman seni izliyor olmalý!" ) 
+wait ( ) 
+pc . warp ( 10000 , 1.2132e+06 ) 
+else 
+say_title ( "Koe-Pung:" ) 
+say ( "Kan Taþýna sahip olursan" ) 
+say ( "tekrar gel." ) 
+return 
+end 

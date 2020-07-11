@@ -1,0 +1,2 @@
+notice_all ( string . format ( "CH%s: %s, Alev Kralý'ný öldürdü!" , pc . get_channel_id ( ) , pc . get_name ( ) ) ) 
+notice_all ( string . format ( "Bilgi: Alev Kral 15 dakikada bir Doyyumhwan'da çýkar." ) ) 

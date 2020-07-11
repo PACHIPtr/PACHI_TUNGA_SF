@@ -1,0 +1,69 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "d:/ymir work/npc/metal_wolf/metal_wolf.gr2"
+
+Group ShapeData
+{
+	PathName			"d:/ymir work/"
+	ShapeDataCount		1
+
+	Group ShapeData00
+	{
+		ShapeIndex		0
+		Model			"npc/metal_wolf/metal_wolf.gr2"
+		SourceSkin		"atreya_textures/mounts/trans_lion_wolf_diff.dds"
+		TargetSkin		"atreya_textures/mounts/trans_lion_wolf_diff.tga"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       3
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           28.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           50.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+	Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "FxBottom"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\metal_wolf.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

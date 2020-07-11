@@ -1,0 +1,9 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local setting = devilcatacomb_zone . setting ( ) 
+d . setf ( "level" , 7 ) 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 7 ) 
+d . jump_all ( setting . floor7_entry . x + setting . base . x , setting . floor7_entry . y + setting . base . y ) 
+d . regen_file ( get_locale_base_path ( ) .. "/map/metin2_map_devilcatacomb/base7_regen.txt" ) 
+d . spawn_mob ( setting . devil_emperor , setting . devil_emperor_pos [ 1 ] , setting . devil_emperor_pos [ 2 ] ) 
+server_timer ( "devilcatacomb_floor7_say_timer" , 2 , get_server_timer_arg ( ) ) 
+end 

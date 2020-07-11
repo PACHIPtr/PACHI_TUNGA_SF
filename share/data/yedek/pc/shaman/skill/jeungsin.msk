@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"증신술"
+Description		"최대 생명력 증가"
+
+IconFileName	"skill/warrior/gibaek.sub"
+List AffectData
+{
+	"최대 생명력 +%.0f"	"SkillPoint * 15"	""
+}

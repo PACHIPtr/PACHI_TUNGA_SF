@@ -1,0 +1,24 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc2\flag_d\flag_d.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc2\flag_d\flag_d.GR2"
+		SourceSkin			"D:\Ymir Work\npc2\flag_d\flag_d.dds"
+		TargetSkin			"D:\Ymir Work\npc2\flag_d\flag_d_06.dds"
+		SourceSkin2			"D:\Ymir Work\npc2\flag_d\flag_d_pole.DDS"
+		TargetSkin2			"D:\Ymir Work\npc2\flag_d\flag_d_pole_06.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       0
+    
+}

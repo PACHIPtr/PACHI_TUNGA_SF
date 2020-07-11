@@ -1,0 +1,7 @@
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "third_boss" ) == 1 then 
+crystal_dungeon1 . spawn_boss ( 3 ) 
+d . setf ( "third_boss" , 0 ) 
+else 
+return 
+end 

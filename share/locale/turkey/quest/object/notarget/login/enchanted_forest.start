@@ -1,0 +1,6 @@
+if pc . get_map_index ( ) == 353 then if get_time ( ) >= pc . getqf ( "limit_activity" ) and pc . getqf ( "limit_activity" ) > 0 then 
+pc . warp ( 816700 , 1.505e+06 ) 
+else 
+pc . setqf ( "limit_activity" , 0 ) 
+end 
+ return end 

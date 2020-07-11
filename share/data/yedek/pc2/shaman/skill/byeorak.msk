@@ -1,0 +1,21 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"NEED_TARGET" "FOR_ALLIANCE" "USE_FOR_ME"
+
+Name				"º­¶ô"
+Description			"ÇÏ´ÃÀÇ ÈûÀ» ºô¾î Àû¿¡°Ô º­¶ôÀ» ³»¸°´Ù"
+Requirement			"ºñÆÄºÎ" 5
+
+IconFileName		"skill/shaman/byeorak.sub"
+MotionIndex			17
+
+List AffectData
+{
+	"ÆÄ±«·Â : %.0f" "(INT * 2 + 20) * (10 + SkillPoint)" ""
+}
+
+CoolTimeFormula		"24"
+NeedSPFormula		"120 + SkillPoint * 3"
+
+MaxLevel			30

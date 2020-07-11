@@ -1,0 +1,76 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_owl_d_lowboss\skill00.GR2"
+MotionDuration           5.266667
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.705394
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Finger01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/12_hor_s3_making.mse"
+        EffectPosition       100.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.705394
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Finger01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/12_hor_s3_making.mse"
+        EffectPosition       100.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         3.555394
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/owl_dmoblowboss_skill00b.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      2
+        StartingTime         3.555394
+        
+        DuringTime           1.254756
+        Power                500
+        AffectingRange       800
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         3.555394
+        DuringTime           1.254756
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

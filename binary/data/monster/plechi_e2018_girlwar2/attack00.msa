@@ -1,0 +1,30 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_girlwar2\attack00.GR2"
+MotionDuration           1.200000
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.640000
+        AttackingEndTime     0.680000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.640000 0.000000 -200.000000 140.000000 0.000000 -0.000000 150.000000
+            0.650000 -40.000000 -230.000000 130.000000 0.000000 -0.000000 150.000000
+            0.655000 -55.000000 -200.000000 110.000000 0.000000 -0.000000 150.000000
+		}
+   }
+}

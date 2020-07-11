@@ -1,0 +1,1627 @@
+section
+npc	20091
+item	189	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	300	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+section
+npc	20091
+item	1139	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	1180	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+section
+npc	20091
+item	2179	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	2200	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+section
+npc	20091
+item	3169	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	3220	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+section
+npc	20091
+item	5129	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	5160	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+section
+npc	20091
+item	6079	1
+item	78726	15
+item	78727	15
+item	78728	15
+item	78729	15
+reward	6120	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+#seon_pyeong_guertel		
+section		
+npc	20092	
+item	50639	10
+item	51001	200
+item	30525	10
+item	30524	10
+item	18089	1
+reward	18090	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#seon_pyeong_guertel	
+section		
+npc	20092	
+item	71520	20
+item	71521	20
+item	71522	20
+item	30525	30
+item	18099	1
+reward	19050	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#seon_pyeong_guertel	
+section		
+npc	20092	
+item	71520	20
+item	71521	20
+item	71522	20
+item	30524	30
+item	18099	1
+reward	19060	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#seon_pyeong_guertel	
+section		
+npc	20092	
+item	27992	20
+item	27993	20
+item	27994	20
+item	50513	20
+item	50630	10
+reward	18030	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#seon_pyeong_guertel		
+section		
+npc	20092	
+item	27992	20
+item	27993	20
+item	27994	20
+item	50513	20
+item	50628	10
+reward	18010	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	40	
+end
+
+#seon_pyeong_guertel	
+section		
+npc	20092	
+item	27992	20
+item	27993	20
+item	27994	20
+item	50513	20
+item	50629	10
+reward	18020	1
+gold	90000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	40	
+end
+
+#seon_pyeong_schuhe	
+section		
+npc	20092	
+item	15169	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	15370	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_schuhe
+section		
+npc	20092	
+item	15189	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	15390	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end		
+
+#seon_pyeong_schuhe
+section		
+npc	20092	
+item	15209	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	15410	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end		
+
+#seon_pyeong_schuhe
+section		
+npc	20092	
+item	15229	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	15430	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end		
+	
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	149	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	270	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	159	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	280	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	249	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	200	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	1109	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	4040	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	2149	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	2160	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	5109	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	5330	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	7149	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	7190	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_waffen
+section		
+npc	20092	
+item	6059	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	200
+reward	6080	1
+gold	5000000	
+percent	100	
+end	
+
+#seon_pyeong_ruestungen
+section		
+npc	20092	
+item	11299	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	100
+reward	12010	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end		
+
+#seon_pyeong_ruestungen
+section		
+npc	20092	
+item	11499	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	100
+reward	12020	1
+gold	5000000	
+percent	100	
+end	
+
+#seon_pyeong_ruestungen
+section		
+npc	20092	
+item	11699	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	100
+reward	12030	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_ruestungen
+section		
+npc	20092	
+item	11899	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	100
+reward	12040	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#seon_pyeong_ruestungen
+section		
+npc	20092	
+item	21079	1
+item	70031	1
+item	71123	4
+item	71129	4
+item	51001	100
+reward	21080	1
+gold	5000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Demirci		
+section		
+npc	20016	
+item	28412	5
+item	81601	5
+reward	28512	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28430	5
+item	81601	5
+reward	28530	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28431	5
+item	81601	5
+reward	28531	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28432	5
+item	81601	5
+reward	28532	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28433	5
+item	81601	5
+reward	28533	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28434	5
+item	81601	5
+reward	28534	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28435	5
+item	81601	5
+reward	28535	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28436	5
+item	81601	5
+reward	28536	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28437	5
+item	81601	5
+reward	28537	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28438	5
+item	81601	5
+reward	28538	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28439	5
+item	81601	5
+reward	28539	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28440	5
+item	81601	5
+reward	28540	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28441	5
+item	81601	5
+reward	28541	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28442	5
+item	81601	5
+reward	28542	1
+gold	100000000	
+percent	100	
+end		
+
+#Demirci		
+section		
+npc	20016	
+item	28443	5
+item	81601	5
+reward	28543	1
+gold	100000000	
+percent	100	
+end		
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	18900	5
+item	71520	25
+item	71521	25
+item	71522	25
+reward	18901	1
+gold	100000000	
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	71520	5
+item	71521	5
+item	71522	5
+reward	18900	1
+gold	100000000	
+percent	50	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	14209	1
+item	50634	10
+item	71123	4
+item	71129	4
+item	51001	500
+reward	14220	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	14209	1
+item	50635	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	14500	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	14209	1
+item	50636	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	14520	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	14209	1
+item	50637	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	14540	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	14209	1
+item	50638	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	14560	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	16209	1
+item	50634	10
+item	71123	4
+item	71129	4
+item	51001	500
+reward	16220	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	16209	1
+item	50635	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	16500	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	16209	1
+item	50636	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	16520	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	16209	1
+item	50637	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	16540	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	16209	1
+item	50638	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	16560	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	17209	1
+item	50634	10
+item	71123	4
+item	71129	4
+item	51001	500
+reward	17220	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	17209	1
+item	50635	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	17500	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	17209	1
+item	50636	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	17520	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	17209	1
+item	50637	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	17540	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_schmuck
+section		
+npc	20383	
+item	17209	1
+item	50638	10
+item	30524	10
+item	30525	10
+item	51001	500
+reward	17560	1
+gold	400000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	279	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	460	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	289	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	470	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	209	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	460	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	4049	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	1340	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	2169	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	2370	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	3159	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	3190	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	5339	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	5340	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	7199	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	7370	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_waffen
+section		
+npc	20383	
+item	6089	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	6090	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#jae_seon_kim_ruestungen
+section		
+npc	20383	
+item	12019	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	20000	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#jae_seon_kim_ruestungen
+section		
+npc	20383	
+item	12029	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	20250	1
+gold	250000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#jae_seon_kim_ruestungen
+section		
+npc	20383	
+item	12039	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	20500	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#jae_seon_kim_ruestungen
+section		
+npc	20383	
+item	12049	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	20750	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#jae_seon_kim_ruestungen
+section		
+npc	20383	
+item	21089	1
+item	30524	10
+item	30525	10
+item	51001	500
+reward	21090	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#kawuco_guertel
+section		
+npc	20413	
+item	30524	10
+item	30525	10
+item	30500	100
+item	30501	100
+item	51001	2000
+reward	18040	1
+gold	150000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#kawuco_guertel
+section		
+npc	20413	
+item	30524	10
+item	30525	10
+item	30502	100
+item	30503	100
+item	51001	2000
+reward	18050	1
+gold	150000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#kawuco_guertel
+section		
+npc	20413	
+item	30524	10
+item	30525	10
+item	30504	100
+item	30505	100
+item	51001	2000
+reward	18060	1
+gold	150000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end
+
+#kawuco_guertel
+section		
+npc	20413	
+item	30524	10
+item	30525	10
+item	30506	100
+item	30507	100
+item	51001	2000
+reward	18070	1
+gold	150000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end
+
+
+#kawuco_schuhe		
+section		
+npc	20413	
+item	15439	1
+item	30600	10
+item	30603	10
+reward	15440	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end	
+
+#kawuco_schuhe	
+section		
+npc	20413	
+item	15419	1
+item	30600	10
+item	30602	10
+reward	15450	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100
+end	
+
+#kawuco_ruestungen	
+section		
+npc	20413	
+item	20009	1
+item	30601	10
+item	30602	10
+item	30605	5
+reward	20760	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen		
+section		
+npc	20413	
+item	20259	1
+item	30601	10
+item	30602	10
+item	30605	5
+reward	20770	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen		
+section		
+npc	20413	
+item	20509	1
+item	30601	10
+item	30602	10
+item	30605	5
+reward	20780	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen			
+section		
+npc	20413	
+item	20759	1
+item	30601	10
+item	30602	10
+item	30605	5
+reward	20790	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen		
+section		
+npc	20413	
+item	21099	1
+item	30601	10
+item	30602	10
+item	30605	5
+reward	20800	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen			
+section		
+npc	20413	
+item	20009	1
+item	30601	10
+item	30603	10
+item	30606	5
+reward	20810	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen		
+section		
+npc	20413	
+item	20259	1
+item	30601	10
+item	30603	10
+item	30606	5
+reward	20820	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen			
+section		
+npc	20413	
+item	20509	1
+item	30601	10
+item	30603	10
+item	30606	5
+reward	20830	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen		
+section		
+npc	20413	
+item	20759	1
+item	30601	10
+item	30603	10
+item	30606	5
+reward	20840	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#kawuco_ruestungen			
+section		
+npc	20413	
+item	21099	1
+item	30601	10
+item	30603	10
+item	30606	5
+reward	20850	1
+gold	250000000	
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#theowadhan_band	
+section		
+npc	20406	
+item	80019	25
+item	30500	10
+item	30503	10
+item	30506	10
+item	30558	1
+reward	85001	1
+gold	200000	
+percent	100	
+end	
+
+#theowadhan_band	
+section		
+npc	20406	
+item	80019	25
+item	30511	10
+item	30514	10
+item	30517	10
+item	30554	1
+reward	85005	1
+gold	200000	
+percent	100	
+end	
+
+#theowadhan_band	
+section		
+npc	20406	
+item	80019	25
+item	30510	10
+item	30516	10
+item	30513	10
+item	30556	1
+reward	85011	1
+gold	200000	
+percent	100	
+end	
+
+#theowadhan_band	
+section		
+npc	20406	
+item	80019	25
+item	30508	10
+item	30505	10
+item	30502	10
+item	30555	1
+reward	85015	1
+gold	200000	
+percent	100	
+end	
+
+#theowadhan_band	
+section		
+npc	20406	
+item	80019	25
+item	30509	10
+item	30512	10
+item	30515	10
+item	30559	1
+reward	85021	1
+gold	200000	
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12289	1
+item	30524	10
+item	30525	10
+item	51001	1000
+reward	12690	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12409	1
+item	30524	10
+item	30525	10
+item	51001	1000
+reward	12700	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	12549	1
+item	30524	10
+item	30525	10
+item	51001	1000
+reward	12710	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12689	1
+item	30524	10
+item	30525	10
+item	51001	1000
+reward	12720	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	21549	1
+item	30524	10
+item	30525	10
+item	51001	1000
+reward	21550	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12699	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	30610	1000
+reward	13890	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12709	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	30610	1000
+reward	13800	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	12719	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	30610	1000
+reward	13810	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12729	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	30610	1000
+reward	13820	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	21559	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	30610	1000
+reward	13830	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12699	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	51001	2000
+reward	13390	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12709	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	51001	2000
+reward	13300	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	12719	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	51001	2000
+reward	13310	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme	
+section		
+npc	20421	
+item	12729	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	51001	2000
+reward	13320	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+#Jaharr_helme		
+section		
+npc	20421	
+item	21559	1
+item	96140	10
+item	96141	10
+item	78774	250
+item	51001	2000
+reward	13330	1
+gold	500000000
+allow_copy_socket	1
+allow_copy_attr	1
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	100
+item	27992	5
+item	27993	5
+reward	41504	1
+gold	5000000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	100
+item	27993	5
+item	27994	5
+reward	41507	1
+gold	5100000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	100
+item	27994	5
+item	71520	5
+reward	41505	1
+gold	5200000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	100
+item	71520	5
+item	71521	5
+reward	41506	1
+gold	5300000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	50
+item	71521	5
+item	51001	50
+reward	45191	1
+gold	5300000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	50
+item	71522	5
+item	51001	50
+reward	45193	1
+gold	5400000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	50
+item	71520	5
+item	51001	50
+reward	45190	1
+gold	5500000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	50
+item	27994	5
+item	51001	50
+reward	45192	1
+gold	5600000
+percent	100	
+end	
+
+Tavsan
+section		
+npc	30129	
+item	30178	20
+reward	50255	3
+gold	100000
+percent	100	
+end	

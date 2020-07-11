@@ -1,0 +1,55 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/fire_dragon/20.gr2"
+MotionDuration           3.166667
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.927818
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 Head"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/fire_dragon_breathe.mse"
+        EffectPosition       0.000000 0.000000 -120.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.433090
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 Head"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/fire_dragon_breathe.mse"
+        EffectPosition       0.000000 0.000000 -120.000000
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         2.041768
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           1200.000000
+            Position         0.000000 -900.000000 0.000000
+        }
+    }
+}

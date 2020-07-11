@@ -1,0 +1,2 @@
+if game . get_event_flag ( "harvest_festival" ) == 0 then harvest_festival . reset_flags ( ) 
+ return end 

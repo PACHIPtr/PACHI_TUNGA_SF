@@ -1,0 +1,2 @@
+if game . get_event_flag ( "ex_olympic_drop" ) >= 1 then set_state ( "information" ) 
+ return end 

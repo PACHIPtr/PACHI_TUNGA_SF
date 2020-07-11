@@ -1,0 +1,14 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Name			"함정 찾기"
+Description		"주변의 함정을 찾는다"
+
+IconFileName	"skill/assassin/find_trap.sub"
+MotionIndex		0
+
+MaxLevel				3
+LevelUpPoint			3
+NeedSPFormula			"60"
+ContinuationSPFormula 	"3" 
+

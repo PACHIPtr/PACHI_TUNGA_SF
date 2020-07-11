@@ -1,0 +1,26 @@
+mushroom_dungeon={["start"]=0,setting= function ()return { 
+[ "base" ] = { [ "x" ] = 21000 , [ "y" ] = 1000 } , 
+[ "floor_1" ] = { [ "x" ] = 269 , [ "y" ] = 144 } , 
+[ "floor_2" ] = { [ "x" ] = 778 , [ "y" ] = 151 } , 
+[ "floor_3" ] = { [ "x" ] = 158 , [ "y" ] = 811 } , 
+[ "floor_4" ] = { [ "x" ] = 473 , [ "y" ] = 581 } , 
+[ "floor_4_metin_1" ] = { { 527 , 555 } , { 695 , 643 } } , 
+[ "floor_4_metin_2" ] = { { 588 , 614 } , { 626 , 591 } } , 
+[ "floor_4_metin_3" ] = { { 618 , 569 } , { 574 , 574 } } , 
+[ "floor_4_metin_4" ] = { { 654 , 619 } , { 522 , 596 } } , 
+[ "floor_4_metin_5" ] = { { 730 , 600 } , { 545 , 624 } } , 
+[ "floor_4_metin_6" ] = { { 781 , 627 } , { 644 , 581 } } , 
+[ "semi_boss" ] = { { 326 , 210 } , { 217 , 213 } , { 832 , 217 } , { 725 , 220 } , { 158 , 811 } , { 261 , 809 } , { 761 , 748 } , { 762 , 792 } , { 719 , 791 } , { 718 , 747 } } , 
+[ "final_boss" ] = { [ "x" ] = 739 , [ "y" ] = 831 } , 
+} 
+end ,warrior_soul= function ()local soul = d . getf ( "warrior_soul" ) 
+local soul_names = { 
+[ 1 ] = { "Bu topraklarý koruyan bir savaþcýnýn ruhunu keþfettiniz ! - Kalan(4)" } , 
+[ 2 ] = { "Bu topraklarý koruyan bir savaþcýnýn ruhunu keþfettiniz ! - Kalan(3)" } , 
+[ 3 ] = { "Bu topraklarý koruyan bir savaþcýnýn ruhunu keþfettiniz ! - Kalan(2)" } , 
+[ 4 ] = { "Bu topraklarý koruyan bir savaþcýnýn ruhunu keþfettiniz ! - Kalan(1)" } , 
+[ 5 ] = { "Bu topraklarý koruyan bir savaþcýnýn ruhunu keþfettiniz ! - Kalan(0)" } , 
+} 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "%s." , soul_names [ soul ] [ 1 ] ) ) 
+end }

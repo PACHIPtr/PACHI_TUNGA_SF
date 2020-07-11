@@ -1,0 +1,18 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Attribute		"STANDING_SKILL"
+
+Name			"함정 파기"
+Description		"지금 서있는 자리에 적에게 치명타를 입힐 함정을 만든다"
+
+IconFileName	"skill/assassin/make_trap.sub"
+MotionIndex		12
+
+List AffectData
+{
+	"%.1f 배의 타격"	"1 + SkillPoint / 4"	""
+}
+
+CoolTimeFormula		"40 - SkillPoint"
+NeedSPFormula		"50"

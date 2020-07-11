@@ -1,0 +1,20 @@
+ScriptType			SkillDataScript
+
+Type				LOW
+Attribute			"NEED_TARGET" "FOR_ALLIANCE" "USE_FOR_ME"
+Range				800
+
+Name				"정업인"
+Description			"빛의 기운으로 상처를 치유한다"
+
+IconFileName		"skill/assassin/1.sub"
+MotionIndex			1
+MotionIndexForMe	2
+
+List AffectData
+{
+	"체력 %.0f 회복" "(10 + SkillLevel * 3) * 10" ""
+}
+
+NeedSPFormula		"50"
+CoolTimeFormula		"5"

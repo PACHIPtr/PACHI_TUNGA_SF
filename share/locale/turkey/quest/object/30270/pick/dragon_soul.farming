@@ -1,0 +1,4 @@
+if pc . count_item ( 30270 ) >= 5 then 
+pc . remove_item ( 30270 , 5 ) 
+pc . give_item2 ( 50255 ) 
+end 

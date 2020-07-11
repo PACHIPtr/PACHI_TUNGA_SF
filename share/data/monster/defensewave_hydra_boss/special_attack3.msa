@@ -1,0 +1,42 @@
+ScriptType		MotionData
+MotionFileName	"D:/ymir work/monster2/defensewave_hydra_boss/special_attack1.GR2"
+MotionDuration	2.500000
+Accumulation	0.00 0.00 0.00
+
+Group MotionEventData
+{
+	MotionEventDataCount	2
+
+	Group Event00
+	{
+		MotionEventType		1
+		StartingTime		1.380779
+		IndependentFlag		0
+		AttachingEnable		1
+		AttachingBoneName	"effect_Bone"
+		FollowingEnable		1
+		EffectFileName		"D:/ymir work/effect/monster2/defense_start_breath.mse"
+		EffectPosition		0.000000 0.000000 0.000000
+	}
+	Group Event01
+	{
+		MotionEventType		4
+		StartingTime		1.380779
+		DuringTime			0.000000
+		EnableHitProcess	0
+		AttackType			0
+		HittingType			1
+		StiffenTime			0.000000
+		InvisibleTime		0.000000
+		ExternalForce		0.000000
+		HitLimitCount		0
+		CollisionType		4
+		SphereDataCount		1
+
+		Group SphereData00
+		{
+			Radius		400.000000
+			Position	0.000000 0.000000 0.000000
+		}
+	}
+}

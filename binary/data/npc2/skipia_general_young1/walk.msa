@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc_pet/skipia_general_young1/walk.GR2"
+MotionDuration           0.933333
+Accumulation             0.00	-40.00	0.00
+

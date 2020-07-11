@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"명상"
+Description		"정신력 회복량 증가"
+
+IconFileName	"skill/warrior/tuji.sub"
+List AffectData
+{
+	"정신력 회복량 +%.0f%%" "SkillPoint * 5" ""
+}

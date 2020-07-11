@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_dark_china_stone\spwan.GR2"
+MotionDuration           1.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.018789
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Dummy001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_china_stone/spwan_1.mse"
+        EffectPosition       40.000000 0.000000 160.000000
+    }
+}

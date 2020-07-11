@@ -1,0 +1,6 @@
+say_title ( "Baek-Go:" ) 
+say ( "Elimden geleni yapýyorum. Bu tehlikeli dünyada" ) 
+say ( "bir çok insan her gün yaralanýyor. Bizim o" ) 
+say ( "kadar ilaç ve doktorumuz yok. Zaman çok zor!" ) 
+say ( "Bana daha sonra yardým edebilir misin?" ) 
+say ( "" ) 

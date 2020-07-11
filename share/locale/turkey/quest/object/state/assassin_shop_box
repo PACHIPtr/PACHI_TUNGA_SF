@@ -1,0 +1,4 @@
+assassin_shop_box={["start"]=0,give_costume_item= function (costume_vnum,duration)local remain_time = 86400 * duration 
+pc . give_item2_select ( costume_vnum , 1 ) 
+item . set_socket ( 0 , get_global_time ( ) + remain_time ) 
+end }

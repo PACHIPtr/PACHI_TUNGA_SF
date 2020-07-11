@@ -1,0 +1,13 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Bir Sonraki dalga " .. d . getf ( "sn" ) .. " sn. içinde baþlayacak.." ) 
+if d . getf ( "sn" ) > 1 then 
+d . setf ( "sn" , d . getf ( "sn" ) - 1 ) 
+else 
+d . setf ( "sn" , d . getf ( "sn" ) - 1 ) 
+clear_server_timer ( "DefanceCheckSecondTwoOne" , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+server_timer ( "DefanceJump_Wawe2" , 1 , d . get_map_index ( ) ) 
+end 
+end 

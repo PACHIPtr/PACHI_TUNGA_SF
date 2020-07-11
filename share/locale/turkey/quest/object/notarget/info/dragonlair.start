@@ -1,0 +1,2 @@
+q . set_clock ( "Kalan süre:" , game . get_event_flag ( "time_1_" .. pc . get_channel_id ( ) .. "_" ) - get_time ( ) ) 
+dragonlair . ejder_odasi_kalansure ( ) 

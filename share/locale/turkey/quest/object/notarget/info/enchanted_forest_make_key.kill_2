@@ -1,0 +1,3 @@
+say_title ( "Ýlaç çantasýný ara." ) 
+say ( "En Tai Rahibi'ni öldür ve ilaç çantasýný ele" ) 
+say ( "geçir." ) 

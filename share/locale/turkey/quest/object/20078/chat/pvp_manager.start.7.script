@@ -1,0 +1,5 @@
+for aArena = 1 , 4 , 1 begin 
+arena [ aArena ] [ 3 ] = 0 
+arena [ aArena ] [ 4 ] = "SLEEPING" 
+end 
+pvp_manager . refresh_arenas ( ) 

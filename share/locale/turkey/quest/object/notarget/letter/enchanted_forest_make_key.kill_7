@@ -1,0 +1,4 @@
+send_letter ( "&Bir aðaç zümrütü " ) 
+target . pos ( "__BOSS__" , 610 , 78 , 213 , "En Tai Hükümdarý " ) 
+loop_timer ( "kill_7" , 1 ) 
+pc . setqf ( "boss_2" , 0 ) 

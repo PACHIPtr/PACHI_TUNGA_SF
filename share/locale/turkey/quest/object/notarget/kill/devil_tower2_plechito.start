@@ -1,0 +1,147 @@
+if npc . get_race ( ) == 801 or npc . get_race ( ) == 802 or npc . get_race ( ) == 803 or npc . get_race ( ) == 804 or npc . get_race ( ) == 805 then local count , check = d . getf ( "mobs" ) + 1 , false ; 
+if d . getf ( "lair_check1" ) == 1 then 
+if count < 650 and check == false then 
+d . setf ( "mobs" , count ) 
+local c = 650 - d . getf ( "mobs" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(1.Görev)Dikkat! Dalga dalga gelecek olan iblisleri temizle! Kalan yaratýk: " .. c .. "" ) 
+else 
+if d . getf ( "metin_stone" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . spawn_mob ( 8401 , 146 , 151 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "(1.2 Görev) %s Ortaya Çýktý ! Onu bul ve ruhu serbest býrak  !" , mob_name ( 8401 ) ) ) 
+d . setf ( "metin_stone" , 1 ) 
+end 
+check = true 
+end 
+end 
+ return end if npc . get_race ( ) == 8401 and pc . in_dungeon ( ) then local setting = devil_tower2_plechito . settings ( ) 
+if d . getf ( "lair_check1" ) == 1 then 
+d . setf ( "lair_check1" , 2 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 3 ) 
+end 
+if d . getf ( "lair_check1" ) == 3 then 
+local items = { setting [ "keys" ] [ 1 ] , setting [ "keys" ] [ 2 ] } 
+local chance = number ( 1 , 3 ) 
+if chance <= 2 then 
+game . drop_item ( items [ 1 ] , 1 ) 
+elseif chance == 3 then 
+game . drop_item ( items [ 2 ] , 1 ) 
+end 
+end 
+ return end if npc . get_race ( ) == 805 or npc . get_race ( ) == 804 or npc . get_race ( ) == 803 or npc . get_race ( ) == 809 or npc . get_race ( ) == 810 then local count , check_2 = d . getf ( "mobs_level_2" ) + 1 , false ; 
+if d . getf ( "lair_check1" ) == 2 then 
+if count < 60 and check_2 == false then 
+d . setf ( "mobs_level_2" , count ) 
+else 
+if d . getf ( "boss_check1" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "(2.1 Görev) %s belirdi bul ve yok et !" , mob_name ( 806 ) ) ) 
+devil_tower2_plechito . spawn_boss ( 2 ) 
+d . setf ( "boss_check1" , 1 ) 
+end 
+check_2 = true 
+end 
+end 
+ return end if npc . get_race ( ) == 806 and pc . in_dungeon ( ) then d . notice ( string . format ( "%s baþarý ile yok edildi !" , mob_name ( 806 ) ) ) 
+d . notice ( "Bir sonraki göreve hazýrlan  !" ) 
+d . setf ( "lair_check1" , 3 ) 
+cleartimer ( "level_timer1" ) 
+cleartimer ( "level_two_timer" ) 
+timer ( "level_timer1" , 3 ) 
+ return end if npc . get_race ( ) == 807 or npc . get_race ( ) == 808 or npc . get_race ( ) == 809 or npc . get_race ( ) == 812 then local count , check_3 = d . getf ( "mobs_level_3" ) + 1 , false ; 
+if d . getf ( "lair_check1" ) == 4 then 
+if count < 30 and check_3 == false then 
+d . setf ( "mobs_level_3" , count ) 
+else 
+if d . getf ( "boss_check1_2" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+devil_tower2_plechito . spawn_boss ( 4 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "(4.1 Görev) %s a belirdi! Onu yoket !" , mob_name ( 817 ) ) ) 
+d . setf ( "boss_check1_2" , 1 ) 
+end 
+check_3 = true 
+end 
+end 
+ return end if npc . get_race ( ) == 817 and pc . in_dungeon ( ) then d . notice ( string . format ( "Harika !  %s'yi yok ettin bir sonraki aþamaya geçiliyor ! " , mob_name ( 817 ) ) ) 
+d . setf ( "lair_check1" , 5 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 3 ) 
+ return end if npc . get_race ( ) == 8402 and pc . in_dungeon ( ) then local chance = number ( 1 , 4 ) 
+if chance < 2 then 
+if d . getf ( "first_root" ) == 0 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(5.Görev) Doðru metin yok edildi ! Kalan doðru metin: 1 !" ) 
+d . setf ( "first_root" , 1 ) 
+else 
+d . notice ( "Son doðru metin taþýný buldun !" ) 
+d . notice ( "Bir sonraki aþamada canavarlarý öldürerek kapýlarýn kilidini açmalýsýn!" ) 
+d . setf ( "lair_check1" , 6 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 3 ) 
+end 
+else 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "(5. Görev) Yanlýþ %s yokettin !" , mob_name ( 8402 ) ) ) 
+end 
+ return end if npc . get_race ( ) == 812 or npc . get_race ( ) == 813 or npc . get_race ( ) == 814 then local count = d . getf ( "mobs_level_4" ) + 1 ; 
+local purge_count = d . getf ( "purge_count" ) 
+if d . getf ( "lair_check1" ) == 6 then 
+if count < 10 then 
+d . setf ( "mobs_level_4" , count ) 
+else 
+if purge_count < 10 then 
+d . setf ( "purge_count" , purge_count + 1 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "Canavar gruplarýný yok et ! Kalan grup %s !" , 10 - d . getf ( "purge_count" ) + 1 ) ) 
+d . setf ( "mobs_level_4" , 0 ) 
+else 
+d . notice ( "Tüm anýtlarý serbest býraktýn !" ) 
+d . notice ( "Bir sonraki seviyede tüm canavarlarý öldür ve Mavi Ölüm sana görünecek !" ) 
+d . setf ( "lair_check1" , 7 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 3 ) 
+end 
+end 
+end 
+ return end if npc . get_race ( ) == 811 or npc . get_race ( ) == 814 or npc . get_race ( ) == 815 then local count , check_4 = d . getf ( "mobs_level_5" ) + 1 , false ; 
+if d . getf ( "lair_check1" ) == 7 then 
+if count < 10 and check_4 == false then 
+d . setf ( "mobs_level_5" , count ) 
+else 
+if d . getf ( "boss_check1_4" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+devil_tower2_plechito . spawn_boss ( 7 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "(7.1 Görev) %s göründü ! onu maðlub et !" , mob_name ( 1095 ) ) ) 
+d . setf ( "boss_check1_4" , 1 ) 
+end 
+check_4 = true 
+end 
+end 
+ return end if npc . get_race ( ) == 1095 and pc . in_dungeon ( ) then d . notice ( string . format ( "Ýyi iþ! Grubun %s karþý kazandý !" , mob_name ( 1095 ) ) ) 
+d . notice ( "Bu zindandaki son patronu maðlub et !" ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check1" , 8 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 15 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "15 Saniye içerisinde bir sonraki kata gönderileceksiniz." ) ) 
+ return end if npc . get_race ( ) == 816 and pc . in_dungeon ( ) then d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "%s Maðlub edildi , Tebrikler!" , mob_name ( 816 ) ) ) 
+notice_all ( string . format ( "%s grubu Mavi Ölüm Kulesini baþarý ile tamamladý!" , pc . get_name ( ) ) ) 
+d . notice ( "2 dakika içide ýþýnlanýyorsun !" ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check1" , 0 ) 
+timer ( "final1" , 60 * 2 ) 
+ return end 

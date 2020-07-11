@@ -1,0 +1,92 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\YMIR WORK\monster\milgyo_founder\25.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	-238.17	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         0.260960
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.250522
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/milgyo_founder/kami_attack.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.257481
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/milgyo_founder/kami_attack.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.243563
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/milgyo_founder/kami_skill_1.mse"
+        EffectPosition       -300.000000 0.000000 -200.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.243563
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/milgyo_founder/kami_skill_1.mse"
+        EffectPosition       300.000000 0.000000 -200.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.017397
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/milgyo_founder/kami_ritual_skill.mse"
+        EffectPosition       0.000000 0.000000 300.000000
+    }
+}

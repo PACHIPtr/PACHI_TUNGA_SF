@@ -1,0 +1,7 @@
+if game . get_event_flag ( "spider_dead" .. get_channel_id ( ) ) == 0 then warp_all_in_area_to_area ( 82700 , 612700 , 93700 , 625700 , 68700 , 610800 , 68700 , 610800 ) 
+game . set_event_flag ( "spider_lair_ongoing_" .. get_channel_id ( ) , 0 ) 
+game . set_event_flag ( "spider_lair_leader_" .. get_channel_id ( ) , 0 ) 
+game . set_event_flag ( "spider_dead" .. get_channel_id ( ) , 0 ) 
+game . set_event_flag ( "spider_key_dropped" .. get_channel_id ( ) , 0 ) 
+purge_area ( 82700 , 612700 , 93700 , 625700 ) 
+ return end 

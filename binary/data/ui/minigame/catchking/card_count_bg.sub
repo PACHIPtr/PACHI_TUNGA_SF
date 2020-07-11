@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "king_001.dds"
+left 245
+top 285
+right 270
+bottom 302

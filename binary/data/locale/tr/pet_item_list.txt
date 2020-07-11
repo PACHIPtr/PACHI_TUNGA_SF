@@ -1,0 +1,248 @@
+169998	Silahlar
+169997	Zýrhlar
+169991	Kasklar
+169995	Kalkanlar
+169992	Bilezikler
+169994	Kolyeler
+169996	Küpeler
+169993	Ayakkabýlar
+169999	Taþlar (+0 > +4)
+50300	Beceri Kitabý
+70102	Zen Fasulye
+50513	Ruh Taþý
+25040	Kutsama Kaðýdý
+25041	Büyülü Metal
+70005	Tecrübe Yüzüðü
+70043	Hýrsýz Eldiveni
+70104	Dönüþüm Küresi
+50011	Ayýþýðý Define Sandýðý
+50037	Altýgen Hediye Paketi
+50096	Futbol Topu
+30340	Bakýr Yükseltme Sandýðý
+30341	Gümüþ Yükseltme Sandýðý
+30342	Altýn Yükseltme Sandýðý
+30343	Efsanevi Yükseltme Sandýðý
+61100	Metin Taþý Sandýðý(Sv.1-20)
+61101	Metin Taþý Sandýðý(Sv.25-35)
+61102	Metin Taþý Sandýðý(Sv.40-65)
+61103	Metin Taþý Sandýðý(Sv.70-80)
+61104	Metin Taþý Sandýðý(Sv.85-90)
+61105	Kaya Maymun Sandýðý
+61106	Vahþi Yüzbaþý Sandýðý
+61107	Yürüyen Maymun Sandýðý
+61108	Ork Reisi Sandýðý
+61109	Karanlýk Lider Sandýðý
+61110	Maymun Lordu Sandýðý
+61111	Kraliçe Örümcek Sandýðý
+61112	Dev Çöl Kaplumbaðasý Sandýðý
+61113	Dokuz Kuyruk Sandýðý
+61114	Alev Kral Sandýðý
+61115	Þeytan Kral Sandýðý
+61116	Kibirli Þeytan Kral Sandýðý
+61117	Sarý Kaplan Hayaleti Sandýðý
+61118	Dev Hayalet Aðaç Sandýðý
+61119	Tartaros Sandýðý
+61120	Güçlü Buz Cadýsý Sandýðý
+61121	General Sandýðý
+61122	Kharoon Sandýðý
+61123	Beran-Setaou Sandýðý
+61124	General Kappa Sandýðý
+61125	General Istakoz Sandýðý
+61126	Kemik Surat Sandýðý
+61127	Lemur Prensi Sandýðý
+61128	Lord Gnoll Sandýðý
+61129	Rakshasa Sandýðý
+61130	Arges Sandýðý
+61131	Zalim Kemik Surat Sandýðý
+61132	Kaptak Þrak Sandýðý
+61133	Gargoyle Sandýðý
+61134	Jotun Thrym Sandýðý
+61135	Bagjanamu Sandýðý
+61136	Nemere Sandýðý
+61137	Razadör Sandýðý
+61200	Metin Taþý Sandýðý(Sv.115)
+61201	Metin Taþý Sandýðý(Paskalya)
+61202	Metin Taþý Sandýðý(B.O)
+50097	Çiçek Demeti Kutusu
+70031	Eskrim Broþürü
+71123	Ejderha Pulu
+71129	Ejderha Pençesi
+30190	Kan Taþý
+30319	Küçülen Kafa
+30179	Kývrýk Anahtar
+71035	Araþtýrmacýnýn Özütü
+70022	Beranýn Kalbi
+70014	Kan Hapý
+30021	Deðerli Taþ Parçasý
+30030	Paslý Býçak
+30005	Kýrýk Zýrh Parçasý
+30033	Kýrýk Porselen
+30011	Çile
+30035	Yüz Kremi
+30017	Süslü Saç Tokasý
+30018	K. Domuzkuyruðu Kurdele
+30034	B. Domuzkuyruðu Kurdele
+30073	B. Domuzkuyruðu Kurdele+
+30031	Süs Eþyasý
+30040	Yaprak
+30060	Kurbaða Dili
+30061	Kurbaða Bacaðý
+30052	Bayrak
+30067	Yýlan Derisi
+30042	Saldýrgan kaplanýn diþi
+30006	Ork Diþi
+30077	Ork Diþi+
+30007	Ork Muskasý
+30076	Ork Muskasý+
+30008	Baþlangýç Elkitabý
+30078	Baþlangýç El Kitabý+
+30015	Þeytan Hatýrasý
+30086	Þeytan Hatýrasý+
+30016	Þeytan Mücevheri
+30087	Þeytan Mücevheri+
+30022	Yýlan Kuyruðu
+30082	Yýlan Kuyruðu+
+30032	Yýpranmýþ Siyah Üniforma
+30074	Siyah Üniforma+
+30041	Shiriken
+30075	Shiriken+
+30046	Akrep Kuyruðu
+30081	Akrep Kuyruðu+
+30047	Lanet Kitabý
+30080	Lanet Kitabý+
+30051	Bilinmeyen Týlsým
+30079	Bilinmeyen Týlsým+
+30009	Bilinmeyen Ýlaç
+30083	Bilinmeyen Ýlaç+
+30039	Sargý Bezi
+30085	Sargý Bezi+
+30048	Buz Parçasý
+30088	Buz Parçasý+
+30014	Yeti Postu
+30089	Yeti Postu+
+30050	Buz Topu
+30090	Buz Küresi+
+30049	Katil Buzbalina Boynuzu
+30025	Örümceðin Zehir Kesesi
+30326	Kraliçe Örümcek Zehri
+30056	Örümcek Aðý
+30057	Örümcek Gözleri
+30058	Örümcek Yumurta Kesesi
+30059	Örümcek Bacaklarý
+30045	Akrep Ýðnesi
+30055	Akrep Kýskacý
+30019	Alev Yelesi
+30091	Savaþçý Sembolü
+30192	Süt Þerbeti
+30193	Parmak Kemikleri
+30194	Ork Topuzu
+30195	Kuvars Kumu
+30196	Þeytan Külü
+30197	Büyülü Tohum
+30198	Su Kristali
+30199	Mavi Kristal
+30300	Bilinmeyen Eski Sandýk
+50084	Kilit Açma Taþý
+30302	Zin-Sa-Gui Kale Haritasý
+30304	Zin-Bong-In Anahtar
+30265	Madalya Parçasý (1)
+30266	Madalya Parçasý (2)
+30267	Madalya Parçasý (3)
+30268	Madalya Parçasý (4)
+30269	Madalya Parçasý (5)
+30500	Yakut Oyma Býçaðý
+30501	Altýn Kenet
+30502	Yakut Ýþlemeli
+30503	Ametist Oyma Býçaðý
+30504	Gümüþ Kenet
+30505	Zümrüt Ýþlemeli
+30506	Safir Oyma Býçaðý
+30507	Bronz Kenet
+30508	Safir Ýþlemesi
+30509	Mavi Ejderha Çeliði
+30510	Fiyakalý Apolet
+30511	Kýrmýzý Kumaþ
+30512	Kýrmýzý Ejderha Çeliði
+30513	Kýymetli Apolet
+30514	Eflatun Kumaþ
+30515	Erguvani Ejderha Çeliði
+30516	Antika Apolet
+30517	Altýn Kumaþ
+30518	Altýn Ýplik
+30519	Altýn Kanca
+30520	Altýn Kenet
+30521	Halka Öðesi
+30522	Zincir Halkalar
+30523	Mücevher Öðesi
+30524	Alev Taþý
+30525	Buz Alevi Taþý
+30600	Kesim Örneði
+30601	Zýrh Planý
+30602	mavi boya
+30603	kýrmýzý boya
+30604	gri boya
+30605	Altýn Plakalar
+30606	Gümüþ Plakalar
+30607	Bakýr Plakalar
+30608	Çelik Plakalar
+30609	Tunç Plakalar
+30610	Mitril
+30611	Aðýr Kemerler
+30612	Saðlam Ýpler
+30613	Orman Perisi Taþý
+30614	siyah boya
+30615	beyaz boya
+30616	Titandiyoksit
+30617	Akik
+30618	Ay Taþý
+30619	altýn metalik boya
+30620	Kýrmýzý Ejderha Boynuzu
+30621	Kýrmýzý Ejderha Pulu
+30622	Zýrh Planý: Kask
+30315	Simit
+50010	Çorap
+52701	Aslan Sertifikasý
+52702	Kaplan Sertifikasý
+52703	Yaban Domuzu Sertifikasý
+52704	Kurt Sertifikasý
+52705	RenGeyiði Sertifikasý(e)
+52706	RenGeyiði Sertifikasý(d)
+52707	Ejdercik Sertifikasý
+50067	Evrim Parþömeni
+50068	Mutasyon Parþömeni
+50008	Altýn Anahtar
+50009	Gümüþ Anahtar
+50014	Altýn Anahtar+
+50015	Gümüþ Anahtar+
+50006	Altýn Define Sandýðý
+50007	Gümüþ Define Sandýðý
+50012	Altýn Define Sandýðý+
+50013	Gümüþ Define Sandýðý+
+50186	Azrailin Sandýðý
+50254	Karanlýðýn Sandýðý
+50080	Kýrmýzý Ejderha Sandýðý
+38054	Çöl Fýrtýnasý Sandýðý
+71159	Milonun Sandýðý
+71160	Athenanýn Sandýðý
+55008	Pet Evrim Kitabý Kutusu
+55009	Pet Kitabý Kutusu
+38055	Yavrucuk Kutusu
+55401	Küçük Örümcek Yumurtasý
+55402	Yavru Azrail Yumurtasý
+55403	Küçük Nemere Yumurtasý
+55404	Küçük Razador Yumurtasý
+55405	Küçük Ejderha Yumurtasý
+55406	Yavru Meley Yumurtasý
+71144	Noel Sandýðý
+38056	Bayram Sandýðý
+50721	Þeftali Çiçeði
+50722	Çançiçeði
+50723	Kaki Çiçeði
+50724	Gango Kökü
+50725	Leylak
+50726	Tue Mantarý
+50727	Alp Gülü
+50728	Dut
+90010	Temel Taþý
+90011	Gövde
+90012	Kontrplak

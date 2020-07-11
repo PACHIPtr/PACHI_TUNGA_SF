@@ -1,0 +1,12 @@
+say_title ( "Sura Ruhu;" ) 
+say ( "Sýfýrlamak istediðinden emin misin ?" ) 
+local cyvercha = select ( "Evet" , "Hayýr" ) 
+if cyvercha == 2 then 
+return 
+elseif cyvercha == 1 then 
+notice_all ( "CH " .. pc . get_channel_id ( ) .. ": mavi ejderha süresi sýfýrlanmýþtýr." ) 
+game . set_event_flag ( "time_1_" .. pc . get_channel_id ( ) .. "" , get_time ( ) + 600 ) 
+clear_server_timer ( "sure_bitti_" .. pc . get_channel_id ( ) .. "" , get_server_timer_arg ( ) ) 
+server_timer ( "geri_dondu_" .. pc . get_channel_id ( ) .. "_" , 60 * 1 , pc . get_map_index ( ) ) 
+forked . warp_all_in_map ( "207" , "73" , "180100" , "1220400" , 295 ) 
+end 

@@ -1,0 +1,93 @@
+flame_dungeon={["start"]=0,["run"]=1349952704,setting= function ()return 
+{ 
+[ "bossroom_entry_pos" ] = { 8109 , 6867 } , 
+[ "boss_pos" ] = { 686 , 637 } , 
+[ "doors_pos" ] = { 
+{ 320 , 394 } , 
+{ 293 , 359 } , 
+{ 333 , 321 } , 
+{ 378 , 320 } , 
+{ 400 , 355 } , 
+{ 394 , 401 } 
+} , 
+[ "idoors_pos" ] = { 
+{ 268 , 447 } , 
+{ 234 , 359 } , 
+{ 300 , 264 } , 
+{ 454 , 217 } , 
+{ 470 , 355 } , 
+{ 467 , 469 } 
+} , 
+[ "doors_dir" ] = { 135 , 90 , 210 , 152 , 90 , 223 } , 
+[ "idoors_dir" ] = { 135 , 90 , 210 , 135 , 90 , 239 } , 
+[ "dungeon_entry_pos" ] = { 7762 , 6739 } , 
+[ "20385_bpos" ] = { 690 , 722 } , 
+[ "20385_pos" ] = { 354 , 362 } , 
+[ "LEVEL2_STONE_pos" ] = { 195 , 352 } , 
+[ "LEVEL4_TARGET_pos" ] = { 470 , 175 } , 
+[ "LEVEL5_STONE_pos" ] = { 
+{ 486 , 345 } , 
+{ 511 , 336 } , 
+{ 525 , 349 } , 
+{ 521 , 365 } , 
+{ 503 , 372 } , 
+{ 486 , 365 } , 
+{ 500 , 354 } 
+} , 
+[ "LEVEL6_TARGET_pos" ] = { 511 , 480 } , 
+[ "outside_entry_pos" ] = { 6142 , 7068 } , 
+[ "YAK_pos" ] = { 376 , 397 } 
+} 
+end ,is_flamed= function (idx)return ( idx >= 351 * 10000 and idx < ( 351 + 1 ) * 10000 ) or idx == 351 
+end ,make_dungeon= function ()local setting = flame_dungeon . setting ( ) 
+d . new_jump ( 351 , setting . dungeon_entry_pos [ 1 ] * 100 , setting . dungeon_entry_pos [ 2 ] * 100 ) 
+d . regen_file ( "data/dungeon/flame_dungeon/npc.txt" ) 
+d . setf ( "level" , 0 ) 
+for i = 1 , 6 begin 
+d . set_unique ( "door" .. i , d . spawn_mob_ac_dir ( 20387 , setting . doors_pos [ i ] [ 1 ] , setting . doors_pos [ i ] [ 2 ] , setting . doors_dir [ i ] ) ) 
+d . set_unique ( "idoor" .. i , d . spawn_mob_ac_dir ( 20388 , setting . idoors_pos [ i ] [ 1 ] , setting . idoors_pos [ i ] [ 2 ] , setting . idoors_dir [ i ] ) ) 
+end 
+d . setf ( "clear_count" , 0 ) 
+d . setf ( "started" , 0 ) 
+pc . setf ( "flame_dungeon" , "dungeon_enter" , 0 ) 
+end ,go_boss= function ()local setting = flame_dungeon . setting ( ) 
+if pc . get_level ( ) < 90 then 
+say ( "Sizin seviyeniz devam etmek için yeterli değil.[ENTER]90.Seviyeye ulaştığınız zaman tekrar gelin." ) 
+return 
+else 
+say ( "Kaderinle karşılaşmak için hazır mısın?" ) 
+local warp = select ( "Devam Et" , "Daha Sonra" ) 
+if warp == 1 then 
+d . setf ( "level" , 17 ) 
+d . jump_all ( setting . bossroom_entry_pos [ 1 ] , setting . bossroom_entry_pos [ 2 ] ) 
+d . set_regen_file ( "data/dungeon/flame_dungeon/" .. "fd_fild_boss.txt" ) 
+d . spawn_mob ( 6091 , setting . boss_pos [ 1 ] , setting . boss_pos [ 2 ] ) 
+end 
+end 
+end ,level_clear= function ()d . setf ( "level" , 0 ) 
+d . clear_regen ( ) 
+d . purge_area ( 750000 , 620000 , 817400 , 689400 ) 
+end ,clear_timer= function (inx)clear_server_timer ( "flame_dungeon_0m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_1m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_5m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_10m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_15m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_30m_left_timer" , inx ) 
+clear_server_timer ( "flame_dungeon_45m_left_timer" , inx ) 
+clear_server_timer ( "killed_A_1" , inx ) 
+clear_server_timer ( "killed_A_2" , inx ) 
+end ,map_index_compare= function ()if flame_dungeon . is_flamed ( pc . getf ( "flame_dungeon" , "dungeon_index" ) ) then 
+return ( pc . getf ( "flame_dungeon" , "dungeon_index" ) == pc . getf ( "flame_dungeon" , "dungeon_index" ) ) 
+end 
+end ,entry_setting= function ()local idx = pc . get_map_index ( ) 
+local setting = flame_dungeon . setting ( ) 
+if idx == 351 then 
+pc . warp ( setting . outside_entry_pos [ 1 ] * 100 , setting . outside_entry_pos [ 2 ] * 100 , 62 ) 
+elseif flame_dungeon . is_flamed ( idx ) then 
+if not flame_dungeon . map_index_compare ( ) and pc . getf ( "flame_dungeon" , "dungeon_enter" ) == 1 then 
+pc . setf ( "flame_dungeon" , "dungeon_index" , d . get_map_index ( ) ) 
+end 
+elseif not d . find ( pc . getf ( "flame_dungeon" , "dungeon_index" ) ) then 
+pc . setf ( "flame_dungeon" , "dungeon_index" , 0 ) 
+end 
+end }

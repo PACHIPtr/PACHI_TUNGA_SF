@@ -1,0 +1,13 @@
+if pc . get_map_index ( ) >= 2.49e+06 and pc . get_map_index ( ) < 2.5e+06 and npc . get_race ( ) == 4972 then d . setf ( "4972_kill" , 1 ) 
+ return end if pc . get_map_index ( ) >= 2.49e+06 and pc . get_map_index ( ) < 2.5e+06 and npc . get_race ( ) == 4972 then clear_server_timer ( "nclogintime1" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime2" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime3" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime4" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime5" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime6" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintimeend" , d . get_map_index ( ) ) 
+clear_server_timer ( "nclogintime5" , d . get_map_index ( ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Nefrit Magarasi başarılı şekilde fethedildi! 2 dakika içerisinde dışarı gönderileceksiniz." ) 
+timer ( "exit_Nephrit" , 60 * 2 ) 
+ return end 

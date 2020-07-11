@@ -1,0 +1,7 @@
+GENERAL WAIT wait.msa 80
+GENERAL WAIT1 wait1.msa 20
+GENERAL WALK walk.msa 100
+GENERAL DEAD dead.msa 100
+
+
+

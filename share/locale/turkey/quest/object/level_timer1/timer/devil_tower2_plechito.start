@@ -1,0 +1,53 @@
+local get_flag = d . getf ( "lair_check1" ) 
+local setting = devil_tower2_plechito . settings ( ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+if get_flag == 2 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 2 ] [ 1 ] , setting [ "spawm_pos" ] [ 2 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 2 ) 
+d . setf ( "lair_check1" , 2 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(2.Görev) Bu aþamadaki canavarlarý 10 dakika içerisinde yok et !" ) 
+end 
+if get_flag == 3 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 3 ] [ 1 ] , setting [ "spawm_pos" ] [ 3 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 3 ) 
+d . setf ( "lair_check1" , 3 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(3.Görev)Metinden Maat Taþý düþür ve Þeytani anýta sürükleyerk üst kata geç." ) 
+end 
+if get_flag == 4 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 4 ] [ 1 ] , setting [ "spawm_pos" ] [ 4 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 4 ) 
+d . setf ( "lair_check1" , 4 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(4.Görev) Bütün yaratýklarý temizle ve Patronu çaðýr !" ) 
+end 
+if get_flag == 5 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 5 ] [ 1 ] , setting [ "spawm_pos" ] [ 5 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 5 ) 
+d . setf ( "lair_check1" , 5 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(5. Görev) Doðru metin taþýný bulana kadar metinleri yoket !" ) 
+end 
+if get_flag == 6 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 6 ] [ 1 ] , setting [ "spawm_pos" ] [ 6 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 6 ) 
+d . setf ( "lair_check1" , 6 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(6. Görev) Dalga Dalga canavarlarý yok et !" ) 
+end 
+if get_flag == 7 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 7 ] [ 1 ] , setting [ "spawm_pos" ] [ 7 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 7 ) 
+d . setf ( "lair_check1" , 7 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(7. Görev) Canavarlarý temizle ve sana görünecek Mavi Ölümü yoket !" ) 
+end 
+if get_flag == 8 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 8 ] [ 1 ] , setting [ "spawm_pos" ] [ 8 ] [ 2 ] ) 
+devil_tower2_plechito . get_regens ( 8 ) 
+d . setf ( "lair_check1" , 8 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(Son Görev) Þeytaný Kurt'u yok et !" ) 
+end 

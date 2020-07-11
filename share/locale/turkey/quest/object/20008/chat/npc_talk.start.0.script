@@ -1,0 +1,14 @@
+say_title ( "Restoran sahibi Octavio:" ) 
+say ( "" ) 
+say ( "Hoþgeldin! Restoranýmýz uluslar arasý bir zincirin" ) 
+say ( "parçasýdýr. Gel ve bizi bir dene." ) 
+say ( "içeri gelin ve bizi deneyin." ) 
+say ( "" ) 
+if math . random ( 2 ) == 1 then 
+wait ( ) 
+say_title ( "" .. pc . get_name ( ) .. ":" ) 
+say ( "" ) 
+say ( "Büyük bir restoran için, dekor" ) 
+say ( "þaþýrtýcý derecede basit." ) 
+say ( "" ) 
+end 

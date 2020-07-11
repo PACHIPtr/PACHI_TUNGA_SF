@@ -1,0 +1,79 @@
+local pc_job = pc . get_job ( ) 
+if pc_job ~= 0 then 
+say_title ( "Yanlýþ Eðitim " ) 
+say ( "" ) 
+say ( "Özür Dilerim." ) 
+say ( "Sadece Savaþçýlar Zihinsel Savaþý " ) 
+say ( "seçebilir." ) 
+say ( "" ) 
+if pc_job == 0 then 
+say_reward ( "Bir Savaþçý , Zihinsel Savaþý " ) 
+say_reward ( "veya Bedensel Savaþý " ) 
+say_reward ( "seçebilir." ) 
+elseif pc_job == 1 then 
+say_reward ( "Bir Ninja, Yakýn Dövüþ veya" ) 
+say_reward ( "Uzak Dövüþ eðitimini" ) 
+say_reward ( "seçebilir." ) 
+elseif pc_job == 2 then 
+say_reward ( "Bir Sura, Büyülü Silah" ) 
+say_reward ( "veya Kara Büyü eðitimini" ) 
+say_reward ( "seçebilir." ) 
+elseif pc_job == 3 then 
+say_reward ( "Bir saman ,Ejderha Gücü eðitimini" ) 
+say_reward ( "veya iyilestirme eðitimini" ) 
+say_reward ( "seçebilir." ) 
+elseif pc_job == 4 then 
+say_reward ( "Bir Lycan, sadece Ýç güdü eðitimini" ) 
+say_reward ( "seçebilir." ) 
+end 
+say ( "" ) 
+return 
+end 
+say_title ( "Zihinsel Savaþ eðitimi" ) 
+say ( "" ) 
+say ( "Zihinsel savaþ eðitimi sana düþmanlarýna nasýl" ) 
+say ( "güçlü chi-saldýrýlarý yapabileceðini ve kendini" ) 
+say ( "düþman saldýrýlarýndan koruyabileceðini öðretir." ) 
+say_reward ( "Gereksinim: Seviye 5 ve üstü bir savaþçý olmak" ) 
+say ( "" ) 
+local s = select ( "Baþla" , "Daha sonra" ) 
+if 2 == s then 
+return 
+end 
+if pc . get_job ( ) ~= 0 or pc . get_skill_group ( ) ~= 0 then 
+test_chat ( "npc_is_same_job:" .. bool_to_str ( npc_is_same_job ( ) ) ) 
+test_chat ( "pc.get_skill_group:" .. pc . get_skill_group ( ) ) 
+test_chat ( "pc_job:" .. pc . get_job ( ) ) 
+return 
+end 
+set_state ( "start" ) 
+pc . set_skill_group ( 2 ) 
+pc . clear_skill ( ) 
+char_log ( 0 , "CLEAR_SKILL" , "Ögretmen silindikten sonraki dogal yetenek" ) 
+say_title ( "Zihinsel savaþ eðitimini seçtin." ) 
+say ( "Hoþgeldin!" ) 
+if not pc . is_clear_skill_group ( ) then 
+local beceripuan = pc . get_level ( ) 
+local beceripuanhesapla = beceripuan - 1 
+say ( "Ders almayý seçtiðin için " .. beceripuanhesapla .. " yetenek puaný " ) 
+say ( "kazandýn. Bu puanlarý dilediðin herhangi bir" ) 
+say ( "yeteneðini geliþtirmek için kullabilirsin." ) 
+say_title ( "Bilgi:" ) 
+say_reward ( "" .. beceripuanhesapla .. " yetenek puaný kazandýn." ) 
+say ( "" ) 
+pc . set_skill_level ( 17 , 0 ) 
+pc . set_skill_level ( 18 , 0 ) 
+pc . set_skill_level ( 19 , 0 ) 
+pc . set_skill_level ( 20 , 0 ) 
+pc . set_skill_level ( 16 , 0 ) 
+pc . set_skill_level ( 21 , 0 ) 
+pc . set_skill_level ( 121 , 20 ) 
+pc . set_skill_level ( 137 , 20 ) 
+pc . set_skill_level ( 138 , 20 ) 
+pc . set_skill_level ( 139 , 20 ) 
+else 
+say_reward ( "Yeni bir ders seçtiginde," ) 
+say_reward ( "daha fazla tecrübe puani almayacaksin." ) 
+say ( "" ) 
+end 
+clear_letter ( ) 

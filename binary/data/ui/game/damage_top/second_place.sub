@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "damage_top.dds"
+left 0
+top 24
+right 462
+bottom 48

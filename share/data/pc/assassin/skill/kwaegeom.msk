@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Attribute		"WEAPON_LIMITATION" "STANDING_SKILL"
+NeedWeapon		"SWORD" "DAGGER" "DOUBLE_SWORD"
+
+Name			"쾌검술"
+Description		"빠르게 적에게 접근하여 치명타를 입힌다"
+
+IconFileName	"skill/assassin/kwaegeom.sub"
+MotionIndex		14
+
+List AffectData
+{
+	"%.1f 배의 타격"	"1 + SkillPoint / 4"	""
+}
+
+CoolTimeFormula		"40 - SkillPoint"
+NeedSPFormula		"50"

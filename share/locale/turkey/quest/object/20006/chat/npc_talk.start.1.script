@@ -1,0 +1,4 @@
+say_title ( "Mirine:" ) 
+say ( "Bugünlerde kardeþim çok seyahat ediyor, onu" ) 
+say ( "artýk göremiyorum ve endiþeleniyorum..." ) 
+say ( "" ) 

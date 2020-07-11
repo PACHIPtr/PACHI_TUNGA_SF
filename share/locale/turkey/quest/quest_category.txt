@@ -1,0 +1,10 @@
+1	mysterious_earthquakes
+1	enchanted_forest_make_key
+1	vip_packet
+1	questscroll5
+1	zodiac_info
+4	gm_info
+4	event_manager
+4	system_manager
+4	pvp_manager
+4	lonca_turnuva

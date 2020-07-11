@@ -1,0 +1,65 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_tiger_boss/special_attack2.GR2"
+MotionDuration           2.866666
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.807056
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_tiger_s2_blow2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.822871
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "12zi_tiger_boss1_acc"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_tiger_s2_blow1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      2
+        StartingTime         1.791241
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       500
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.706894
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           600.000000
+            Position         0.000000 0.000000 200.000000
+        }
+    }
+}

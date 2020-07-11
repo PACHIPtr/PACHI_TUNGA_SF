@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"NEED_TARGET"
+
+Name			"비파부"
+Description		"적에게 부적을 던져 상처 입힌다"
+Range			1200
+
+IconFileName	"skill/shaman/bipabu.sub"
+MotionIndex		0
+
+List AffectData
+{
+	"파괴력 : %.0f"	"(INT * 2 + 30) * (20 + SkillPoint) / 10"	""
+}
+
+CoolTimeFormula			"3"
+NeedSPFormula			"30 + SkillPoint * 2"

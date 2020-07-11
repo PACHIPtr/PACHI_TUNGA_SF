@@ -1,0 +1,17 @@
+ScriptType		SkillDataScript
+
+Type			ACTIVE
+Name			"관격술"
+Description		"적을 관통하는 화살을 쏜다"
+
+IconFileName		"skill/assassin/6.sub"
+MotionIndex		5
+
+List AffectData
+{
+	"최대 %.0f 명까지 관통"	"1 + SkillPoint / 5"	""
+	"데미지 : %.0f ~ %.0f"	"(AttackPower * (100 + SkillPoint * 4)) / 100"	"(AttackPower * (100 + SkillPoint * 6)) / 100"
+}
+CoolTimeFormula		"40 - SkillPoint"
+
+NeedSP			100

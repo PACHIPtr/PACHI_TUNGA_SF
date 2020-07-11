@@ -1,0 +1,67 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\monster2\cz_condor\cz_condor.GR2"
+
+Group ShapeData
+{
+	PathName	"D:\Ymir Work\monster2\cz_condor\"
+
+	ShapeDataCount			1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"cz_condor.GR2"
+		SourceSkin			"cz_condor_a_01.dds"
+		TargetSkin			"cz_condor_c_01.dds"
+		SourceSkin2			"cz_condor_a_02.dds"
+		TargetSkin2			"cz_condor_c_01.dds"
+	}
+}
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -30.000000 0.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           200.000000
+            Position         0.000000 -30.000000 0.000000
+        }
+    }
+}

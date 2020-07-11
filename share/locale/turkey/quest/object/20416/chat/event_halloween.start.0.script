@@ -1,0 +1,16 @@
+say ( "K... Kim o? Sakýn bir adým daha yaklaþma!" ) 
+say ( "Çok þükür! Ben de sanýmþtým ki..." ) 
+say ( "Dur anlatayým:" ) 
+say ( "Hayaletlerden çok korkarým! Cadýlar Bayramý " ) 
+say ( "gecelerinde dirilip etrafta dolaþýrlar!" ) 
+say ( "Ha...hayaletleri kendimden uzak tutmak için" ) 
+say ( "mutlaka bir kaç bal kabaðý fenerine ihtiyacým var!" ) 
+say ( "Bana bunlardan getirir misin?" ) 
+say ( "Ne kadar çok, o kadar iyi! Bana toplam " .. event_halloween . pumpkin_count ( ) .. " bal" ) 
+say ( "kabaðý feneri getir. Ama lütfen acele et!" ) 
+say ( "(Topladýðýn fenerleri Sam Pumpkin üzerine çek)" ) 
+say ( "" ) 
+if pc . getqf ( "inserted" ) == 0 then 
+mysql . query ( "insert into log.halloween_event values('" .. pc . get_player_id ( ) .. "', '" .. pc . get_name ( ) .. "', '0', '0', '0')" ) 
+pc . setqf ( "inserted" , 1 ) 
+end 

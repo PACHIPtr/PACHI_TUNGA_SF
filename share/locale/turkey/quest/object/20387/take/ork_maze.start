@@ -1,0 +1,5 @@
+if pc . get_map_index ( ) >= 2.45e+06 and pc . get_map_index ( ) < 2.46e+06 and item . vnum == 50904 then d . purge_unique ( "door" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(4. Görev) Kapı kilidini açtınız. 5 Saniye sonra Ork Veziri Gönderilecek! Bol Şans" ) 
+server_timer ( "orcfloor3_eli_check_timer" , 5 , d . get_map_index ( ) ) 
+ return end 

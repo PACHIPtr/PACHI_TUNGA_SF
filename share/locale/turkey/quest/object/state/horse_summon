@@ -1,0 +1,24 @@
+horse_summon={["start"]=0,["__COMPLETE__"]=668443392,get_horse_summon_prob_pct= function ()local skill_level = pc . get_skill_level ( 131 ) 
+if skill_level == 1 then 
+return 15 
+elseif skill_level == 2 then 
+return 20 
+elseif skill_level == 3 then 
+return 30 
+elseif skill_level == 4 then 
+return 40 
+elseif skill_level == 5 then 
+return 50 
+elseif skill_level == 6 then 
+return 60 
+elseif skill_level == 7 then 
+return 70 
+elseif skill_level == 8 then 
+return 80 
+elseif skill_level == 9 then 
+return 90 
+elseif skill_level >= 10 then 
+return 100 
+end 
+return 10 
+end }

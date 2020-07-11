@@ -1,0 +1,6 @@
+local s1 = select ( "Boss Gaya Maðazasý " , "Close" ) 
+if s1 == 1 then 
+if s1 == 1 then 
+pc . open_gem_shop ( 0 ) 
+end 
+end 

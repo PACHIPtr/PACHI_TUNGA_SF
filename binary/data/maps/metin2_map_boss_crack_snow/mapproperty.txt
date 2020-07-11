@@ -1,0 +1,5 @@
+ScriptType MapProperty
+
+MapType "Outdoor"
+
+ParentMapName "metin2_map_n_snow_dungeon_01"

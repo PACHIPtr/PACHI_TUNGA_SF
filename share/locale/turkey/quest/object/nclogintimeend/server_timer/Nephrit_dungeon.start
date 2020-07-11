@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Zindaný tamamlamakta baþarýsýz oldun. 5 saniye içerisinde dýþarý ýþýnlanýyorsun." ) 
+clear_server_timer ( "nclogintimeend" , d . get_map_index ( ) ) 
+timer ( "exit_Nephrit" , 5 ) 
+end 

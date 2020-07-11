@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "public_minigame.dds"
+left 444
+top 60
+right 478
+bottom 108

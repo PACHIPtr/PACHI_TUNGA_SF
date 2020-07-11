@@ -1,0 +1,68 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster3/b_pewi_diabel//skill1.gr2"
+MotionDuration           3.966667
+Accumulation           0.00	-423.93	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.912944
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/pewi_edit/gf.mse"
+        EffectPosition       0.000000 200.000000 600.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.416075
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "BN_Eye_R"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/pewi_edit/diabelface.mse"
+        EffectPosition       35.000000 -20.000000 -50.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         2.343563
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01_R_Finger42"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/pewi_edit/wybuch_diabel1.mse"
+        EffectPosition       0.000000 -300.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         2.542310
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           550.000000
+            Position         0.000000 -250.000000 0.000000
+        }
+    }
+}

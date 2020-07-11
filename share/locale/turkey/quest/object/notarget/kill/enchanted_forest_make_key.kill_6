@@ -1,0 +1,6 @@
+if npc . get_race ( ) == 6407 then if party . is_party ( ) then 
+party . setqf ( "boss_1" , 1 ) 
+else 
+pc . setqf ( "boss_1" , 1 ) 
+end 
+ return end 

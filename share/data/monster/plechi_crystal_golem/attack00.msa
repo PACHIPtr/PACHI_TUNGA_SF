@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_crystal_golem\attack00.GR2"
+MotionDuration           1.800000
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.715000
+        AttackingEndTime     0.850000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.7700000 0.000000 -220.000000 120.000000 0.000000 -0.000000 100.000000
+            0.7710000 0.000000 -120.000000 120.000000 0.000000 -0.000000 100.000000
+		}
+   }
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.770000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_golem_attack00.mse"
+        EffectPosition       0.000000 -180.000000 120.000000
+    }
+}

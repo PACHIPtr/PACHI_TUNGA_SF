@@ -1,0 +1,81 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster\yellow_tigerman\20_1.GR2"
+MotionDuration           1.333333
+Accumulation           0.00	-500.01	0.00
+
+Group LoopData
+{
+    MotionLoopCount          5
+    LoopCancelEnable         0
+    LoopStartTime            0.431454
+    LoopEndTime              0.545581
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     7
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         0.771051
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.200000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 -130.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.765612
+        
+        DuringTime           0.100000
+        Power                100
+        AffectingRange       100
+    }
+    Group Event02
+    {
+        MotionEventType      8
+        StartingTime         0.194850
+    }
+    Group Event03
+    {
+        MotionEventType      7
+        StartingTime         0.403619
+    }
+    Group Event04
+    {
+        MotionEventType      8
+        StartingTime         0.462074
+    }
+    Group Event05
+    {
+        MotionEventType      7
+        StartingTime         0.584551
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         0.768267
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe0Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_punsh_skill.mse"
+        EffectPosition       0.000000 -200.000000 20.000000
+    }
+}

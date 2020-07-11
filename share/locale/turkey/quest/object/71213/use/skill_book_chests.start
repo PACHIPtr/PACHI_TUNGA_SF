@@ -1,0 +1,20 @@
+local a = pc . count_item ( "50300" ) 
+local b = item . get_vnum ( ) 
+if skill_book_chests . is_big_chest ( ) then 
+if pc . get_empty_inventory_count ( ) < 25 then 
+syschat ( "Envanterde yeterli boþluk yok." ) 
+return 
+end 
+repeat 
+skill_book_chests . give_books ( b ) 
+until pc . count_item ( "50300" ) - a == 25 
+else 
+if pc . get_empty_inventory_count ( ) < 10 then 
+syschat ( "Envanterde yeterli boþluk yok." ) 
+return 
+end 
+repeat 
+skill_book_chests . give_books ( b ) 
+until pc . count_item ( "50300" ) - a == 10 
+end 
+pc . remove_item ( b , 1 ) 

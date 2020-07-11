@@ -1,0 +1,1 @@
+return pc . getf ( "event_ramadan" , "fig_exchange" ) == 0 and event_ramadan . is_running ( )

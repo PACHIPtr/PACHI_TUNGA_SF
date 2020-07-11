@@ -1,0 +1,42 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster\maenghwan\20_2.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      10
+        StartingTime         0.628548
+        
+        EffectFileName       "d:/ymir work/effect/monster/maenghwan_20_2_stun.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        FollowingEnable      0
+        FishingEffectFlag    0
+    }
+    Group Event01
+    {
+        MotionEventType      4
+        StartingTime         0.616383
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           230.000000
+            Position         0.000000 -150.000000 0.000000
+        }
+    }
+}

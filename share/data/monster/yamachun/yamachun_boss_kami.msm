@@ -1,0 +1,189 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\monster2\yamachun_boss_kami\yamachun_boss_kami.GR2"
+
+Group ShapeData
+{
+	PathName			"d:/ymir work/monster2\yamachun_boss_kami/"
+	ShapeDataCount		1
+
+	Group ShapeData00
+	{
+		ShapeIndex		0
+		Model			"yamachun_boss_kami.gr2"
+		SourceSkin		"boss_yamachun.dds"
+		TargetSkin		"boss_yamachun.dds"
+		SourceSkin2		"boss_yamachun_weapon.dds"
+		TargetSkin2		"boss_yamachun_weapon.dds"
+		Specular		1.0
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       12
+    
+    Group AttachingData00
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "yamachun_boss_02"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_weapon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    2
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_body.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 R Hand"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_hands.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 R Finger0"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 L Finger0"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 R Toe0"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01 L Toe0"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 R Forearm"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_hand3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData08
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 L Hand"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_foot.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData09
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip02 L Hand"
+        
+        EffectScriptName     "D:\ymir work\monster2\yamachun_boss_kami\kami_hand3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    Group AttachingData10
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           228.000000
+            Position         0.000000 -100.000000 0.000000
+        }
+    }
+    
+    Group AttachingData11
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           192.000000
+            Position         0.000000 -100.000000 0.000000
+        }
+    }
+}

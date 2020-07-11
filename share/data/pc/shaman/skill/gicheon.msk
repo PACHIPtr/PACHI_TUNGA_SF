@@ -1,0 +1,22 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"NEED_TARGET" "ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
+
+Name				"기천대공"
+Description			"돕고자 하는 자의 손에 하늘의 의지를 불태운다"
+
+IconFileName		"skill/shaman/gicheon.sub"
+MotionIndex			12
+MotionIndexForMe	11
+
+List AffectData
+{
+	"일시적으로 공격력 %.1f배" "(SkillPoint * 5 + 100) / 100" ""
+}
+
+CoolTimeFormula		"3"
+NeedSPFormula		"80"
+
+MaxLevel			20
+LevelUpPoint		10

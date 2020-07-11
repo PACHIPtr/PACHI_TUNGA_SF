@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\npc2\halloween_pumpkin_pet\Walk.GR2"
+MotionDuration           0.8
+Accumulation             0.00   -100.0  0.00
+

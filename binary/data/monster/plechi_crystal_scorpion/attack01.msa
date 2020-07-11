@@ -1,0 +1,52 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_crystal_scorpion\attack01.GR2"
+MotionDuration           1.900000
+
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.700000
+        AttackingEndTime     0.900000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.710000 -210.000000 -140.000000 150.000000 0.000000 -0.000000 50.000000
+            0.711000 -110.000000 -80.000000 150.000000 0.000000 -0.000000 50.000000
+            0.725000 -140.000000 -240.000000 150.000000 0.000000 -0.000000 50.000000
+            0.725100 -70.000000 -130.000000 150.000000 0.000000 -0.000000 50.000000
+            0.740000 -50.000000 -300.000000 100.000000 0.000000 -0.000000 50.000000
+            0.755000 80.000000 -270.000000 80.000000 0.000000 -0.000000 50.000000
+            0.770000 140.000000 -200.000000 40.000000 0.000000 -0.000000 50.000000
+		}
+   }
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.740000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_scorpion_attack01.mse"
+        EffectPosition       0.000000 -100.000000 40.000000
+    }
+}

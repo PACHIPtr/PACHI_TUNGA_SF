@@ -1,0 +1,4 @@
+if flame_dungeon . is_flamed ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 14 then notice_multiline ( "Tebrikler!.. Ignator yok edildi." , d . notice ) 
+notice_multiline ( "Am-heh ile görüþün..." , d . notice ) 
+flame_dungeon . level_clear ( ) 
+ return end 

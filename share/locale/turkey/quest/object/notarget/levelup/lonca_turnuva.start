@@ -1,0 +1,14 @@
+if game . get_event_flag ( "turnuva" ) == 0 then if pc . getqf ( "turnuvadasin" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+elseif pc . getqf ( "uyarildin" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+elseif pc . getqf ( "odulver" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+end 
+ return end 

@@ -1,0 +1,14 @@
+local t = get_global_time ( ) - item . get_socket ( 1 ) 
+local n = item . get_socket ( 0 ) 
+if t >= 1800 then 
+new_easter_gift_box_gf . gift ( item . get_id ( ) ) 
+item . set_socket ( 1 , get_global_time ( ) ) 
+if n == 2 then 
+item . remove ( ) 
+else 
+item . set_socket ( 0 , n + 1 ) 
+end 
+syschat ( string . format ( "% D dan, hala% d açabilirsiniz. " , 3 , 2 - n ) ) 
+else 
+syschat ( string . format ( "Sonraki hediye için % d dakika bekleyin. " , 31 - t / 60 ) ) 
+end 

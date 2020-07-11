@@ -1,0 +1,51 @@
+if item . vnum >= 29101 and item . vnum < 29200 and item . get_socket ( 0 ) < item . get_value ( 2 ) then say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Kazmaný henüz yükseltemem. Sýký çalýþmalýsýn!" ) 
+say ( "" ) 
+ return end if item . vnum >= 29101 and item . vnum < 29200 and item . get_socket ( 0 ) >= item . get_value ( 2 ) then say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Kazmaný geliþtirmek istiyor musun?" ) 
+say ( "Pekala ..." ) 
+say ( "" ) 
+say ( "Kazman " .. item . get_level ( ) .. " seviye." ) 
+say ( "" ) 
+if item . get_value ( 3 ) == 100 then 
+say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Geliþtirmek istiyor musun?" ) 
+say ( "" ) 
+else 
+say ( " " .. ( 100 - item . get_value ( 3 ) ) .. "% þansýn var. " ) 
+say ( "Baþarýsýz olma ihtimalide var." ) 
+say ( "" ) 
+say ( "Geliþtirmek istiyor musun?" ) 
+say ( "" ) 
+end 
+local s = select ( "Evet " , "Hayýr " ) 
+if s == 2 then 
+say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Denemek istediðinde tekrar gel." ) 
+say ( "" ) 
+return 
+end 
+local f = __refine_pick ( item . get_cell ( ) ) 
+if f == 2 then 
+say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Bir sorun var daha sonra " ) 
+say ( "tekrar gel." ) 
+say ( "" ) 
+elseif f == 1 then 
+say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Kazman yeni seviyeye ulaþtý!" ) 
+say ( "" ) 
+else 
+say_title ( "Deokbae:" ) 
+say ( "" ) 
+say ( "Üzgünüm!" ) 
+say ( "Baþaramadým, kazmaný yaktým." ) 
+say ( "" ) 
+end 
+ return end 

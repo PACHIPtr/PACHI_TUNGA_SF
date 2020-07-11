@@ -1,0 +1,34 @@
+local mob2_info = pc . getqf ( "mob2_info" ) 
+if mob2_info == 10 then 
+mob2_name = "Kırmızı Yaban Domuzu " 
+elseif mob2_info == 9 then 
+mob2_name = "Ayı " 
+elseif mob2_info == 8 then 
+mob2_name = "Cehennem Deniz Anası " 
+elseif mob2_info == 7 then 
+mob2_name = "Zombi " 
+elseif mob2_info == 6 then 
+mob2_name = "Alev Savaşçı " 
+elseif mob2_info == 5 then 
+mob2_name = "Kurbağa Generali " 
+elseif mob2_info == 4 then 
+mob2_name = "Karanlık Haberci " 
+elseif mob2_info == 3 then 
+mob2_name = "Mistik Arahan Savaşçısı " 
+elseif mob2_info == 2 then 
+mob2_name = "Yabani Uşak " 
+elseif mob2_info == 1 then 
+mob2_name = "Kahverengi Ayı " 
+end 
+say_title ( "Yağmacıları kovala! " ) 
+say ( string . format ( "60 %s öldür ve Handu-Up'a geri dön. " , mob2_name ) ) 
+if party . is_party ( ) then 
+say ( "Yağmacıları kovalaması için birilerini[ENTER]arıyoruz. " ) 
+else 
+say ( "Yağmacıları kovalamak için bir grup[ENTER]oluşturmalısın. Birlikte daha çabuk halledersiniz. " ) 
+end 
+local gogo_set = select ( "Size yardım edeceğim! " , "Pes ediyorum. " ) 
+if gogo_set == 2 then 
+clear_letter ( ) 
+set_state ( "information" ) 
+end 

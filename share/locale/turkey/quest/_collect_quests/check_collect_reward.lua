@@ -1,0 +1,118 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest check_collect_reward begin
+	state start begin
+		when 20018.chat."Biyoloðun etkisiz reçeteleri" begin
+			say_title("Baek-Go:")
+			say("Selam! Nasýlsýn, sana nasýl yardýmcý olabilirim?")
+			wait()
+			say_pc_name()
+			say("Biyolog Chaegirab'ýn ödüllerinden söz ediyorum.")
+			say("Sana getirdiðim gizli reçeteyi hatýrlýyor musun?")
+			say("Ýþte, iksirlerden birinin bende etkisi olmadý.")
+			wait()
+			say_title("Baek-Go:")
+			say("Hmm, gerçekten de bu reçeteye eklenmesi")
+			say("gerekenlerden biri eksik. Ama dert etme. Lazým")
+			say("olan her þey iþte burada. Sana istediðin etkiyi")
+			say("gösterece yeni bir iksiri hemen hazýrlarým. Bir")
+			say("dakika müsaade...")
+			wait()
+			local value = 1
+			local a_ = pc.getf("bio", "30")
+			local b_ = pc.getf("bio", "40")
+			local c_ = pc.getf("bio", "50")
+			local d_ = pc.getf("bio", "60")
+			local e_ = pc.getf("bio", "70")
+			local f_ = pc.getf("bio", "80")
+			local g_ = pc.getf("bio", "85")
+			local h_ = pc.getf("bio", "90")
+			local i_ = pc.getf("bio", "92")
+			local j_ = pc.getf("bio", "94")
+			affect.remove_all_collect()
+			if a_ == value then
+				affect.add_collect(apply.MOV_SPEED, 10, 60*60*24*365*60)
+			end
+			if b_ == value then
+				affect.add_collect(apply.ATT_SPEED,5,60*60*24*365*60)
+			end
+			if c_ == value then
+				affect.add_collect(apply.DEF_GRADE_BONUS,60,60*60*24*365*60)
+			end
+			if d_ == value then
+				affect.add_collect(apply.ATT_GRADE_BONUS,50,60*60*24*365*60)
+			end
+			if e_ == value then
+				affect.remove_collect(apply.MOV_SPEED,10, 60*60*24*365*60)
+				affect.add_collect(apply.MOV_SPEED,21,60*60*24*365*60)
+				affect.add_collect_point(POINT_DEF_BONUS,10,60*60*24*365*60)
+			end
+			if f_ == value then
+				affect.remove_collect(apply.ATT_SPEED,5, 60*60*24*365*60)
+                affect.add_collect(apply.ATT_SPEED,11,60*60*24*365*60) --60Jahre
+				affect.add_collect_point(POINT_ATT_BONUS,10,60*60*24*365*60) --60¥¸
+			end
+			if g_ == value then
+				affect.add_collect_point(POINT_RESIST_WARRIOR,10,60*60*24*365*60) --60³â
+				affect.add_collect_point(POINT_RESIST_ASSASSIN,10,60*60*24*365*60) --60³â
+				affect.add_collect_point(POINT_RESIST_SURA,10,60*60*24*365*60) --60³â
+				affect.add_collect_point(POINT_RESIST_SHAMAN,10,60*60*24*365*60) --60³â
+				affect.add_collect_point(139,10,60*60*24*365*60)
+			end
+			if h_ == value then
+				affect.add_collect_point(POINT_ATTBONUS_WARRIOR,10,60*60*24*365*60) --60years
+				affect.add_collect_point(POINT_ATTBONUS_ASSASSIN,10,60*60*24*365*60) --60years
+				affect.add_collect_point(POINT_ATTBONUS_SURA,10,60*60*24*365*60) --60years
+				affect.add_collect_point(POINT_ATTBONUS_SHAMAN,10,60*60*24*365*60) --60years
+				affect.add_collect_point(138,10,60*60*24*365*60)
+			end
+			if i_ == value then
+				local s = select ( "+1000 HP " , " Savunma Deðeri +120 " , " Saldýrý Deðeri +50 " )
+				if s == 1 then
+					affect.add_collect(apply.MAX_HP,1000,60*60*24*365*60)
+					pc.setf("biyolog","92odul",1)
+				elseif s == 2 then
+					affect.remove_collect(apply.DEF_GRADE_BONUS,60, 60*60*24*365*60)
+					affect.add_collect(apply.DEF_GRADE_BONUS,180,60*60*24*365*60)
+					pc.setf("biyolog","92odul",2)
+				elseif s == 3 then
+					affect.remove_collect(apply.ATT_GRADE_BONUS,50, 60*60*24*365*60)
+					affect.add_collect(apply.ATT_GRADE_BONUS,100,60*60*24*365*60)
+					pc.setf("biyolog","92odul",3)
+				end
+			end
+			if j_ == value then
+				local s = select ( "+1100 HP " , " Savunma Deðeri +140 " , " Saldýrý Deðeri +60 " )
+				if s == 1 then
+					if pc.getf("biyolog","92odul") == 1 then
+						affect.remove_collect(apply.MAX_HP,1000, 60*60*24*365*60)
+						affect.add_collect(apply.MAX_HP,2100,60*60*24*365*60)
+					else
+						affect.add_collect(apply.MAX_HP,1100,60*60*24*365*60)
+					end
+				elseif s == 2 then
+					if pc.getf("biyolog","92odul") == 2 then
+						affect.remove_collect(apply.DEF_GRADE_BONUS,180,60*60*24*365*60)
+						affect.add_collect(apply.DEF_GRADE_BONUS,320,60*60*24*365*60)
+					else
+						affect.add_collect(apply.DEF_GRADE_BONUS,140,60*60*24*365*60)
+					end
+				elseif s == 3 then
+					if pc.getf("biyolog","92odul") == 3 then
+						affect.remove_collect(apply.ATT_GRADE_BONUS,100,60*60*24*365*60)
+						affect.add_collect(apply.ATT_GRADE_BONUS,160,60*60*24*365*60)
+					else
+						affect.add_collect(apply.ATT_GRADE_BONUS,60,60*60*24*365*60)
+					end
+				end	
+			end
+			say_title("Baek-Go:")
+			say("Buyrun efendim. Derin bir nefese veee mideye! Çok")
+			say("güzel. Ben de Chaegirab'a uðrayýp O'na hatayý ")
+			say("bildireyim bari. Saðlýcakla kal, görüþmek üzere!")
+		end
+	end
+end

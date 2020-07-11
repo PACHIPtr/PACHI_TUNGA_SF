@@ -1,0 +1,9 @@
+if item . vnum == 19986 and pc . in_dungeon ( ) then local setting = crystal_dungeon1 . settings ( ) 
+pc . remove_item ( setting [ "keys" ] [ 2 ] , 1 ) 
+d . spawn_mob ( 9213 , 405 , 687 ) 
+timer ( "wait_eff1" , 2 ) 
+ return end if item . vnum == 19987 and pc . in_dungeon ( ) then local setting = crystal_dungeon1 . settings ( ) 
+pc . remove_item ( setting [ "keys" ] [ 3 ] , 1 ) 
+d . spawn_mob ( 9213 , 405 , 687 ) 
+timer ( "wait_eff2" , 2 ) 
+ return end 

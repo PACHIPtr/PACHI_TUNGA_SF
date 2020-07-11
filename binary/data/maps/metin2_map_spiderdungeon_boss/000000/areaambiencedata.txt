@@ -1,0 +1,3 @@
+AreaAmbienceDataFile
+
+ObjectCount 0

@@ -1,0 +1,5 @@
+server_timer ( "spider_dead_timer" , 180 ) 
+game . set_event_flag ( "spider_dead" .. get_channel_id ( ) , 1 ) 
+game . set_event_flag ( "spider_key_dropped" .. get_channel_id ( ) , 0 ) 
+notice_multiline ( "Örümcek Barones yok edildi! Tüm savaþçýlar üç[ENTER]dakika içinde yuvadan dýþarý ýþýnlanacak" , notice_in_map ) 
+notice_all ( string . format ( "%s Grubu Örümcek Baronesi Öldürdü!" , pc . name ) ) 

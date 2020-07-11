@@ -1,0 +1,62 @@
+if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 4900 then d . setf ( "4900_kill" , 1 ) 
+ return end if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 4904 then local killset = d . getf ( "kill_104" ) + 1 
+d . setf ( "kill_104" , killset ) 
+if d . getf ( "kill_104" ) >= 70 then 
+game . drop_item ( 30368 , 1 ) 
+d . setf ( "kill_104" , 0 ) 
+end 
+ return end if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 4910 then d . setf ( "kill_1192" , d . getf ( "kill_1192" ) - 1 ) 
+if d . getf ( "kill_1192" ) > 0 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(5.Görev) Tüm patronlarý ve yaratýklarý yok et! - Kalan Patron : " .. d . getf ( "kill_1192" ) .. "" ) 
+pc . aggregate_monster ( ) 
+end 
+if d . getf ( "kill_1192" ) <= 0 then 
+d . kill_all ( ) 
+d . clear_regen ( ) 
+d . jump_all ( 383 + 21000 , 815 + 17000 ) 
+d . setf ( "md2_level" , 5 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(6.Görev) Doðru patronu bulana kadar kesmeye devam et!" ) 
+d . regen_file ( "data/dungeon/midgard_dungeon/regen_4_1.txt" ) 
+d . spawn_mob ( 4911 , 298 , 877 ) 
+end 
+ return end if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 4911 then local per = number ( 1 , 100 ) 
+if per <= 25 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . jump_all ( 383 + 21000 , 815 + 17000 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(7.Görev) Metin taþlarýný keserek anahtar düþür ve anýtý parçala!" ) 
+d . setf ( "md2_level" , 7 ) 
+d . spawn_mob ( 30151 , 295 , 886 ) 
+d . spawn_mob ( 8163 , 297 , 903 ) 
+d . spawn_mob ( 8163 , 347 , 872 ) 
+d . spawn_mob ( 8163 , 301 , 861 ) 
+d . spawn_mob ( 8163 , 334 , 905 ) 
+d . setf ( "stone_count" , 4 ) 
+else 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . zodiac_notice_clear ( ) 
+d . regen_file ( "data/dungeon/midgard_dungeon/regen_4_1.txt" ) 
+d . zodiac_notice ( "(6.Görev) Yanlýþ patronu buldun tekrar kes!" ) 
+d . spawn_mob ( 4911 , 298 , 877 ) 
+end 
+ return end if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 8163 then d . setf ( "stone_count" , d . getf ( "stone_count" ) - 1 ) 
+if d . getf ( "monument_30151" ) == 0 then 
+game . drop_item ( 30368 , 1 ) 
+end 
+ return end if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and npc . get_race ( ) == 4912 then clear_server_timer ( "mdlogintime1" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime2" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime3" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime4" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime5" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime6" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintimeend" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdtimefail" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime5" , d . get_map_index ( ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Ruhlar Magarasi baþarýlý þekilde fethedildi! 2 dakika içerisinde dýþarý gönderileceksiniz." ) 
+timer ( "exit_midgard" , 60 * 2 ) 
+ return end 

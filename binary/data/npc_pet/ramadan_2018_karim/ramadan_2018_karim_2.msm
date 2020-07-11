@@ -1,0 +1,39 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc_pet\ramadan_2018_karim\ramadan_2018_karim.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc_pet\ramadan_2018_karim\ramadan_2018_karim.GR2"
+		SourceSkin			"D:\Ymir Work\npc_pet\ramadan_2018_karim\ramadan_2018_karim_1.dds"
+		TargetSkin			"D:\Ymir Work\npc_pet\ramadan_2018_karim\ramadan_2018_karim_2.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       1
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bone01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           30.000000
+            Position         0.000000 0.000000 18.000000
+        }
+    }
+}

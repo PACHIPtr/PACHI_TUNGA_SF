@@ -1,0 +1,41 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_sheep_boss/normal_attack2.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.851581
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_she_n1_making.mse"
+        EffectPosition       -30.000000 -380.000000 250.000000
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.843471
+        
+        DuringTime           0.200000
+        Power                200
+        AffectingRange       200
+    }
+    Group Event02
+    {
+        MotionEventType      6
+        StartingTime         0.851581
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FlyFileName       "d:/ymir work/effect/monster2/12_she_n1_elec.msf"
+        FlyPosition       -30.000000 -380.000000 250.000000
+    }
+}

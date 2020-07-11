@@ -1,0 +1,4 @@
+if game . get_event_flag ( "time_1_2_" ) - get_time ( ) <= 0 then notice_all ( "CH" .. pc . get_channel_id ( ) .. ": Mavi Ejderha geri döndü!" ) 
+purge_area ( 829200 , 1.0596e+06 , 844200 , 1.0746e+06 ) 
+forked . warp_all_in_map ( "207" , "73" , "184500" , "1220700" , 1 ) 
+ return end 

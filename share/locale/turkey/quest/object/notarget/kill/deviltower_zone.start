@@ -1,0 +1,53 @@
+if npc . get_race ( ) == 8015 then timer ( "devil_stone1_1" , 8 ) 
+ return end if npc . get_race ( ) == 1091 then d . set_warp_at_eliminate ( 4 , d . get_map_index ( ) , special . devil_tower [ 3 ] [ 1 ] , special . devil_tower [ 3 ] [ 2 ] , "data/dungeon/deviltower4_regen.txt" ) 
+d . check_eliminated ( ) 
+ return end if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 and npc . get_race ( ) == 8016 then d . setf ( "level" , 4 ) 
+local positions = deviltower_zone . get_4floor_stone_pos ( ) 
+for i = 1 , 6 begin 
+d . set_unique ( "fake" .. i , d . spawn_mob ( 8017 , positions [ i ] [ 1 ] , positions [ i ] [ 2 ] ) ) 
+end 
+local vid = d . spawn_mob ( 8017 , positions [ 7 ] [ 1 ] , positions [ 7 ] [ 2 ] ) 
+d . set_unique ( "real" , vid ) 
+server_loop_timer ( "devil_stone4_update" , 10 , pc . get_map_index ( ) ) 
+server_timer ( "devil_stone4_fail1" , 5 * 60 , pc . get_map_index ( ) ) 
+d . notice ( "4. Kat Seçenek Kapısındasın." ) ; 
+d . notice ( "Gözlerini ve kulaklarını aldatacak bir çok sahte" ) ; 
+d . notice ( "Metin Taşı mevcut. 15 dakika içerisinde" ) ; 
+d . notice ( "gerçek Metin Taşı'nı bul ve yok et!" ) ; 
+d . notice ( "Kapıdan geçmenin tek yolu budur." ) ; 
+ return end if npc . get_race ( ) == 8023 then game . drop_item ( 50084 , 1 ) 
+ return end if pc . in_dungeon ( ) and d . getf ( "level" ) == 5 and npc . get_race ( ) == 1062 then local KILL_COUNT_FOR_DROP_KEY = 50 
+local n = d . getf ( "count" ) + 1 
+d . setf ( "count" , n ) 
+if n == KILL_COUNT_FOR_DROP_KEY then 
+game . drop_item ( 50084 , 1 ) 
+d . setf ( "count" , 0 ) 
+end 
+ return end if npc . get_race ( ) == 1092 then d . kill_all ( ) 
+d . check_eliminated ( ) 
+local reward_alchemist = { 20074 , 20075 , 20076 } 
+d . spawn_mob ( reward_alchemist [ number ( 1 , 3 ) ] , 425 , 216 ) ; 
+d . setqf ( "can_refine" , 1 ) 
+ return end if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 and npc . get_race ( ) == 8018 then local cont = d . getf ( "7_stone_kill" ) + 1 
+d . setf ( "7_stone_kill" , cont ) 
+if cont >= 4 then 
+d . setf ( "7_stone_kill" , 0 ) 
+d . set_regen_file ( "data/dungeon/deviltower7_regen.txt" ) 
+end 
+ return end if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 and npc . get_race ( ) == 8019 then game . drop_item ( 30300 , 1 ) 
+ return end if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 and npc . get_race ( ) == 1040 then if d . getf ( "level" ) < 9 then 
+local pct1 = number ( 1 , 10 ) 
+if pct1 == 1 then 
+local pct2 = number ( 1 , 4 ) 
+if pct2 == 1 then 
+game . drop_item ( 30304 , 1 ) 
+else 
+game . drop_item ( 30303 , 1 ) 
+end 
+else 
+return 
+end 
+end 
+ return end if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 and npc . get_race ( ) == 1093 then d . kill_all ( ) 
+timer ( "devil_end_jump" , 30 ) 
+ return end 

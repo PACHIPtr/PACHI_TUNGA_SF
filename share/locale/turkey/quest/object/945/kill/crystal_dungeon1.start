@@ -1,0 +1,38 @@
+local count , check3 = d . getf ( "mobs_3" ) + 1 , false ; 
+if d . getf ( "lair_check" ) == 3 then 
+if count < 104 and check3 == false then 
+d . setf ( "mobs_3" , count ) 
+local q = 105 - d . getf ( "mobs_3" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Haritadaki bütün canavarlarý temizle ! Kalan yaratýk: " .. q .. "" ) 
+else 
+if d . getf ( "crystal_boss1" ) == 0 then 
+d . kill_all ( ) 
+d . clear_regen ( ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Ejderhanýn yavrusunu yoket ! " ) 
+timer ( "third_boss" , 10 ) 
+d . setf ( "third_boss" , 1 ) 
+d . setf ( "crystal_boss1" , 1 ) 
+end 
+check3 = true 
+end 
+end 
+local count , check_4 = d . getf ( "mobs_5" ) + 1 , false ; 
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 5 then 
+if count < 74 and check_4 == false then 
+d . setf ( "mobs_5" , count ) 
+local q = 74 - d . getf ( "mobs_5" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Haritadaki bütün canavarlarý temizle ! Kalan yaratýk: " .. q .. "" ) 
+else 
+if d . getf ( "crystal_dino" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+timer ( "crystal_dino" , 10 ) 
+d . setf ( "crystal_dino" , 1 ) 
+end 
+check_4 = true 
+end 
+end 

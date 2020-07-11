@@ -1,0 +1,31 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+local level = d . getf ( "level" ) 
+local mob_count = d . count_monster ( ) 
+local next_jump_time = set . NextJumpTime if level == 1 and mob_count <= 5 then 
+d . notice ( "Az sonra ikinci kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_2" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . set_regen_file ( "data/dungeon/ice_dungeon/zone_2.txt" ) 
+elseif level == 3 and mob_count <= 5 then 
+d . notice ( "Az sonra dördüncü kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_4" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_4.txt" ) 
+elseif level == 4 and mob_count <= 5 then 
+d . notice ( "Az sonra beþinci kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_5" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . set_regen_file ( "data/dungeon/ice_dungeon/zone_5.txt" ) 
+elseif level == 6 and mob_count <= 5 then 
+local MobStonelvl6 = set . MobVnum_level_6 d . notice ( "Ayaz Metini belirdi!" ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_6.txt" ) 
+d . spawn_mob ( MobStonelvl6 , 570 , 649 ) 
+end 
+snow_dungeon . _GetLastTime ( ) 
+end 

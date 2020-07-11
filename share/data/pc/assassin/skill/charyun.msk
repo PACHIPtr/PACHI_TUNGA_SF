@@ -1,0 +1,20 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"WEAPON_LIMITATION"	"CAN_CHANGE_DIRECTION"
+NeedWeapon		"SWORD" "DAGGER" "DOUBLE_SWORD"
+
+Name			"차륜살"
+Description		"빠르게 회전하며 전방의 적을 벤다"
+
+IconFileName	"skill/assassin/charyun.sub"
+MotionIndex		6
+
+List AffectData
+{
+	"파괴력 : %.1f배"	"(SkillPoint * 12 + 100) / 100"	""
+}
+
+MaxLevel			"25"
+NeedSPFormula		"100"
+CoolTimeFormula		"8"

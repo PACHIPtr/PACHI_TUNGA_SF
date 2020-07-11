@@ -1,0 +1,137 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest questscroll4 begin
+    state start begin
+	when 50310.use begin
+	    local idx = item.get_socket(0)
+	    if idx == 0 then
+		idx = 20
+		item.set_socket(0, idx)
+	    end
+	    if idx>table.getn(special.questscroll) or idx <= 0 then
+		item.remove()
+	    elseif table.getn(special.questscroll[idx])!=5 then
+	    else
+		local table = special.questscroll[idx]
+		local rt = special.questscroll_reward[idx]
+		local t = table[1]
+		if  t == QUEST_SCROLL_TYPE_KILL_MOB then
+		    say(table[2])
+		    say(color(1,1,0),rt[2],locale.gold," ",locale.exp,rt[3]," ",(rt[4] != 0) and item_name(rt[4]) or ""," ",(rt[5] != 0) and item_name(rt[5]) or ""," ", (rt[6] != 0) and item_name(rt[6]) or "", color(1,1,1))
+		    pc.setqf("idx", idx)
+		    pc.setqf("count", table[5])
+		    pc.setqf("target", mob_vnum(table[4]))
+		    q.set_title(table[3])
+		    q.set_counter(table[4],table[5])
+		    q.start()
+		    pc.setqf("timer", 24*60*60)
+		    setstate(kill_mob)
+		    item.remove()
+		    char_log(0, "QUEST", "questscroll4 start");
+		elseif t == QUEST_SCROLL_TYPE_KILL_ANOTHER_EMPIRE then
+		    say(table[2])
+		    pc.setqf("idx", idx)
+		    pc.setqf("count", table[5])
+		    q.set_title(table[3])
+		    q.set_counter(table[4],table[5])
+		    q.start()
+		    pc.setqf("timer", 24*60*60)
+		    setstate(kill_another_empire)
+		    item.remove()
+		else
+		    item.remove()
+		end
+	    end
+	end
+    end
+    state kill_mob begin
+	when 50310.use begin
+	    say(locale.questscroll.exist)
+	end
+	when kill begin
+	    if npc.race == pc.getqf("target") then
+		pc.setqf("count", pc.getqf("count")-1)
+		q.set_counter_value(pc.getqf("count"))
+		if pc.getqf("count")>=0 then
+		    char_log(0, "QUEST", "questscroll4 kill "..pc.getqf("count"));
+		end
+		if pc.getqf("count") <= 0 then
+		    makequestbutton(locale.questscroll.finish_button)
+		end
+		setskin(NOWINDOW)
+	    end
+	end
+	when login begin
+	    if pc.getqf("count") <= 0 then
+		makequestbutton(locale.questscroll.finish_button)
+	    else
+		local table = special.questscroll[pc.getqf("idx")]
+		q.set_title(table[3])
+		q.set_counter(table[4],pc.getqf("count"))
+		q.start()
+	    end
+	    setskin(NOWINDOW)
+	end
+	when button begin
+	    setstate(start)
+	    q.done()
+	    local rt = special.questscroll_reward[pc.getqf("idx")]
+	    say(locale.questscroll.finish)
+	    say(rt[2],locale.gold)
+	    pc.changegold(rt[2])
+	    say(locale.exp ..  " " .. rt[3])
+	    pc.give_exp2(rt[3])
+	    if rt[4]!=0 then say(item_name(rt[4])) pc.give_item2(rt[4]) end
+	    if rt[5]!=0 then say(item_name(rt[5])) pc.give_item2(rt[5]) end
+	    if rt[6]!=0 then say(item_name(rt[6])) pc.give_item2(rt[6]) end
+	    pc.setqf("idx", 0)
+	    char_log(0, "QUEST", "questscroll4 done")
+	end
+    end
+    state kill_another_empire begin
+	when 50310.use begin
+	    say(locale.questscroll.exist)
+	end
+	when kill begin
+	    if npc.is_pc() and npc.empire != pc.empire then
+		pc.setqf("count", pc.getqf("count")-1)
+		q.set_counter_value(pc.getqf("count"))
+		if pc.getqf("count")>=0 then
+		    char_log(0, "QUEST", "questscroll4 kill "..pc.getqf("count"));
+		end
+		if pc.getqf("count") <= 0 then
+		    makequestbutton(locale.questscroll.finish_button)
+		end
+		setskin(NOWINDOW)
+	    end
+	end
+	when login begin
+	    if pc.getqf("count") <= 0 then
+		makequestbutton(locale.questscroll.finish_button)
+	    else
+		local table = special.questscroll[pc.getqf("idx")]
+		q.set_title(table[3])
+		q.set_counter(table[4],pc.getqf("count"))
+		q.start()
+	    end
+	    setskin(NOWINDOW)
+	end
+	when button begin
+	    setstate(start)
+	    local rt = special.questscroll_reward[pc.getqf("idx")]
+	    say(locale.questscroll.finish)
+	    say(rt[2],locale.gold)
+	    pc.changegold(rt[2])
+	    say(locale.exp .. " " .. rt[3])
+	    pc.give_exp2(rt[3])
+	    if rt[4]!=0 then say(item_name(rt[4])) pc.give_item2(rt[4]) end
+	    if rt[5]!=0 then say(item_name(rt[5])) pc.give_item2(rt[5]) end
+	    if rt[6]!=0 then say(item_name(rt[6])) pc.give_item2(rt[6]) end
+	    q.done()
+	    pc.setqf("idx", 0)
+	end
+    end
+end

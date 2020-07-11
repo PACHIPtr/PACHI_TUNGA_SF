@@ -1,0 +1,4 @@
+clear_server_timer ( "level_six_timer" , d . get_map_index ( ) ) 
+clear_server_timer ( "final_warp" , d . get_map_index ( ) ) 
+clear_server_timer ( "level_four_timer" , d . get_map_index ( ) ) 
+d . exit_all_to_start_position ( ) 

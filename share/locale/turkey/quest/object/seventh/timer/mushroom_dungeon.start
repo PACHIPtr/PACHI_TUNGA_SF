@@ -1,0 +1,3 @@
+local setting = mushroom_dungeon . setting ( ) 
+d . spawn_mob ( 4969 , setting . final_boss . x , setting . final_boss . y ) 
+cmdchat ( "MashRoomCoolTimeSetFloor 7" ) 

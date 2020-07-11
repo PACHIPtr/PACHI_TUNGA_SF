@@ -1,0 +1,5 @@
+import os,sys,shutil
+for root, dirs, files in os.walk('../'):
+	for file in files:
+		if ".gr2" in file:
+			os.system("GrannyConverter.exe \""+os.path.join(root,file)+"\" false")

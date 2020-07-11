@@ -1,0 +1,22 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"STANDING_SKILL" "TOGGLE"
+
+Name			"전귀혼"
+Description		"오로지 공격에만 전념한다"
+
+IconFileName	"skill/warrior/jeongwi.sub"
+MotionIndex		7
+
+List AffectData
+{
+	"파괴력 1.5배 증가" "" ""
+	"맞을때 타격치 3배" "" ""
+	"이동속도 : +25" "" ""
+	"공격속도 : +10" "" ""
+}
+
+MaxLevel		"10"
+LevelUpPoint	"10"
+NeedSPFormula 	"-1"

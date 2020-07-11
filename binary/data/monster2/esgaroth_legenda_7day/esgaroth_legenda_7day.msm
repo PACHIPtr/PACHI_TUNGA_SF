@@ -1,0 +1,58 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "d:\ymir work\monster2\esgaroth_legenda_7day\esgaroth_legenda_7day.gr2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\monster2\esgaroth_legenda_7day\esgaroth_legenda_7day.gr2"
+		SourceSkin			"D:\ymir work\esgaroth_boss_text\legends\Mon_Karmaije_D_01_T_DI.tga"
+		TargetSkin			"D:\ymir work\esgaroth_boss_text\legends\Mon_Karmaije_D_01_T_DI.tga"
+	}
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+}

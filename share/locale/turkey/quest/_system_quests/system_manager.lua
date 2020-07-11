@@ -1,0 +1,656 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest system_manager begin
+	state start begin
+		when letter with pc.is_gm() == true begin
+			if pc.is_gm() == true then
+				send_letter("*GM: Sistem Yönetimi")
+			end
+		end
+		when button or info with pc.is_gm() == true begin
+			say_size(350,400)
+			if pc.is_gm() == false then
+				say_title("Sistem Yönetimi:")
+				say("")
+				say("Yönetici olmadýðýnýz için bunu")
+				say("kullanamazsýnýz.")
+			else
+				say_title("Sistem Yönetimi:")
+				say("")
+				say_reward("Hangi sistemi kapatmak istiyorsun?")
+				local sistemler = select("Lycan Karakteri ", "Evrim Sistemi ", "Ticaret Camý ", "Beceri Seçme ", "Saç Seçme ", "Won Parasý ", "Omuz Kuþaklarý ", "Yansýtma Penceresi ", "Kombinasyon Penceresi ", "Ek Envanter ", "Gaya Maðazasý ", "Kanal Deðiþtirme ", "Aura Penceresi ", "Evcil Hayvan ", "Kostüm Set Bonus ", "Depo Bankasý ", "Deðerli Paket ", "Patron Takip ", "Ep Kuponlarý ", "Posta Kutusu ", "Beceri Kapatma ", "Toplu Sandýk ", "Won/Yang Transfer", "Lonca Sýralamasý ", "Ortalama Fiyat ", "Tezgah Yang/Won ", "Vazgeç ")
+				if sistemler == 1 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_wolfman_test_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(1)
+						syschat("Lycan karakteri aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(1)
+						syschat("Lycan karakteri devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 2 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_weapon_rarity_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(2)
+						syschat("Evrim sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(2)
+						syschat("Evrim sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 3 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_privateshop_search_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(3)
+						syschat("Ticaret camý aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(3)
+						syschat("Ticaret camý devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 4 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_skill_select_ex_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(4)
+						syschat("Beceri seçme sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(4)
+						syschat("Beceri seçme sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 5 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_hair_select_ex_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(5)
+						syschat("Saç seçme sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(5)
+						syschat("Saç seçme sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 6 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_cheque_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(7)
+						syschat("Won parasý sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(7)
+						syschat("Won parasý sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 7 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_acce_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(8)
+						syschat("Omuz kuþaðý sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(8)
+						syschat("Omuz kuþaðý sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 8 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_changelook_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(9)
+						syschat("Yansýtma penceresi sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(9)
+						syschat("Yansýtma penceresi sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 9 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_combination_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(10)
+						syschat("Kombinasyon penceresi sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(10)
+						syschat("Kombinasyon penceresi sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 10 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_special_inventory_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(11)
+						syschat("Ek envanter sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(11)
+						syschat("Ek envanter sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 11 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_gem_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(12)
+						syschat("Gaya maðazasý sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(12)
+						syschat("Gaya maðazasý sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 12 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_channel_change_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(13)
+						syschat("Kanal deðiþtirme sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(13)
+						syschat("Kanal deðiþtirme sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 13 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_aura_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(14)
+						syschat("Aura penceresi sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(14)
+						syschat("Aura penceresi sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 14 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_pet_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(15)
+						syschat("Pet sistemi aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(15)
+						syschat("Pet sistemi devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 15 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_costume_set_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(16)
+						syschat("Kostüm set bonusu aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(16)
+						syschat("Kostüm set bonusu devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 16 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_safebox_money_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(17)
+						syschat("Depo bankasý aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(17)
+						syschat("Depo bankasý devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 17 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_value_pack_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(18)
+						syschat("Deðerli paketler aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(18)
+						syschat("Deðerli paketler devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 18 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_boss_tracking_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(19)
+						syschat("Patron takip aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(19)
+						syschat("Patron takip devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 19 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_dc_coupon_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(20)
+						syschat("Ep kuponlarý aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(20)
+						syschat("Ep kuponlarý devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 20 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_mail_box_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(21)
+						syschat("Posta Kutusu aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(21)
+						syschat("Posta Kutusu devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 21 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_remove_skill_affect_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(22)
+						syschat("Beceri kapatma aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(22)
+						syschat("Beceri kapatma devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 22 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_open_gift_box_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(23)
+						syschat("Toplu Sandýk aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(23)
+						syschat("Toplu Sandýk devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 23 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_transfer_money_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(24)
+						syschat("Won aktarma aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(24)
+						syschat("Won aktarma devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 24 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_guild_rank_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(25)
+						syschat("Lonca sýralamasý aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(25)
+						syschat("Lonca sýralamasý devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 25 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_average_price_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(26)
+						syschat("Ortalama Fiyat aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(26)
+						syschat("Ortalama Fiyat devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				elseif sistemler == 26 then
+					say_title("Sistem Yönetimi: ")
+					say("")
+					if utils.is_feature_average_price_enabled() == true then
+						say_reward("Sistem þuanda aktif.")
+					else
+						say_reward("Sistem þuanda deaktif.")
+					end
+					say_reward("Sistemi açmak/kapatmak istiyor musun?")
+					local sec = select("Sistemi Aç ","Sistemi Kapat ", "Vazgeç ")
+					if sec == 1 then
+						set_feature_enable(27)
+						syschat("Tezgah Won aktif edilmiþtir.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					elseif sec == 2 then
+						set_feature_disable(27)
+						syschat("Tezgah Won devre dýþý býrakýlmýþtýr.")
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					else
+						send_letter("*GM: Sistem Yönetimi")
+						setskin(NOWINDOW)
+					end
+				else
+					send_letter("*GM: Sistem Yönetimi")
+					setskin(NOWINDOW)
+				end
+			end
+		end
+	end
+end

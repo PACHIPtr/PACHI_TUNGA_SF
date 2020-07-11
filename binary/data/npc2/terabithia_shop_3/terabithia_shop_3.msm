@@ -1,0 +1,211 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc2\terabithia_shop_3\terabithia_shop_3.GR2"
+
+Group ShapeData
+{
+	PathName		 "D:\Ymir Work\npc2\terabithia_shop_3\"
+	ShapeDataCount		 1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"terabithia_shop_3.GR2"
+		SourceSkin			"pb023_1a.dds"
+		TargetSkin			"pb023_1a.dds"
+		SourceSkin2			"pb023_1b.dds"
+		TargetSkin2			"pb023_1b.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       14
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box15"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           70.000000
+            Position         0.000000 0.000000 50.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box14"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\choineczka.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box02"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box06"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box07"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box09"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box12"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box01"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData08
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box04"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData09
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box10"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData10
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box03"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData11
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box05"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData12
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box08"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData13
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box11"
+        
+        EffectScriptName     "D:\ymir work\effect\etc\christmas_tree\bombeczki3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

@@ -1,0 +1,2 @@
+pc . warp_local ( pc . get_map_index ( ) , 12600 , 4000 ) 
+pvp_manager . local_pc_warp ( pvp_manager . get_duel_partner ( ) , 126 , 40 ) 

@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) >= 2.49e+06 and pc . get_map_index ( ) < 2.5e+06 then pc . setf ( "Nephrit" , "dungeon_turn" , 1 ) 
+ return end 

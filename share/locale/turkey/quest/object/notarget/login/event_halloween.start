@@ -1,0 +1,26 @@
+if game . get_event_flag ( "ex_halloween_drop" ) > 0 then local mapIndex = pc . get_map_index ( ) 
+if mapIndex == 1 or mapIndex == 21 or mapIndex == 41 then 
+if find_npc_by_vnum ( 20416 ) == 0 then 
+if mapIndex == 1 then 
+mob . spawn ( 20416 , 608 , 617 , 1 , 1 , 1 ) 
+elseif mapIndex == 21 then 
+mob . spawn ( 20416 , 596 , 610 , 1 , 1 , 1 ) 
+elseif mapIndex == 41 then 
+mob . spawn ( 20416 , 357 , 743 , 1 , 1 , 1 ) 
+end 
+end 
+end 
+if pc . getqf ( "noticed" ) == 0 then 
+send_letter ( "Ekþi mi tatlý mý?" ) 
+end 
+if pc . getqf ( "inserted" ) == 0 then 
+mysql . query ( "insert into log.halloween_event values('" .. pc . get_player_id ( ) .. "', '" .. pc . get_name ( ) .. "', '0', '0', '0')" ) 
+pc . setqf ( "inserted" , 1 ) 
+end 
+ return end if game . get_event_flag ( "ex_halloween_drop" ) == 0 then if pc . getqf ( "inserted" ) == 1 then 
+pc . setqf ( "inserted" , 0 ) 
+end 
+if pc . getqf ( "noticed" ) == 1 then 
+pc . setqf ( "noticed" , 0 ) 
+end 
+ return end 

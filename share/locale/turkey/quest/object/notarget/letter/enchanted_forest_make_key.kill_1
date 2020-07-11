@@ -1,0 +1,3 @@
+send_letter ( "&En Tai Savaþçýsý öldür." ) 
+loop_timer ( "kill_1" , 1 ) 
+q . set_counter ( "Kalan sayý " , 50 - pc . getqf ( "entai_1" ) ) 

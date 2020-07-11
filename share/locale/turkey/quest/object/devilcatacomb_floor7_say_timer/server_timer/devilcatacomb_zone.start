@@ -1,0 +1,8 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local t = 3600 - ( get_global_time ( ) - d . getf ( "enter_time" ) ) 
+local t_r = math . mod ( t , 60 ) 
+local t_m = ( t - t_r ) / 60 
+d . notice ( "Azrail'i yen!" ) 
+d . notice ( "" .. t_m .. " dakikan daha var." ) 
+d . set_warp_location ( 0 , 0 , 0 ) 
+end 

@@ -1,0 +1,9 @@
+if game . get_event_flag ( "worldbookday" ) == 1 then target . delete ( "__TARGETWBD__" ) 
+say_title ( "Hong-Hae" ) 
+say ( "" ) 
+say ( "Dünya Kitap Günün Kutlu Olsun!" ) 
+say ( "" ) 
+say ( "Eðer bana bir beceri kitabý verirsen" ) 
+say ( "Sana rastgele bir beceri kýlavuzu vereceðim." ) 
+say ( "" ) 
+ return end 

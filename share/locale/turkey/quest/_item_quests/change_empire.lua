@@ -1,0 +1,109 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest change_empire begin
+	state start begin
+		when 71054.use begin
+			say_title("Krallýklarýn Ýzi ")
+
+			if get_time() < pc.getqf("next_use_time") then
+				say("3 gün boyunca imparatorluk deðistiremezsin.")
+				say("")
+				return
+			end
+
+			if change_empire.move_pc() == true then
+				pc.setqf("next_use_time", get_time() + 86400 * 3)
+			end
+		end
+
+
+
+		function move_pc()
+			if pc.is_engaged() then
+				say("Niþanlý olduðun için")
+				say("imparatorluk deðiþtiremezsin.")
+				say("")
+				return false
+			end
+
+			if pc.is_married() then
+				say("Evli olduðun için")
+				say("imparatorluk deðiþtiremezsin.")
+				say("")
+				return false
+			end
+
+			if pc.is_polymorphed() then
+				say("Dönüþmüþ þekilde imparatorluk deðiþtiremezsin.")
+				say("")
+				return false
+			end
+
+			if pc.has_guild() then
+				say("Bir loncaya üyeyken")
+				say("imparatorluk deðiþtiremezsin.")
+				say("")
+				return false
+			end
+			if pc.money < 500000 then
+				say("Yeterli Altýn yok.")
+				say("500 bin Altýn'a ihtiyacýn var.")
+				say("")
+				return false
+			end
+			say("Kaçmak istediðin ülkeyi seç.")
+			local s = select("Shinsoo Krallýðý(Kýrmýzý Irk) ", "Chunjo Ülkesi(Sarý Irk)", "Jinno Ýmparatorluðu(Mavi Irk)", "Vazgeç ")
+			if 4==s then
+				return false 
+			end
+			say_title("Krallýklarýn Ýzi ")
+			say("")
+			say("Gerçekten imparatorluk deðiþtirmek istiyor musun?")
+			say("Arkadaþlarýný býrakýp gidiyorsun yani?")
+			say("")
+			local a = select("Evet", "Hayýr")
+			if 2== a then
+				return false
+			end
+
+			local ret = pc.change_empire(s)
+			local oldempire = pc.get_empire()
+			if ret == 999 then
+				say_title("Krallýklarýn Ýzi ")
+				say("Baþarýyla imparatorluk deðiþti.")
+				say("Oyundan çýk ve tekrar gir.")
+				say("")
+				pc.change_gold(-500000)
+				pc.remove_item(71054,1)
+				char_log(0, "CHANGE_EMPIRE",string.format("%d -> %d", oldempire, s))
+
+			
+				return  true
+			else
+				if ret == 1 then
+					say_title("Krallýklarýn Ýzi ")
+					say("Zaten bu imparatorluktasýn.")
+					say("Lütfen baþka bir imparatorluk seç.")
+					say("")
+					say("")
+				elseif ret == 2 then
+					say_title("Krallýklarýn Ýzi ")
+					say("Deðiþim þu an mümkün deðil.")
+					say("Son zamanlarda yapýlan lonca deðiþimi yüzünden ")
+					say("imparatorluk deðiþtiremezsin.")
+					say("")
+				elseif ret == 3 then
+					say_title("Krallýklarýn Ýzi ")
+					say("Degiþim þu an mümkün deðil.")
+					say("Son zamanlardaki evlilik durumundaki deðiþiklik yüzünden")
+					say("imparatorluk deðiþtiremezsin.")
+				end
+			end
+			return false
+		end
+
+	end
+end

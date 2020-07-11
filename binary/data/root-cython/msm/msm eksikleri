@@ -1,0 +1,116 @@
+	Group HairData114
+	{
+		HairIndex			517
+		Model				"hair/hair_63_1.gr2"
+		SourceSkin			"hair/hair_63_1.dds"
+		TargetSkin			"hair/hair_63_1.dds"
+	}
+	Group HairData114
+		{
+		HairIndex			509
+		Model				"hair/hair_61_1.gr2"
+		SourceSkin			"hair/hair_61_1.dds"
+		TargetSkin			"hair/hair_61_1.dds"
+	}
+	Group HairData113
+	{
+		HairIndex			510
+		Model				"hair/hair_61_1.gr2"
+		SourceSkin			"hair/hair_61_1.dds"
+		TargetSkin			"hair/hair_61_2.dds"
+	}
+	Group HairData114
+	{
+		HairIndex			517
+		Model				"hair/hair_63_1.gr2"
+		SourceSkin			"hair/hair_63_1.dds"
+		TargetSkin			"hair/hair_63_1.dds"
+	}
+	Group HairData115
+	{
+		HairIndex			518
+		Model				"hair/hair_63_1.gr2"
+		SourceSkin			"hair/hair_63_1.dds"
+		TargetSkin			"hair/hair_63_2.dds"
+	}
+	Group HairData116
+	{
+		HairIndex			519
+		Model				"hair/hair_64_1.gr2"
+		SourceSkin			"hair/hair_64_1.dds"
+		TargetSkin			"hair/hair_64_1.dds"
+	}
+	Group HairData117
+	{
+		HairIndex			520
+		Model				"hair/hair_64_1.gr2"
+		SourceSkin			"hair/hair_64_1.dds"
+		TargetSkin			"hair/hair_64_2.dds"
+	}
+
+
+41680
+
+	Group ShapeData259
+	{
+		ShapeIndex			41688
+		Model				"assassin_christmas_2018.GR2"
+		SourceSkin			"assassin_christmas_2018_01.dds"
+		TargetSkin			"assassin_christmas_2018_02.dds"
+	}
+	Group ShapeData260
+	{
+		ShapeIndex			41689
+		Model				"assassin_christmas_2018.GR2"
+		SourceSkin			"assassin_christmas_2018_01.dds"
+		TargetSkin			"assassin_christmas_2018_01.dds"
+	}
+	Group ShapeData261
+	{
+		ShapeIndex			41680
+		Model				"assassin_easter_day_2019.GR2"
+		SourceSkin			"assassin_easter_day_2019_1.dds"
+		TargetSkin			"assassin_easter_day_2019_1.dds"
+	}
+	Group ShapeData262
+	{
+		ShapeIndex			41681
+		Model				"assassin_easter_day_2019.GR2"
+		SourceSkin			"assassin_easter_day_2019_1.dds"
+		TargetSkin			"assassin_easter_day_2019_2.dds"
+	}
+	Group ShapeData263
+	{
+		ShapeIndex			41704
+		Model				"assassin_ramadan_2019.GR2"
+		SourceSkin			"assassin_ramadan_2019_1.dds"
+		TargetSkin			"assassin_ramadan_2019_1.dds"
+	}
+	Group ShapeData264
+	{
+		ShapeIndex			41705
+		Model				"assassin_ramadan_2019.GR2"
+		SourceSkin			"assassin_ramadan_2019_1.dds"
+		TargetSkin			"assassin_ramadan_2019_2.dds"
+	}
+	Group ShapeData265
+	{
+		ShapeIndex			32
+		Model				"assassin_7_1.GR2"
+		SourceSkin			"assassin_7_1.dds"
+		TargetSkin			"assassin_7_1.dds"
+	}
+	Group ShapeData266
+	{
+		ShapeIndex			41696
+		Model				"assassin_summer_2019.GR2"
+		SourceSkin			"assassin_summer_2019_1.dds"
+		TargetSkin			"assassin_summer_2019_1.dds"
+	}
+	Group ShapeData267
+	{
+		ShapeIndex			41697
+		Model				"assassin_summer_2019.GR2"
+		SourceSkin			"assassin_summer_2019_1.dds"
+		TargetSkin			"assassin_summer_2019_2.dds"
+	}

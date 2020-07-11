@@ -1,0 +1,5 @@
+say_title ( "Köy Gardiyanı:" ) 
+say ( "" ) 
+say ( "Kendi lonca sıralaman " .. guild . get_rank ( ) .. "." ) 
+say ( "Puan miktarı :" .. guild . get_ladder_point ( ) .. "." ) 
+say ( "" ) 

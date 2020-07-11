@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\monster\fox_ninetail\33.GR2"
+MotionDuration           2.333333
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.024356
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/fox_ninetail/kami_stand_up.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

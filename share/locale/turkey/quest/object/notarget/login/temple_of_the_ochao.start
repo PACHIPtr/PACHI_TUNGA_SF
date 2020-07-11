@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) == 354 then temple_ochao . initialize ( ) 
+ return end 

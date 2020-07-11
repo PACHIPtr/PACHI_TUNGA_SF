@@ -1,0 +1,103 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_deamon_worldboss\skill_1.GR2"
+MotionDuration           2.533334
+
+Group LoopData
+{
+    MotionLoopCount          5
+    LoopCancelEnable         0
+    LoopStartTime            0.650522
+    LoopEndTime              1.549617
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     8
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         0.708699
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FlyFileName       "d:/ymir work/monster2/kami_deamon_worldboss/kami_skull.msf"
+        FlyPosition       0.000000 -500.000000 400.000000
+    }
+    Group Event01
+    {
+        MotionEventType      6
+        StartingTime         1.047182
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FlyFileName       "d:/ymir work/monster2/kami_deamon_worldboss/kami_skull.msf"
+        FlyPosition       -50.000000 -450.000000 400.000000
+    }
+    Group Event02
+    {
+        MotionEventType      6
+        StartingTime         1.406820
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FlyFileName       "d:/ymir work/monster2/kami_deamon_worldboss/kami_skull.msf"
+        FlyPosition       70.000000 -470.000000 450.000000
+    }
+    Group Event03
+    {
+        MotionEventType      6
+        StartingTime         0.851496
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger0Nub"
+        FlyFileName       "d:/ymir work/monster2/kami_deamon_worldboss/kami_skull.msf"
+        FlyPosition       100.000000 -500.000000 300.000000
+    }
+    Group Event04
+    {
+        MotionEventType      6
+        StartingTime         1.491441
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FlyFileName       "d:/ymir work/monster2/kami_deamon_worldboss/kami_skull.msf"
+        FlyPosition       -100.000000 -500.000000 400.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.703410
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_2.mse"
+        EffectPosition       0.000000 0.000000 10.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         0.142797
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Finger11"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_4.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event07
+    {
+        MotionEventType      1
+        StartingTime         0.190397
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Finger0Nub"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_china_worldboss/skill_atck_kami_1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

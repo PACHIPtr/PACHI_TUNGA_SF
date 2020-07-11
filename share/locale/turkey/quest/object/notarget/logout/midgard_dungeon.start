@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 then pc . setf ( "midgard" , "dungeon_turn" , 1 ) 
+ return end 

@@ -1,0 +1,2 @@
+if MeleyLair . IsMeleyMap ( ) then MeleyLair . Check ( ) 
+ return end 

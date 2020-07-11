@@ -1,0 +1,14 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . count_monster ( ) <= 0 then 
+if d . getf ( "level" ) == 11 then 
+notice_multiline ( "Bütün þeytanlarý yendiniz," , d . notice ) 
+notice_multiline ( "Yeni görev için Am-heh ile görüþün..." , d . notice ) 
+else 
+notice_multiline ( "Bütün þeytanlarý yendiniz," , d . notice ) 
+notice_multiline ( "Yeni görev için Am-heh ile görüþün..." , d . notice ) 
+end 
+d . setf ( "level" , 0 ) 
+else 
+server_timer ( "killed_A_2" , 6 , get_server_timer_arg ( ) ) 
+end 
+end 

@@ -1,0 +1,1 @@
+return pc . level > 10 and not pc . is_mount ( )

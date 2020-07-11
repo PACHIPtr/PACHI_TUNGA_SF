@@ -1,0 +1,26 @@
+local setting = devilcatacomb_zone . setting ( ) 
+if d . getf ( "devilcatacomb_floor2_stone_clicked" ) == 0 then 
+say ( "Kaplumbaða Kayalýðý'na yaklaþtýkça " ) 
+say ( "bazý gravürler dikkat çekiyor... " ) 
+wait ( ) 
+say ( "...Sadece Küçülen Kafa'ya sahip olanlar" ) 
+say ( "bir sonraki kademeye geçebilirler. " ) 
+say ( "Küçülen Kafa'ya sahip deðilsen yer yüzüne" ) 
+say ( "ýþýnlanacaksýn." ) 
+wait ( ) 
+local s = select ( "Evet, geçeceðim!" , "Hayýr, geçmek istemiyorum." ) 
+if s == 1 then 
+if d . getf ( "devilcatacomb_floor2_stone_clicked" ) == 0 then 
+d . setf ( "devilcatacomb_floor2_stone_clicked" , 1 ) 
+d . setqf2 ( "devilcatacomb_zone" , "last_exit_time" , get_global_time ( ) ) 
+d . set_item_group ( "reapers_credit" , 4 , setting . reapers_credit4 , 1 , setting . reapers_credit3 , 1 , setting . reapers_credit2 , 1 , setting . reapers_credit1 , 1 ) 
+d . say_diff_by_item_group ( "reapers_credit" , "Küçülen Kafa'ya sahipsin ve artýk 3. kata[ENTER]ýþýnlanabilirsin.[ENTER][ENTER]" , "Küçülen Kafa'ya sahip deðilsin.[ENTER]Þimdi Þeytan Katakombunun dýþýna[ENTER]ýþýnlanacaksýn.[ENTER][ENTER]" ) 
+timer ( "devilcatacomb_floor3_enter_timer" , 7 ) 
+end 
+end 
+else 
+say_title ( "Devil´s Catacomb:" ) 
+say ( "" ) 
+say ( "Lütfen bekle." ) 
+say ( "" ) 
+end 

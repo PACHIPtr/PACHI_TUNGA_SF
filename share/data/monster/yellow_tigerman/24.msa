@@ -1,0 +1,115 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\YMIR WORK\monster\yellow_tigerman\24.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	-500.01	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     12
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.023844
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_punsh.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.439416
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe0Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_punsh_skill_2.mse"
+        EffectPosition       0.000000 -280.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.481752
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -300.000000 0.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      8
+        StartingTime         0.394572
+    }
+    Group Event04
+    {
+        MotionEventType      7
+        StartingTime         1.471816
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         1.255741
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe0Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_punsh.mse"
+        EffectPosition       0.000000 -50.000000 180.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         0.009395
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe0Nub"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster/yellow_tigerman/kami_tiger_jump.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event07
+    {
+        MotionEventType      8
+        StartingTime         1.287056
+    }
+    Group Event08
+    {
+        MotionEventType      7
+        StartingTime         1.321503
+    }
+    Group Event09
+    {
+        MotionEventType      7
+        StartingTime         1.393528
+    }
+    Group Event10
+    {
+        MotionEventType      8
+        StartingTime         1.355950
+    }
+    Group Event11
+    {
+        MotionEventType      8
+        StartingTime         1.437370
+    }
+}

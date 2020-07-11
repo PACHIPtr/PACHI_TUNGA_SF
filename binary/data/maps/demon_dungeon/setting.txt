@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	4	4
+BasePosition	2100000	1700000
+TextureSet	textureset\demon_dungeon.txt
+Environment	demon_dungeon.msenv
+

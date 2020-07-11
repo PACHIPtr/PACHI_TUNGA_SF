@@ -1,0 +1,9 @@
+if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 then pc . remove_item ( "30300" , 1 ) 
+local pct = number ( 1 , 8 ) 
+if pct == 1 then 
+game . drop_item ( 30302 , 1 ) 
+d . clear_regen ( ) 
+else 
+game . drop_item ( 30301 , 1 ) 
+end 
+ return end 

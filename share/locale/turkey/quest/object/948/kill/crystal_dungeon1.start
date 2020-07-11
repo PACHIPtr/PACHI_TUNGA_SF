@@ -1,0 +1,13 @@
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 3 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 4 ) 
+d . notice ( "Kristal Canavar öldürüldü !" ) 
+d . notice ( "30 saniye içinde sizi bir sonraki seviyeye ýþýnlayacaðýz ." ) 
+cleartimer ( "level_four_timer" ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 10 ) 
+else 
+return 
+end 

@@ -1,0 +1,4 @@
+d . spawn_mob ( 4966 , 156 , 812 ) 
+d . spawn_mob ( 4966 , 260 , 808 ) 
+d . spawn_mob ( 4966 , 206 , 862 ) 
+cmdchat ( "MashRoomCoolTimeSetFloor 4" ) 

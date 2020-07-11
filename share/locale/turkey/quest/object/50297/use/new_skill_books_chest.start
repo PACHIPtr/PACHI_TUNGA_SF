@@ -1,0 +1,6 @@
+pc . give_item2 ( 50559 + number ( 1 , 9 ) ) 
+pc . give_item2 ( 50559 + number ( 1 , 9 ) ) 
+pc . give_item2 ( 50559 + number ( 1 , 9 ) ) 
+pc . give_item2 ( 50559 + number ( 1 , 9 ) ) 
+pc . give_item2 ( 50559 + number ( 1 , 9 ) ) 
+pc . remove_item ( "50297" , 1 ) 

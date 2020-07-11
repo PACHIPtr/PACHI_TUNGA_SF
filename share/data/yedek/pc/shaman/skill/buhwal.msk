@@ -1,0 +1,19 @@
+ScriptType			SkillDataScript
+
+Type				HIGH
+Attribute			"NEED_TARGET" "FOR_ALLIANCE" "USE_FOR_ME"
+
+Name				"부활"
+Description			"바람을 타고 달린다"
+
+IconFileName		"skill/shaman/buhwal.sub"
+MotionIndex			19
+
+List AffectData
+{
+	"이동 속도 : + %.0f" "(10 * (20 + (SkillPoint * 3))) / 20" ""
+	"지속 시간 : %.0f분" "4 * ((10 + SkillPoint) / 10)" ""
+}
+
+CoolTimeFormula		"20"
+NeedSPFormula		"50 + (SkillPoint * 10)"

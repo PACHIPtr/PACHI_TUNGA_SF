@@ -1,0 +1,2 @@
+notice_all ( string . format ( "CH%s: %s, Dev Hayalet Aðac'ý öldürdü!" , pc . get_channel_id ( ) , pc . get_name ( ) ) ) 
+notice_all ( string . format ( "Bilgi: Dev Hayalet Aðaç 1 saatte bir Kýzýl Orman'da çýkar." ) ) 

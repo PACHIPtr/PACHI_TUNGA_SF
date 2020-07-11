@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_boss\attack00.GR2"
+MotionDuration           1.800000
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.970000
+        AttackingEndTime     1.300000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.970000 90.000000 -540.000000 60.000000 0.000000 -0.000000 150.000000
+            0.971000 70.000000 -340.000000 80.000000 0.000000 -0.000000 150.000000
+            0.972000 70.000000 -140.000000 80.000000 0.000000 -0.000000 150.000000
+            1.100000 250.000000 -470.000000 80.000000 0.000000 -0.000000 150.000000
+            1.100100 200.000000 -350.000000 80.000000 0.000000 -0.000000 150.000000
+            1.100200 180.000000 -200.000000 80.000000 0.000000 -0.000000 150.000000
+		}
+   }
+}

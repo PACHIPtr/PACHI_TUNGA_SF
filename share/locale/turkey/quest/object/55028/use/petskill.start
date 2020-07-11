@@ -1,0 +1,37 @@
+if newpet . count_summoned ( ) < 1 then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Evcil hayvanýný çaðýrmýþ olmalýsýn." ) 
+else 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Kaçýncý beceriyi sýfýrlamak istiyorsun ?" ) 
+say_reward ( "0 - 1 - 2" ) 
+local input = tonumber ( input ( "" ) ) 
+if input == nil then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Boþ býrakamazsýn." ) 
+elseif input < 0 then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Sýfýrdan düþük bir rakam giremezsin." ) 
+elseif pc . count_item ( 55028 ) < 1 then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Envanterinde Pet Revertus bulamadým." ) 
+else 
+local ret = newpet . resetskill ( input ) 
+if ret == true then 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Evcil Hayvanýnýzýn becerisi baþarýyla sýfýrlandý." ) 
+say_reward ( "Evcil hayvanýnýzý gönderin ve tekrar çaðýrýn." ) 
+pc . remove_item ( 55028 , 1 ) 
+else 
+say_title ( "Pet Revertus" ) 
+say ( "" ) 
+say_reward ( "Bilinmeyen bir hata oluþtu." ) 
+end 
+end 
+end 

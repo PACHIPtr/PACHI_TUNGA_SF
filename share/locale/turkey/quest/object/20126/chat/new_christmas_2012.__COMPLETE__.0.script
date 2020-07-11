@@ -1,0 +1,4 @@
+set_state ( "start" ) 
+set_quest_state ( "new_christmas_2012_nog" , "start" ) 
+set_quest_state ( "new_christmas_2012_sock" , "start" ) 
+say ( "init complete" ) 

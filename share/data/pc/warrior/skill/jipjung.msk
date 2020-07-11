@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"STANDING_SKILL"
+
+Name			"집중방어"
+Description		"멀리서 날아오는 공격을 차단한다"
+
+IconFileName		"skill/warrior/jipjung.sub"
+MotionIndex		3
+
+List AffectData
+{
+	"Range 공격에 대해 %.0f%% 피해 감소" "SkillPoint * 5" ""
+}
+
+MaxLevel				"10"
+NeedSPFormula			"50"
+ContinuationSPFormula	"5"

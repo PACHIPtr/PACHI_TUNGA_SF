@@ -1,0 +1,8 @@
+local pw = tonumber ( input ( "" ) ) 
+if pw == nil then 
+say_title ( "Zodyak Tapýnaðý:" ) 
+say ( "" ) 
+say ( "Boþ býrakamazsýn." ) 
+return 
+end 
+zodiac_temple . new_floor ( pw ) 

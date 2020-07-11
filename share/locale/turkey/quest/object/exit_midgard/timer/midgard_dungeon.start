@@ -1,0 +1,2 @@
+d . setqf2 ( "midgard_dungeon" , "last_exit_time" , d . get_map_index ( ) ) 
+d . exit_all_to_start_position ( ) 

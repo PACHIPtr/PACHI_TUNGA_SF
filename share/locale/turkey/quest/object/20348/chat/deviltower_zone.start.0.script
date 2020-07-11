@@ -1,0 +1,69 @@
+if pc . get_level ( ) < 40 then 
+say_title ( "Þeytan Kulesi Bekçisi:" ) 
+say ( locale . deviltower_man_say_you_cant ) 
+else 
+say_title ( "Þeytan Kulesi Bekçisi:" ) 
+addimage ( 35 , 35 , "kule.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( locale . deviltower_man_say ) 
+local secim = select ( locale . kulesecim , locale . kulesecimiki , locale . kulesecimuc , "Vazgeçtim" ) 
+if secim == 1 then 
+pc . warp ( 216500 , 727000 ) 
+elseif secim == 2 then 
+say_npc ( ) 
+say ( "Eðer 50.000.000 yang verirsen seni hiçbir" ) 
+say ( "þeyle uðraþtýrmadan 2.Kat'a gönderebilirim." ) 
+say ( "ister misin?" ) 
+local icsecimiki = select ( "Girmek istiyorum" , "Girmek istemiyorum." ) 
+if icsecimiki == 1 then 
+if pc . get_money ( ) < 5e+07 then 
+say_npc ( ) 
+say_reward ( "Hay aksi!" ) 
+say ( "Seni içeri alamam envanterinde yeterli" ) 
+say ( "yang bulamadým bana 50.000.000 yang getirmelisin." ) 
+return 
+end 
+pc . change_money ( - 5e+07 ) 
+d . new_jump ( 66 , special . devil_tower [ 1 ] [ 1 ] * 100 , special . devil_tower [ 1 ] [ 2 ] * 100 ) 
+d . regen_file ( "data/dungeon/deviltower2_regen.txt" ) 
+d . set_warp_at_eliminate ( 4 , d . get_map_index ( ) , special . devil_tower [ 2 ] [ 1 ] , special . devil_tower [ 2 ] [ 2 ] , "data/dungeon/deviltower3_regen.txt" ) 
+end 
+elseif secim == 3 then 
+say_npc ( ) 
+say ( "Eðer 75.000.000 yang verirsen seni ve grubunu hiçbir" ) 
+say ( "þeyle uðraþtýrmadan 2.Kat'a gönderebilirim." ) 
+say ( "Ýster misin?" ) 
+local icsecimgrup = select ( "Girmek Ýstiyorum" , "Girmek Ýstemiyorum." ) 
+if icsecimgrup == 1 then 
+if pc . get_money ( ) < 7.5e+07 then 
+say_npc ( ) 
+say_reward ( "Hay aksi!" ) 
+say ( "Seni içeri alamam envanterinde yeterli" ) 
+say ( "yang bulamadým bana 75.000.000 yang getirmelisin." ) 
+return 
+end 
+if not party . is_party ( ) then 
+say_npc ( ) 
+say_reward ( "Heey " .. pc . get_name ( ) .. "" ) 
+say ( "Bu iþlemi yapmak istiyorsan önce grup olmalýsýn" ) 
+say ( "unutma kulede insanlar deðiþebilir kendine" ) 
+say ( "güvenilir bir grup kurmaný tavsiye ederim" ) 
+return 
+end 
+if not party . is_leader ( ) then 
+say_npc ( ) 
+say_reward ( "Heey " .. pc . get_name ( ) .. "" ) 
+say ( "Cesaretini takdir ediyorum ama" ) 
+say ( "yalnýzca grup lideri giriþ talebi yapabilir." ) 
+return 
+end 
+pc . change_money ( - 7.5e+07 ) 
+d . new_jump_party ( 66 , special . devil_tower [ 1 ] [ 1 ] , special . devil_tower [ 1 ] [ 2 ] ) 
+d . regen_file ( "data/dungeon/deviltower2_regen.txt" ) 
+d . set_warp_at_eliminate ( 4 , d . get_map_index ( ) , special . devil_tower [ 2 ] [ 1 ] , special . devil_tower [ 2 ] [ 2 ] , "data/dungeon/deviltower3_regen.txt" ) 
+end 
+end 
+end 

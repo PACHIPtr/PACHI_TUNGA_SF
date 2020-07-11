@@ -1,0 +1,37 @@
+local low_value = game . get_event_flag ( "kids_day_drop" ) 
+local high_value = game . get_event_flag ( "kids_day_drop_high" ) 
+say_title ( "Bulmaca Kutusu Düþme Yüzdesi:" ) 
+say ( string . format ( "Düþük seviyeler için yüzde : 1/%d " , low_value ) ) 
+say ( string . format ( "Yüksek seviyeler için yüzde  : 1/%d " , high_value ) ) 
+local s = select ( "Düþük Seviyeler Ýçin Drop Ayarla " , "Yüksek Seviyeler Ýçin Drop Ayarla " , "Vazgeç " ) 
+if s == 1 then 
+say_title ( "Düþük seviyeler için yüzde deðiþikliði :" ) 
+say ( string . format ( "Düþük seviyede yapýlacak deðiþiklik 1/%d -> " , low_value ) ) 
+local v = tonumber ( input ( ) ) 
+if v < 300 then 
+say ( "300'ün altýnda deðer yazamazsýn!" ) 
+end 
+say ( string . format ( "Düþük seviyede yapýlacak deðiþiklik 1/%d -> 1/%d " , low_value , v ) ) 
+local s = select ( "Deðiþtir " , "Vazgeç " ) 
+if s == 1 then 
+say ( "Deðiþtirildi!" ) 
+game . set_event_flag ( "kids_day_drop" , v ) 
+else 
+say ( "Ýptal Edildi." ) 
+end 
+elseif s == 2 then 
+say_title ( "Yüksek seviyeler için yüzde deðiþikliði :" ) 
+say ( string . format ( "Düþük seviyede yapýlacak deðiþiklik 1/%d -> " , high_value ) ) 
+local v = tonumber ( input ( ) ) 
+if v < 300 then 
+say ( "300'ün altýnda deðer yazamazsýn!" ) 
+end 
+say ( string . format ( "Düþük seviyede yapýlacak deðiþiklik 1/%d -> 1/%d " , high_value , v ) ) 
+local s = select ( "Deðiþtir " , "Vazgeç " ) 
+if s == 1 then 
+say ( "Deðiþtirildi!" ) 
+game . set_event_flag ( "kids_day_drop_high" , v ) 
+else 
+say ( "Ýptal Edildi." ) 
+end 
+end 

@@ -1,0 +1,4 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . notice ( "45 dakikan daha var." ) 
+server_timer ( "devilcatacomb_30m_left_timer" , 60 * 15 , get_server_timer_arg ( ) ) 
+end 

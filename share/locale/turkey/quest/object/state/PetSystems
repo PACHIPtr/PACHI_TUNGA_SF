@@ -1,0 +1,15 @@
+PetSystems={["start"]=0,get_pet_info= function (itemVnum)pet_info_map = { 
+[ 55701 ] = { 34041 , " - Küçük Örümcek" , 0 } , 
+[ 55702 ] = { 34045 , " - Küçük Maymun" , 0 } , 
+[ 55703 ] = { 34049 , " - Küçük Razador" , 0 } , 
+[ 55704 ] = { 34053 , " - Küçük Nemere" , 0 } , 
+[ 55705 ] = { 34036 , " - Küçük Ejderha" , 0 } , 
+[ 55706 ] = { 34064 , " - Küçük Meley" , 0 } , 
+[ 55707 ] = { 34073 , " - Küçük Azrail" , 0 } , 
+[ 55708 ] = { 34075 , " - Küçük Cellatçýk" , 0 } , 
+[ 55709 ] = { 34080 , " - Baashido Yavrusu" , 0 } , 
+[ 55710 ] = { 34082 , " - Nessie Yavusu" , 0 } , 
+} 
+itemVnum = tonumber ( itemVnum ) 
+return pet_info_map [ itemVnum ] 
+end }

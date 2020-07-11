@@ -1,0 +1,9 @@
+if pc . getqf ( "count" ) <= 0 then 
+makequestbutton ( locale . questscroll . finish_button ) 
+else 
+local table = special . questscroll [ pc . getqf ( "idx" ) ] 
+q . set_title ( table [ 3 ] ) 
+q . set_counter ( table [ 4 ] , pc . getqf ( "count" ) ) 
+q . start ( ) 
+end 
+setskin ( NOWINDOW ) 

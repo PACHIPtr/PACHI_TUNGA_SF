@@ -1,0 +1,14 @@
+local t = marriage . get_wedding_list ( ) 
+if table . getn ( t ) == 0 then 
+say_title ( "Yaþlý Kadýn:" ) 
+say ( "" ) 
+say ( "Þu an devam eden nikah töreni yok." ) 
+say ( "" ) 
+else 
+local wedding_names = { } 
+table . foreachi ( t , function ( n , p ) wedding_names [ n ] = p [ 3 ] .. "ile" .. p [ 4 ] .. "evleniyor." end ) 
+wedding_names [ table . getn ( t ) + 1 ] = locale . confirm local s = select_table ( wedding_names ) 
+if s ~= table . getn ( wedding_names ) then 
+marriage . join_wedding ( t [ s ] [ 1 ] , t [ s ] [ 2 ] ) 
+end 
+end 

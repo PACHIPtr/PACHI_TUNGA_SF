@@ -1,0 +1,28 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"NEED_TARGET"
+Range			2500
+
+Name			"투속마령"
+Description		"몬스터의 이동속도를 떨어뜨린다"
+Requirement		"저주"	6
+
+IconFileName	"skill/sura/tusok.sub"
+MotionIndex		9
+
+List ConditionData
+{
+	"스플래쉬 공격"
+}
+
+List AffectData
+{
+	"이동속도 : -%.0f" "5 + (SkillPoint / 2)" ""
+	"지속시간 30초" "" ""
+}
+
+MaxLevel			"20"
+LevelUpPoint		"2"
+CoolTimeFormula		"7"
+NeedSPFormula		"120"

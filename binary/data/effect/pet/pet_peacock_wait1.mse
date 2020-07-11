@@ -1,0 +1,147 @@
+BoundingSphereRadius   300.000000
+BoundingSpherePosition 0.000000 0.000000 200.000000
+
+Group Particle
+{
+    StartTime           0.000000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    Group EmitterProperty
+    {
+        MaxEmissionCount        15
+    
+        CycleLength             0.500000
+        CycleLoopEnable         1
+        LoopCount               6
+    
+        EmitterShape            2
+        EmitterAdvancedType     0
+        EmittingSize            70.000000 70.000000 70.000000
+        EmitterEmitFromEdgeFlag  0
+        EmittingDirection       0.000000 0.000000 0.000000
+    
+        List TimeEventEmittingSize
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmittingAngularVelocity
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmittingDirectionX
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmittingDirectionY
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmittingDirectionZ
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmittingVelocity
+        {
+            0.000000 0.000000
+        }
+        List TimeEventEmissionCountPerSecond
+        {
+            0.000000 30.927835
+        }
+        List TimeEventLifeTime
+        {
+            0.000000 0.500000
+        }
+        List TimeEventSizeX
+        {
+            0.002857 10.000000
+        }
+        List TimeEventSizeY
+        {
+            0.002857 10.000000
+        }
+    }
+    
+    Group ParticleProperty
+    {
+        SrcBlendType                 3
+        DestBlendType                2
+        ColorOperationType           4
+        BillboardType                1
+        RotationType                 0
+        RotationSpeed                0.000000
+        RotationRandomStartingBegin  0
+        RotationRandomStartingEnd    0
+    
+        AttachEnable                 0
+        StretchEnable                0
+    
+        TexAniType                   0
+        TexAniDelay                  0.030000
+        TexAniRandomStartFrameEnable 0
+    
+        List TimeEventGravity
+        {
+            0.000000 100.000000
+        }
+        List TimeEventAirResistance
+        {
+        }
+        List TimeEventScaleX
+        {
+            0.000000 0.175258
+            0.400000 0.577320
+            1.000000 0.123711
+        }
+        List TimeEventScaleY
+        {
+            0.000000 0.154639
+            0.394286 0.567010
+            1.000000 0.164948
+        }
+        List TimeEventColorRed
+        {
+            0.000000 0.937255
+            0.200000 0.788235
+            0.335897 0.949020
+            0.453846 0.309804
+            0.666667 0.949020
+            0.997436 0.721569
+        }
+        List TimeEventColorGreen
+        {
+            0.000000 0.776471
+            0.200000 0.423529
+            0.335897 0.956863
+            0.453846 0.850980
+            0.666667 0.843137
+            0.997436 0.160784
+        }
+        List TimeEventColorBlue
+        {
+            0.000000 0.301961
+            0.200000 0.874510
+            0.335897 0.466667
+            0.453846 0.796078
+            0.666667 0.470588
+            0.997436 0.729412
+        }
+        List TimeEventAlpha
+        {
+            0.138462 0.000000
+            0.276923 0.270000
+            0.907692 0.000000
+        }
+        List TimeEventRotation
+        {
+            0.000000 0.000000
+        }
+        List TextureFiles
+        {
+            "D:\Ymir Work\effect\etc\christmas_tree\banzzak.dds"
+        }
+    }
+}

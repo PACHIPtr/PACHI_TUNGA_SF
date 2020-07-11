@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Zindaný tamamlamak için 5 dakika vaktin kaldý." ) 
+server_timer ( "mdlogintime6" , 4 * 60 , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime5" , d . get_map_index ( ) ) 
+end 

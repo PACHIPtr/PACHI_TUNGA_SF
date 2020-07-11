@@ -1,0 +1,76 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\ymir work\monster2\yamachun_boss_kami\normal_attack.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	-92.97	0.00
+
+Group LoopData
+{
+    MotionLoopCount          2
+    LoopCancelEnable         0
+    LoopStartTime            0.000000
+    LoopEndTime              1.141266
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.275750
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone01"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack.mse"
+        EffectPosition       0.000000 -200.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.024356
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack_1.mse"
+        EffectPosition       0.000000 -280.000000 20.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.306193
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack_2.mse"
+        EffectPosition       0.000000 0.000000 100.000000
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         0.292276
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           400.000000
+            Position         0.000000 -400.000000 0.000000
+        }
+    }
+}

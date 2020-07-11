@@ -1,0 +1,83 @@
+addimage ( 35 , 35 , "nemere.tga" ) 
+if party . is_leader ( ) or party . is_party ( ) then 
+say_title ( mob_name ( 20395 ) ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say_reward ( "Bu zindana grup halinde giremezsin" ) 
+say_reward ( "lütfen önce bulundugun grupdan ayril !" ) 
+return 
+end 
+local set = snow_dungeon . get_settings ( ) 
+local need_level = 90 
+say_title ( mob_name ( 20395 ) ) 
+addimage ( 35 , 35 , "nemere.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Nemerenin kulesine tek basina giris yapabilirsin" ) 
+say ( "Biraz tehlikeli bir yolculuk olacak gibi duruyor!" ) 
+say ( "" ) 
+say_reward ( "Nemere'nin Gözetleme Kulesi'ne girmek" ) 
+say_reward ( "istiyor musun?" ) 
+if select ( "Gir" , "Girme" ) == 2 then 
+return 
+end 
+if ( game . get_event_flag ( "enable_time_snow" ) == 1 and pc . getf ( "snow_dungeon" , "duration" ) >= get_global_time ( ) ) then 
+say_title ( mob_name ( 20395 ) ) 
+addimage ( 35 , 35 , "nemere.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Beta Server; süreyi sýfýrlamak mý istiyorsun?" ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+pc . setf ( "snow_dungeon" , "duration" , 0 ) 
+return 
+end 
+end 
+if pc . get_level ( ) < need_level then 
+say_title ( mob_name ( 20395 ) ) 
+addimage ( 35 , 35 , "nemere.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Kuleye girebilmek için en az " .. need_level .. "." ) 
+say ( "seviyede olmalýsýn." ) 
+return 
+end 
+if pc . getf ( "snow_dungeon" , "duration" ) >= get_global_time ( ) then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+addimage ( 35 , 35 , "nemere.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Nemere'nin Gözetleme Kulesi'ne yeniden giriþ " ) 
+say ( "için bekleme süresi henüz dolmamýþ." ) 
+say ( "Kalan süre: " .. dungeon_get_duration ( pc . getf ( "snow_dungeon" , "duration" ) - get_global_time ( ) ) .. "" ) 
+return 
+end 
+if pc . count_item ( 71175 ) < 1 then 
+say_title ( mob_name ( 20395 ) ) 
+addimage ( 35 , 35 , "nemere.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Envanterinde yeterli miktarda yok:" ) 
+say ( string . format ( "%s." , item_name ( 71175 ) ) ) 
+say ( "" ) 
+return 
+end 
+pc . remove_item ( 71175 , 1 ) 
+timer ( "make_dungeon" , 2 ) 

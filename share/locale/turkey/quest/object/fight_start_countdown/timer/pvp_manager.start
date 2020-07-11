@@ -1,0 +1,26 @@
+if arena [ pvp_manager . get_arena ( ) ] [ 5 ] == - 1 then 
+return 
+end 
+local partner_vid = find_pc_by_name ( pvp_manager . get_duel_partner ( ) ) 
+local my_vid = pc . get_vid ( ) 
+if arena [ pvp_manager . get_arena ( ) ] [ 5 ] == 0 then 
+arena [ pvp_manager . get_arena ( ) ] [ 5 ] = - 1 
+pc . select ( partner_vid ) 
+command ( "pvp " .. my_vid ) 
+pc . select ( my_vid ) 
+command ( "pvp " .. partner_vid ) 
+notice_in_map ( "" .. pc . getname ( ) .. "  ile " .. pvp_manager . get_duel_partner ( ) .. "  arasýndaki düello baþladý!" , pc . get_map_index ( ) ) 
+timer ( "fight_start_countdown_shutdown" , 1 ) 
+else 
+pc . select ( partner_vid ) 
+if math . mod ( arena [ pvp_manager . get_arena ( ) ] [ 5 ] , 5 ) == 0 then 
+syschat ( "Düello " .. tostring ( arena [ pvp_manager . get_arena ( ) ] [ 5 ] ) .. " saniye içinde baþlayacak." ) 
+end 
+affect . add ( apply . MOV_SPEED , - 10000 , 2 ) 
+pc . select ( my_vid ) 
+if math . mod ( arena [ pvp_manager . get_arena ( ) ] [ 5 ] , 5 ) == 0 then 
+syschat ( "Düello " .. tostring ( arena [ pvp_manager . get_arena ( ) ] [ 5 ] ) .. " saniye içinde baþlayacak." ) 
+end 
+affect . add ( apply . MOV_SPEED , - 10000 , 2 ) 
+arena [ pvp_manager . get_arena ( ) ] [ 5 ] = arena [ pvp_manager . get_arena ( ) ] [ 5 ] - 1 
+end 

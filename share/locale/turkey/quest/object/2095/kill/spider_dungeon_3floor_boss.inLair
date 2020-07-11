@@ -1,0 +1,10 @@
+local kingVid = game . get_event_flag ( "king_vid" .. get_channel_id ( ) ) 
+local remain_egg = game . get_event_flag ( "remain_egg" .. get_channel_id ( ) ) 
+notice_multiline ( "Dikkat: Örümcek Barones sinirleniyor! Saldýrýsý güçleniyor ama savunmasý azalýyor." , notice_in_map ) 
+if remain_egg > 0 then 
+remain_egg = remain_egg - 1 
+game . set_event_flag ( "remain_egg" .. get_channel_id ( ) , remain_egg ) 
+end 
+npc . set_vid_attack_mul ( kingVid , 10 / ( remain_egg + 1 ) ) 
+npc . set_vid_damage_mul ( kingVid , 10 / ( remain_egg + 1 ) ) 
+pc . aggregate_monster ( ) 

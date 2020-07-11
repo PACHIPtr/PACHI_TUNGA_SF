@@ -1,0 +1,76 @@
+addimage ( 35 , 35 , "razador.tga" ) 
+if party . is_leader ( ) or party . is_party ( ) then 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say_reward ( "Bu zindana grup halinde giremezsin" ) 
+say_reward ( "lütfen önce bulundugun grupdan ayril !" ) 
+return 
+end 
+local setting = flame_dungeon . setting ( ) 
+if ( game . get_event_flag ( "enable_time_flame" ) == 1 and get_global_time ( ) - pc . getf ( "flame_dungeon" , "exit_time" ) < 60 * 60 ) then 
+addimage ( 35 , 35 , "razador.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Beta Server; süreyi sýfýrlamak mý istiyorsun?" ) 
+say ( "Kalan süre: " .. dungeon_get_duration ( pc . getf ( "flame_dungeon" , "exit_time" ) - get_global_time ( ) ) .. "" ) 
+if select ( "Evet" , "Hayýr" ) == 1 then 
+pc . setf ( "flame_dungeon" , "exit_time" , 0 ) 
+return 
+end 
+end 
+if get_global_time ( ) - pc . getf ( "flame_dungeon" , "exit_time" ) < 60 * 60 then 
+say_title ( mob_name ( 20394 ) ) 
+addimage ( 35 , 35 , "razador.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Soguma sureniz henuz dolmadi!" ) 
+say ( "Kalan süre: " .. dungeon_get_duration ( pc . getf ( "flame_dungeon" , "exit_time" ) - get_global_time ( ) ) .. "" ) 
+return 
+end 
+if pc . level < 90 then 
+say_title ( mob_name ( 20394 ) ) 
+addimage ( 35 , 35 , "razador.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Zindana giris icin seviyeniz yetersiz!" ) 
+return 
+end 
+if pc . count_item ( 71174 ) < 1 then 
+say_title ( mob_name ( 20394 ) ) 
+addimage ( 35 , 35 , "razador.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Envanterinde yeterli miktarda yok:" ) 
+say ( string . format ( "%s." , item_name ( 71174 ) ) ) 
+say ( "" ) 
+return 
+end 
+say_title ( mob_name ( 20394 ) ) 
+addimage ( 35 , 35 , "razador.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Kýrmýzý Ejderha Kulesi'ne girmek için emin misin?" ) 
+local warp = select ( "Evet." , "Belki daha sonra..." ) 
+if warp == 1 then 
+pc . remove_item ( 71174 , 1 ) 
+flame_dungeon . make_dungeon ( ) 
+end 
+pc . setf ( "flame_dungeon" , "flame_dungeon_boss_kill_count" , 0 ) 

@@ -1,0 +1,101 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\ymir work\monster2\yamachun_boss_kami\special_attack1.GR2"
+MotionDuration           3.000000
+Accumulation           0.00	-92.97	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     7
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.056367
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/shining.mse"
+        EffectPosition       0.000000 50.000000 120.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         2.029227
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack_6.mse"
+        EffectPosition       0.000000 -420.000000 20.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.050104
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02 R Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_hand2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.037578
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip02"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack_1.mse"
+        EffectPosition       0.000000 0.000000 20.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         2.022964
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip02"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/yamachun_boss_kami/kami_attack_2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         1.991649
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           400.000000
+            Position         0.000000 -500.000000 0.000000
+        }
+    }
+    Group Event06
+    {
+        MotionEventType      2
+        StartingTime         1.979123
+        
+        DuringTime           1.000000
+        Power                300
+        AffectingRange       398
+    }
+}

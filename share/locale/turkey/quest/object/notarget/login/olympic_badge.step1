@@ -1,0 +1,5 @@
+if game . get_event_flag ( "ex_olympic_drop" ) == 0 then test = pc . getqf ( "medal_done" ) 
+if test ~= 0 then 
+pc . setqf ( "medal_done" , 0 ) 
+end 
+ return end 

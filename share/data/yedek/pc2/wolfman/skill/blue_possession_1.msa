@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\Ymir Work\pc3\wolfman\skill\blue_possession.GR2"
+MotionDuration           2.0
+Accumulation             0.00   0.00    0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.389294
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_06.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.832117
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_03.mse"
+        EffectPosition       0.000000 0.000000 100.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.690998
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_07.mse"
+        EffectPosition       0.000000 0.000000 200.000000
+    }
+}

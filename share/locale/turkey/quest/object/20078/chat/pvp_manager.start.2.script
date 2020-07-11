@@ -1,0 +1,16 @@
+say_title ( "GM: PvP Turnuvasý Ýptal Et:" ) 
+say ( "PvP Turnuvasý iptal etmek istiyormusun?" ) 
+say ( "" ) 
+local s = select ( "Evet " , "Hayýr " ) 
+if s == 1 then 
+game . set_event_flag ( "pvp" , 0 ) 
+pvp_attenders = nil 
+notice_all ( "Turnuva sona ermiþtir!" ) 
+say_title ( "PvP Turnuvasý iptal edildi!" ) 
+say ( "PvP Turnuvasý iptal edildi!" ) 
+say ( "" ) 
+warp_all_to_village ( pc . get_map_index ( ) , 5 ) 
+if pvp_manager_callback ~= nil then 
+pvp_manager_callback ( ) 
+end 
+end 

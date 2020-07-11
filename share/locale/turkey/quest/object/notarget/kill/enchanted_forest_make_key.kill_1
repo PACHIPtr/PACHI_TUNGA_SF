@@ -1,0 +1,8 @@
+if npc . get_race ( ) == 6401 then local count = pc . getqf ( "entai_1" ) + 1 
+if party . is_party ( ) then 
+party . setqf ( "entai_1" , count ) 
+else 
+pc . setqf ( "entai_1" , count ) 
+end 
+q . set_counter ( "Kalan sayı " , 50 - count ) 
+ return end 

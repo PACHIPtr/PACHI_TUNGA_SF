@@ -1,0 +1,21 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"TOGGLE" "STANDING_SKILL"
+
+Name			"천근추"
+Description		"일시적으로 방어력이 상승하며 강력한 공격에도 쓰러지지 않는다"
+Requirement		"집중방어" 5
+
+IconFileName		"skill/warrior/chungeun.sub"
+MotionIndex		9
+
+List AffectData
+{
+	"방어력 +%.0f"	"1 + SkillPoint / 3" ""
+}
+
+MaxLevel				"15"
+LevelUpPoint			"3"
+NeedSPFormula			"100"
+ContinuationSPFormula	"5"

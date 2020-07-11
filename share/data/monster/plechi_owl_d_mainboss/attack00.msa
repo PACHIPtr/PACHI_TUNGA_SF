@@ -1,0 +1,43 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_owl_d_mainboss\attack00.GR2"
+MotionDuration           1.800000
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         0.741394
+        DuringTime           0.300000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           350.000000
+            Position         0.000000 -200.000000 100.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.741394
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/owl_dmobmainboss_attack00.mse"
+        EffectPosition       -100.000000 -150.000000 -250.000000
+    }
+}

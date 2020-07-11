@@ -1,0 +1,250 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_crystal_dragonboss\skill00.GR2"
+MotionDuration           7.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     17
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone35"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone36"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone37"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone38"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone39"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.956089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone40"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       0.000000 -500.000000 0.000000
+    }
+    Group Event07
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       0.000000 500.000000 0.000000
+    }
+    Group Event08
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       500.000000 0.000000 0.000000
+    }
+    Group Event09
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       -500.000000 0.000000 0.000000
+    }
+    Group Event10
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       -500.000000 -500.000000 0.000000
+    }
+    Group Event11
+    {
+        MotionEventType      1
+        StartingTime         4.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_dragonboss_skill00b.mse"
+        EffectPosition       500.000000 -500.000000 0.000000
+    }
+    Group Event12
+    {
+        MotionEventType      2
+        StartingTime         4.156089
+        
+        DuringTime           2.000000
+        Power                500
+        AffectingRange       400
+    }
+    Group Event13
+    {
+        MotionEventType      4
+        StartingTime         4.156089
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 -500.000000 0.000000
+        }
+	}
+    Group Event14
+    {
+        MotionEventType      4
+        StartingTime         4.156089
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         500.000000 -500.000000 0.000000
+        }
+	}
+    Group Event15
+    {
+        MotionEventType      4
+        StartingTime         4.156089
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         -500.000000 -500.000000 0.000000
+        }
+	}
+    Group Event16
+    {
+        MotionEventType      4
+        StartingTime         4.156089
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 500.000000 0.000000
+        }
+	}
+}

@@ -1,0 +1,7 @@
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Kötü hatýralarý bir an önce " ) 
+say ( "unutmalýsýn." ) 
+say ( "" ) 
+say_reward ( "Nikah yüzüðü silindi." ) 
+pc . remove_item ( 70302 ) 

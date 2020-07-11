@@ -1,0 +1,1 @@
+return game . get_event_flag ( "ex_olympic_drop" ) >= 1 and pc . level >= 30

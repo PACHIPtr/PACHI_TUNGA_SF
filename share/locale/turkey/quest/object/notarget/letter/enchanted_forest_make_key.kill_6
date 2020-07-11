@@ -1,0 +1,4 @@
+send_letter ( "&En Tai Hükümdarý'ný öldür" ) 
+target . pos ( "__BOSS__" , 610 , 78 , 354 , "En Tai Hükümdarý " ) 
+loop_timer ( "kill_6" , 1 ) 
+pc . setqf ( "boss_1" , 0 ) 

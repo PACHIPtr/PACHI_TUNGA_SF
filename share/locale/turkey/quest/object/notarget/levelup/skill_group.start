@@ -1,0 +1,2 @@
+if pc . level >= 5 and pc . skillgroup == 0 then set_state ( "run" ) 
+ return end 

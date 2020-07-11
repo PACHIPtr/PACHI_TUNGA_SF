@@ -1,0 +1,6 @@
+send_letter ( "&Uriel'e dön" ) 
+local u = find_npc_by_vnum ( 200811 ) 
+if 0 == u then 
+else 
+target . vid ( "__TARGET3__" , u , "Uriel" ) 
+end 

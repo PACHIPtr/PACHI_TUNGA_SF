@@ -1,0 +1,12 @@
+local setting = devilcatacomb_zone . setting ( ) 
+local idx = pc . get_map_index ( ) 
+if idx >= ( setting . map_idx * 10000 ) and idx < ( ( setting . map_idx + 1 ) * 10000 ) then 
+if pc . getqf ( "katakombfix" ) == 1 then 
+pc . setqf ( "katakombfix" , 0 ) 
+end 
+end 
+local idx = pc . get_map_index ( ) 
+local setting = devilcatacomb_zone . setting ( ) 
+if idx == setting . map_idx or idx >= ( setting . map_idx * 10000 ) and idx < ( ( setting . map_idx + 1 ) * 10000 ) then 
+pc . setf ( "devilcatacomb_zone" , "last_exit_time" , get_global_time ( ) ) 
+end 

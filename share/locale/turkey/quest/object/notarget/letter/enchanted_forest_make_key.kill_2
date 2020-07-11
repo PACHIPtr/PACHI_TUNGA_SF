@@ -1,0 +1,2 @@
+send_letter ( "&Ýlaç çantasýný ara." ) 
+loop_timer ( "kill_2" , 1 ) 

@@ -1,0 +1,11 @@
+say_title ( mob_name ( 20078 ) .. ":" ) 
+if pvp_manager . get_duel_partner ( ) == nil then 
+say ( "Þuanda sana uygun aday yok." ) 
+say ( "" ) 
+say ( "Eðer sana uygun aday bulamazsak bir sonraki " ) 
+say ( "rounda geçeceksin." ) 
+return 
+end 
+say ( "Düello yapacaðýn kiþi:" ) 
+say ( "" ) 
+say_reward ( "" .. pvp_manager . get_duel_partner ( ) .. "" ) 

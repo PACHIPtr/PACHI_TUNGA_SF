@@ -1,0 +1,2 @@
+spawn_mob0 ( 6420 , 61 , 693 , 290 ) 
+clear_server_timer ( "shadow_warrior_timer_61" ) 

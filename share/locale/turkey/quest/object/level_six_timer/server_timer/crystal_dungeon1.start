@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . set_warp_location ( 41 , 9694 , 2786 ) 
+d . notice ( "Zindan sonuna kadar gidilmedi !" ) 
+d . notice ( "Zaman doldu  !" ) 
+server_timer ( "exit_before2" , 10 , d . get_map_index ( ) ) 
+end 

@@ -1,0 +1,15 @@
+if pc . getqf ( "turnuvadasin" ) == 0 and pc . isguildmaster ( ) and game . get_event_flag ( "turnuva" ) == 1 and pc . getqf ( "uyarildin" ) == 0 then send_letter ( "*Lonca Turnuvası " ) 
+ return end if game . get_event_flag ( "turnuva" ) == 0 then if pc . getqf ( "turnuvadasin" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+elseif pc . getqf ( "uyarildin" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+elseif pc . getqf ( "odulver" ) == 1 then 
+pc . delqf ( "turnuvadasin" ) 
+pc . delqf ( "uyarildin" ) 
+pc . delqf ( "odulver" ) 
+end 
+ return end 

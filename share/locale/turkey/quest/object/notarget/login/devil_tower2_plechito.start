@@ -1,0 +1,15 @@
+local mid = pc . get_map_index ( ) 
+local setting = devil_tower2_plechito . settings ( ) 
+local get_flag = d . getf ( "lair_check1" ) 
+if get_flag == 2 then 
+if d . getf ( "level_two_login" ) == 0 then 
+d . setf ( "level_two_login" , 1 ) 
+clear_server_timer ( "level_two_timer" , d . get_map_index ( ) ) 
+server_timer ( "level_two_timer" , 10 * 60 , d . get_map_index ( ) ) 
+end 
+end 
+if mid == setting [ "map_index" ] then 
+if not pc . in_dungeon ( ) then 
+warp_to_village ( ) 
+end 
+end 

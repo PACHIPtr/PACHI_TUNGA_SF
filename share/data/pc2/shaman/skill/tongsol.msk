@@ -1,0 +1,8 @@
+ScriptType		SkillDataScript
+
+Type			PARTY
+Name			"통솔력"
+Description		"일행을 이끌어 가는 능력"
+IconFileName	"skill/warrior/tongsol.sub"
+
+MaxLevel		40

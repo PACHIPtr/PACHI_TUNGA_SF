@@ -1,0 +1,17 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Name			"은형법"
+Description		"자신의 모습을 감춘다"
+
+IconFileName	"skill/assassin/eunhyeong.sub"
+MotionIndex		8
+
+List AffectData
+{
+	"지속시간 : 30 초"	"" ""
+}
+
+MaxLevel			5
+LevelUpPoint		5
+NeedSPFormula		"50"

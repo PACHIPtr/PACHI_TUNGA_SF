@@ -1,0 +1,9 @@
+q . set_counter ( "Kalan sayý " , 50 - pc . getqf ( "entai_1" ) ) 
+if pc . getqf ( "entai_1" ) >= 50 then 
+notice ( "En Tai Savaþçýlarý'ný öldürdün. Orman Bekçisi'ne" ) 
+notice ( "geri dön." ) 
+cleartimer ( "kill_1" ) 
+clear_letter ( ) 
+pc . setqf ( "entai_1" , 0 ) 
+set_state ( "return_1" ) 
+end 

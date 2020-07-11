@@ -1,0 +1,72 @@
+say_title ( "Bilgi Yarýþmasý! " ) 
+say ( "" ) 
+say ( "Bilgi yarýþmasýna hoþ geldin! Eðer 3 soruyu " ) 
+say ( "doðru cevaplarsan ödül kazanacaksýn. " ) 
+say ( "" ) 
+say ( "Hazýr mýsýn? " ) 
+say ( "" ) 
+local s = select ( "Hadi Baþlayalým! " , "Vazgeçtim. " ) 
+if 2 == s then 
+return 
+end 
+item . remove ( ) 
+local size = 3 
+local chance = pc . getqf ( "chance" ) 
+if 0 == chance then 
+pc . setqf ( "chance" , number ( 3 , 5 ) ) 
+elseif pc . getqf ( "success_count" ) == chance then 
+pc . setqf ( "success_count" , 0 ) 
+pc . setqf ( "chance" , number ( 3 , 5 ) ) 
+size = 5 
+end 
+say_title ( "Bilgi Yarýþmasý! " ) 
+say ( "" ) 
+say ( "" .. size .. " soruyu doðru cevaplarsan " ) 
+say ( "ödül kazanacaksýn. " ) 
+wait ( ) 
+for i = 1 , size + 1 begin 
+local quiz_index = number ( 1 , table . getn ( locale . quiz ) ) 
+local quiz_data = locale . quiz [ quiz_index ] 
+say_title ( "Bilgi Yarýþmasý #" .. i .. " " ) 
+say ( "" ) 
+say ( quiz_data [ 1 ] ) 
+say ( "" ) 
+local s = select ( quiz_data [ 2 ] , quiz_data [ 3 ] , quiz_data [ 4 ] , quiz_data [ 5 ] ) 
+if s == quiz_data [ 6 ] then 
+if i == size then 
+say_title ( "Bilgi Yarýþmasý! " ) 
+say ( "" ) 
+say ( "Tüm sorularý doðru cevapladýn, " ) 
+say ( "iþte ödülün! " ) 
+say ( "" ) 
+pc . setqf ( "success_count" , pc . getqf ( "success_count" ) + 1 ) 
+if 5 == size then 
+say_item_vnum ( 50036 ) 
+say_reward ( "Mor hediye sandýðý kazandýn. " ) 
+pc . give_item2 ( 50036 ) 
+else 
+say_item_vnum ( 50035 ) 
+say_reward ( "Sarý hediye sandýðý kazandýn. " ) 
+pc . give_item2 ( 50035 ) 
+end 
+say ( "" ) 
+return 
+else 
+say_title ( "Bilgi Yarýþmasý! " ) 
+say ( "" ) 
+say_reward ( "Doðru! " ) 
+say ( "" ) 
+say ( "Bir sonraki soruya geçiliyor. " ) 
+say ( "" ) 
+wait ( ) 
+end 
+else 
+say_title ( "Bilgi Yarýþmasý! " ) 
+say ( "" ) 
+say ( "Yanlýþ cevap! " ) 
+say ( "" ) 
+say ( "Üzgünüm, daha sonra tekrar dene! " ) 
+say ( "" ) 
+return 
+end 
+end 

@@ -1,0 +1,46 @@
+if pc . get_map_index ( ) ~= 207 then if pc . getqf ( "icerdesin_1_" ) == 1 or pc . getqf ( "icerdesin_2_" ) == 1 or pc . getqf ( "lider" ) == 1 then 
+pc . delqf ( "icerdesin_1_" ) 
+pc . delqf ( "icerdesin_2_" ) 
+pc . delqf ( "ejder_sifre" ) 
+pc . delqf ( "lider" ) 
+pc . delqf ( "ejder_bug_engel333" ) 
+pc . delqf ( "ejder_bug_engel33" ) 
+pc . delqf ( "ejder_bug_engel3" ) 
+pc . delqf ( "ejder_bug_engel2" ) 
+pc . delqf ( "ejder_sifre_kontrol" ) 
+end 
+ return end if pc . getqf ( "icerdesin_" .. pc . get_channel_id ( ) .. "_" ) == 1 then 
+send_letter ( "Mavi Ejderha'yý maðlup edin" ) 
+end 
+if pc . get_map_index ( ) == 207 and pc . getqf ( "icerdesin_" .. pc . get_channel_id ( ) .. "_" ) ~= 1 then warp_to_village ( ) 
+ return end if pc . get_map_index ( ) == 207 and pc . getqf ( "lider" ) == 1 then local lonca = game . get_event_flag ( "ejder_lonca_" .. pc . get_channel_id ( ) .. "_" ) 
+local id = pc . get_player_id ( ) 
+if lonca ~= id then 
+pc . delqf ( "icerdesin_1_" ) 
+pc . delqf ( "icerdesin_2_" ) 
+pc . delqf ( "ejder_sifre" ) 
+pc . delqf ( "lider" ) 
+pc . delqf ( "ejder_bug_engel333" ) 
+pc . delqf ( "ejder_bug_engel33" ) 
+pc . delqf ( "ejder_bug_engel3" ) 
+pc . delqf ( "ejder_bug_engel2" ) 
+pc . delqf ( "ejder_sifre_kontrol" ) 
+syschat ( "Þifre sende olmadýðý için Sura Ruhu giriþine atýldýn!" ) 
+pc . give_item2 ( 30179 , 1 ) 
+pc . warp ( 180100 , 1.2204e+06 ) 
+return 
+end 
+purge_area ( 829200 , 1.0596e+06 , 844200 , 1.0746e+06 ) 
+regen_in_map ( 207 , "data/dungeon/skia_deliboss.txt" ) 
+notice_all ( "CH" .. pc . get_channel_id ( ) .. ": " .. pc . get_name ( ) .. " grubu, Mavi Ejderha'yý öldürmeye çalýþýyor!" ) 
+notice ( "" .. pc . getqf ( "ejder_sifre" ) .. " numaralý þifreyi daðýtmaya 30 dakika zamanýn var!" ) 
+server_timer ( "sure_bitti_" .. pc . get_channel_id ( ) .. "_" , 1800 , pc . get_map_index ( ) ) 
+dragonlair . ejder_odasi_kalansure ( ) 
+pc . setqf ( "lider" , 2 ) 
+pc . set_warp_location ( 73 , 1801 , 12204 ) 
+ return end if pc . get_map_index ( ) == 207 and pc . getqf ( "icerdesin_" .. pc . get_channel_id ( ) .. "_" ) == 1 and pc . getqf ( "lider" ) ~= 1 then if pc . getqf ( "ejder_sifre_kontrol" ) ~= game . get_event_flag ( "ejder_sifresi_" .. pc . get_channel_id ( ) .. "_" ) then 
+warp_to_village ( ) 
+end 
+dragonlair . ejder_odasi_kalansure ( ) 
+pc . set_warp_location ( 73 , 1801 , 12204 ) 
+ return end 

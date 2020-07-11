@@ -1,0 +1,60 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\ymir work\monster2\cz_dragonman\cz_dragonman.GR2"
+
+Group ShapeData
+{
+	PathName	"D:\ymir work\monster2\cz_dragonman\"
+
+	ShapeDataCount			1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"cz_dragonman.gr2"
+		SourceSkin			"cz_dragonman_01.dds"
+		TargetSkin			"cz_dragonman_02.dds"
+	}
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 10.000000 -20.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           110.000000
+            Position         0.000000 10.000000 -20.000000
+        }
+    }
+}

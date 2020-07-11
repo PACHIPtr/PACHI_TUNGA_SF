@@ -1,0 +1,4 @@
+say_title ( "Taþlarý yok et" ) 
+say ( "Aðaç Yaratýðý Metinleri'ni yok et ve Orman" ) 
+say ( "Casusu'na geri dön." ) 
+q . set_counter ( "Kalan sayý " , 5 - pc . getqf ( "stone_4" ) ) 

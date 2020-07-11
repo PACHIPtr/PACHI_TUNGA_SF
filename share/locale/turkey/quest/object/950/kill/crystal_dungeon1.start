@@ -1,0 +1,13 @@
+if pc . in_dungeon ( ) then local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 7 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . notice ( "Kristal Ejderha öldürüldü !" ) 
+d . notice ( "Zindaný baþarýyla tamamladýn !" ) 
+d . notice ( "3 dakika içinde ýþýnlanacaksýn ." ) 
+cleartimer ( "level_timer" ) 
+timer ( "final" , 3 * 60 ) 
+else 
+return 
+end 
+ return end 

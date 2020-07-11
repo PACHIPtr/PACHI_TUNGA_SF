@@ -1,0 +1,51 @@
+if pc . count_item ( item . get_vnum ( ) ) < 1 then 
+say_title ( "İksir Çantası " ) 
+say ( "" ) 
+say_reward ( "Envanterinde iksir çantası bulamadım." ) 
+else 
+say_size ( 300 , 350 ) 
+say_title ( "İksir Çantası " ) 
+say ( "" ) 
+say ( "Yoldamı kaldın ? Merak etme ben buradayım..." ) 
+say_reward ( "Hangi iksirden istiyorsun ?" ) 
+local s = select ( "Yeşil İksir (B)" , "Mor İksir (B)" , "Kırmızı İksir (B)" , "Mavi İksir (B)" , "Vazgeç " ) 
+local cost = 0 
+local count = 1 
+if s == 1 then 
+cost = 300000 
+count = 200 
+elseif s == 2 then 
+cost = 300000 
+count = 200 
+elseif s == 3 then 
+cost = 32000 
+count = 200 
+elseif s == 4 then 
+cost = 96000 
+count = 200 
+end 
+if pc . get_gold ( ) < cost then 
+say_title ( "İksir Çantası " ) 
+say ( "" ) 
+say_reward ( "Yeterli Yang'a sahip değilsin." ) 
+elseif pc . get_empty_inventory_count ( ) < 1 then 
+say_title ( "İksir Çantası " ) 
+say ( "" ) 
+say_reward ( "Envanterinde yeterli boş yer bulamadım." ) 
+else 
+pc . change_gold ( - cost ) 
+if s == 1 then 
+pc . give_item2 ( 27102 , count ) 
+syschat ( string . format ( "%s İsimli eşya envanterine eklendi. Karşılığında %s Yang kaybettin." , item_name ( 27102 ) , cost ) ) 
+elseif s == 2 then 
+pc . give_item2 ( 27115 , count ) 
+syschat ( string . format ( "%s İsimli eşya envanterine eklendi. Karşılığında %s Yang kaybettin." , item_name ( 27115 ) , cost ) ) 
+elseif s == 3 then 
+pc . give_item2 ( 27003 , count ) 
+syschat ( string . format ( "%s İsimli eşya envanterine eklendi. Karşılığında %s Yang kaybettin." , item_name ( 27115 ) , cost ) ) 
+elseif s == 4 then 
+pc . give_item2 ( 27006 , count ) 
+syschat ( string . format ( "%s İsimli eşya envanterine eklendi. Karşılığında %s Yang kaybettin." , item_name ( 27115 ) , cost ) ) 
+end 
+end 
+end 

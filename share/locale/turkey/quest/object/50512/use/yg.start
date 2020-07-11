@@ -1,0 +1,5 @@
+x = { } 
+y = { } 
+z = 1 
+g = 50512 
+yg . BeceriKontrol ( pc . get_skill_group ( ) ) 

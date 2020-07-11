@@ -1,0 +1,6 @@
+if game . get_event_flag ( "harvest_festival" ) > 0 then local v = find_npc_by_vnum ( 20086 ) 
+if 0 == v then 
+else 
+target . vid ( "__TARGET__" , v , "Wonda-Rim: " ) 
+end 
+ return end 

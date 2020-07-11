@@ -1,0 +1,4 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . notice ( "5 dakika kaldý " ) 
+server_timer ( "devil_stone5_fail" , 5 * 60 , get_server_timer_arg ( ) ) 
+end 

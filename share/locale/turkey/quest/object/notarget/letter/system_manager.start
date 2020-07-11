@@ -1,0 +1,4 @@
+if pc . is_gm ( ) == true then if pc . is_gm ( ) == true then 
+send_letter ( "*GM: Sistem Yönetimi" ) 
+end 
+ return end 

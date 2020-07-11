@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "easter_map_2018_atlas.dds"
+left 0
+top 0
+right 256
+bottom 192

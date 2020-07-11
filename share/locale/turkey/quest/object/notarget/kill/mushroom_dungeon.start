@@ -1,0 +1,61 @@
+if pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and npc . get_race ( ) == 4963 and d . getf ( "level" ) == 2 then local KILL_COUNT_FOR_DROP_KEY = 30 
+local n = d . getf ( "count_to_kill" ) + 1 
+d . setf ( "count_to_kill" , n ) 
+if n == KILL_COUNT_FOR_DROP_KEY then 
+local soul = d . getf ( "warrior_soul" ) + 1 
+d . setf ( "warrior_soul" , soul ) 
+mushroom_dungeon . warrior_soul ( ) 
+d . setf ( "count_to_kill" , 0 ) 
+if soul >= 5 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "10 saniye içerisinde bir sonraki kata gönderileceksin !" ) 
+d . kill_all ( ) 
+d . clear_regen ( ) 
+d . setf ( "level" , 3 ) 
+timer ( "third" , 5 ) 
+end 
+end 
+ return end if npc . get_race ( ) == 8073 and pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and d . getf ( "kill_metins" ) < 10 and d . getf ( "level" ) == 3 then d . setf ( "kill_metins" , d . getf ( "kill_metins" ) + 1 ) 
+if d . getf ( "kill_metins" ) >= 10 then 
+d . setf ( "level" , 4 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Bir sonraki aşamaya geçmek için Büyülü Mantar Elçilerini yok et!." ) 
+timer ( "fourth" , 5 ) 
+end 
+ return end if npc . get_race ( ) == 4966 and pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and d . getf ( "kill_mini_bosses" ) < 3 and d . getf ( "level" ) == 4 then d . setf ( "kill_mini_bosses" , d . getf ( "kill_mini_bosses" ) + 1 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Bir büyülü mantar elçisi yok edildi." ) 
+if d . getf ( "kill_mini_bosses" ) >= 3 then 
+d . setf ( "level" , 5 ) 
+d . kill_all ( ) 
+d . clear_regen ( ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "10 saniye içerisinde bir sonraki kata gönderileceksin !" ) 
+timer ( "fifth" , 5 ) 
+end 
+ return end if npc . get_race ( ) == 8073 and pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and d . getf ( "kill_metins_sd" ) < 6 and d . getf ( "level" ) == 5 then d . setf ( "kill_metins_sd" , d . getf ( "kill_metins_sd" ) + 1 ) 
+if d . getf ( "kill_metins_sd" ) > 1 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "Bir metin taşı katledildi ! - Kalan metin taşı: %d" , ( 6 - d . getf ( "kill_metins_sd" ) ) ) ) 
+end 
+if d . getf ( "kill_metins_sd" ) >= 6 then 
+d . setf ( "level" , 6 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Büyülü mantar kahramanlarını etkisiz hale getirin !" ) 
+timer ( "sixth" , 5 ) 
+end 
+ return end if npc . get_race ( ) == 4965 and pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and d . getf ( "kill_semi_final" ) < 8 and d . getf ( "level" ) == 6 then d . setf ( "kill_semi_final" , d . getf ( "kill_semi_final" ) + 1 ) 
+if d . getf ( "kill_semi_final" ) > 1 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "Büyülü mantar kahramanlarını etkisiz hale getirin ! - Kalan : %d" , ( 8 - d . getf ( "kill_semi_final" ) ) ) ) 
+end 
+if d . getf ( "kill_semi_final" ) >= 8 then 
+d . setf ( "level" , 7 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Lanetli Ormannın fethetmek için Büyülü Mantar Efsanesini yok et." ) 
+timer ( "seventh" , 5 ) 
+end 
+ return end if npc . get_race ( ) == 4969 and pc . get_map_index ( ) >= 2.44e+06 and pc . get_map_index ( ) < 2.45e+06 and d . getf ( "level" ) == 7 then timer ( "exitmsh" , 3 * 60 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Tebrikler zindan tamamlandı 3 dakika içerisinde dışarı gönderileceksin." ) 
+ return end 

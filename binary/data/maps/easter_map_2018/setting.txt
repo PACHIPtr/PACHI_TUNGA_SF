@@ -1,0 +1,12 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	4	3
+BasePosition	2100000	2850000
+TextureSet	textureset\easter_map_2018.txt
+Environment	easter2018.msenv
+

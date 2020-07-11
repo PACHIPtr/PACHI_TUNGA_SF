@@ -1,0 +1,4 @@
+say_title ( "Uriel'e dön" ) 
+say ( "" ) 
+say ( "Uriel'e dön ve güzel haberi ona ver!" ) 
+say ( "" ) 

@@ -1,0 +1,7 @@
+title subImage
+version 1.0
+image "metin2_map_trent02_atlas.dds"
+left 0
+top 0
+right 300
+bottom 300

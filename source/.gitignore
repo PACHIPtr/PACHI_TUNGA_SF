@@ -1,0 +1,11 @@
+
+client/extern
+server/extern
+*.db
+*.log
+*.suo
+*.pdb
+*.exe
+*.lib
+*.exp
+*.map

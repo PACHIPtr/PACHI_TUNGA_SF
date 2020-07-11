@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"USE_HP" "STANDING_SKILL"
+
+Name			"건곤치환"
+Description		"정신을 집중하여 정신력을 회복한다"
+
+IconFileName	"skill/sura/geongon.sub"
+MotionIndex		0
+
+List AffectData
+{
+	"정신력 회복량 : %.0f"	"(5 + MaxSP / 50) * ((10 + SkillPoint) / 10)"	""
+	"생명력 20%% 소모" "" ""
+}
+
+MaxLevel			"20"
+NeedSPFormula		"MaxHP / 5"

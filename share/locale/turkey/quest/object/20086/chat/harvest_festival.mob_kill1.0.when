@@ -1,0 +1,1 @@
+return game . get_event_flag ( "harvest_festival" ) > 0

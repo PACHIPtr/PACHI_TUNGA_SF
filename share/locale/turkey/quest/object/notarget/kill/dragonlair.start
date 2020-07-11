@@ -1,0 +1,26 @@
+if pc . get_map_index ( ) == 207 and npc . get_race ( ) == 8031 or npc . get_race ( ) == 8032 or npc . get_race ( ) == 8033 or npc . get_race ( ) == 8034 then local n = game . get_event_flag ( "kesilen_metin_" .. pc . get_channel_id ( ) .. "_" ) + 1 
+game . set_event_flag ( "kesilen_metin_" .. pc . get_channel_id ( ) .. "_" , n ) 
+if n > 3 then 
+local t = number ( 1 , 4 ) 
+if 1 == t then 
+regen_in_map ( 207 , "data/dungeon/skia_boss1.txt" ) 
+elseif 2 == t then 
+regen_in_map ( 207 , "data/dungeon/skia_boss2.txt" ) 
+elseif 3 == t then 
+regen_in_map ( 207 , "data/dungeon/skia_boss3.txt" ) 
+else 
+regen_in_map ( 207 , "data/dungeon/skia_boss4.txt" ) 
+end 
+end 
+ return end if pc . get_map_index ( ) == 207 and game . get_event_flag ( "ejder_kullanimda_" .. pc . get_channel_id ( ) .. "_" ) >= 1 and npc . get_race ( ) == 2493 then game . drop_item_with_ownership ( "71123" , 1 ) 
+game . drop_item_with_ownership ( "71129" , 1 ) 
+local drop_chance = number ( 1 , 10 ) 
+if drop_chance == 5 then 
+game . drop_item_with_ownership ( "71129" , 1 ) 
+end 
+notice_all ( "CH" .. pc . get_channel_id ( ) .. ": " .. pc . get_name ( ) .. " grubu, Mavi Ejderha'yý öldürdü!" ) 
+game . set_event_flag ( "kesilen_metin_" .. pc . get_channel_id ( ) .. "_" , 0 ) 
+clear_server_timer ( "sure_bitti_" .. pc . get_channel_id ( ) .. "_" , get_server_timer_arg ( ) ) 
+server_timer ( "geri_dondu_" .. pc . get_channel_id ( ) .. "_" , 60 * 1 , pc . get_map_index ( ) ) 
+game . set_event_flag ( "ejder_sifresi_" .. pc . get_channel_id ( ) .. "_" , number ( 9999 , 99999 ) ) 
+ return end 

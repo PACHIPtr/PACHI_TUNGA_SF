@@ -1,0 +1,4 @@
+say_title ( "Ýlk Keþif" ) 
+say ( "Efsunlu Orman'da En Tai Savaþçýsý öldür ve Orman" ) 
+say ( "Bekçisi'ne geri dön." ) 
+q . set_counter ( "Kalan sayý " , 50 - pc . getqf ( "entai_1" ) ) 

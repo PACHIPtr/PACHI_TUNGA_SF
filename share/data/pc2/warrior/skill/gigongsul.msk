@@ -1,0 +1,20 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"TOGGLE" "STANDING_SKILL"
+
+Name			"기공술"
+Description		"일시적으로 공격력을 증가 시킨다"
+
+IconFileName	"skill/warrior/gigongsul.sub"
+MotionIndex		0
+
+List AffectData
+{
+	"공격력 +%.0f"	"1 + SkillPoint / 3"	""
+}
+
+MaxLevel				"15"
+LevelUpPoint			"3"
+NeedSPFormula			"50"
+ContinuationSPFormula	"3"

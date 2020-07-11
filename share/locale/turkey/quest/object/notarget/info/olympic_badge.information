@@ -1,0 +1,4 @@
+if pc . level >= 30 and game . get_event_flag ( "ex_olympic_drop" ) >= 1 then say ( "" ) 
+say ( "Yu-Hwan'ýn sana ihtiyacý var.[ENTER]Bir an önce onun yanýna gitmelisin.[ENTER]Onu 2.köyde bulabilirsin. " ) 
+say ( "" ) 
+ return end 

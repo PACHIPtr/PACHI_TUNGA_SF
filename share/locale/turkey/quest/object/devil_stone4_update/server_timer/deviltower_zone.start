@@ -1,0 +1,22 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if not d . is_unique_dead ( "real" ) then 
+for i = 1 , 6 begin 
+if d . getf ( "fakedead" .. i ) == 0 then 
+if d . unique_get_hp_perc ( "fake" .. i ) < 50 then 
+d . purge_unique ( "fake" .. i ) 
+d . setf ( "fakedead" .. i , 1 ) 
+d . notice ( "Sahte Metin taþlarý yok oldu..." ) ; 
+end 
+end 
+end 
+else 
+server_timer ( "devil_stone4_end" , 5 , get_server_timer_arg ( ) ) 
+d . notice ( "Mükemmel bir duyma yeteneðine ve iyi bir" ) ; 
+d . notice ( "içgüdüye sahip olduðunu kanýtlayarak" ) ; 
+d . notice ( "gerçek Metin Taþý'ný yok ettin!" ) ; 
+d . notice ( "Þimdi 5.kata gireceksin." ) 
+d . purge ( ) 
+end 
+else 
+server_timer ( "devil_stone4_stop_timer" , 1 , get_server_timer_arg ( ) ) 
+end 

@@ -1,0 +1,7 @@
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Burada sýralamasý en yüksek sekiz loncayý ve" ) 
+say ( "istatistiklerini görebilirsin: [DELAY value;0]" ) 
+say ( "|Lonca adý |Puaný |Zaferleri |Beraberlikleri |Yenilgileri" ) 
+say ( guild . high_ranking_string ( ) .. "[/DELAY]" ) 
+say ( "" ) 

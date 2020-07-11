@@ -1,0 +1,6 @@
+if pc . get_map_index ( ) == 72 or pc . get_map_index ( ) == 73 or pc . get_map_index ( ) == 79 then 
+if pc . get_level ( ) < 75 then 
+chat ( "Seviyen 75'in altýnda olduðu için buraya giremezsin." ) 
+warp_to_village ( ) 
+end 
+end 

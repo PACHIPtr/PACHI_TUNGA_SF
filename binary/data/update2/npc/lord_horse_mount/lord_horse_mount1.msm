@@ -1,0 +1,65 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:/YMIR WORK/npc/lord_horse_mount/lord_horse_mount.GR2"
+
+Group ShapeData
+{
+    PathName 		 "D:\Ymir Work\"
+    ShapeDataCount		 2
+	
+	Group ShapeData00
+    {
+        ShapeIndex 		 0
+        Model 			 "npc\lord_horse_mount\lord_horse_mount.gr2"
+        SourceSkin 		 "atreya_textures\mounts\Vehicle_Horse_Lord_diff.dds"
+        TargetSkin 		 "atreya_textures\mounts\Vehicle_Horse_Lord_A_diff.tga"
+    }
+	Group ShapeData01
+    {
+        ShapeIndex 		 0
+        Model 			 "npc\lord_horse_mount\lord_horse_mount.gr2"
+        SourceSkin 		 "atreya_textures\mounts\Vehicle_Horse_Lord_diff01.dds"
+        TargetSkin 		 "atreya_textures\mounts\Vehicle_Horse_Lord_A_diff01.tga"
+    }
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "horse_bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "horse_bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           110.000000
+            Position         0.000000 0.000000 100.000000
+        }
+    }
+}

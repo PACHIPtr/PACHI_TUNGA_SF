@@ -1,0 +1,3 @@
+say_title ( "Bir aðaç zümrütü " ) 
+say ( "En Tai Hükümdarý'ndan aðaç zümrütü elde ettin." ) 
+say ( "Orman Kaþifi'ne git ve rapor ver." ) 

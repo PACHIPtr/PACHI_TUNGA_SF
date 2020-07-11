@@ -1,0 +1,6 @@
+say ( "Toplama ödülü (en az 100 fener):" ) 
+say_item_vnum ( 71191 ) 
+say ( "" ) 
+say ( "Çizelge konumu ödülü:" ) 
+say_item_vnum ( 71190 ) 
+say ( "" ) 

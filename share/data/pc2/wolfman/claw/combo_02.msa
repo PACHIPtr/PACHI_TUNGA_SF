@@ -1,0 +1,45 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/pc3/wolfman/claw/combo_02.GR2"
+MotionDuration           1.000000
+Accumulation           0.00	-60.00	0.00
+
+Group ComboInputData
+{
+    PreInputTime             0.445255
+    DirectInputTime          0.586375
+    InputLimitTime           1.000000
+}
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.030000
+    ExternalForce        4.000000
+    HitLimitCount        0
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.467153
+        AttackingEndTime     0.540146
+        AttackingBone        "Bip01 R Hand"
+        WeaponLength         90.000000
+        List HitPosition
+        {
+            0.467153 48.226074 -58.760498 95.410645 44.959213 31.118315 92.484856
+            0.475487 43.676105 -65.839775 102.785095 75.574074 17.852537 95.651299
+            0.483820 32.230042 -80.711136 107.575241 102.751625 -28.022158 89.589714
+            0.492153 6.547082 -98.238464 115.105858 89.874733 -110.499718 83.420494
+            0.500487 -38.611359 -99.332275 135.717285 -7.961444 -179.902969 110.381889
+            0.508820 -74.789925 -63.396255 167.188095 -123.773048 -137.429642 181.020523
+            0.517153 -76.197182 -13.355317 189.845184 -151.604843 -27.961866 236.565277
+            0.525487 -52.313354 27.333872 198.259399 -109.691612 66.623398 255.295197
+            0.533820 -18.613024 49.269875 195.384201 -44.422676 118.597290 246.608841
+        }
+    }
+}
+

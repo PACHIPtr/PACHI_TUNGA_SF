@@ -1,0 +1,14 @@
+if pc . is_busy ( ) == true then 
+syschat ( "Meþgul durumda iken bunu kullanamazsýn." ) 
+elseif pc . is_dead ( ) == true then 
+syschat ( "Ölü durumda iken bunu kullanamazsýn." ) 
+elseif pc . get_map_index ( ) == 1 or pc . get_map_index ( ) == 21 or pc . get_map_index ( ) == 41 or pc . get_map_index ( ) == 3 or pc . get_map_index ( ) == 23 or pc . get_map_index ( ) == 43 then 
+syschat ( "Bu haritada bu eþyayý kullanamazsýn." ) 
+else 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 
+spawn_mob0 ( 2492 , pc . get_map_index ( ) , pc . get_local_x ( ) , pc . get_local_y ( ) ) 
+end 

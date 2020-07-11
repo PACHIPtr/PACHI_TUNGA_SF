@@ -1,0 +1,206 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "d:\ymir work\monster2\esgaroth_dragon\esgaroth_dragon.gr2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 5
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\monster2\esgaroth_dragon\esgaroth_dragon.GR2"
+		SourceSkin			"D:\Ymir Work\monster2\esgaroth_dragon\02-horn-tail_diff.tga"
+		TargetSkin			"D:\Ymir Work\monster2\esgaroth_dragon\02-horn-tail_diff.tga"
+		SourceSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\02-horn-tail_diff2.tga"
+		TargetSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\02-horn-tail_diff2.tga"
+	}
+	Group ShapeData01
+	{
+		ShapeIndex			1
+
+		Model				"D:\Ymir Work\monster2\esgaroth_dragon\esgaroth_dragon.GR2"
+		SourceSkin			"D:\Ymir Work\monster2\esgaroth_dragon\07-frontarm_diff.tga"
+		TargetSkin			"D:\Ymir Work\monster2\esgaroth_dragon\07-frontarm_diff.tga"
+		SourceSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\07-frontarm_diff2.tga"
+		TargetSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\07-frontarm_diff2.tga"
+	}
+	Group ShapeData02
+	{
+		ShapeIndex			2
+
+		Model				"D:\Ymir Work\monster2\esgaroth_dragon\esgaroth_dragon.GR2"
+		SourceSkin			"D:\Ymir Work\monster2\esgaroth_dragon\09-backarm_diff.tga"
+		TargetSkin			"D:\Ymir Work\monster2\esgaroth_dragon\09-backarm_diff.tga"
+		SourceSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\09-backarm_diff2.tga"
+		TargetSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\09-backarm_diff2.tga"
+	}
+	Group ShapeData03
+	{
+		ShapeIndex			3
+
+		Model				"D:\Ymir Work\monster2\esgaroth_dragon\esgaroth_dragon.GR2"
+		SourceSkin			"D:\Ymir Work\monster2\esgaroth_dragon\14-wing_diff.tga"
+		TargetSkin			"D:\Ymir Work\monster2\esgaroth_dragon\14-wing_diff.tga"
+		SourceSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\14-wing_diff2.tga"
+		TargetSkin2			"D:\Ymir Work\monster2\esgaroth_dragon\14-wing_diff2.tga"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       11
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          0
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 0.000000 90.000000
+        }
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "FxShot"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData03
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01-L-Foot"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData04
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01-R-Foot"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData05
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01-L-Hand"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData06
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01-R-Hand"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData07
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Tail_Bone011"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData08
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Tail_Bone010"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData09
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Tail_Bone009"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData10
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Tail_Bone008"
+        
+        EffectScriptName     "D:\ymir work\effect\monster2\purple_dragon.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

@@ -1,0 +1,9 @@
+if flame_dungeon . is_flamed ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 12 then local i = number ( 1 , 80 ) 
+if i == 1 then 
+game . drop_item ( 30329 , 1 ) 
+end 
+ return end if flame_dungeon . is_flamed ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 15 then local i = number ( 1 , 30 ) 
+if i == 1 then 
+game . drop_item ( 30330 , 1 ) 
+end 
+ return end 

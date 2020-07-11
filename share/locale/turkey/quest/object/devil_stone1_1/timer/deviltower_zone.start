@@ -1,0 +1,3 @@
+d . new_jump_all ( 66 , special . devil_tower [ 1 ] [ 1 ] , special . devil_tower [ 1 ] [ 2 ] ) 
+d . regen_file ( "data/dungeon/deviltower2_regen.txt" ) 
+d . set_warp_at_eliminate ( 4 , d . get_map_index ( ) , special . devil_tower [ 2 ] [ 1 ] , special . devil_tower [ 2 ] [ 2 ] , "data/dungeon/deviltower3_regen.txt" ) 

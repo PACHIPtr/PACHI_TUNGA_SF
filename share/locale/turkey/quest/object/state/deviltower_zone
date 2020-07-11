@@ -1,0 +1,44 @@
+deviltower_zone={["start"]=0,get_4floor_stone_pos= function ()local positions = 
+{ 
+{ 368 , 629 } , { 419 , 630 } , { 428 , 653 } , { 422 , 679 } , 
+{ 395 , 689 } , { 369 , 679 } , { 361 , 658 } , 
+} 
+for i = 1 , 6 begin 
+local j = number ( i , 7 ) 
+if i ~= j then 
+local t = positions [ i ] ; 
+positions [ i ] = positions [ j ] ; 
+positions [ j ] = t ; 
+end 
+end 
+return positions 
+end ,register_player= function (vid)local player_count = d . getf ( "player_count" ) 
+player_count = player_count + 1 
+d . setf ( "player_count" , tonumber ( player_count ) ) 
+d . setf ( string . format ( "player%d" , player_count ) , tonumber ( vid ) ) 
+end ,unregister_player= function (vid)local player_count = d . getf ( "player_count" ) 
+local found = false 
+for i = 1 , player_count , 1 begin 
+if found == true then 
+d . setf ( string . format ( "player%d" , tonumber ( i ) ) , d . getf ( string . format ( "player%d" , i + 1 ) ) ) 
+end 
+p = d . getf ( "player" .. tostring ( i ) ) 
+if p == vid then 
+i = i - 1 
+found = true 
+end 
+end 
+if found == true then 
+d . setf ( "player_count" , tonumber ( player_count - 1 ) ) 
+end 
+end ,get_players= function ()local players = { } 
+local player_count = d . getf ( "player_count" ) 
+for i = 1 , player_count , 1 begin 
+players [ i ] = d . getf ( "player" .. tostring ( i ) ) 
+end 
+return players 
+end ,give_dc_access= function (pindex)local self_checked = false 
+local self = pc . select ( d . getf ( "player" .. tostring ( pindex ) ) ) 
+pc . setf ( "deviltower_zone" , "dcenter" , 1 ) 
+pc . select ( self ) 
+end }

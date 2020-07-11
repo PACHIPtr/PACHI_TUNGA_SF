@@ -1,0 +1,18 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Attribute		"NEED_TARGET"
+
+Name			"태양권"
+Description		"빠르게 적에게 접근하여 치명타를 입힌다"
+
+IconFileName	"skill/assassin/taeyang.sub"
+MotionIndex		11
+
+List AffectData
+{
+	"%.1f 배의 타격"	"1 + SkillPoint / 4"	""
+}
+
+CoolTimeFormula		"40 - SkillPoint"
+NeedSPFormula		"50"

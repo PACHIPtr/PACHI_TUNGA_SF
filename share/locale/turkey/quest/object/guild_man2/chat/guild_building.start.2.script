@@ -1,0 +1,18 @@
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Olduðun loncadan çýkmak mý istiyorsun?" ) 
+say ( "Herhalde orada arkadaþ bulamadýn. " ) 
+say ( "Nasýl istersen." ) 
+say ( "Loncadan çikmak istediðine emin misin?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Tamam." ) 
+say ( "Artýk loncada deðilsin. " ) 
+say ( "" ) 
+say ( "" ) 
+pc . remove_from_guild ( ) 
+pc . setqf ( "new_withdraw_time" , get_global_time ( ) ) 
+end 

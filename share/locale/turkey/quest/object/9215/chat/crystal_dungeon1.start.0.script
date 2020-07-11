@@ -1,0 +1,107 @@
+addimage ( 35 , 35 , "kristal.tga" ) 
+local settings = crystal_dungeon1 . settings ( ) 
+say ( mob_name ( 9215 ) ) 
+say ( "" ) 
+if not party . is_party ( ) then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "bir grupta bulunman gerekiyor ." ) 
+return 
+end 
+if not party . is_leader ( ) then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "bir grubun lideri olmalýsýn ." ) 
+return 
+end 
+if party . get_near_count ( ) < 2 then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "bir grupta bulunmalýsýnýz." ) 
+return 
+end 
+local levelCheck , maximlevelCheck , itemCheck , durationCheck = true , true , true , true 
+local noDurationMembers , noLevelMembers , noitemCheckMembers = { } , { } , { } 
+for i , pid in next , crystal_dungeon1 . party_get_member_pids ( ) , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . get_level ( ) < settings [ "level_check" ] [ "minimum" ] then 
+table . insert ( noLevelMembers , pc . get_name ( ) ) 
+levelCheck = false 
+end 
+if pc . get_level ( ) > settings [ "level_check" ] [ "maximum" ] then 
+table . insert ( noLevelMembers , pc . get_name ( ) ) 
+maximlevelCheck = false 
+end 
+if pc . count_item ( 31335 ) <= 0 then 
+table . insert ( noitemCheckMembers , pc . get_name ( ) ) 
+itemCheck = false 
+end 
+if get_time ( ) < pc . getqf ( "cy_player_time_duration" ) then 
+table . insert ( noDurationMembers , pc . get_name ( ) ) 
+durationCheck = false 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not levelCheck then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "grubun her üyesi" ) 
+say ( string . format ( "Minimum seviye: %s." , settings [ "level_check1" ] [ "minimum" ] ) ) 
+say ( "" ) 
+say ( "Grubunuzdaki bazý üyeler bu þartý yerine getirmiyor !" ) 
+for i , name in next , noLevelMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+if not maximlevelCheck then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "grubun her üyesi " ) 
+say ( string . format ( "Minimum seviye:   %s." , settings [ "level_check1" ] [ "maximum" ] ) ) 
+say ( "" ) 
+say ( "Grubunuzdaki bazý üyeler bu þartý yerine getirmiyor !" ) 
+for i , name in next , noLevelMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+if not itemCheck then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "grubun her üyesinin zindan biletine" ) 
+say ( "sahip olmasý gerekiyor bir üyenin" ) 
+say ( "Envanterinde yeterli miktarda yok:" ) 
+say_item ( item_name ( 31335 ) , 31335 , "" ) 
+for i , name in next , noitemCheckMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+if not durationCheck then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Bu zindana giriþ yapabilmen için," ) 
+say ( "grubun her üyesinin soguma süresinin" ) 
+say ( "sona ermiþ olmasý gerekiyor" ) 
+say ( "soguma süresini tamamlamamýþ olanlar var:" ) 
+for i , name in next , noDurationMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , "    " .. name ) 
+end 
+return 
+end 
+if ( pc . get_channel_id ( ) == 2 or pc . get_channel_id ( ) == 3 or pc . get_channel_id ( ) == 4 or pc . get_channel_id ( ) == 5 or pc . get_channel_id ( ) == 6 ) then 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Sadece 1. kanaldan giriþ yapabilirsin." ) 
+return 
+end 
+for i , pid in next , crystal_dungeon1 . party_get_member_pids ( ) , nil begin 
+q . begin_other_pc_block ( pid ) 
+pc . remove_item ( 31335 , 1 ) 
+pc . setqf ( "cy_player_time_duration" , get_time ( ) + 60 * 60 * 3 ) 
+q . end_other_pc_block ( ) 
+end 
+addimage ( 35 , 35 , "kristal.tga" ) say ( "" ) say ( "" ) say ( "" ) say ( "" ) 
+say ( "Kristal zindana ýþýnlanýyorsun," ) 
+say ( "'Devam' dedikten sonra bütün üyeler ýþýnlanacaklar ." ) 
+wait ( ) 
+crystal_dungeon1 . make_dungeon ( ) 

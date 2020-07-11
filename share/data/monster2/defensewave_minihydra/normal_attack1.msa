@@ -1,0 +1,40 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/defensewave_minihydra/normal_attack1.GR2"
+MotionDuration           1.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         0.608272
+        
+        AttachingEnable      1
+        AttachingBoneName    "event02"
+        FlyFileName       "d:/ymir work/effect/monster2/defense_mini_n1_throw.msf"
+        FlyPosition       0.000000 50.000000 -20.000000
+    }
+    Group Event01
+    {
+        MotionEventType      6
+        StartingTime         0.608272
+        
+        AttachingEnable      1
+        AttachingBoneName    "event01"
+        FlyFileName       "d:/ymir work/effect/monster2/defense_mini_n1_throw.msf"
+        FlyPosition       0.000000 50.000000 -20.000000
+    }
+    Group Event02
+    {
+        MotionEventType      6
+        StartingTime         0.608272
+        
+        AttachingEnable      1
+        AttachingBoneName    "event03"
+        FlyFileName       "d:/ymir work/effect/monster2/defense_mini_n1_throw.msf"
+        FlyPosition       0.000000 50.000000 -20.000000
+    }
+}

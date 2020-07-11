@@ -1,0 +1,97 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest carving_stone begin
+	state start begin
+		function is_start()
+			local value = game.get_event_flag("ex_carving_stone_drop")
+			return value
+		end
+		
+		when 30129.chat."Oyma Taþý	" with carving_stone.is_start() == 1 begin
+		say_title("Tavþan:")
+		say("")
+		say("Ödüller!")
+		say("Çok güzel Ödüller!.")
+		say("")
+		local panpa = select("Evet, istiyorum.","Maalesef.")
+			if panpa == 1 then
+			say_title("Tavþan:")
+			say("")
+			say("Demek ne olduðunu biliyorsun?! Bu ")
+			say("ödüllerin eþi benzeri yok!.")
+			say("")
+			wait()
+			say_title("Tavþan:")
+			say("")
+			say("175 Adet Oyma Taþý karþýlýðýnda sana Ödüllerini verebilirim.")
+			say("Anlaþtýk mý?")
+			say("")
+			local panpa2 = select("Seve seve.","Uðraþamam.")
+			if panpa2 == 1 then
+			if pc.countitem(30178) >= 175 then
+			say_title("Tavþan:")
+			say("")
+			say("Ahh harikasýn 175 adet Oyma Taþý buldun demek.")
+			say("Ýþte sana Ödüllerini veriyorum,.")
+			say("Hayýrlý Ramazanlar!.")
+			say("")
+			pc.remove_item("30178",175)
+			pc.give_item2("39002",1)
+			pc.give_item2("39002",1)
+			pc.give_item2("39002",1)
+			pc.give_item2("39002",1)
+			pc.give_item2("39002",1)
+			pc.give_item2("50513",10)
+			pc.give_item2("30199",5)
+			pc.give_item2("81600",5)				
+			else
+			say_title("Tavþan:")
+			say("")
+			say("Her 175 Oyma Taþý karþýlýðýnda sana Ödül vereceðim.. ")
+			say("vereceðim.")
+			say("")
+			end
+			elseif panpa2 == 2 then
+			say_title("Tavþan:")
+			say("")
+			say("Tüh. Neyse, tekrar görüþmek üzere.")
+			say("")
+			end
+			elseif panpa == 2 then
+			say_title("Tavþan:")
+			say("")
+			say("Tüh. Neyse, tekrar görüþmek üzere.")
+			say("")
+			end
+			end
+		when 30129.chat."Tavþan mi?" with carving_stone.is_start() == 1 begin
+			say_title("Tavþan:")
+			say("")
+			say("")
+			say("Geçmiþi olmayanýn geleceði olmaz! Sana nasýl")
+			say("yardýmcý olabilirim?")
+			say("")
+			wait()
+			say_title(""..pc.get_name()..":")
+			say("")
+			say("Pardon, tanýþýyor muyuz?")
+			say("")
+			wait()
+			say_title("Tavþan:")
+			say("")
+			say("Afedersin, kendimi tanýtmayý unutmuþum. Bir")
+			say("Tavþan olarak gösteriþli bir insaným.")
+			say("RoyaL, beni sizlere hizmet etmem için,")
+			say("gönderdi.")
+			say("")
+			wait()
+			say_title(""..pc.get_name()..":")
+			say("")
+			say("Seninle tanýþtýðýma çok memnun oldum. Ramazanda")
+			say("ziyaretine gelirim.")
+		end
+	end
+end

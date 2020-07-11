@@ -1,0 +1,15 @@
+support_system={["start"]=0,get_pet_info= function (itemVnum)pet_info_map = { 
+[ 81001 ] = { 34077 , "Şaman (Ejderha Gücü)" , 0 } , 
+[ 81002 ] = { 34077 , "Şaman (İyileştirme)" , 0 } , 
+[ 81003 ] = { 34077 , "Şaman (Ejderha Gücü)" , 0 } , 
+[ 81004 ] = { 34077 , "Şaman (İyileştirme)" , 0 } , 
+[ 81005 ] = { 34077 , "Şaman (Ejderha Gücü)" , 0 } , 
+} 
+itemVnum = tonumber ( itemVnum ) 
+return pet_info_map [ itemVnum ] 
+end ,get_spawn_effect_file= function (idx)effect_table = { 
+[ 0 ] = nil , 
+[ 1 ] = "d:\\ymir work\\effect\\etc\\appear_die\\npc2_appear.mse" , 
+} 
+return effect_table [ idx ] 
+end }

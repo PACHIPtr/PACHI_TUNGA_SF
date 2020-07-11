@@ -1,0 +1,19 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"TOGGLE" "STANDING_SKILL"
+Name				"수호전령"
+Description			"빛의 정령을 불러 자신의 몸을 보호한다"
+Requirement			"호신" 4
+
+IconFileName		"skill/shaman/suho.sub"
+MotionIndex			15
+
+List AffectData
+{
+	"방어력 : +%.0f" "(3 + SkillPoint / 4) * (100 + INT / 2) / 100" ""
+}
+
+NeedSPFormula			"150"
+ContinuationSPFormula	"8"
+LevelUpPoint			4

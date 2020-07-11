@@ -1,0 +1,22 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Name			"독병 제작"
+Description		"빈병에 독을 만들어 넣는다"
+
+IconFileName	"skill/assassin/make_poison.sub"
+MotionIndex		0
+
+List ConditionData
+{
+	"빈병 필요"
+}
+
+List AffectData
+{
+	"성공확률 %.0f%%"	"SkillPoint*20"	""
+}
+
+MaxLevel			"5"
+CoolTimeFormula		"10"
+NeedSPFormula		"50"

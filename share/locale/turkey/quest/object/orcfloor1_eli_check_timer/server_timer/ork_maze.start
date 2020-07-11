@@ -1,0 +1,16 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . getf ( "floor_one_finish" ) == 1 then 
+d . jump_all ( 577 + 12032 , 1048 + 7168 ) 
+local per = number ( 1 , 100 ) 
+if per <= 33 then 
+d . regen_file ( "data/dungeon/orcmaze/regen_2_1.txt" ) 
+elseif per >= 34 and per <= 66 then 
+d . regen_file ( "data/dungeon/orcmaze/regen_2_2.txt" ) 
+else 
+d . regen_file ( "data/dungeon/orcmaze/regen_2_3.txt" ) 
+end 
+d . setf ( "floor_two_stone_count" , 0 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(2. Görev) Üç Sonsuzluk taþý labirentin dört bir yanýna gönderildi. Onlarý bulup yok etmelisiniz!" ) 
+end 
+end 

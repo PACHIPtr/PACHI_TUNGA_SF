@@ -1,0 +1,11 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"요상법"
+Description		"생명력 회복 속도 증가"
+
+IconFileName	"skill/warrior/geunseong.sub"
+List AffectData
+{
+	"생명력 회복량 +%.0f%%"	"SkillPoint * 5"	""
+}

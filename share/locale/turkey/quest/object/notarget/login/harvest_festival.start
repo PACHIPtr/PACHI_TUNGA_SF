@@ -1,0 +1,6 @@
+if pc . get_level ( ) > 0 then set_state ( "information" ) 
+pc . setqf ( "harvest_festival_count" , 0 ) 
+pc . setqf ( "harvest_festival_mob_complete" , 0 ) 
+pc . setqf ( "cake_count" , 0 ) 
+pc . setqf ( "rice_count" , 0 ) 
+ return end 

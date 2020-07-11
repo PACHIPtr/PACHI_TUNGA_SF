@@ -1,0 +1,3 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ejderha Taþý mý yükseltmek istiyorsun?[ENTER]Tam yerindesin. Ama þunu bilmelisin yükseltmeler[ENTER]baþarýsýzda olabilir. Yükseltme yaparken, farklý renkte[ENTER]fasülyelere ihtiyaç duyacaksýn." ) 
+ds . open_refine_window ( ) 

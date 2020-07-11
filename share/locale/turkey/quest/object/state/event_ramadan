@@ -1,0 +1,21 @@
+event_ramadan={["start"]=0,is_running= function ()return ( game . get_event_flag ( "ex_ramadan_drop" ) > 0 ) 
+end ,reward_period= function ()return ( game . get_event_flag ( "ramazan_etkinlik_bitti" ) > 0 ) 
+end ,setting= function ()return { 
+[ "bread" ] = 30315 , 
+[ "candy" ] = 50183 , 
+[ "plate" ] = 30316 , 
+[ "iftar" ] = 30317 , 
+[ "fruit" ] = 30318 , 
+[ "box" ] = 50182 , 
+[ "horse1" ] = 71131 , 
+[ "horse2" ] = 71132 , 
+[ "horse3" ] = 71133 , 
+[ "horse4" ] = 71134 , 
+[ "historian" ] = 33002 , 
+[ "beggar1" ] = 33003 , 
+[ "beggar2" ] = 33004 , 
+[ "beggar3" ] = 33005 , 
+[ "beggar4" ] = 33006 , 
+[ "beggar5" ] = 33007 
+} 
+end }

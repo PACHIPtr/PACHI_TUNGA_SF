@@ -1,0 +1,83 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_seamonsterBoss\attack00.GR2"
+MotionDuration           1.533333
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/sea_monsterBoss_attack00.mse"
+        EffectPosition       0.000000 -600.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/sea_monsterBoss_attack00.mse"
+        EffectPosition       0.000000 -600.000000 100.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/sea_monsterBoss_attack00.mse"
+        EffectPosition       100.000000 -600.000000 100.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/sea_monsterBoss_attack00.mse"
+        EffectPosition       -100.000000 -600.000000 100.000000
+    }
+}
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.450000
+        AttackingEndTime     1.623173
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            0.450000 0.000000 -450.000000 200.000000 -0.000000 0.000000 0.000000
+            0.510000 0.000000 -480.000000 200.000000 -0.000000 0.000000 0.000000
+            0.540000 0.000000 -520.000000 150.000000 -0.000000 0.000000 0.000000
+		}
+   }
+}

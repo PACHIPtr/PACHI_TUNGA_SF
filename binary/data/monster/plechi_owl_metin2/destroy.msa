@@ -1,0 +1,33 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_owl_metin2\destroy.GR2"
+MotionDuration           6.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.098516
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "owl_metin2"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/background/metinstone_laser.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.155547
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "owl_metin2"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/owl_metin2_destroy.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

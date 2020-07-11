@@ -1,0 +1,48 @@
+local get_flag = d . getf ( "lair_check" ) 
+local setting = crystal_dungeon1 . settings ( ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+if get_flag == 2 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 2 ] [ 1 ] , setting [ "spawm_pos" ] [ 2 ] [ 2 ] ) 
+crystal_dungeon1 . get_regens ( 2 ) 
+d . spawn_mob ( 9210 , 753 , 172 ) 
+d . setf ( "lair_check" , 2 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Dikkat! Canavarlarý Temizle anahtarý bul ve anýtý yoket !" ) 
+end 
+if get_flag == 3 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 2 ] [ 1 ] , setting [ "spawm_pos" ] [ 2 ] [ 2 ] ) 
+crystal_dungeon1 . get_regens ( 3 ) 
+d . setf ( "lair_check" , 3 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Dikkat! Canavarlarý Temizle !" ) 
+end 
+if get_flag == 4 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 3 ] [ 1 ] , setting [ "spawm_pos" ] [ 3 ] [ 2 ] ) 
+crystal_dungeon1 . get_regens ( 4 ) 
+d . setf ( "lair_check" , 4 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Dikkat! Metinlerden kristal magma elde et ve Kristal Kuleye ver !" ) 
+crystal_dungeon1 . spawn_metins_4thfloor ( ) 
+end 
+if get_flag == 5 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 4 ] [ 1 ] , setting [ "spawm_pos" ] [ 4 ] [ 2 ] ) 
+crystal_dungeon1 . get_regens ( 5 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Dikkat! Canavarlarý Temizle !" ) 
+d . setf ( "lair_check" , 5 ) 
+end 
+if get_flag == 6 then 
+d . jump_all ( setting [ "spawm_pos" ] [ 5 ] [ 1 ] , setting [ "spawm_pos" ] [ 5 ] [ 2 ] ) 
+crystal_dungeon1 . get_regens ( 6 ) 
+crystal_dungeon1 . get_regens ( 7 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Dikkat! Metinleri temizle ve Kristal Ejderhayý çaðýr !" ) 
+d . setf ( "lair_check" , 6 ) 
+end 
+if get_flag == 7 then 
+crystal_dungeon1 . spawn_boss ( 7 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Patronu katlettin! Görev tamamlandý !" ) 
+d . setf ( "lair_check" , 7 ) 
+end 

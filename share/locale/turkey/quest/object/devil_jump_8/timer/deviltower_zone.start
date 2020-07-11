@@ -1,0 +1,6 @@
+d . setf ( "level" , 8 ) 
+d . jump_all ( 2048 + 590 , 6656 + 403 ) 
+d . set_regen_file ( "data/dungeon/deviltower8_regen.txt" ) 
+d . spawn_mob ( 20366 , 640 , 460 ) 
+local _count = pc . count_item ( 30302 ) 
+pc . remove_item ( 30302 , _count ) 

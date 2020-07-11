@@ -1,0 +1,15 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"STAND_SKILL"
+
+Name				"초전부"
+Description			"귀환부를 사용해 기억하고 있는 그곳으로 이동한다"
+Requirement			"귀환" 3
+
+IconFileName		"skill/shaman/chojeon.sub"
+MotionIndex			16
+
+NeedSPFormula		"300"
+MaxLevel			5
+LevelUpPoint		5

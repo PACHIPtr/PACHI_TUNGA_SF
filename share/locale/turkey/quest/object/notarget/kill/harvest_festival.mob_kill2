@@ -1,0 +1,30 @@
+if npc . get_race ( ) == 108 and pc . getf ( "harvest_festival" , "mob2_info" ) == 10 and party . is_party ( ) then 
+harvest_festival . kill_action ( 108 , 2 ) 
+end 
+if npc . get_race ( ) == 109 and pc . getf ( "harvest_festival" , "mob2_info" ) == 9 and party . is_party ( ) then 
+harvest_festival . kill_action ( 109 , 2 ) 
+end 
+if npc . get_race ( ) == 113 and pc . getf ( "harvest_festival" , "mob2_info" ) == 1 and party . is_party ( ) then 
+harvest_festival . kill_action ( 113 , 2 ) 
+end 
+if npc . get_race ( ) == 502 and pc . getf ( "harvest_festival" , "mob2_info" ) == 2 and party . is_party ( ) then 
+harvest_festival . kill_action ( 502 , 2 ) 
+end 
+if npc . get_race ( ) == 703 and pc . getf ( "harvest_festival" , "mob2_info" ) == 3 and party . is_party ( ) then 
+harvest_festival . kill_action ( 703 , 2 ) 
+end 
+if npc . get_race ( ) == 707 and pc . getf ( "harvest_festival" , "mob2_info" ) == 4 and party . is_party ( ) then 
+harvest_festival . kill_action ( 707 , 2 ) 
+end 
+if npc . get_race ( ) == 1305 and pc . getf ( "harvest_festival" , "mob2_info" ) == 5 and party . is_party ( ) then 
+harvest_festival . kill_action ( 1305 , 2 ) 
+end 
+if npc . get_race ( ) == 2205 and pc . getf ( "harvest_festival" , "mob2_info" ) == 6 and party . is_party ( ) then 
+harvest_festival . kill_action ( 2205 , 2 ) 
+end 
+if npc . get_race ( ) == 2501 and pc . getf ( "harvest_festival" , "mob2_info" ) == 7 and party . is_party ( ) then 
+harvest_festival . kill_action ( 2501 , 2 ) 
+end 
+if npc . get_race ( ) == 2503 and pc . getf ( "harvest_festival" , "mob2_info" ) == 8 and party . is_party ( ) then 
+harvest_festival . kill_action ( 2503 , 2 ) 
+end 

@@ -1,0 +1,131 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_deamon_worldboss\skill.GR2"
+MotionDuration           2.533334
+Accumulation             0.00	-90.00	0.00
+
+Group LoopData
+{
+    MotionLoopCount          20
+    LoopCancelEnable         0
+    LoopStartTime            0.544746
+    LoopEndTime              0.671677
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     10
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.047599
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_3.mse"
+        EffectPosition       0.000000 -500.000000 10.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.042310
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_3.mse"
+        EffectPosition       150.000000 -400.000000 20.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.047599
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_3.mse"
+        EffectPosition       -150.000000 -400.000000 10.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         1.248156
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_insect_worldboss/kami_skill_3.mse"
+        EffectPosition       0.000000 -400.000000 200.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.269311
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Dummy001"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_worldboss/kami_akill_2.mse"
+        EffectPosition       0.000000 0.000000 20.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.946695
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_china_worldboss/skill_atck_kami.mse"
+        EffectPosition       0.000000 -500.000000 20.000000
+    }
+    Group Event06
+    {
+        MotionEventType      8
+        StartingTime         0.338483
+    }
+    Group Event07
+    {
+        MotionEventType      7
+        StartingTime         0.877940
+    }
+    Group Event08
+    {
+        MotionEventType      4
+        StartingTime         1.242867
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    Group Event09
+    {
+        MotionEventType      2
+        StartingTime         1.248156
+        
+        DuringTime           2.000000
+        Power                250
+        AffectingRange       0
+    }
+}

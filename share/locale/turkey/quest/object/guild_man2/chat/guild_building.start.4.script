@@ -1,0 +1,57 @@
+local level_limit ; 
+local guild_create_item 
+level_limit = 40 
+guild_create_item = false 
+if pc . hasguild ( ) then 
+setskin ( NOWINDOW ) 
+return 
+end 
+if game . get_event_flag ( "guild_withdraw_delay" ) * 86400 > 
+get_global_time ( ) - pc . getqf ( "new_withdraw_time" ) then 
+say_title ( "Köy Gardiyanı:" ) 
+say ( "" ) 
+say ( "Bir loncadan ayrıldıktan sonra, 1 gün beklemelisin." ) 
+return 
+end 
+if game . get_event_flag ( "guild_disband_delay" ) * 86400 > 
+get_global_time ( ) - pc . getqf ( "new_withdraw_time" ) then 
+say_title ( "Köy Gardiyanı: " ) 
+say ( "" ) 
+say ( "Bir lonca kapattın! " ) 
+say ( "Bu yüzden 1 gün beklemelisin." ) 
+say_reward ( "Loncayı kapattığın tarih: " ) 
+say_reward ( string . format ( "%s" , time_to_str ( pc . getqf ( "new_withdraw_time" ) ) ) ) 
+return 
+end 
+say_title ( "Köy Gardiyanı:" ) 
+say ( "" ) 
+say ( "Yeni lonca kurmak istiyor musun?" ) 
+say ( "" ) 
+say ( "Yeni lonca kurmak için " ) 
+say ( "en az 40.seviyede olmalısın. Ayrıca" ) 
+say ( " 200.000 Yang gerekiyor." ) 
+say ( "" ) 
+say ( "Lonca kurmak istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayır" ) 
+if s == 2 then 
+return 
+end 
+if pc . level >= 40 then 
+if pc . gold >= 200000 then 
+if not guild_create_item or pc . countitem ( guild_create_item ) > 0 then 
+game . request_make_guild ( ) 
+end 
+else 
+say_title ( "Köy Gardiyanı:" ) 
+say ( "" ) 
+say ( "Yeterli Yang yok!" ) 
+say ( "" ) 
+return 
+end 
+else 
+say_title ( "Köy Gardiyanı:" ) 
+say ( "" ) 
+say ( "Seviyen lonca kurmak için " ) 
+say ( "yeterli değil. " ) 
+end 

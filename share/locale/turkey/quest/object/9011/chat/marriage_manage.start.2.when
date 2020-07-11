@@ -1,0 +1,1 @@
+return ( pc . is_engaged ( ) or pc . is_married ( ) ) and marriage . in_my_wedding ( ) and marriage . wedding_is_playing_music ( )

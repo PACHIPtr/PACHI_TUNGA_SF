@@ -1,0 +1,8 @@
+lonca_turnuva={["start"]=0,guild_tournement_create= function ()if pc . get_empire ( ) == 1 then 
+game . mysql_query ( "INSERT INTO guild_tournement(guild_id,guild_name,guild_master,empire) VALUES ('" .. pc . get_guild ( ) .. "','" .. guild . name ( pc . get_guild ( ) ) .. "','" .. pc . get_name ( ) .. "','Shinso')" ) 
+elseif pc . get_empire ( ) == 2 then 
+game . mysql_query ( "INSERT INTO guild_tournement(guild_id,guild_name,guild_master,empire) VALUES ('" .. pc . get_guild ( ) .. "','" .. guild . name ( pc . get_guild ( ) ) .. "','" .. pc . get_name ( ) .. "','Chunjo')" ) 
+elseif pc . get_empire ( ) == 3 then 
+game . mysql_query ( "INSERT INTO guild_tournement(guild_id,guild_name,guild_master,empire) VALUES ('" .. pc . get_guild ( ) .. "','" .. guild . name ( pc . get_guild ( ) ) .. "','" .. pc . get_name ( ) .. "','Jinno')" ) 
+end 
+end }

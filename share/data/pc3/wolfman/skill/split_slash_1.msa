@@ -1,0 +1,136 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\Ymir Work\pc3\wolfman\skill\split_Slash.GR2"
+MotionDuration           1.33333
+Accumulation             0.00   0.00    0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     8
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.139497
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/clu_throw_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.424979
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/clu_throw_02.mse"
+        EffectPosition       0.000000 -50.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.866179
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/split_slash2.mse"
+        EffectPosition       0.000000 -70.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.888888
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/split_slash1.mse"
+        EffectPosition       0.000000 -190.000000 120.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.840226
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/clu_throw_03.mse"
+        EffectPosition       0.000000 -80.000000 40.000000
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         0.191403
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           200.000000
+            Position         0.000000 -100.000000 100.000000
+        }
+    }
+	Group Event06
+    {
+        MotionEventType      4
+        StartingTime         0.476884
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           200.000000
+            Position         0.000000 -100.000000 100.000000
+        }
+    }
+	Group Event07
+    {
+        MotionEventType      4
+        StartingTime         0.892132
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           100.000000
+            Position         0.000000 -100.000000 100.000000
+        }
+    }      
+}

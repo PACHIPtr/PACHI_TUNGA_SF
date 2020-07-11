@@ -1,0 +1,53 @@
+if npc . get_guild ( ) == pc . get_guild ( ) and pc . is_guild_master ( ) then say_title ( "Yaholo:" ) 
+say ( "" ) 
+say ( "Lonca derecen ne kadar yüksek olursa," ) 
+say ( "o kadar büyük güç mimberin olabilir." ) 
+say ( "Derecen artýnca, loncan da" ) 
+say ( "güçleniyor." ) 
+say ( "" ) 
+wait ( ) 
+say_title ( "Yaholo:" ) 
+say ( "" ) 
+if pc . getqf ( "build_level" ) < guild . level ( pc . get_guild ( ) ) or guild . level ( pc . get_guild ( ) ) >= 20 then 
+say ( "Oh, loncan þimdi çok daha güçlü! " ) 
+say ( "Senin güç mimberini büyüteceðim." ) 
+say ( "Gereken malzemeler:" ) 
+say ( "" ) 
+say_reward ( "30 milyon Yang" ) 
+say_reward ( "15 Temel Taþý " ) 
+say_reward ( "20 Kontrplak" ) 
+say_reward ( "20 Agaç Kökü " ) 
+say ( "" ) 
+local s = select ( "Güç Mimberini büyüt." , "Güç Mimberini büyütme." ) 
+if s == 1 then 
+if pc . count_item ( 90010 ) >= 15 and pc . count_item ( 90012 ) >= 20 and pc . count_item ( 90011 ) >= 15 and pc . get_gold ( ) >= 3e+07 then 
+say_title ( "Yaholo:" ) 
+say ( "" ) 
+say ( "Bu Mimberi " ) 
+say ( "büyüteceðim." ) 
+say ( "" ) 
+building . reconstruct ( 14063 ) 
+pc . setqf ( "build_level" , guild . level ( pc . get_guild ( ) ) ) 
+char_log ( 0 , "GUILD_BUILDING" , "alter_of_power 14063 constructed" ) 
+pc . change_gold ( - 3e+07 ) 
+pc . remove_item ( "90010" , 15 ) 
+pc . remove_item ( "90011" , 20 ) 
+pc . remove_item ( "90012" , 20 ) 
+else 
+say_title ( "Yaholo:" ) 
+say ( "" ) 
+say ( "Yeterli malzeme yok. Þu an minberi" ) 
+say ( "büyütemem." ) 
+say ( "" ) 
+end 
+elseif s == 2 then 
+say_title ( "Yaholo:" ) 
+say ( "" ) 
+say ( "Sonra bir daha gel." ) 
+say ( "" ) 
+end 
+end 
+ return end if npc . get_guild ( ) == pc . get_guild ( ) and pc . is_guild_master ( ) ~= true then say_title ( "Yaholo:" ) 
+say ( "Güç sunaðý loncana daha çok üye kabul edebilmeni" ) 
+say ( "saðlar." ) 
+ return end 

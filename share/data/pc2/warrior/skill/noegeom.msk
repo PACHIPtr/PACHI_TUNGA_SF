@@ -1,0 +1,17 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Name			"뇌검도래"
+Description		"번개의 힘으로 주위의 모든 적을 섬멸한다"
+
+IconFileName	"skill/warrior/noegeom.sub"
+MotionIndex		7
+
+List AffectData
+{
+	"데미지 : %.0f ~ %.0f"	"(AttackPower * (75 + 3 * SkillPoint)) / 100"	"(AttackPower * (75 + 7 * SkillPoint)) / 100"
+}
+
+CoolTimeFormula		"60 - SkillPoint"
+
+NeedSP			200

@@ -1,0 +1,101 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_boss_elf3/skill2.gr2"
+MotionDuration           6.666667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     7
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         2.505219
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip001-R-Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/leaf_ring.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         2.435630
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip001-R-Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/kula_lasu.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         2.769659
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone183"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -450.000000 50.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         2.964509
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone183"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -900.000000 50.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         3.131524
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bone183"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -1300.000000 50.000000
+    }
+    Group Event05
+    {
+        MotionEventType      2
+        StartingTime         2.797495
+        
+        DuringTime           0.700000
+        Power                300
+        AffectingRange       300
+    }
+	Group Event06
+    {
+        MotionEventType      4
+        StartingTime         0.846715
+        DuringTime           2.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        3.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

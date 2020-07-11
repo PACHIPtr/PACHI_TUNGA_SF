@@ -1,0 +1,10 @@
+if npc . get_guild ( ) == pc . get_guild ( ) and pc . is_guild_master ( ) then say_title ( "Yaholo:" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Güç Mimberi'ni henüz büyütemezsin." ) 
+say ( "" ) 
+say ( "" ) 
+ return end if npc . get_guild ( ) == pc . get_guild ( ) and pc . is_guild_master ( ) ~= true then say_title ( "Yaholo:" ) 
+say ( "Güç sunağı loncana daha çok üye kabul edebilmeni" ) 
+say ( "sağlar." ) 
+ return end 

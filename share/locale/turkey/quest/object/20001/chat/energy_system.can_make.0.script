@@ -1,0 +1,13 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( "Yapabildin mi? Enerji parçasý elde edebildin mi?[ENTER]Simya yardýmýyla parçalayabileceðim daha fazla[ENTER]eþya getir bana.Tekniðim henüz mükemmelleþmedi.[ENTER]Bu yüzden ne kadar parça elde edileceðine dair[ENTER]bir garanti veremeyeceðim." ) 
+wait ( ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Tek bir þart var:[ENTER]Kendi seviyen ve eþyanýn seviyesi[ENTER]en az 65 olmalý. Hým bir göz atalým bakalým... " ) 
+wait ( ) 
+if pc . get_level ( ) < 65 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Henüz yeterince güçlü deðilsin![ENTER]En az 65. seviyede olmalýsýn. " ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ah süper! Güçlü ve tecrübelisin. Ýþlenecek[ENTER]eþyayý ver bakalým. " ) 
+end 

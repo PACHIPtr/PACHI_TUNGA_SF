@@ -1,0 +1,67 @@
+defance_wawe={["start"]=0,Settings= function ()local Settings = { } 
+Settings . map_index = 305 
+Settings . cord = { 1280 , 4864 } 
+Settings . start_pos = { 385 , 357 } 
+return Settings 
+end ,SpawnHandicap= function (i)if i == 0 then 
+local h1 = d . spawn_mob_ac_dir ( 3970 , 400 , 372 , 0 ) 
+local h2 = d . spawn_mob_ac_dir ( 3970 , 369 , 372 , 0 ) 
+d . setf ( "h1" , h1 ) 
+d . setf ( "h2" , h2 ) 
+elseif i == 1 then 
+local h3 = d . spawn_mob_ac_dir ( 3970 , 400 , 435 , 0 ) 
+local h4 = d . spawn_mob_ac_dir ( 3970 , 369 , 435 , 0 ) 
+d . setf ( "h3" , h3 ) 
+d . setf ( "h4" , h4 ) 
+end 
+end ,PurgeHandicap= function (i)if i == 0 then 
+d . purge_vid ( d . getf ( "h1" ) ) 
+d . purge_vid ( d . getf ( "h2" ) ) 
+elseif i == 1 then 
+d . purge_vid ( d . getf ( "h3" ) ) 
+d . purge_vid ( d . getf ( "h4" ) ) 
+end 
+end ,SpawnHidras= function ()local h1 = d . spawn_mob_ac_dir ( 3963 , 378 , 443 , 180 ) 
+local h2 = d . spawn_mob_ac_dir ( 3963 , 385 , 439 , 180 ) 
+local h3 = d . spawn_mob_ac_dir ( 3964 , 392 , 443 , 180 ) 
+d . setf ( "hidra1" , h1 ) 
+d . setf ( "hidra2" , h2 ) 
+d . setf ( "hidra3" , h3 ) 
+end ,PurgeHidras= function ()if d . getf ( "hidracount" ) == 2 then 
+d . purge_vid ( d . getf ( "hidra3" ) ) 
+elseif d . getf ( "hidracount" ) == 1 then 
+d . purge_vid ( d . getf ( "hidra3" ) ) 
+d . purge_vid ( d . getf ( "hidra2" ) ) 
+else 
+d . purge_vid ( d . getf ( "hidra3" ) ) 
+d . purge_vid ( d . getf ( "hidra2" ) ) 
+d . purge_vid ( d . getf ( "hidra1" ) ) 
+end 
+end ,Clear= function (inx)clear_server_timer ( "UpdateDungeon" , inx ) 
+clear_server_timer ( "DefanceCheckSecondFiveOne" , inx ) 
+clear_server_timer ( "DefanceCheckSecondFive" , inx ) 
+clear_server_timer ( "DefanceCheckSecondFourOne" , inx ) 
+clear_server_timer ( "DefanceCheckSecondFour" , inx ) 
+clear_server_timer ( "DefanceCheckSecondThreeOne" , inx ) 
+clear_server_timer ( "DefanceCheckSecondThree" , inx ) 
+clear_server_timer ( "DefanceJump_Wawe2" , inx ) 
+clear_server_timer ( "DefanceCheckSecondTwoOne" , inx ) 
+clear_server_timer ( "DefanceCheckSecondTwo" , inx ) 
+clear_server_timer ( "DefanceCheckSecond" , inx ) 
+d . setf ( "sn" , 0 ) 
+d . setf ( "dalga" , 0 ) 
+d . setf ( "hidra1" , 0 ) 
+d . setf ( "hidra2" , 0 ) 
+d . setf ( "hidra3" , 0 ) 
+d . setf ( "h3" , 0 ) 
+d . setf ( "h4" , 0 ) 
+d . setf ( "h3" , 0 ) 
+d . setf ( "h4" , 0 ) 
+d . setf ( "hidracount" , 0 ) 
+d . setf ( "hidra" , 0 ) 
+end ,DefanceLoginTimeControl= function ()if get_time ( ) < pc . getf ( "defensewave" , "dungeon_last_login_time" ) then 
+return true 
+else 
+return false 
+end 
+end }

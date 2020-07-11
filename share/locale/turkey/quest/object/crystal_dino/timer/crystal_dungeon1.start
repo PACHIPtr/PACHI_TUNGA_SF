@@ -1,0 +1,9 @@
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "crystal_dino" ) == 1 then 
+crystal_dungeon1 . spawn_boss ( 5 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( string . format ( "%s belirdi ! Onunla mücadele et" , mob_name ( 949 ) ) ) 
+d . setf ( "crystal_dino" , 0 ) 
+else 
+return 
+end 

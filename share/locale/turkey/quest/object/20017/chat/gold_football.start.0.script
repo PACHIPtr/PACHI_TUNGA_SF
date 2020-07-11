@@ -1,0 +1,8 @@
+say_title ( "Yu-Hwan" ) 
+say ( "" ) 
+say ( "20 Adet Futbol Topu karþýlýðý sana 1 adet" ) 
+say ( "Altýn Futbol Topu vereceðim." ) 
+say ( "Altýn Futbol Topu içerisinden seni güçlendirecek" ) 
+say ( "iksirler ve inciler elde edebileceksin." ) 
+say_reward ( "Altýn Futbol Topu istiyorsan burada olacaðým." ) 
+pc . setqf ( "first_seen" , 1 ) 

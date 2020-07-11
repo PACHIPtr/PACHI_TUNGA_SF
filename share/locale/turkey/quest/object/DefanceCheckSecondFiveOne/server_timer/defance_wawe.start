@@ -1,0 +1,17 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . getf ( "sn" ) > 1 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Deniz Savaþý " .. d . getf ( "sn" ) .. " sn. içinde baþlayacak" ) 
+d . setf ( "sn" , d . getf ( "sn" ) - 1 ) 
+d . set_victim_mast ( d . getf ( "hidra" ) , 0 ) 
+else 
+clear_server_timer ( "DefanceCheckSecondFiveOne" , d . get_map_index ( ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Deniz savaþý baþladý direði savun !" ) 
+d . setf ( "sn" , d . getf ( "sn" ) - 1 ) 
+d . set_regen_file ( "data/dungeon/defance_wawe/4.txt" ) 
+d . set_victim_mast ( d . spawn_mob_ac_dir ( 3956 , 385 , 430 , 0 ) , 1 ) 
+defance_wawe . PurgeHandicap ( 0 ) 
+d . set_victim_mast ( d . getf ( "hidra" ) , 1 ) 
+end 
+end 

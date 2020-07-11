@@ -1,0 +1,16 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"NEED_TARGET" "NEED_CORPSE"
+Range			100
+
+Name			"ÀÌÇ÷¼ú"
+Description		"Á×Àº ÀûÀÇ È¥À» Èí¼öÇØ ¼·È¥±¸ ¾ÆÀÌÅÛ È¹µæ"
+
+IconFileName	"skill/sura/ihyeol.sub"
+MotionIndex		8
+
+MaxLevel			"8"
+LevelUpPoint		"8"
+CoolTimeFormula		"20"
+NeedSPFormula		"100"

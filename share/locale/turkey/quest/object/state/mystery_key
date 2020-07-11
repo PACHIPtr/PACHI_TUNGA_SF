@@ -1,0 +1,37 @@
+mystery_key={["start"]=0,get_master_key= function ()return 50156 
+end ,get_key_for_chest= function (chest_vnum)local chest_table = { 
+[ 50132 ] = 50150 , 
+[ 50133 ] = 50151 , 
+[ 50134 ] = 50152 , 
+[ 50135 ] = 50153 , 
+[ 50136 ] = 50154 , 
+[ 50137 ] = 50155 , 
+} 
+return chest_table [ chest_vnum ] 
+end ,get_reward_for_chest= function (chest_vnum)local reward_table = { 
+[ 50132 ] = { 
+{ 71126 , 1 , 20 } , 
+{ 71094 , 1 } , 
+{ 71085 , 2 } , 
+{ 70039 , 2 } , 
+{ 71032 , 3 } , 
+{ 70024 , 3 } , 
+{ 25040 , 5 } , 
+{ 71044 , 7 } , 
+{ 71083 , 8 } , 
+{ 71030 , 10 } , 
+{ 71027 , 10 } , 
+{ 71012 , 12 } 
+} 
+} 
+return get_random_vnum_from_table ( reward_table [ chest_vnum ] ) 
+end ,open_chest= function (chest_vnum,key_vnum)say ( " Elmas Anahtar ile sandığı açmak ister misiniz? " ) 
+local s = select ( " Evet, isterim. " , " Hayır, şimdi değil. " ) 
+if s == 2 then 
+return 
+end 
+local reward = mystery_key . get_reward_for_chest ( chest_vnum ) 
+item . remove ( ) 
+pc . remove_item ( key_vnum , 1 ) 
+pc . give_item2 ( reward ) 
+end }

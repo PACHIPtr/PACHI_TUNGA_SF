@@ -1,0 +1,6 @@
+if not pc . is_engaged ( ) and not pc . is_married ( ) then say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Bu sizin düðününüz!" ) 
+say ( "iyi eðlenceler." ) 
+say ( "" ) 
+ return end 

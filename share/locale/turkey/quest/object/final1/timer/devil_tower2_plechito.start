@@ -1,0 +1,2 @@
+clear_server_timer ( "level_two_timer" , d . get_map_index ( ) ) 
+d . exit_all_to_start_position ( ) 

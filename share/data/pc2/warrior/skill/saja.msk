@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"TOGGLE" "STANDING_SKILL"
+
+Name			"사자후"
+Description		"일정 시간동안 공격력 증가"
+
+IconFileName	"skill/warrior/2.sub"
+MotionIndex		1
+
+List AffectData
+{
+	"공격력 +%.0f"	"2 + SkillLevel / 4"	""
+}
+
+CoolTimeFormula			"0"
+NeedSPFormula			"50"
+ContinuationSPFormula	"3"

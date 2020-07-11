@@ -1,0 +1,6 @@
+if pc . level >= 20 then send_letter ( "Elementer Güçler" ) 
+local v = find_npc_by_vnum ( 20438 ) 
+if 0 ~= v then 
+target . vid ( "__TARGET__" , v , mob_name ( 20438 ) ) 
+end 
+ return end 

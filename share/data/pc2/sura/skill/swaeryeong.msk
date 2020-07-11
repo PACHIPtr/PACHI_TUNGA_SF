@@ -1,0 +1,8 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Name			"¼â·ÉÁö"
+Description		"Test - Description"
+
+IconFileName	"skill/sura/swaeryeong.sub"
+MotionIndex		17

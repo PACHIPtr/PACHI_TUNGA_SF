@@ -1,0 +1,3 @@
+if flame_dungeon . is_flamed ( pc . get_map_index ( ) ) then set_state ( "run" ) 
+flame_dungeon . entry_setting ( ) 
+ return end 

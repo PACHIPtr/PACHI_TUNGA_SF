@@ -1,0 +1,18 @@
+ScriptType			SkillDataScript
+
+Type				HIGH
+Attribute			"STANDING_SKILL"
+
+Name				"인마합신"
+Description			"일시적으로 주위의 기운을 흡수한다"
+
+IconFileName		"skill/shaman/inma.sub"
+MotionIndex			20
+
+List AffectData
+{
+	"최대 체력 : + %.0f%%" "(5 + SkillPoint) * 5%" ""
+	"지속 시간 : + %.0f%%분" 4 * ((10 + SkillPoint) / 10)" ""
+}
+
+NeedSPFormula		"200"

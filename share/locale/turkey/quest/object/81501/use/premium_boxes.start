@@ -1,0 +1,19 @@
+if utils . is_feature_value_pack_enabled ( ) == true then if pc . is_affect_flag ( 56 ) == true then 
+syschat ( "Zaten deðerli paket kullanmýþsýn." ) 
+elseif pc . is_busy ( ) == true then 
+syschat ( "Karakterin þuanda meþgul." ) 
+elseif pc . count_item ( item . get_vnum ( ) ) < 1 then 
+syschat ( "Envanterinde deðerli paket bulamadým." ) 
+elseif pc . is_gm ( ) == true then 
+syschat ( "Yönetim ekibindeki kullanýcýlar deðerli paket kullanamazlar." ) 
+else 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 
+local timeval = 86400 * 7 
+pc . set_premium ( get_global_time ( ) + timeval ) 
+syschat ( string . format ( "Deðerli Paket içeriði %s gün boyunca karakterine iþleyecek." , timeval / 86400 ) ) 
+end 
+ return end 

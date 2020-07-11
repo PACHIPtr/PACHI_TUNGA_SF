@@ -1,0 +1,8 @@
+ScriptType		SkillDataScript
+
+Type			ACTIVE
+Name			"¹«ÇüÁø"
+Description		"Test - Description"
+
+IconFileName		"skill/sura/8.sub"
+MotionIndex		7

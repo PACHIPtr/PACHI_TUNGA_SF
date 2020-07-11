@@ -1,0 +1,4 @@
+if pc . is_gm ( ) == true then if pc . is_gm ( ) == true then 
+send_letter ( "*GM: Etkinlik Yönetimi" ) 
+end 
+ return end 

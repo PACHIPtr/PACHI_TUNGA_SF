@@ -1,0 +1,6 @@
+if pc . get_level ( ) < 20 then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( locale . zodyak_yetersiz_level ) 
+return 
+end 
+pc . warp ( 333200 , 1.431e+06 ) 

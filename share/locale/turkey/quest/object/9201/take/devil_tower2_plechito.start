@@ -1,0 +1,10 @@
+if item . vnum == 30330 and pc . in_dungeon ( ) then local setting = devil_tower2_plechito . settings ( ) 
+pc . remove_item ( 30330 , 1 ) 
+d . notice ( "Doðru anahtarý buldun ! sonraki aþamaya geçiyorsun !" ) 
+npc . purge ( ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . setf ( "lair_check1" , 4 ) 
+cleartimer ( "level_timer1" ) 
+timer ( "level_timer1" , 3 ) 
+ return end 

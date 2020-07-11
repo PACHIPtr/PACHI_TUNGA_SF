@@ -1,0 +1,9 @@
+[DELAY value;0]
+1. Ýlgili sayýda sandýk kazanmak için her oyunda birden fazla deste[ENTER]
+kullanabilirsin.[ENTER]
+[ENTER]
+2. Bir seferde en fazla 5 kral destesi kullanabilirsin.[ENTER]
+[ENTER]
+3. Baþladýktan sonra kral desteleri iade edilmez.[ENTER]
+[ENTER]
+4. Ayrýntýlý oyun kýlavuzunu "Kurallar" kýsmýnda bulabilirsin.

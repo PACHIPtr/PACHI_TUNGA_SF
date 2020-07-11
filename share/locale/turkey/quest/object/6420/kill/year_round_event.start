@@ -1,0 +1,12 @@
+if game . get_event_flag ( "2017_year_round_event" ) > 0 and pc . get_channel_id ( ) == 1 then local stime = 60 * 60 * 3 
+if pc . get_map_index ( ) == 61 then 
+server_timer ( "shadow_warrior_timer_61" , stime ) 
+elseif pc . get_map_index ( ) == 62 then 
+server_timer ( "shadow_warrior_timer_62" , stime ) 
+elseif pc . get_map_index ( ) == 63 then 
+server_timer ( "shadow_warrior_timer_63" , stime ) 
+elseif pc . get_map_index ( ) == 64 then 
+server_timer ( "shadow_warrior_timer_64" , stime ) 
+end 
+notice_all ( string . format ( "Gölge Savaþçýsý katledildi! %s dakika sonra tekrar dönecek." , stime / 60 / 60 ) ) 
+ return end 

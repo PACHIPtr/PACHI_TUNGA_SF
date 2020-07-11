@@ -1,0 +1,29 @@
+local setting = devilcatacomb_zone . setting ( ) 
+if item . vnum == setting . rag then 
+if not party . is_party ( ) then 
+say ( "Katakombun daha alt aþamalarýna geçmek için" ) 
+say ( "güçlü bir gruba ihtiyacýn var." ) 
+say ( "" ) 
+return 
+elseif party . is_in_dungeon ( ) then 
+say ( "Senin grubun zaten zindanda." ) 
+say ( "" ) 
+return 
+end 
+item . remove ( ) 
+say ( "Mühürlü kapý açýldý. Acele et," ) 
+say ( "aþaðý iniyoruz." ) 
+wait ( ) 
+say ( "Asýl macera þimdi baþlýyor. Þeytan " ) 
+say ( "Katakombu'nu keþfetmek için sadece" ) 
+say ( "bir saatin var." ) 
+wait ( ) 
+d . new_jump_party ( setting . map_idx , setting . floor2_entry . x + setting . base . x , setting . floor2_entry . y + setting . base . y ) 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 2 ) 
+d . setf ( "level" , 2 ) 
+d . regen_file ( get_locale_base_path ( ) .. "/map/metin2_map_devilcatacomb/base2_regen.txt" ) 
+d . spawn_mob ( setting . floor2_stone , setting . floor2_stone_pos [ 1 ] , setting . floor2_stone_pos [ 2 ] ) 
+devilcatacomb_zone . spawn_doors ( ) 
+server_timer ( "devilcatacomb_45m_left_timer" , 60 * 15 , d . get_map_index ( ) ) 
+d . setf ( "enter_time" , get_global_time ( ) ) 
+end 

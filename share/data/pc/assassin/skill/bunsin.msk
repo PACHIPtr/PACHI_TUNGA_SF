@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"STANDING_SKILL"
+
+Name			"분신술"
+Description		"자신의 분신을 남기고 그 자리에서 사라진다"
+
+IconFileName	"skill/assassin/bunsin.sub"
+MotionIndex		0
+
+List AffectData
+{
+	"지속시간 : %.0f초 "	"SkillPoint"	""
+}
+
+MaxLevel			"10"
+NeedSPFormula		"70"
+CoolTimeFormula		"30"

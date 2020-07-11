@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster/metinstone_reddragon_statue/metinstone_throw.GR2"
+MotionDuration           1.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.031630
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "metinstone_reddragon_A_Part_12"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_statue_making.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.126521
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "metinstone_reddragon_A_Part_12"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_statue_throw_laser2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.749392
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "metinstone_reddragon_A_Part_12"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_statue_boom_1.mse"
+        EffectPosition       0.000000 -3400.000000 0.000000
+    }
+}

@@ -1,0 +1,59 @@
+say_title ( "Köy Gardiyaný: " ) 
+say ( "" ) 
+say ( "Bilgi istiyor isen, kayýtlý " ) 
+say ( "kiþinin ismini yaz." ) 
+say ( "" ) 
+local u_name = input ( ) 
+local u_vid = find_pc_by_name ( u_name ) 
+if u_vid == 0 then 
+say_title ( "Bu isim kayýtlý deðil." ) 
+say ( u_name ) 
+return 
+end 
+local old_vid = pc . select ( u_vid ) 
+u_withdrawTime = pc . getqf ( "new_withdraw_time" ) 
+u_withdrawTime = pc . getqf ( "new_withdraw_time" ) 
+pc . select ( old_vid ) 
+withdrawDelay = game . get_event_flag ( "guild_withdraw_delay" ) 
+disbandDelay = game . get_event_flag ( "guild_disband_delay" ) 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "En erken katýlýþ tarihini" ) 
+say ( "kontrol et." ) 
+if u_withdrawTime > 0 then 
+say ( "Geçen zaman: " .. time_to_str ( u_withdrawTime ) ) 
+say ( "(Kalan zaman: " .. withdrawDelay .. " Gün)" ) 
+say ( "" ) 
+end 
+if u_disbandTime > 0 then 
+say ( "kayýp olmaya zaman: " .. time_to_str ( u_disbandTime ) ) 
+say ( "(kalan zaman: " .. disbandDelay .. " Gün)" ) 
+say ( "" ) 
+end 
+local retryTime1 = u_withdrawTime + withdrawDelay * 86400 
+local retryTime2 = u_withdrawTime + disbandDelay * 86400 
+local retryTime = 0 
+if retryTime1 > retryTime2 then 
+retryTime = retryTime1 
+else 
+retryTime = retryTime2 
+end 
+local curTime = get_time ( ) 
+if curTime < retryTime then 
+say ( "Yeni denemeye, kalan zaman: " .. time_to_str ( retryTime ) ) 
+say ( "(Kalan zaman: " .. ( ( retryTime - curTime ) / 3600 ) .. " saat)" ) 
+say ( "" ) 
+if is_test_server ( ) then 
+local s = select ( "Hemen intibak et" , "Kapat" ) 
+if s == 1 then 
+local old_vid = pc . select ( u_vid ) 
+local curTime = get_time ( ) 
+pc . setqf ( "new_withdraw_time" , curTime - withdrawDelay * 86400 ) 
+pc . setqf ( "new_withdraw_time" , curTime - disbandDelay * 86400 ) 
+pc . select ( old_vid ) 
+end 
+end 
+else 
+say ( "Hemen kayýt mümkün." ) ; 
+say ( "" ) 
+end 

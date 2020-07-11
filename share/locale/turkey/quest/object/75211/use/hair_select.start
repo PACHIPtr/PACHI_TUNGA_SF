@@ -1,0 +1,35 @@
+say_size ( 350 , 375 ) 
+say_title ( "Saç Stili: " ) 
+say ( "" ) 
+say_reward ( "Saç stiline sadece bir adet bonus ekleyebilirsin." ) 
+say_reward ( "Hangi bonusu eklemek istiyorsun ?" ) 
+local s = select ( "%10 Savaþçýlara Karþý Güçlü " , "%10 Ninjalara Karþý Güçlü " , "%10 Suralara Karþý Güçlü " , "%10 Þamanlara Karþý Güçlü " , "%10 Lycanlara Karþý Güçlü " , "%2 HP Artýþý " , "%2 SP Artýþý " , "Daha Sonra Seç " ) 
+local bonus = "Savaþçýlara Karþý Güçlü " 
+if s == 1 then 
+item . set_attribute ( 0 , apply . ATTBONUS_WARRIOR , 10 ) 
+bonus = "%10 Savaþçýlara Karþý Güçlü " 
+elseif s == 2 then 
+item . set_attribute ( 0 , apply . ATTBONUS_ASSASSIN , 10 ) 
+bonus = "%10 Ninjalara Karþý Güçlü " 
+elseif s == 3 then 
+item . set_attribute ( 0 , apply . ATTBONUS_SURA , 10 ) 
+bonus = "%10 Suralara Karþý Güçlü " 
+elseif s == 4 then 
+item . set_attribute ( 0 , apply . ATTBONUS_SHAMAN , 10 ) 
+bonus = "%10 Þamanlara Karþý Güçlü " 
+elseif s == 5 then 
+item . set_attribute ( 0 , 95 , 10 ) 
+bonus = "%10 Lycanlara Karþý Güçlü " 
+elseif s == 6 then 
+item . set_attribute ( 0 , apply . MAX_HP_PCT , 2 ) 
+bonus = "%2 HP Artýþý " 
+elseif s == 7 then 
+item . set_attribute ( 0 , apply . MAX_SP_PCT , 2 ) 
+bonus = "%2 SP Artýþý " 
+else 
+return 
+end 
+say_title ( "Saç Stili: " ) 
+say ( "" ) 
+say_reward ( string . format ( "Eklenen bonus: %s" , bonus ) ) 
+say_reward ( "Bonus ekleme iþlemi baþarýlý!" ) 

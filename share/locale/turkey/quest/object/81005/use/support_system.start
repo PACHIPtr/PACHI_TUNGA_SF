@@ -1,0 +1,22 @@
+local any_info = support_system . get_pet_info ( item . vnum ) 
+if null ~= any_info then 
+local mobVnum = any_info [ 1 ] 
+local petName = any_info [ 2 ] 
+local spawn_effect_file_name = support_system . get_spawn_effect_file ( any_info [ 3 ] ) 
+if true == supports . is_summon ( mobVnum ) then 
+if spawn_effect_file_name ~= nil then 
+supports . spawn_effect ( mobVnum , spawn_effect_file_name ) 
+end 
+supports . unsummon ( mobVnum ) 
+item . set_socket ( 1 , 0 ) ; 
+else 
+if supports . count_summoned ( ) < 1 then 
+supports . summon ( mobVnum , petName , false ) 
+else 
+syschat ( "Zaten bir destek şamanı çağırmışsın." ) 
+end 
+if spawn_effect_file_name ~= nil then 
+supports . spawn_effect ( mobVnum , spawn_effect_file_name ) 
+end 
+end 
+end 

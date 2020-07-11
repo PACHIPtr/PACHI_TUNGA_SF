@@ -1,0 +1,16 @@
+if npc . get_guild ( ) == pc . get_guild ( ) then 
+say_title ( "Zırh Ustası:" ) 
+say ( "Görünüşe göre sen bizim loncadansın. Bu sana %10" ) 
+say ( "başarı şansı kazandırır." ) 
+say ( "Yanısıra bizim üyelerimize %5 fiyat indirimimiz" ) 
+say ( "olur. Hoşgeldin evlat!" ) 
+say ( "Ben zırhları, kalkanları ve kaskları " ) 
+say ( "geliştirebilirim. Şimdi bana geliştirmek istediğin" ) 
+say ( "nesneyi ver." ) 
+else 
+say_title ( "Zırh Ustası:" ) 
+say ( "Ben Stanton. Ben zırh geliştirme sorumlusuyum. " ) 
+say ( "Köydeki demirciden daha yetenekliyim: başarı " ) 
+say ( "şansım %10 daha fazla." ) 
+say ( "Şimdi bana geliştirmek istediğin nesneyi ver." ) 
+end 

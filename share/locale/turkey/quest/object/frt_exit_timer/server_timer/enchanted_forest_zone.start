@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+clear_server_timer ( "frt_exit_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "frt_2h_left_timer" , get_server_timer_arg ( ) ) 
+d . setf ( "frt_party_leader_pid" , 0 ) 
+d . exit_all ( ) 
+end 

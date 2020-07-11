@@ -1,0 +1,53 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc2\terabithia_shop_8\terabithia_shop_8.GR2"
+
+Group ShapeData
+{
+	PathName		 "D:\Ymir Work\npc2\terabithia_shop_8\"
+	ShapeDataCount		 1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"terabithia_shop_8.GR2"
+		SourceSkin			"fr017_1ax.dds"
+		TargetSkin			"fr017_1ax.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "root"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           70.000000
+            Position         0.000000 0.000000 50.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "root"
+        
+        EffectScriptName     "D:\ymir work\effect\background\baloniki.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

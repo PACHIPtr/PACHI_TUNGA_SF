@@ -1,0 +1,129 @@
+local setting = flame_dungeon . setting ( ) 
+if d . getf ( "started" ) == 0 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "STARTED" ) 
+say ( "Am-heh Uyandý!" ) 
+say ( "Kýzýl Ejderha Kale'si bir saat boyunca[ENTER]baþkalarýna kapatýldý." ) 
+wait ( ) 
+d . setf ( "started" , 1 ) 
+server_timer ( "flame_dungeon_45m_left_timer" , 15 * 60 , d . get_map_index ( ) ) 
+notice_multiline ( "Kalan zaman: 60 Dakika(lar) " , d . notice ) 
+notice_multiline ( "Süre dolduðunda disariya gönderileceksiniz." , d . notice ) 
+pc . setf ( "flame_dungeon" , "dungeon_enter" , 1 ) 
+end 
+if d . getf ( "level" ) == 0 then 
+if d . getf ( "clear_count" ) == 6 then 
+d . setf ( "level" , 7 ) 
+else 
+local rand = number ( 1 , 6 ) 
+local setlev = 0 
+d . setf ( "level" , 7 ) 
+for i = 1 , 50 begin 
+setlev = setlev + 1 
+if setlev > 6 then 
+setlev = 1 
+end 
+if not d . is_unique_dead ( "door" .. setlev ) then 
+rand = rand - 1 
+if rand == 0 then 
+d . setf ( "level" , setlev ) 
+d . setf ( "clear_count" , d . getf ( "clear_count" ) + 1 ) 
+break 
+end 
+end 
+end 
+end 
+end 
+if d . getf ( "level" ) == 1 then 
+say ( "Þeytanlar kilitli kapýnýn arkasýnda[ENTER]gidin ve onlarý maðlup edin." ) 
+notice_multiline ( "Savaþçýlar ve Ejderha kral arasýndaki ayaklanma birazdan baþlayacak." , d . notice ) 
+d . kill_unique ( "door1" ) 
+d . kill_unique ( "idoor1" ) 
+d . setf ( "level" , 11 ) 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_a.txt" ) 
+server_timer ( "killed_A_1" , 12 , d . get_map_index ( ) ) 
+elseif d . getf ( "level" ) == 11 then 
+say ( "Bütün þeytanlar yenilmedi." ) 
+say_title ( "Kalan: " .. d . count_monster ( ) ) 
+elseif d . getf ( "level" ) == 2 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "LEVEL 2 started" ) 
+say ( "Altýn Diþli Çarký bul ve mührü aç." ) 
+notice_multiline ( "Altýn Diþli Çarký ele geçirmek için yaratýklarý öldür ve mührü aç." , d . notice ) 
+d . spawn_mob ( 20386 , setting . LEVEL2_STONE_pos [ 1 ] , setting . LEVEL2_STONE_pos [ 2 ] ) 
+d . kill_unique ( "door2" ) 
+d . kill_unique ( "idoor2" ) 
+d . set_regen_file ( "data/dungeon/flame_dungeon/" .. "fd_b.txt" ) 
+d . setf ( "level" , 12 ) 
+elseif d . getf ( "level" ) == 12 then 
+say ( "Altýn diþli çark ile mührü açmadan ilerleyemezsin." ) 
+elseif d . getf ( "level" ) == 3 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "LEVEL 3 started" ) 
+say ( "Tüm yaratýklarý öldürün.[ENTER]Kaderinizi belirleyin." ) 
+notice_multiline ( "Tüm yaratýklarý öldürün ve kaderinizi belirleyin." , d . notice ) 
+d . kill_unique ( "door3" ) 
+d . kill_unique ( "idoor3" ) 
+d . setf ( "level" , 13 ) 
+d . regen_file ( "data/dungeon/flame_dungeon/" .. "fd_c.txt" ) 
+server_timer ( "killed_A_1" , 12 , d . get_map_index ( ) ) 
+elseif d . getf ( "level" ) == 13 then 
+say ( "Yaratýklarýn hepsi ölmedi." ) 
+say_title ( "Kalan: " .. d . count_monster ( ) ) 
+elseif d . getf ( "level" ) == 4 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "LEVEL 4 started" ) 
+say ( "Devam edebilmek için, Ignator'u yok edin." ) 
+d . notice ( "Gidin ve Ignatoru maðlup edin." ) 
+d . setf ( "level" , 14 ) 
+d . kill_unique ( "door4" ) 
+d . kill_unique ( "idoor4" ) 
+d . set_regen_file ( "data/dungeon/flame_dungeon/" .. "fd_d.txt" ) 
+d . spawn_mob ( 6051 , setting . LEVEL4_TARGET_pos [ 1 ] , setting . LEVEL4_TARGET_pos [ 2 ] ) 
+elseif d . getf ( "level" ) == 14 then 
+say ( "Ignator hala Yaþýyor.[ENTER]Kendinizi güclendirin ve tekrar deneyin.[ENTER]Ebedi lanetten temizlenin." ) 
+elseif d . getf ( "level" ) == 5 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "LEVEL 5 started" ) 
+say ( "Maat Taþ'larýný bulunuz ve tek tek açýn." ) 
+notice_multiline ( "Maat Taþlarýný bulunuz ve[ENTER]7 Maat Taþýný sýrasýyla ve doðru þekilde açýnýz." , d . notice ) 
+d . kill_unique ( "door5" ) 
+d . kill_unique ( "idoor5" ) 
+d . setf ( "level" , 15 ) 
+d . set_regen_file ( "data/dungeon/flame_dungeon/" .. "fd_e.txt" ) 
+local vis = { 0 , 0 , 0 , 0 , 0 , 0 , 0 } 
+for i = 1 , 7 begin 
+vis [ i ] = 0 
+end 
+for i = 1 , 7 begin 
+local ran = number ( 1 , 7 ) 
+local st = 0 
+for j = 1 , 50 begin 
+st = st + 1 
+if st > 7 then 
+st = 1 
+end 
+if vis [ st ] == 0 then 
+ran = ran - 1 
+if ran == 0 then 
+vis [ st ] = 1 
+d . set_unique ( "stone5_" .. st , d . spawn_mob ( 20386 , setting . LEVEL5_STONE_pos [ i ] [ 1 ] , setting . LEVEL5_STONE_pos [ i ] [ 2 ] ) ) 
+break 
+end 
+end 
+end 
+end 
+elseif d . getf ( "level" ) == 15 then 
+say ( "Ey Savaþcý! Gizemi Bulmak için [ENTER]doðru Secim yapýn ve[ENTER]görev yerine gelin." ) 
+elseif d . getf ( "level" ) == 6 then 
+say ( "Sýcak ve korku dolu [ENTER]Cehennem Ateþi Metin Taþý'ný bulun ve yok edin." ) 
+notice_multiline ( "Sýcak ve korku dolu [ENTER]Cehennem Ateþi Metin taþýný bulun ve yok edin." , d . notice ) 
+d . setf ( "level" , 16 ) 
+d . kill_unique ( "door6" ) 
+d . kill_unique ( "idoor6" ) 
+d . set_regen_file ( "data/dungeon/flame_dungeon/" .. "fd_f.txt" ) 
+d . spawn_mob ( 8057 , setting . LEVEL6_TARGET_pos [ 1 ] , setting . LEVEL6_TARGET_pos [ 2 ] ) 
+elseif d . getf ( "level" ) == 16 then 
+char_log ( pc . get_channel_id ( ) .. "" .. d . get_map_index ( ) , "BP" , "LEVEL 6 started" ) 
+say ( "Cehennem Ateþi Metini Henuz yok edilmedi.[ENTER]Görev Tamamlanýnca Tekrar Gel." ) 
+elseif d . getf ( "level" ) == 7 then 
+flame_dungeon . go_boss ( ) 
+else 
+say ( "Geçersiz Parametre Yöneticiye Bildirin!" ) 
+end 
+npc . unlock ( ) 

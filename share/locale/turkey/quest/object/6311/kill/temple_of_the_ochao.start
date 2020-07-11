@@ -1,0 +1,19 @@
+if pc . get_level ( ) >= 95 then local drop = { 
+{ [ "vnum" ] = 2145 , [ "count" ] = 1 , [ "chance" ] = 60 , } , 
+{ [ "vnum" ] = 11295 , [ "count" ] = 1 , [ "chance" ] = 55 , } , 
+{ [ "vnum" ] = 11495 , [ "count" ] = 1 , [ "chance" ] = 55 , } , 
+{ [ "vnum" ] = 11695 , [ "count" ] = 1 , [ "chance" ] = 55 , } , 
+{ [ "vnum" ] = 11895 , [ "count" ] = 1 , [ "chance" ] = 55 , } , 
+{ [ "vnum" ] = 21075 , [ "count" ] = 1 , [ "chance" ] = 55 , } , 
+{ [ "vnum" ] = 70043 , [ "count" ] = 1 , [ "chance" ] = 45 , } , 
+{ [ "vnum" ] = 30609 , [ "count" ] = 1 , [ "chance" ] = 15 , } , 
+{ [ "vnum" ] = 30612 , [ "count" ] = 1 , [ "chance" ] = 15 , } , 
+{ [ "vnum" ] = 30523 , [ "count" ] = 1 , [ "chance" ] = 40 , } , 
+} 
+for i , info in ipairs ( drop ) begin 
+local generate = number ( 1 , 100 ) 
+if generate <= info . chance then 
+game . drop_item_with_ownership ( info . vnum , info . count , 300 ) 
+end 
+end 
+ return end 

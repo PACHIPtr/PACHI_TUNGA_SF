@@ -1,0 +1,27 @@
+zodiac_temples={["start"]=0,CheckAnimasfer= function ()local user_animasfer = { } 
+local pids = { party . get_member_pids ( ) } 
+for i = 1 , table . getn ( pids ) , 1 begin 
+q . begin_other_pc_block ( pids [ i ] ) 
+if pc . get_zodiac_point ( ) < 12 then 
+table . insert ( user_animasfer , table . getn ( user_animasfer ) + 1 , pc . get_name ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+if table . getn ( user_animasfer ) >= 1 then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( "Zodyak Tapýnaðýna girebilmek için,[ENTER]bütün grup üyelerinin[ENTER]en az 12 animasfere sahip olmasý gereklidir.[ENTER]Geçiþ izni olmayan üyeler:" ) 
+for x = 1 , table . getn ( user_animasfer ) , 1 begin 
+say ( color ( 1 , 1 , 0 ) , " " .. user_animasfer [ x ] ) 
+end 
+return false 
+end 
+end ,DeleteAnimasfer= function ()local user_animasfer = { } 
+local pids = { party . get_member_pids ( ) } 
+for i = 1 , table . getn ( pids ) , 1 begin 
+q . begin_other_pc_block ( pids [ i ] ) 
+if pc . get_zodiac_point ( ) >= 12 then 
+pc . change_zodiac_point ( - 12 ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+end }

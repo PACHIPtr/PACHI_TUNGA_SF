@@ -1,0 +1,5 @@
+setskin ( NOWINDOW ) 
+test_chat ( "pc.has_guild: " .. bool_to_str ( pc . has_guild ( ) ) ) 
+test_chat ( "pc.is_guildmaster: " .. bool_to_str ( pc . isguildmaster ( ) ) ) 
+test_chat ( "pc.empire: " .. pc . empire ) 
+test_chat ( "npc.empire: " .. npc . empire ) 

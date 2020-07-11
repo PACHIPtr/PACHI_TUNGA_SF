@@ -1,0 +1,97 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_tiger_boss/special_attack1.GR2"
+MotionDuration           1.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     5
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.890268
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "12zi_tiger_boss1_acc"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_tiger_s1_blow.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.883455
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       300
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.777859
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           400.000000
+            Position         0.000000 -200.000000 0.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         0.832360
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           400.000000
+            Position         0.000000 -1400.000000 0.000000
+        }
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         0.794890
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           400.000000
+            Position         0.000000 -800.000000 0.000000
+        }
+    }
+}

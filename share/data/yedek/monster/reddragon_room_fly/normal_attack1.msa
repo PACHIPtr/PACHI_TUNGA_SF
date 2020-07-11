@@ -1,0 +1,34 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/reddragon_room_fly/normal_attack1.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.992701
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 Head"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/redd_fly_attack2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.138686
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/fire_ghost_boom.mse"
+        EffectPosition       0.000000 -600.000000 20.000000
+    }
+}

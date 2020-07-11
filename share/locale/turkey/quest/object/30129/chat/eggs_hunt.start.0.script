@@ -1,0 +1,20 @@
+local eggsCount = eggs_hunt . CountItemRange ( 50160 , 50179 ) 
+local rewardVnum , rewardCount 
+if eggsCount >= 20 then 
+say_title ( "Paskalya Tavşanı:" ) 
+say ( "Yeterli miktarda paskalya yumurtası getirdin mi?" ) 
+say ( "En az 20 paskalya yumurtasına sahip olmalısın." ) 
+rewardVnum , rewardCount = eggs_hunt . getRewardByLevel ( ) 
+say ( "Eşya adeti " .. rewardCount ) 
+say ( "Eşya:" ) 
+say_item_vnum ( rewardVnum ) 
+wait ( ) 
+say_title ( "Paskalya Tavşanı:" ) 
+say ( "Eşya envanterine başarıyla eklendi." ) 
+say ( "Paskalya yumurtaları kaldırıldı!" ) 
+pc . give_item2 ( rewardVnum , rewardCount ) 
+eggs_hunt . RemoveItemRange ( 20 , 50160 , 50179 ) 
+else 
+say ( "Yeterli miktarda yumurtan yok!" ) 
+say ( "Bana daha fazla yumurta getirmelisin." ) 
+end 

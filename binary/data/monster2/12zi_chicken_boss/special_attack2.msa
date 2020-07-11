@@ -1,0 +1,65 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_chicken_boss/special_attack2.GR2"
+MotionDuration           2.833333
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.000000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_chi_s2_making.mse"
+        EffectPosition       0.000000 0.000000 200.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.178832
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Toe01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_chi_s2_blow.mse"
+        EffectPosition       0.000000 0.000000 200.000000
+    }
+    Group Event02
+    {
+        MotionEventType      2
+        StartingTime         1.165045
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       200
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.253528
+        DuringTime           0.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          0
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -800.000000 0.000000
+        }
+    }
+}

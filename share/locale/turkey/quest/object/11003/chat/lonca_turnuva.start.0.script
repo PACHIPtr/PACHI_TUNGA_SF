@@ -1,0 +1,29 @@
+if game . get_event_flag ( guild . name ( pc . get_guild ( ) ) ) == 1 then 
+if pc . getqf ( "odulver" ) == 0 then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Seni ve loncaný tebrik ederim " .. pc . get_name ( ) .. "" ) 
+say ( "Gerçekten bu ödülü hak ettiniz. Bir sonraki" ) 
+say ( "turnuvada görüþmek dileðiyle." ) 
+say ( "" ) 
+pc . give_item2 ( "80014" , 1 ) 
+pc . give_item2 ( "80014" , 1 ) 
+pc . give_item2 ( "80014" , 1 ) 
+pc . give_item2 ( "83008" , 1 ) 
+pc . give_item2 ( "83008" , 1 ) 
+pc . setqf ( "odulver" , 1 ) 
+elseif pc . getqf ( "odulver" ) == 1 then 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Sen zaten ödülünü almamýþ mýydýn?" ) 
+say ( "Yeterli gelmediyse bir dahaki turnuvayý " ) 
+say ( "kazanmak için çalýþ." ) 
+say ( "" ) 
+end 
+else 
+say_title ( "Savaþ Sorumlusu:" ) 
+say ( "" ) 
+say ( "Üzgünüm, bu turnuvayý sen kazanmadýn." ) 
+say ( "Ödülü de sen almayacaksýn." ) 
+say ( "" ) 
+end 

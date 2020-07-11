@@ -1,0 +1,38 @@
+# 
+Group ShopNPC
+{
+	#--#	npc	group
+	1	20431	YearRoundNPC
+	2 20429 B01
+}
+
+Group YearRoundNPC
+{
+	vnum	10000
+	Name	"Yıldönümü Tüccarı"
+	coinType	YearRoundCoin
+	Sort	Asc
+	Group	items
+	{
+		#--#	vnum	count	price
+		1 72319 1 7
+		2 72320 1 14
+	}
+}
+
+Group B01
+{
+	Vnum 50
+	Name B1
+	CoinType CombatZone
+	Sort	Asc
+	Group Items
+	{
+		#--# Vnum Count Price
+		1 50289 1 10
+		2 50285 1 30
+		3 50286 1 50
+		4 50287 1 100
+		5 50288 1 150
+	}
+}

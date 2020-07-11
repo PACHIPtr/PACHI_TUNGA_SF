@@ -1,0 +1,2 @@
+setskin ( NOWINDOW ) 
+command ( "item_comb open_skillbook" ) 

@@ -1,0 +1,32 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_demon_wretch\attack00.GR2"
+MotionDuration           1.800000
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.800000
+        AttackingEndTime     0.900000
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            0.800000 -260.000000 -0.000000 260.000000 -0.000000 0.000000 200.000000
+            0.810000 -260.000000 -90.000000 240.000000 -0.000000 0.000000 200.000000
+            0.820000 -200.000000 -210.000000 200.000000 -0.000000 0.000000 200.000000
+            0.830000 -40.000000 -340.000000 160.000000 -0.000000 0.000000 200.000000
+            0.840000 80.000000 -370.000000 140.000000 -0.000000 0.000000 200.000000
+		}
+   }
+}

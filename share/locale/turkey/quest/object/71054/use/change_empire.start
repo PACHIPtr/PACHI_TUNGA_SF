@@ -1,0 +1,9 @@
+say_title ( "Krallýklarýn Ýzi " ) 
+if get_time ( ) < pc . getqf ( "next_use_time" ) then 
+say ( "3 gün boyunca imparatorluk deðistiremezsin." ) 
+say ( "" ) 
+return 
+end 
+if change_empire . move_pc ( ) == true then 
+pc . setqf ( "next_use_time" , get_time ( ) + 86400 * 3 ) 
+end 

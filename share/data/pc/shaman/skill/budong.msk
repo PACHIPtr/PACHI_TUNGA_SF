@@ -1,0 +1,23 @@
+ScriptType			SkillDataScript
+
+Type				MIDDLE
+Attribute			"NEED_TARGET"
+Range				1200
+
+Name				"부동박부"
+Description			"부적의 힘으로 적을 잠시동안 정지 시킨다"
+
+IconFileName		"skill/shaman/budong.sub"
+MotionIndex			10
+
+List AffectData
+{
+	"성공률 : 약 %.0f%%" "15 * (10 + SkillPoint) / 10" ""
+	"지속시간 : %.0f초" "2 + (SkillPoint / 2)" ""
+}
+
+CoolTimeFormula		"25"
+NeedSPFormula		"130"
+
+MaxLevel			16
+LevelUpPoint		2

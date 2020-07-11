@@ -1,0 +1,11 @@
+make_wonso={["start"]=0,have_item= function ()if pc . count_item ( 50016 ) > 0 or 
+pc . count_item ( 50017 ) > 0 or 
+pc . count_item ( 50018 ) > 0 or 
+pc . count_item ( 50019 ) > 0 or 
+pc . count_item ( 50020 ) > 0 or 
+pc . count_item ( 50021 ) > 0 or 
+pc . count_item ( 50022 ) > 0 then 
+return true 
+end 
+return false 
+end }

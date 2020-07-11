@@ -1,0 +1,15 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 0 ) 
+d . setqf2 ( "devilcatacomb_zone" , "last_exit_time" , get_global_time ( ) ) 
+clear_server_timer ( "devilcatacomb_5m_left_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devilcatacomb_1m_left_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devilcatacomb_0m_left_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "floor6_eli_check_timer_1" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "floor6_eli_check_timer_2" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "floor7_eli_check_timer_1" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "floor7_eli_check_timer_2" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devilcatacomb_floor7_say_timer" , get_server_timer_arg ( ) ) 
+clear_server_timer ( "devilcatacomb_floor7_timer" , 3 , get_server_timer_arg ( ) ) 
+d . clear_regen ( ) 
+d . exit_all ( ) 
+end 

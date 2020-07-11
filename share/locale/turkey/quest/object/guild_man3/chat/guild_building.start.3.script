@@ -1,0 +1,30 @@
+if guild . get_any_war ( ) == true then 
+say_title ( "Köy Gardiyaný: " ) 
+say ( "" ) 
+say ( "Lonca savaþta iken loncaný kapatamazsýn." ) 
+setskin ( NOWINDOW ) 
+return 
+end 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Ne?" ) 
+say ( "[DELAY value;150]        [/DELAY]" ) 
+say ( "O kadar zahmetle bu loncayý " ) 
+say ( "kurdum ve sen onu þimdi kapatmak mý istiyorsun?" ) 
+say ( "Bütün hatýralarýn ve dostlarýn " ) 
+say ( "sonsuza kadar kaybolacak!" ) 
+say ( "" ) 
+say ( "Loncayý kapatmak istediðine emin misin?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Tamam." ) 
+say ( "Loncayý kapattým." ) 
+say ( "" ) 
+say ( "" ) 
+pc . destroy_guild ( ) 
+pc . setqf ( "new_disband_time" , get_global_time ( ) ) 
+pc . setqf ( "new_withdraw_time" , get_global_time ( ) ) 
+end 

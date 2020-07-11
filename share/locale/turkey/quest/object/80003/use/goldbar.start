@@ -1,0 +1,16 @@
+if goldbar . check_item ( item . get_vnum ( ) ) == false then 
+syschat ( "Envanterinde yeterli miktarda külçe bulamadým." ) 
+elseif goldbar . check_pc ( ) == false then 
+syschat ( "Þu anda meþgul görünüyorsun." ) 
+elseif item . get_value ( 0 ) < 0 then 
+syschat ( "Bilinmeyen bir hata oluþtu lütfen yöneticiye bildirin." ) 
+elseif goldbar . check_gold ( item . get_value ( 0 ) ) == false then 
+syschat ( "Envanterinde çok fazla Yang taþýyorsun." ) 
+else 
+pc . give_gold ( item . get_value ( 0 ) ) 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 
+end 

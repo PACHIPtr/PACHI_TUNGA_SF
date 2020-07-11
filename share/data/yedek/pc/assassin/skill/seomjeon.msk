@@ -1,0 +1,8 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Name			"섬전검"
+Description		"적에게 순간적으로 접근하여 치명타를 입힌다"
+
+IconFileName	"skill/assassin/seomjeon.sub"
+MotionIndex		8

@@ -1,0 +1,12 @@
+clear_server_timer ( "mdlogintime1" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime2" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime3" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime4" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime5" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime6" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintimeend" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdtimefail" , d . get_map_index ( ) ) 
+clear_server_timer ( "mdlogintime5" , d . get_map_index ( ) ) 
+if d . select ( get_server_timer_arg ( ) ) then 
+d . exit_all_to_start_position ( ) 
+end 

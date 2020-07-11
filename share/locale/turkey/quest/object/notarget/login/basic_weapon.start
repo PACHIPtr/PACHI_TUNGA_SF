@@ -1,0 +1,3 @@
+if pc . getqf ( "basic_weapon" ) == 0 then notice_all ( string . format ( "Myte2'ye hoþgeldin %s , Keyifli oyunlar ! " , pc . get_name ( ) ) ) 
+pc . setqf ( "basic_weapon" , 1 ) 
+ return end 

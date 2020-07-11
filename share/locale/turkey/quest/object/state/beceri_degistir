@@ -1,0 +1,75 @@
+beceri_degistir={["start"]=0,SinifBeceri= function (g_sinif,g_beceri)D_SinifBeceri = { 
+[ 0 ] = { 
+[ 1 ] = { "Üç Yönlü Kesme" , "Kýlýç Çevirme" , "Öfke" , "Hava Kýlýcý " , "Hamle" , "Yaþama Ýsteði" } , 
+[ 2 ] = { "Ruh Vuruþu" , "Þiddetli Vuruþ " , "Güçlü Vuruþ " , "Güçlü Beden" , "Kýlýç Darbesi" , "Kýlýç Çemberi" } 
+} , 
+[ 1 ] = { 
+[ 1 ] = { "Suikast" , "Hýzlý Saldýrý " , "Býçak Çevirme" , "Kamuflaj" , "Zehirli Bulut" } , 
+[ 2 ] = { "Tekrarlanan Atýþ " , "Ok Yaðmuru" , "Ateþli Ok" , "Hafif Adým" , "Zehirli Ok" } 
+} , 
+[ 2 ] = { 
+[ 1 ] = { "Parmak Darbesi" , "Ejderha Dönüþü " , "Büyülü Keskinlik" , "Dehþet" , "Büyülü Zýrh" , "Büyü Çözme" } , 
+[ 2 ] = { "Karanlýk Vuruþ " , "Ateþ Vuruþ " , "Ateþ Hayaleti" , "Karanlýk Koruma" , "Hayalet Vuruþ " , "Karanlýk Küre" } 
+} , 
+[ 3 ] = { 
+[ 1 ] = { "Uçan Týlsým" , "Ejderha Atýþý " , "Kutsama" , "Ejderha Kükremesi" , "Yansýtma" , "Ejderha Yardýmý " } , 
+[ 2 ] = { "Þimþek Atma" , "Þimþek Çaðýrma" , "Þimþek Pençesi" , "Ýyileþtirme" , "Hýz" , "Yüksek Saldýrý " } 
+} , 
+[ 4 ] = { 
+[ 1 ] = { "Yýrtma " , "Kurt Nefesi " , "Kurt Atlayýþý " , "Kurt Pençesi " , "Kýrmýzý Kurt Ruhu " , "Çivit Kurt Ruhu " } , 
+[ 2 ] = { "Yýrtma " , "Kurt Nefesi " , "Kurt Atlayýþý " , "Kurt Pençesi " , "Kýrmýzý Kurt Ruhu " , "Çivit Kurt Ruhu " } 
+} 
+} 
+return D_SinifBeceri [ g_sinif ] [ g_beceri ] 
+end ,BeceriKodlari= function (g_Kod_sinif,g_Kod_beceri)beceriKodlari = { 
+[ 0 ] = { 
+[ 1 ] = { 1 , 2 , 3 , 4 , 5 , 6 } , 
+[ 2 ] = { 16 , 17 , 18 , 19 , 20 , 21 } 
+} , 
+[ 1 ] = { 
+[ 1 ] = { 31 , 32 , 33 , 34 , 35 , 36 } , 
+[ 2 ] = { 46 , 47 , 48 , 49 , 50 , 51 } 
+} , 
+[ 2 ] = { 
+[ 1 ] = { 61 , 62 , 63 , 64 , 65 , 66 } , 
+[ 2 ] = { 76 , 77 , 78 , 79 , 80 , 81 } 
+} , 
+[ 3 ] = { 
+[ 1 ] = { 91 , 92 , 93 , 94 , 95 , 96 } , 
+[ 2 ] = { 106 , 107 , 108 , 109 , 110 , 111 } 
+} , 
+[ 4 ] = { 
+[ 1 ] = { 170 , 171 , 172 , 173 , 174 , 175 } , 
+[ 2 ] = { 170 , 171 , 172 , 173 , 174 , 175 } 
+} 
+} 
+return beceriKodlari [ g_Kod_sinif ] [ g_Kod_beceri ] 
+end ,BeceriDurumu= function (gelenBeceriDurumu)if gelenBeceriDurumu < 20 then 
+return gelenBeceriDurumu 
+else 
+beceriDurumlari = { 
+[ 20 ] = { "Master 1" } , 
+[ 21 ] = { "Master 2" } , 
+[ 22 ] = { "Master 3" } , 
+[ 23 ] = { "Master 4" } , 
+[ 24 ] = { "Master 5" } , 
+[ 25 ] = { "Master 6" } , 
+[ 26 ] = { "Master 7" } , 
+[ 27 ] = { "Master 8" } , 
+[ 28 ] = { "Master 9" } , 
+[ 29 ] = { "Master 10" } , 
+[ 30 ] = { "Grand Master 1" } , 
+[ 31 ] = { "Grand Master 2" } , 
+[ 32 ] = { "Grand Master 3" } , 
+[ 33 ] = { "Grand Master 4" } , 
+[ 34 ] = { "Grand Master 5" } , 
+[ 35 ] = { "Grand Master 6" } , 
+[ 36 ] = { "Grand Master 7" } , 
+[ 37 ] = { "Grand Master 8" } , 
+[ 38 ] = { "Grand Master 9" } , 
+[ 39 ] = { "Grand Master 10" } , 
+[ 40 ] = { "Perfect Master" } 
+} 
+return beceriDurumlari [ gelenBeceriDurumu ] [ 1 ] 
+end 
+end }

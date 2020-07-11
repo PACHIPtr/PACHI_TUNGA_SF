@@ -1,0 +1,49 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_otter1\attack00.GR2"
+MotionDuration           1.033333
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.340000
+        AttackingEndTime     0.530000
+        AttackingBone        "Bip01"
+        WeaponLength         80.000000
+        List HitPosition
+        {
+            0.340000 90.000000 -40.000000 100.000000 0.000000 -0.000000 100.000000
+            0.390000 90.000000 -80.000000 100.000000 0.000000 -0.000000 100.000000
+            0.450000 45.000000 -140.000000 100.000000 0.000000 -0.000000 100.000000
+            0.490000 -20.000000 -155.000000 100.000000 0.000000 -0.000000 100.000000
+            0.525000 -90.000000 -75.000000 100.000000 0.000000 -0.000000 100.000000
+		}
+   }
+}
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/e2018_otter1_attack00.mse"
+        EffectPosition       0.000000 -140.000000 100.000000
+    }
+}

@@ -1,0 +1,32 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/CZ_Demon/normal_attack1.GR2"
+MotionDuration           1.066667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      6
+        StartingTime         0.612490
+        
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 R Hand"
+        FlyFileName       "d:/ymir work/effect/monster2/12_a02_na1_arrow.msf"
+        FlyPosition       0.000000 -150.000000 150.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.607299
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 Head"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_a02_na1_blow2.mse"
+        EffectPosition       0.000000 -150.000000 150.000000
+    }
+}

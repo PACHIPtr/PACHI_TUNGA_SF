@@ -1,0 +1,42 @@
+devil_tower2_plechito={["start"]=0,get_regens= function (level)local regens = { 
+[ 1 ] = "data/dungeon/devil_tower2_regens/floor_1.txt" , 
+[ 2 ] = "data/dungeon/devil_tower2_regens/floor_2.txt" , 
+[ 3 ] = "data/dungeon/devil_tower2_regens/floor_3.txt" , 
+[ 4 ] = "data/dungeon/devil_tower2_regens/floor_4.txt" , 
+[ 5 ] = "data/dungeon/devil_tower2_regens/floor_5.txt" , 
+[ 6 ] = "data/dungeon/devil_tower2_regens/floor_6.txt" , 
+[ 7 ] = "data/dungeon/devil_tower2_regens/floor_7.txt" , 
+[ 8 ] = "data/dungeon/devil_tower2_regens/floor_8.txt" } ; 
+return d . set_regen_file ( regens [ level ] ) 
+end ,spawn_boss= function (level)local boss_settings = { 
+[ 2 ] = { 806 , 382 , 191 } , 
+[ 4 ] = { 817 , 394 , 394 } , 
+[ 7 ] = { 1095 , 209 , 609 } , 
+[ 8 ] = { 816 , 564 , 613 } } ; 
+return d . spawn_mob ( boss_settings [ level ] [ 1 ] , boss_settings [ level ] [ 2 ] , boss_settings [ level ] [ 3 ] ) 
+end ,settings= function ()return 
+{ 
+[ "map_index" ] = 18 , 
+[ "spawm_pos" ] = { 
+[ 1 ] = { 21086 , 22099 } , 
+[ 2 ] = { 332 + 21000 , 109 + 22000 } , 
+[ 3 ] = { 598 + 21000 , 96 + 22000 } , 
+[ 4 ] = { 330 + 21000 , 360 + 22000 } , 
+[ 5 ] = { 166 + 21000 , 333 + 22000 } , 
+[ 6 ] = { 166 + 21000 , 333 + 22000 } , 
+[ 7 ] = { 212 + 21000 , 540 + 22000 } , 
+[ 8 ] = { 560 + 21000 , 546 + 22000 } 
+} , 
+[ "level_check1" ] = { 
+[ "minimum" ] = 40 , 
+[ "maximum" ] = 120 
+} , 
+[ "keys" ] = { 30330 , 30330 } 
+} 
+end ,party_get_member_pids= function ()local pids = { party . get_member_pids ( ) } 
+return pids 
+end ,make_dungeon= function ()local setting = devil_tower2_plechito . settings ( ) 
+d . new_jump_party ( setting [ "map_index" ] , setting [ "spawm_pos" ] [ 1 ] [ 1 ] , setting [ "spawm_pos" ] [ 1 ] [ 2 ] ) 
+d . setf ( "lair_check1" , 1 ) 
+devil_tower2_plechito . get_regens ( 1 ) 
+end }

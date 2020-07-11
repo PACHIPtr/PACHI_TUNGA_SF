@@ -1,0 +1,5 @@
+say_title ( "Taurean:" ) 
+say ( "" ) 
+say ( "Harang kötü bir kız! Ondan nefret ediyorum! Ben" ) 
+say ( "zayıfım ve o hep bana çatıyor!" ) 
+say ( "" ) 

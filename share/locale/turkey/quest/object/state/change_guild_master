@@ -1,0 +1,46 @@
+change_guild_master={["start"]=0,change_master= function (name,level_limit,time_resign_limit,time_be_other_leader,time_be_other_member,iscacheitem)local ret = guild . change_master_with_limit ( name , level_limit , time_resign_limit , time_be_other_leader , time_be_other_member , iscacheitem ) 
+local result = false 
+if ret == 0 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Yanlýþ isim girdin." ) 
+say ( "" ) 
+elseif ret == 1 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bu eþyayý sadece lonca liderleri kullanabilir." ) 
+say ( "" ) 
+elseif ret == 2 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Böyle bir lonca üyesi yok." ) 
+say ( "" ) 
+elseif ret == 3 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Lonca lideri baþarýyla deðiþtirildi." ) 
+say ( "" ) 
+result = true 
+elseif ret == 4 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bir loncada deðilsin." ) 
+say ( "" ) 
+elseif ret == 5 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bu oyuncu online deðil." ) 
+say ( "" ) 
+elseif ret == 6 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bu oyuncu lonca lideri olmak için yeterince" ) 
+say ( "güçlü deðil." ) 
+elseif ret == 7 then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bu oyuncu lonca lideri olmak için çok" ) 
+say ( "tecrübesiz." ) 
+end 
+return result 
+end }

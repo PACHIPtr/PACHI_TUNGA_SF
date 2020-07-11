@@ -1,0 +1,43 @@
+if not marriage_manage . check_divorce_time ( ) then 
+return 
+end 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Tek taraflý boþanma için 1 milyona ihtiyacýn var." ) 
+say ( "Boþanmak istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+local NEED_MONEY = 1e+06 
+if s == 2 then 
+return 
+end 
+if pc . money < NEED_MONEY then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Boþanmak için yeterli Yang yok." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "Bir yuva kurmak kolay deðildir. Gerçekten emin" ) 
+say ( "olmadan böyle büyük bir karar vermemelisin." ) 
+say ( "Gerçekten boþanmak istiyor musun?" ) 
+local c = select ( "Evet ,istiyorum." , "Tekrar düþünmeliyim." ) 
+if c == 2 then 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Bu daha iyi." ) 
+say ( "Eðer bunu gerçekten istersen, sonra tekrar gel." ) 
+say ( "" ) 
+return 
+end 
+pc . removeitem ( 70302 , 1 ) 
+pc . change_gold ( - NEED_MONEY ) 
+marriage . remove ( ) 
+say_title ( "Köy Gardiyaný:" ) 
+say ( "" ) 
+say ( "Peki tamam." ) 
+say ( "Umarým doðru olaný yapýyorsundur!" ) 
+say ( "" ) 
+say_reward ( "Tek taraflý boþanma gerçekleþti." ) 
+say ( "" ) 

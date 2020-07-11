@@ -1,0 +1,64 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_e2018_boss\skill00.GR2"
+MotionDuration           2.500000
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.050000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/e2018_boss_skill00a.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.450000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/e2018_boss_skill00b.mse"
+        EffectPosition       0.000000 -320.000000 0.000000
+    }
+   Group Event02
+    {
+        MotionEventType      2
+        StartingTime         1.450000
+        
+        DuringTime           1.000000
+        Power                700
+        AffectingRange       600
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.450000
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           700.000000
+            Position         0.000000 -320.000000 0.000000
+        }
+    }
+}

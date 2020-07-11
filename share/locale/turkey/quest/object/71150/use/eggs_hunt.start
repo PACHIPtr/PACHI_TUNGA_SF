@@ -1,0 +1,8 @@
+if game . get_event_flag ( "enable_easter_event" ) >= 1 then if item . get_socket ( 0 ) == 1 then 
+item . remove ( ) 
+eggs_hunt . giveMagicEggReward ( ) 
+else 
+item . set_socket ( 0 , item . get_socket ( 0 ) - 1 ) 
+eggs_hunt . giveMagicEggReward ( ) 
+end 
+ return end 

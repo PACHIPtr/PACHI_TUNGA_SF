@@ -1,0 +1,53 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_oldmap_boss2/skill2.gr2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.718163
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip001-R-Finger21"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/wybuch_lasu.mse"
+        EffectPosition       0.000000 -250.000000 55.000000
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         0.734864
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       200
+    }
+	Group Event02
+    {
+        MotionEventType      4
+        StartingTime         0.846715
+        DuringTime           2.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        3.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

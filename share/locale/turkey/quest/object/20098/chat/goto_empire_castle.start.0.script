@@ -1,0 +1,21 @@
+local empire = pc . get_empire ( ) 
+if empire == 2 then 
+a = select ( "Milaard kalesi" , "Listhmos kalesi " , "Dendera kalesi " , "İptal" ) 
+if 1 == a then 
+say ( "Milaard kalesi için ışınlan. " ) 
+wait ( ) 
+pc . warp ( 977400 , 150100 ) 
+elseif 2 == a then 
+say ( "Listhmos kalesi için ışınlan. " ) 
+wait ( ) 
+pc . warp ( 977200 , 185000 ) 
+elseif 3 == a then 
+say ( "Dendera kalesine ışınlanıyorsun... " ) 
+wait ( ) 
+pc . warp ( 925600 , 201200 ) 
+else 
+return 
+end 
+else 
+say ( "Bu kapıdan sadece Chunjo İmparatorluğu'nun[ENTER]cesur savaşçıları geçebilir. " ) 
+end 

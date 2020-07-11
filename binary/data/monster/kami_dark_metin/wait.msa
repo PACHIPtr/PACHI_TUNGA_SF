@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_dark_metin_1\wait.GR2"
+MotionDuration           0.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.013918
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "smdimport_Part_15"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/kami_shining.mse"
+        EffectPosition       -70.000000 -10.000000 140.000000
+    }
+}

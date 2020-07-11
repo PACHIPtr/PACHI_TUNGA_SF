@@ -1,0 +1,4 @@
+send_letter ( "&En Tai þebnemi bul" ) 
+pc . setqf ( "entai_killed_11" , 0 ) 
+loop_timer ( "kill_5" , 1 ) 
+q . set_counter ( "Kalan sayý " , 5 - pc . count_item ( "31097" ) ) 

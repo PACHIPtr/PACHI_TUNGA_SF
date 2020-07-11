@@ -1,0 +1,40 @@
+if pc . is_guild_master ( ) == false then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Bu eþyayý sadece lonca liderleri kullanabilir." ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Oyuncunun adýný yaz." ) 
+say ( "" ) 
+local s = input ( ) 
+if s == pc . name then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Kendi adýný yazamazsýn." ) 
+say ( "" ) 
+return 
+elseif s == "" then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Boþ býrakamazsýn." ) 
+say ( "" ) 
+return 
+end 
+if not pc . is_near_vid ( find_pc_by_name ( s ) , 10 ) then 
+say_title ( "Yer Deðiþtirme Yüzüðü " ) 
+say ( "" ) 
+say ( "Oyuncu yakýnlarýnda olmalý." ) 
+say ( "" ) 
+return 
+end 
+if change_guild_master . change_master ( s , 40 , 0 , 0 , 0 , true ) == true then 
+pc . remove_item ( 71099 ) 
+elseif ret == 5 then 
+elseif ret == 6 then 
+say_title ( "" ) 
+say ( "" ) 
+say ( "Oyuncunun seviyesi çok düþük." ) 
+end 

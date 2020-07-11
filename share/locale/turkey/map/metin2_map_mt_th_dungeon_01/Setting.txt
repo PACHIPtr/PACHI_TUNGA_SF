@@ -1,0 +1,11 @@
+ScriptType	MapSetting
+
+CellScale	200
+HeightScale	0.500000
+
+ViewRadius	128
+
+MapSize	3	3
+BasePosition	844800	1408000
+TextureSet	textureset\metin2_mtthunder_dungeon.txt
+Environment	dark.msenv

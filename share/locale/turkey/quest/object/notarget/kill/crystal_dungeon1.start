@@ -1,0 +1,43 @@
+if npc . get_race ( ) == 940 or npc . get_race ( ) == 941 or npc . get_race ( ) == 942 then local count , check = d . getf ( "mobs" ) + 1 , false ; 
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 1 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Haritadaki bütün canavarlarý temizle !" ) 
+if count < 82 and check == false then 
+d . setf ( "mobs" , count ) 
+local c = 82 - d . getf ( "mobs" ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Haritadaki bütün canavarlarý temizle ! Kalan yaratýk: " .. c .. "" ) 
+else 
+if d . getf ( "metin_stone" ) == 0 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 1 ] , 261 , 276 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 1 ] , 242 , 303 ) 
+d . spawn_mob ( setting [ "metin_stones" ] [ 1 ] , 293 , 305 ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(1.2 Görev) Metinleri yoket !" ) 
+d . notice ( string . format ( " %s Belirdi onlarý yoket ! " , mob_name ( 8411 ) ) ) 
+d . setf ( "metin_stone" , 1 ) 
+end 
+check = true 
+end 
+end 
+ return end if npc . get_race ( ) == 8411 and pc . in_dungeon ( ) then local count , check_metin1 = d . getf ( "metins" ) + 1 , false ; 
+local setting = crystal_dungeon1 . settings ( ) 
+if d . getf ( "lair_check" ) == 1 then 
+if count < 3 and check_metin1 == false then 
+d . setf ( "metins" , count ) 
+else 
+if d . getf ( "metin_stone1" ) == 0 then 
+d . notice ( "Harika! Ýlk görevi baþarý ile tamamladýn, sonraki kata gönderiliyorsun !" ) 
+d . kill_all ( ) 
+d . setf ( "lair_check" , 2 ) 
+d . setf ( "metin_stone1" , 1 ) 
+cleartimer ( "level_timer" ) 
+timer ( "level_timer" , 7 ) 
+end 
+check_metin1 = true 
+end 
+end 
+ return end 

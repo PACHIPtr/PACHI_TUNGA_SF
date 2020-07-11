@@ -1,0 +1,5 @@
+if pc . get_map_index ( ) == 113 and not pc . is_gm ( ) then if pc . is_mount ( ) then 
+pc . unmount ( ) 
+horse . unsummon ( ) 
+end 
+ return end 

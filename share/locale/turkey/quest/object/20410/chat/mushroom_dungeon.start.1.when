@@ -1,0 +1,1 @@
+return ( game . get_event_flag ( "mashroom_dung_time" ) == 1 )

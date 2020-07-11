@@ -1,0 +1,7 @@
+d . clear_regen ( ) 
+d . spawn_mob ( 8018 , 639 , 658 ) 
+d . spawn_mob ( 8018 , 611 , 637 ) 
+d . spawn_mob ( 8018 , 596 , 674 ) 
+d . spawn_mob ( 8018 , 629 , 670 ) 
+d . setf ( "level" , 7 ) 
+d . jump_all ( 2048 + 590 , 6656 + 638 ) 

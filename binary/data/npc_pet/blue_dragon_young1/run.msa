@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc_pet/blue_dragon_young1/run.GR2"
+MotionDuration           0.800000
+Accumulation             0.00	-360.00	0.00
+

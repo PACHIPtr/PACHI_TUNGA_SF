@@ -1,0 +1,13 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Deniz Savaþý " .. d . getf ( "sn" ) .. " sn. içinde baþlayacak" ) 
+clear_server_timer ( "DefanceLoginTime" , inx ) 
+server_timer ( "DefanceLoginTime" , 60 * 45 , d . get_map_index ( ) ) 
+if d . getf ( "sn" ) == 10 then 
+d . setf ( "sn" , d . getf ( "sn" ) - 1 ) 
+server_loop_timer ( "DefanceCheckSecondOne" , 1 , d . get_map_index ( ) ) 
+clear_server_timer ( "DefanceCheckSecond" , d . get_map_index ( ) ) 
+else 
+d . setf ( "sn" , d . getf ( "sn" ) - 10 ) 
+end 
+end 

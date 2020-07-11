@@ -1,0 +1,8 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local set = snow_dungeon . get_settings ( ) 
+local v = set . MobVnum_level_7 d . setf ( "level" , 7 ) 
+local cord = set . base_cord local pos = set . Position_level_7 d . jump_all ( ( cord [ 1 ] + pos [ 1 ] ) , ( cord [ 2 ] + pos [ 2 ] ) ) 
+d . notice ( "Ayazýn ve buzun efendisi Szel'i bulun ve yok edin." ) 
+d . notice ( "Bunun üstesinden ancak ejderhanýn desteðiyle" ) 
+d . notice ( "gelinebilir." ) 
+end 

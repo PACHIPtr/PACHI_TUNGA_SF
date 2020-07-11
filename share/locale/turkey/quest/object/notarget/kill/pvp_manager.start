@@ -1,0 +1,11 @@
+if game . get_event_flag ( "pvp" ) == 2 and pc . get_map_index ( ) == 500 and npc . is_pc ( ) and pvp_manager . get_fight_mode ( ) == 2 then pvp_manager . set_fight_mode ( 3 ) 
+if arena [ pvp_manager . get_arena ( ) ] [ 3 ] == 3 then 
+return 
+end 
+arena [ pvp_manager . get_arena ( ) ] [ 3 ] = 3 
+notice_in_map ( "" .. pc . getname ( ) .. " , " .. pvp_manager . get_duel_partner ( ) .. " karşısındaki düelloyu kazandı!" , pc . get_map_index ( ) ) 
+pvp_attenders [ pvp_manager . get_attender_id_by_name ( pvp_manager . get_duel_partner ( ) ) ] . fight_mode = 3 
+pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . winner = true 
+pvp_attenders [ pvp_manager . get_attender_id_by_name ( pvp_manager . get_duel_partner ( ) ) ] . winner = false 
+timer ( "fight_end" , 5 ) 
+ return end 

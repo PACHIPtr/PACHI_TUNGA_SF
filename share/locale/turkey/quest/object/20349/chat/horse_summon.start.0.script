@@ -1,0 +1,25 @@
+say_title ( "Seyis:" ) 
+say ( "" ) 
+say ( "Binici resmini kaybettin." ) 
+say ( "Bana 10.000 Yang verirsen sana " ) 
+say ( "yenisini verebilirim." ) 
+say ( "" ) 
+local b = select ( "Al" , "Alma" ) 
+if 1 == b then 
+if pc . money >= 10000 then 
+pc . changemoney ( - 10000 ) 
+say_title ( "Seyis:" ) 
+say ( "" ) 
+say ( "Bu yeni binici resmin." ) 
+say ( "Tekrar kaybetme!" ) 
+pc . give_item2 ( "50051" , 1 ) 
+else 
+say_title ( "Seyis:" ) 
+say ( "" ) 
+say ( "Yeterli Yang'ýn yok." ) 
+say ( "" ) 
+end 
+elseif 2 == b then 
+else 
+say ( "UNBEKANNTE TASTE [" .. b .. "]" ) 
+end 

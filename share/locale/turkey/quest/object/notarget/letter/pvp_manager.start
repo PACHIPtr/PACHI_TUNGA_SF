@@ -1,0 +1,6 @@
+if pc . get_map_index ( ) == 500 and game . get_event_flag ( "pvp" ) == 2 and pvp_manager . get_fight_mode ( ) == 3 then pvp_manager . set_fight_mode ( 0 ) 
+if pvp_attenders [ pvp_manager . get_my_attender_id ( ) ] . winner == true then 
+arena [ pvp_manager . get_arena ( ) ] [ 3 ] = 0 
+pvp_manager . refresh_arenas ( ) 
+end 
+ return end 

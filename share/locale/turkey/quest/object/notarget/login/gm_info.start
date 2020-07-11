@@ -1,0 +1,3 @@
+if pc . is_gm ( ) then send_letter ( "*GM: Bilgi" ) 
+q . set_icon ( "scroll_open_blue.tga" ) 
+ return end 

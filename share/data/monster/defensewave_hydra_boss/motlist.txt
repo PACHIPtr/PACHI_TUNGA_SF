@@ -1,0 +1,6 @@
+GENERAL SPAWN drop.msa 100
+GENERAL WAIT wait.msa 100
+GENERAL SPECIAL special_attack1.msa 100
+GENERAL SPECIAL1 special_attack2.msa 100
+GENERAL SPECIAL2 special_attack3.msa 100
+GENERAL FRONT_DEAD front_dead.msa 100

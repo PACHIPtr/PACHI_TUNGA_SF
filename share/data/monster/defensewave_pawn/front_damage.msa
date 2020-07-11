@@ -1,0 +1,15 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/defensewave_pawn/front_damage.GR2"
+MotionDuration           0.800000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      7
+        StartingTime         0.000000
+    }
+}

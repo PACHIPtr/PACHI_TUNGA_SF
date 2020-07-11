@@ -1,0 +1,62 @@
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say ( "Hoþgeldin !" ) 
+say ( "Artýk daha fazla yang taþýyabileceksin." ) 
+say ( "Won para birimi ile bu mümkün!" ) 
+say ( "1 Won parasýnýn deðeri 1.000.000.000 yang etmekte!" ) 
+say ( "" ) 
+say_reward ( "Won almak/satmak istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Won satýn al" , "Won sat" , "Henüz deðil." ) 
+if s == 1 then 
+if pc . is_busy ( ) == true then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Meþgul durumdayken bunu gerçekleþtiremezsin..." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Ölü durumdayken bunu gerçekleþtiremezsin..." ) 
+else 
+if pc . get_cheque ( ) + 1 > 999 then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Envanterinde çok fazla Won taþýyorsun." ) 
+elseif pc . get_money ( ) < 1e+08 then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Envanterinde yeterli miktarda Yang mevcut deðil." ) 
+else 
+pc . change_money ( - 1e+08 ) 
+pc . change_cheque ( 1 ) 
+end 
+end 
+elseif s == 2 then 
+if pc . is_busy ( ) == true then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Meþgul durumdayken bunu gerçekleþtiremezsin..." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Ölü durumdayken bunu gerçekleþtiremezsin..." ) 
+else 
+if pc . get_money ( ) + 1e+08 > 2e+09 then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Envanterinde çok fazla Yang taþýyorsun." ) 
+elseif pc . get_cheque ( ) < 1 then 
+say_title ( "Depocu:" ) 
+say ( "" ) 
+say_reward ( "Envanterinde yeterli miktarda Won mevcut deðil." ) 
+else 
+pc . change_cheque ( - 1 ) 
+pc . change_money ( 1e+08 ) 
+end 
+end 
+else 
+say_title ( "Depocu: " ) 
+say ( "" ) 
+say ( "Eðer fikrini deðiþtirir isen" ) 
+say ( "senin için burada olacaðým..." ) 
+end 

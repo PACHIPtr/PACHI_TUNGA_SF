@@ -1,0 +1,20 @@
+say_title ( "Seyis:" ) 
+say ( "" ) 
+say ( "Atını sadece, Güçlü Maymun zindanından " ) 
+say ( "bulabileceğin bitkilerle canlandırabilirsin. " ) 
+say ( "Fakat, bunu başarmak gerçekten zor. Çünkü bitkiler " ) 
+say ( "maymunlar tarafından korunuyor. " ) 
+say ( "Maymunlar çok sinirli. Bitkileri onlardan çalmak " ) 
+say ( "isteyen, herkesi maymuna dönüştürüyorlar. " ) 
+if pc . countitem ( "50058" ) >= 1 then 
+say_title ( "Seyis: " ) 
+say ( "" ) 
+say ( "Bilgi: Normal Maymun zindanından toplanan " ) 
+say ( "bitkiler sadece normal gelişimdeki atlar içindir. " ) 
+say ( "" ) 
+elseif pc . countitem ( "50057" ) >= 1 then 
+say_title ( "Seyis: " ) 
+say ( "" ) 
+say ( "Bilgi: Zayıf Maymun zindanından toplanan " ) 
+say ( "bitkiler sadece acemi atlar içindir. " ) 
+end 

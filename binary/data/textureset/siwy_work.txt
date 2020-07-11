@@ -1,0 +1,403 @@
+TextureSet
+
+TextureCount 39
+Start Texture001
+    "d:\ymir work\terrainmaps\siwy work\ziemia\ziemia01.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture001
+Start Texture002
+    "d:\ymir work\terrainmaps\siwy work\ziemia\ziemia02.dds"
+    6.000000
+    6.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture002
+Start Texture003
+    "d:\ymir work\terrainmaps\siwy work\ziemia\ziemia03.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture003
+Start Texture004
+    "d:\ymir work\terrainmaps\siwy work\ziemia\ziemia04.dds"
+    6.000000
+    6.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture004
+Start Texture005
+    "d:\ymir work\terrainmaps\siwy work\trawa\trawa01.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture005
+Start Texture006
+    "d:\ymir work\terrainmaps\siwy work\trawa\trawa02.dds"
+    8.000000
+    8.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture006
+Start Texture007
+    "d:\ymir work\terrainmaps\siwy work\trawa\trawa03.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture007
+Start Texture008
+    "d:\ymir work\terrainmaps\siwy work\kamien\kamien01.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture008
+Start Texture009
+    "d:\ymir work\terrainmaps\siwy work\kamien\kamien02.dds"
+    4.000000
+    4.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture009
+Start Texture010
+    "d:\ymir work\terrainmaps\siwy work\kamien\kamien03.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture010
+Start Texture011
+    "d:\ymir work\terrainmaps\siwy work\kamien\kamien04.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture011
+Start Texture012
+    "d:\ymir work\terrainmaps\siwy work\gory\gora01.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture012
+Start Texture013
+    "d:\ymir work\terrainmaps\siwy work\gory\gora02.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture013
+Start Texture014
+    "d:\ymir work\terrainmaps\siwy work\beach\beach sand 01.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture014
+Start Texture015
+    "d:\ymir work\terrainmaps\siwy work\beach\beach sand 02.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture015
+Start Texture016
+    "d:\ymir work\terrainmaps\siwy work\beach\beach sand 03.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture016
+Start Texture017
+    "d:\ymir work\terrainmaps\siwy work\gory\gora03.dds"
+    7.000000
+    7.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture017
+Start Texture018
+    "d:\ymir work\terrainmaps\siwy work\trawa\1.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture018
+Start Texture019
+    "d:\ymir work\terrainmaps\siwy work\trawa\2.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture019
+Start Texture020
+    "d:\ymir work\terrainmaps\siwy work\trawa\3.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture020
+Start Texture021
+    "d:\ymir work\terrainmaps\siwy work\trawa\4.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture021
+Start Texture022
+    "d:\ymir work\terrainmaps\siwy work\trawa\5.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture022
+Start Texture023
+    "d:\ymir work\terrainmaps\siwy work\trawa\6.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture023
+Start Texture024
+    "d:\ymir work\terrainmaps\siwy work\trawa\7.dds"
+    9.000000
+    9.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture024
+
+Start Texture025
+    "d:\ymir work\terrainmaps\siwy work\kamien\1.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture025
+Start Texture026
+    "d:\ymir work\terrainmaps\siwy work\kamien\2.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture026
+Start Texture027
+    "d:\ymir work\terrainmaps\siwy work\kamien\3.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture027
+Start Texture028
+    "d:\ymir work\terrainmaps\siwy work\kamien\4.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture028
+Start Texture029
+    "d:\ymir work\terrainmaps\siwy work\kamien\5.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture029
+Start Texture030
+    "d:\ymir work\terrainmaps\siwy work\ziemia\1.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture030
+Start Texture031
+    "d:\ymir work\terrainmaps\siwy work\ziemia\2.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture031
+Start Texture032
+    "d:\ymir work\terrainmaps\siwy work\trawa\trawa.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture032
+Start Texture033
+    "d:\ymir work\terrainmaps\siwy work\piasek\piasek1.dds"
+    5.000000
+    5.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture033
+Start Texture034
+    "D:\ymir work\terrainmaps\naga\naga_stone01.dds"
+    2.000000
+    2.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture034
+Start Texture035
+    "D:\ymir work\terrainmaps\CapeDragonHead\CapeDragon_grass001.dds"
+    2.000000
+    2.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture035
+Start Texture036
+    "D:\ymir work\terrainmaps\CapeDragonHead\CapeDragon_grass002.dds"
+    2.000000
+    2.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture036
+Start Texture037
+    "D:\ymir work\terrainmaps\CapeDragonHead\CapeDragon_cliff002.dds"
+    1.000000
+    1.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture037
+Start Texture038
+    "D:\ymir work\terrainmaps\CapeDragonHead\CapeDragon_sand002.DDS"
+    2.000000
+    2.000000
+    0.000000
+    0.000000
+    0
+    0
+    0
+End Texture038
+Start Texture039
+    "D:\ymir work\terrainmaps\CapeDragonHead\CapeDragon_field001.dds"
+    2.000000
+    2.000000
+    0.000000
+    0.000000
+    90
+    0
+    0
+End Texture039
+
+
+
+
+
+
+
+
+

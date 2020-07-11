@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc3\wolfman\skill\red_possession.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.389294
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "lv05"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/red_possession_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.046229
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/red_possession_05.mse"
+        EffectPosition       0.000000 0.000000 100.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.900243
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/red_possession_04.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

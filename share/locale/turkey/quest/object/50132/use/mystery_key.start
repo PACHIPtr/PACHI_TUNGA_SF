@@ -1,0 +1,10 @@
+local key_vnum = mystery_key . get_key_for_chest ( item . vnum ) 
+local master_key_vnum = mystery_key . get_master_key ( ) 
+say_title ( item_name ( item . vnum ) .. ": " ) 
+if pc . count_item ( key_vnum ) >= 1 then 
+mystery_key . open_chest ( item . vnum , key_vnum ) 
+elseif pc . count_item ( master_key_vnum ) >= 1 then 
+mystery_key . open_chest ( item . vnum , master_key_vnum ) 
+else 
+say ( " Sandığın açılabilmesi için bir anahtar gerekiyor. " ) 
+end 

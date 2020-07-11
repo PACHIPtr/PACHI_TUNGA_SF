@@ -1,0 +1,52 @@
+if pc . get_level ( ) < 65 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "65. seviye'ye ulaþtýðýnda gel." ) 
+return 
+end 
+local item_vnum = item . vnum local levelLimit = item . get_level_limit ( item_vnum ) 
+local setting = energy_system . setting ( ) 
+if levelLimit == nil then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Bu öðe tekniðime uygun deðil. " ) 
+wait ( ) 
+elseif item . get_type ( ) == ITEM_WEAPON and item . get_sub_type ( ) == WEAPON_ARROW then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Bu öðe tekniðime uygun deðil. " ) 
+wait ( ) 
+elseif item . is_sealed ( ) == true then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ruha baðlanmýþ bir öðeyi enerji parçasýna dönüþtüremezsin." ) 
+wait ( ) 
+elseif item . is_basic ( ) == true then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Temel (Baþlangýç) eþyalarýný enerji parçasýna dönüþtüremezsin." ) 
+wait ( ) 
+elseif levelLimit < 65 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Bu öðe yeterli seviyeye sahip deðil." ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( item_name ( item_vnum ) ) 
+say ( "Bu itemi enerji parçasýna dönüþtürmek istermisin? " ) 
+local s = select ( " Evet! " , " Hayýr, þimdi deðil!" ) 
+if s == 1 then 
+item . remove ( ) 
+local r = number ( 1 , 100 ) 
+local n 
+if levelLimit >= 65 and levelLimit <= 75 then 
+n = energy_system . getItemNum ( "65to75" , r ) 
+elseif levelLimit > 75 and levelLimit <= 85 then 
+n = energy_system . getItemNum ( "75to85" , r ) 
+else 
+n = energy_system . getItemNum ( "upto85" , r ) 
+end 
+if ( n == 0 ) then 
+say_title ( mob_name ( 20001 ) ) 
+say ( "Ne yazýkki iþe yaramadý.[ENTER]Enerji kristali üretemedik. " ) 
+else 
+pc . give_item2 ( setting . energy_stone , n ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( "Harika! %d Enerji parçasý oluþturuldu..[ENTER]Hadi bakalým. " , n ) ) 
+end 
+end 
+end 

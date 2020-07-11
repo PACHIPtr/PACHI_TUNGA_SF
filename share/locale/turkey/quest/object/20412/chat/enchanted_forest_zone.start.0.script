@@ -1,0 +1,82 @@
+local setting = enchanted_forest_zone . setting ( ) 
+say_title ( mob_name ( 20412 ) ) 
+say ( "" ) 
+say ( "Bagjanamu'ya karþý savaþmak ister misin? " ) 
+local agree = select ( "Evet. " , "Hayýr " ) 
+if agree == 1 then 
+say_title ( mob_name ( 20412 ) ) 
+say ( "" ) 
+if not party . is_party ( ) then 
+say ( "Bu odaya eriþebilmek için " ) 
+say ( "grup üyesi olmanýz gerekmektedir. " ) 
+return 
+end 
+local party_check = 0 
+if d . find ( party . getf ( "frt_dungeon_index" ) ) then 
+party_check = ( d . getf_from_map_index ( "frt_party_leader_pid" , party . getf ( "frt_dungeon_index" ) ) == party . get_leader_pid ( ) ) 
+end 
+if d . find ( party . getf ( "frt_dungeon_index" ) ) and party_check then 
+if get_global_time ( ) > pc . getqf ( "exit_time_logout" ) then 
+say ( "Maalesef çok geç geliyorsun, giriþi kýsýtlýyorsun " ) 
+say ( "Zindana dönüþ 5 dakýkalýk. " ) 
+return 
+end 
+pc . setf ( "enchanted_forest_zone" , "dungeon_enter" , 1 ) 
+say ( "Grubunuz Iþýnlanýyor. " ) 
+say ( "" ) 
+wait ( ) 
+pc . warp ( setting . dungeon_entry_pos [ 1 ] * 100 , setting . dungeon_entry_pos [ 2 ] * 100 , party . getf ( "frt_dungeon_index" ) ) 
+end 
+local event_flag = string . format ( "frt_dungeon_status_%d" , pc . get_channel_id ( ) ) 
+if game . get_event_flag ( event_flag ) > get_time ( ) then 
+local next_time = ( game . get_event_flag ( event_flag ) - get_time ( ) ) 
+say ( "Giriþ Þuanda Kapalý." ) 
+if next_time < 60 then 
+say ( string . format ( "%d Saniye(s) Sonra Tekrar Deneyiniz. " , tonumber ( next_time ) ) ) 
+else 
+say ( string . format ( "%d Dakika(s) Sonra Tekrar Deneyiniz. " , tonumber ( next_time / 60 ) ) ) 
+end 
+return 
+end 
+if not party . is_leader ( ) then 
+say ( "Bu odaya eriþebilmek için " ) 
+say ( "grup lideri olmaniý gerekmektedir. " ) 
+return 
+end 
+if party . get_near_count ( ) < 2 then 
+say ( "Bu odaya eriþebilmek için " ) 
+say ( "2 adet grup üyesi olmasý gerekmektedir. " ) 
+return 
+end 
+local pids = { party . get_member_pids ( ) } 
+local ticketCheck = true 
+local notEnoughTicketMembers = { } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . count_item ( setting . ticket_vnum ) < 1 then 
+table . insert ( notEnoughTicketMembers , pc . get_name ( ) ) 
+ticketCheck = false 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not ticketCheck then 
+say ( "Bu odaya eriþebilmek için " ) 
+say ( string . format ( "Tüm Grupta Olmasý Gereken Eþya %s. " , item_name ( setting . ticket_vnum ) ) ) 
+say ( "" ) 
+say ( "Grupta Olan Üyelerin Biletleri Mevcut Deðil!: " ) 
+for i , name in next , notEnoughLevelMembers , nil begin 
+say ( "- " .. name .. "" ) 
+end 
+return 
+end 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+pc . remove_item ( setting . ticket_vnum , 1 ) 
+pc . setf ( "enchanted_forest_zone" , "dungeon_enter" , 1 ) 
+q . end_other_pc_block ( ) 
+end 
+say ( "Devam ettikten sonra tüm " ) 
+say ( "grup üyeleri odaya ýþýnlanmýþ olacak. " ) 
+wait ( ) 
+enchanted_forest_zone . make_dungeon ( party . get_leader_pid ( ) , pc . get_channel_id ( ) ) 
+end 

@@ -1,0 +1,40 @@
+BoundingSphereRadius   450.000000
+BoundingSpherePosition 0.000000 -50.000000 250.000000
+
+Group Mesh
+{
+    StartTime           0.000000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"D:\YMIR WORK\effect\monster2\impact5.mde"
+    MeshAnimationLoopEnable    	0
+    MeshAnimationLoopCount     	0
+    MeshAnimationFrameDelay    	0.020000
+    
+    MeshElementCount           	1
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	16
+        ColorFactor                	0.650980 0.180392 0.003922 1.000000
+        List TimeEventAlpha
+        {
+            0.000000 0.663717
+            0.120000 0.256637
+            0.246667 0.292035
+            0.306667 0.079290
+            0.400000 0.000000
+        }
+    }
+}

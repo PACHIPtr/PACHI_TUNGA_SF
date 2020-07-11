@@ -1,0 +1,48 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_sea_officer00\attack01.GR2"
+MotionDuration           2.500000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.000000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/sea_sailor00_attack01.mse"
+        EffectPosition       90.000000 -240.000000 0.000000
+    }
+}
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.509395
+        AttackingEndTime     1.623173
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            0.726514 10.000000 -190.000000 210.000000 -0.000000 0.000000 11349020114944.000000
+            0.826514 30.000000 -200.000000 190.000000 -0.000000 0.000000 11349020114944.000000
+            0.926514 60.000000 -210.000000 80.000000 -0.000000 0.000000 11349020114944.000000
+            1.026514 90.000000 -240.000000 0.000000 -0.000000 0.000000 11349020114944.000000
+		}
+   }
+}

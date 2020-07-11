@@ -1,0 +1,20 @@
+ScriptType			SkillDataScript
+
+Type				LOW
+Attribute			"NEED_TARGET" "ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
+
+Name				"감지"
+Description			"잠시동안 보이지 않는 것을 볼 수 있는 능력을 부여한다"
+
+IconFileName		"skill/shaman/gamji.sub"
+MotionIndex			6
+MotionIndexForMe	5
+
+List AffectData
+{
+	"지속 시간 : 3분" "" ""
+}
+
+NeedSPFormula		"60"
+MaxLevel			5
+LevelUpPoint		5

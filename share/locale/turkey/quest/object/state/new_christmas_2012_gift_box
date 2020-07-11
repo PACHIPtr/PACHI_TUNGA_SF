@@ -1,0 +1,29 @@
+new_christmas_2012_gift_box={["start"]=0,gift= function ()local n = number ( 1 , 100 ) 
+if n <= 4 then 
+pc . give_item2 ( 71520 , 1 ) 
+elseif n <= 8 then 
+pc . give_item2 ( 71521 , 1 ) 
+elseif n <= 12 then 
+pc . give_item2 ( 71522 , 1 ) 
+elseif n <= 16 then 
+pc . give_item2 ( 70005 , 1 ) 
+elseif n <= 21 then 
+pc . give_item2 ( 56001 , 1 ) 
+elseif n <= 26 then 
+pc . give_item2 ( 80060 , 1 ) 
+elseif n <= 31 then 
+pc . give_item2 ( 30327 , 1 ) 
+elseif n <= 40 then 
+pc . give_item2 ( 30329 , 1 ) 
+elseif n <= 50 then 
+pc . changegold ( 2e+07 ) 
+elseif n <= 61 then 
+pc . changegold ( 1.5e+07 ) 
+elseif n <= 73 then 
+pc . changegold ( 1e+07 ) 
+elseif n <= 86 then 
+pc . changegold ( 5e+06 ) 
+else 
+pc . changegold ( 3e+06 ) 
+end 
+end }

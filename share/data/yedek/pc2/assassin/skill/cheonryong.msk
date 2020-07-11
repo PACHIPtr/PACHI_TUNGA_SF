@@ -1,0 +1,27 @@
+ScriptType		SkillDataScript
+
+Type			MIDDLE
+Attribute		"WEAPON_LIMITATION" "NEED_TARGET"
+NeedWeapon		"SWORD" "DAGGER" "DOUBLE_SWORD"
+Range			800
+
+Name			"천룡추타"
+Description		"순간적으로 적에게 접근해 일격을 가한다"
+
+IconFileName	"skill/assassin/cheonryong.sub"
+MotionIndex		4
+
+List ConditionData
+{
+	"단검일때 파괴력 50% 증가"
+	"3초간 맞을때 데미지 2배"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f배"	"(SkillPoint * 35 + 200) / 100" ""
+}
+
+MaxLevel			"25"
+NeedSPFormula		"100"
+CoolTimeFormula		"15"

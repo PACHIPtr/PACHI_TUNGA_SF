@@ -1,0 +1,10 @@
+if get_global_time ( ) - pc . getqf ( "last_reindeer_give_time" ) < 86400 then 
+say_title ( mob_name ( 20126 ) ) 
+say ( "Bugün zaten bir Ren Geyiði aldýn.[ENTER]Yarýna kadar beklemelisin.[ENTER]Eðer beklemek istemiyorsan,[ENTER]aþaðýdaki dönen paraya týklayýp alabilirsin. " ) 
+else 
+say_title ( mob_name ( 20126 ) ) 
+say ( "Çok tatlý deðil mi?[ENTER]Ve mükemmel bir koku alma duyusu vardýr. Bir çorap uzmaný buldun![ENTER]Sizinle 2 saat boyunca kalýr ve arayýþý içinde size yardýmcý olur. " ) 
+pc . give_item2_select ( 53002 , 1 ) 
+item . set_socket ( 0 , get_global_time ( ) + 21600 ) 
+pc . setqf ( "last_reindeer_give_time" , get_global_time ( ) ) 
+end 

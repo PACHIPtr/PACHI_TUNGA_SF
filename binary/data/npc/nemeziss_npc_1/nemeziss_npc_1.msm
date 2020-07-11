@@ -1,0 +1,85 @@
+scripttype            racedatascript
+
+basemodelfilename     "D:\ymir work\npc\nemeziss_npc_1\nemeziss_npc_1.GR2"
+
+group shapedata
+{
+    pathname 		 ""
+    shapedatacount 		 0
+}
+group attachingdata
+{
+    attachingdatacount       4
+    
+    group attachingdata00
+    {
+        attachingdatatype    1
+        
+        isattaching          1
+        attachingmodelindex  0
+        attachingbonename    "assembly01"
+        
+        collisiontype        1
+        
+        spheredatacount      1
+        group spheredata00
+        {
+            radius           160.000000
+            position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    group attachingdata01
+    {
+        attachingdatatype    1
+        
+        isattaching          1
+        attachingmodelindex  0
+        attachingbonename    "assembly01"
+        
+        collisiontype        3
+        
+        spheredatacount      1
+        group spheredata00
+        {
+            radius           160.000000
+            position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    group attachingdata02
+    {
+        attachingdatatype    1
+        
+        isattaching          1
+        attachingmodelindex  0
+        attachingbonename    "assembly01"
+        
+        collisiontype        1
+        
+        spheredatacount      1
+        group spheredata00
+        {
+            radius           60.000000
+            position         0.000000 0.000000 0.000000
+        }
+    }
+    
+    group attachingdata03
+    {
+        attachingdatatype    1
+        
+        isattaching          1
+        attachingmodelindex  0
+        attachingbonename    "assembly01"
+        
+        collisiontype        3
+        
+        spheredatacount      1
+        group spheredata00
+        {
+            radius           68.000000
+            position         0.000000 0.000000 0.000000
+        }
+	}
+}

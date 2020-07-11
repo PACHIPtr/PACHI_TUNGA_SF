@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+clear_server_timer ( "DefanceCheckSecondThree" , d . get_map_index ( ) ) 
+server_loop_timer ( "DefanceCheckSecondThreeOne" , 1 , d . get_map_index ( ) ) 
+d . set_victim_mast ( d . getf ( "hidra" ) , 0 ) 
+d . setf ( "sn" , 10 ) 
+end 

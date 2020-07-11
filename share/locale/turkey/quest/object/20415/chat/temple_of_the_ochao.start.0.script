@@ -1,0 +1,8 @@
+say_title ( mob_name ( 20415 ) ) 
+say ( "" ) 
+say ( "Efsunlu Orman'a gitmek ister misin? " ) 
+local answer = select ( "Evet. " , "Hayýr " ) 
+if answer == 1 then 
+pc . setf ( "enchanted_forest" , "limit_activity" , 0 ) 
+pc . warp ( 816700 , 1.505e+06 ) 
+end 

@@ -1,0 +1,8 @@
+say ( "Silah veya zýrhýndan bonus mu emmek istersin?" ) 
+say ( "" ) 
+local confirm = select ( "Evet" , "Hayýr" ) 
+if confirm == 2 then 
+return 
+end 
+setskin ( NOWINDOW ) 
+pc . open_sash ( false ) 

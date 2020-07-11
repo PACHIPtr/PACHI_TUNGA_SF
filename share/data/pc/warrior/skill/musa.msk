@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Attribute		"WEAPON_LIMITATION" "CAN_CHANGE_DIRECTION"
+NeedWeapon		"SWORD" "TWO_HANDED"
+
+Name			"무사혼"
+Description		"전방의 적을 공격한다"
+
+IconFileName		"skill/warrior/musa.sub"
+MotionIndex		14
+
+List AffectData
+{
+	"데미지 : %.0f ~ %.0f"	"AttackPower"	"(AttackPower * (10 + SkillPoint)) / 10"
+}
+
+CoolTimeFormula		"20 - SkillPoint / 2"
+NeedSPFormula		"100"

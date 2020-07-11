@@ -1,0 +1,11 @@
+if npc . is_pc ( ) and npc . empire ~= pc . empire then 
+pc . setqf ( "count" , pc . getqf ( "count" ) - 1 ) 
+q . set_counter_value ( pc . getqf ( "count" ) ) 
+if pc . getqf ( "count" ) >= 0 then 
+char_log ( 0 , "QUEST" , "questscroll4 kill " .. pc . getqf ( "count" ) ) ; 
+end 
+if pc . getqf ( "count" ) <= 0 then 
+makequestbutton ( locale . questscroll . finish_button ) 
+end 
+setskin ( NOWINDOW ) 
+end 

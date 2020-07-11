@@ -1,0 +1,3 @@
+if game . get_event_flag ( "harvest_festival" ) > 0 then say ( "Wonda-Rim: " ) 
+say ( "Yardım etmezsen aç kalacağız." ) 
+ return end 

@@ -1,0 +1,49 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_crystal_tiger\attack01.GR2"
+MotionDuration           1.833333
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.430000
+        AttackingEndTime     0.510000
+        AttackingBone        "Bip01"
+        WeaponLength         100.000000
+        List HitPosition
+        {
+            0.430000 -140.000000 -20.000000 180.000000 0.000000 -0.000000 100.000000
+            0.440000 -90.000000 -100.000000 150.000000 0.000000 -0.000000 100.000000
+            0.450000 5.000000 -145.000000 110.000000 0.000000 -0.000000 100.000000
+            0.470000 90.000000 -100.000000 55.000000 0.000000 -0.000000 100.000000
+		}
+   }
+}
+
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.440000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/crystal_tiger_attack01.mse"
+        EffectPosition       0.000000 -70.000000 50.000000
+    }
+}

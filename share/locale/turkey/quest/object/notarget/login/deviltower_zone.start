@@ -1,0 +1,5 @@
+if pc . get_map_index ( ) == 66 then 
+if pc . get_x ( ) < 2048 + 88 or pc . get_y ( ) < 6656 + 577 or pc . get_x ( ) > 2048 + 236 or pc . get_y ( ) > 6656 + 737 then 
+end 
+elseif pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 then 
+end 

@@ -1,0 +1,28 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"WEAPON_LIMITATION" "NEED_TARGET" "MELEE_ATTACK"
+NeedWeapon		"SWORD" "DAGGER" "DOUBLE_SWORD"
+
+Name			"암습"
+Description		"적에게 몰래 다가가 치명타를 입힌다"
+
+IconFileName	"skill/assassin/amseup.sub"
+MotionIndex		2
+
+List ConditionData
+{
+	"뒤에서 찌를때 파괴력 50% 증가"
+	"은형법 사용시 파괴력 50% 증가"
+	"단검일때 파괴력 100% 증가"
+	"3초간 맞을때 데미지 2배"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f 배"	"(SkillPoint * 20 + 100) / 100 " ""
+}
+
+MaxLevel			"25"
+CoolTimeFormula		"20"
+NeedSPFormula		"50"

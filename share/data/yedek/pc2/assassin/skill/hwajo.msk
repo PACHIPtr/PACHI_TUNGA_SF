@@ -1,0 +1,8 @@
+ScriptType		SkillDataScript
+
+Type			HIGH
+Name			"화조파"
+Description		"화살에 불꽃의 힘을 깃들여 쏜다"
+
+IconFileName	"skill/assassin/hwajo.sub"
+MotionIndex		9

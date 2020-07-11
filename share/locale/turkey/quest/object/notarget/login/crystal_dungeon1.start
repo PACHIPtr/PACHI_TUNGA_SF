@@ -1,0 +1,7 @@
+local mid = pc . get_map_index ( ) 
+local setting = crystal_dungeon1 . settings ( ) 
+if mid == setting [ "map_index" ] then 
+if not pc . in_dungeon ( ) then 
+warp_to_village ( ) 
+end 
+end 

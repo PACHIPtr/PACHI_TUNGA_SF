@@ -1,0 +1,81 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster2\kami_dark_metin\dead.GR2"
+MotionDuration           0.666667
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.002784
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "smdimport_Part_2"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.016701
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "smdimport_Part_1"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.011134
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "smdimport_Part_4"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.009743
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "smdimport_Part_6"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.012526
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "smdimport_Part_12"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/monster2/kami_dark_metin/dead.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.005567
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Dummy001"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/monster2/kami_dark_general/kami_skill_dark_1.mse"
+        EffectPosition       0.000000 0.000000 20.000000
+    }
+}

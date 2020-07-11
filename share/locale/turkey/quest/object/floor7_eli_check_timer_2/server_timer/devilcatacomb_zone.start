@@ -1,0 +1,11 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . count_monster ( ) == 0 then 
+d . set_warp_location ( 65 , 5914 , 992 ) 
+d . setqf2 ( "devilcatacomb_zone" , "done" , 1 ) 
+say_in_map ( get_server_timer_arg ( ) , "Azrail yenildi. Þeytan Katakombu'na nihayet[ENTER]huzur hakim. Þimdi yer yüzüne ýþýnlanacaksýn. " ) 
+clear_server_timer ( "devilcatacomb_0m_left_timer" , get_server_timer_arg ( ) ) 
+server_timer ( "devilcatacomb_exit_timer" , 30 , get_server_timer_arg ( ) ) 
+else 
+server_timer ( "floor7_eli_check_timer_1" , 5 , get_server_timer_arg ( ) ) 
+end 
+end 

@@ -1,0 +1,8 @@
+say ( "Ýki kuþaðý kombine mi etmek istiyorsun?" ) 
+say ( "" ) 
+local confirm = select ( "Evet" , "Hayýr" ) 
+if confirm == 2 then 
+return 
+end 
+setskin ( NOWINDOW ) 
+pc . open_sash ( true ) 

@@ -1,0 +1,106 @@
+local rice_count = pc . getqf ( "rice_count" ) 
+say_title ( "Wonda-Rim: " ) 
+say ( string . format ( "%s tane pirinç patlağı topladın! 30 tane[ENTER]topladığında bana gelip değerli bir[ENTER]eşya karşılığında değiş tokuş edebilirsin.[ENTER]Şimdi kendine bir ödül seçmek ister misin?  " , rice_count ) ) 
+local reward_set = select ( "Evet, lütfen! " , "Hayır, daha sonra." ) 
+if reward_set == 2 then 
+say_title ( "Wonda-Rim: " ) 
+say ( "Fikrin değiştiğinde tekrar gel. " ) 
+return 
+end 
+say_title ( "Wonda-Rim: " ) 
+say ( "Hangi ödülü istersin? " ) 
+local harvest_item_set = select ( "Kırmızı Abanoz Sandık (55 Pirinç Pat.) " , 
+"İhtişamlı Anaboz Sandık (50 Pirinç Pat) " , 
+"Ay Özütü (O) (45 Pirinç Pat) " , 
+"Sarı Abanoz Sandık (30 Pirinç Pat) " , 
+"Diğer ödüller " , 
+"İptal " ) 
+if harvest_item_set == 6 then 
+return 
+end 
+local harvest_item_set_2 = 0 
+if harvest_item_set == 5 then 
+harvest_item_set_2 = select ( "Açık Yeşil Abanoz Sandık (65 Pirinç Pat) " , 
+"Yeşil Abanoz Sandık (75 Pirinç Pat) " , 
+"Güneş Özütü (O) (60 Pirinç Pat) " , 
+"Mavi Abanoz Sandık (75 Pirinç Pat) " , 
+"Koyu Kır. Abanoz Sandık (80 Pirinç Pat) " , 
+"İptal " ) 
+end 
+if harvest_item_set_2 == 6 then 
+return 
+end 
+local harvest_item_name = "" 
+local harvest_rice_count = 0 
+if harvest_item_set == 1 then 
+harvest_item_name = "Kırmızı Abanoz Sandık (55 Pirinç Pat.) " 
+harvest_rice_count = 55 
+elseif harvest_item_set == 2 then 
+harvest_item_name = "İhtişamlı Anaboz Sandık (50 Pirinç Pat) " 
+harvest_rice_count = 50 
+elseif harvest_item_set == 3 then 
+harvest_item_name = "Ay Özütü (O) (45 Pirinç Pat) " 
+harvest_rice_count = 45 
+elseif harvest_item_set == 4 then 
+harvest_item_name = "Sarı Abanoz Sandık (30 Pirinç Pat) " 
+harvest_rice_count = 30 
+elseif harvest_item_set_2 == 1 then 
+harvest_item_name = "Açık Yeşil Abanoz Sandık (65 Pirinç Pat) " 
+harvest_rice_count = 65 
+elseif harvest_item_set_2 == 2 then 
+harvest_item_name = "Yeşil Abanoz Sandık (75 Pirinç Pat) " 
+harvest_rice_count = 75 
+elseif harvest_item_set_2 == 3 then 
+harvest_item_name = "Güneş Özütü (O) (60 Pirinç Pat) " 
+harvest_rice_count = 60 
+elseif harvest_item_set_2 == 4 then 
+harvest_item_name = "Mavi Abanoz Sandık (75 Pirinç Pat) " 
+harvest_rice_count = 75 
+elseif harvest_item_set_2 == 5 then 
+harvest_item_name = "Koyu Kır. Abanoz Sandık (80 Pirinç Pat) " 
+harvest_rice_count = 80 
+end 
+if rice_count < harvest_rice_count then 
+say_title ( "Wonda-Rim: " ) 
+say ( "Bu ödül için yeterince pirinç patlağına[ENTER]sahip değilsin. Daha fazla pirinç patlağı[ENTER]getir ve istediğin ödülü seç! " ) 
+return 
+end 
+say_title ( "Wonda-Rim: " ) 
+say ( "Akıllı bir seçim yap. " ) 
+say ( "" ) 
+say ( string . format ( "Teşekkür olarak %s pirinç patlağı karşılığında[ENTER]sana şunu veriyorum: İhtişamlı Anaboz Sandık (%s pirinç patl.) " , harvest_rice_count , harvest_item_name ) ) 
+say ( "Bu eşyayı almak ister misin? " ) 
+local item_get_set = select ( "Evet, isterim! " , "İptal " ) 
+if item_get_set == 2 then 
+return 
+end 
+if harvest_item_set == 1 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50109" , 1 ) 
+elseif harvest_item_set == 2 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50110" , 1 ) 
+elseif harvest_item_set == 3 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "72728" , 1 ) 
+elseif harvest_item_set == 4 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50111" , 1 ) 
+elseif harvest_item_set_2 == 1 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50112" , 1 ) 
+elseif harvest_item_set_2 == 2 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50113" , 1 ) 
+elseif harvest_item_set_2 == 3 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "72724" , 1 ) 
+elseif harvest_item_set_2 == 4 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50114" , 1 ) 
+elseif harvest_item_set_2 == 5 then 
+pc . setqf ( "rice_count" , rice_count - harvest_rice_count ) 
+pc . give_item2 ( "50115" , 1 ) 
+end 
+say_reward ( string . format ( "%s aldın. " , harvest_item_name ) ) 
+say ( "Eğer, daha fazla Prinç Patlağı getirmek[ENTER]istersen beni burada bulabilirsin. " ) 

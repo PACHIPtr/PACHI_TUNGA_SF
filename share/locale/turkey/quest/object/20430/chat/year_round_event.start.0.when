@@ -1,0 +1,1 @@
+return game . get_event_flag ( "2017_year_round_event" ) > 0

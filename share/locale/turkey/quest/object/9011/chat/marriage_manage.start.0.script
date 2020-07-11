@@ -1,0 +1,75 @@
+if not npc . lock ( ) then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Eþinle konuþuyorum. Biraz bekle. " ) 
+say ( "" ) 
+return 
+end 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Ben bir evlilik asistanýyým." ) 
+say ( "ilk olarak eþinin ismini" ) 
+say ( "yaz." ) 
+local sname = input ( ) 
+local u_vid = find_pc_by_name ( sname ) 
+local m_vid = pc . get_vid ( ) 
+if u_vid == 0 then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Böyle bir isim kayýtlý deðil, " ) 
+say ( "Yazdýðýný tekrar gözden geçir. " ) 
+say ( "" ) 
+say_reward ( string . format ( "%s online deðil." , sname ) ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+if not npc . is_near_vid ( u_vid , 10 ) then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Özür dilerim. Eþini buraya getir," ) 
+say ( "Onu bilgilendirmeli ve" ) 
+say ( "incelemeliyim." ) 
+say ( "" ) 
+say_reward ( string . format ( "%s burada olmalý." , sname ) ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+if u_vid == m_vid then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Lütfen kendi adýný yazma. " ) 
+say ( "" ) 
+say ( "Eþinin adýný yazmalýsýn." ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+if u_vid ~= marriage . find_married_vid ( ) then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Bir þeyler yanlýþ. Bu doðru insan deðil." ) 
+say ( "Kontrol ettin mi?" ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+local ok_sign = confirm ( u_vid , pc . name .. "Evlenmek istiyor musun?" , 30 ) 
+if ok_sign ~= CONFIRM_OK then 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Eþin evlilik için hazýr deðil." ) 
+say ( "Birbirinizle konuþun." ) 
+say ( "" ) 
+npc . unlock ( ) 
+return 
+end 
+say_title ( "Nikah Memuru:" ) 
+say ( "" ) 
+say ( "Þimdi her þey uygun, baþlayabiliriz." ) 
+marriage . set_to_marriage ( ) 
+say ( "" ) 
+say ( "Güzel bir düðündü." ) 
+say ( "" ) 
+npc . unlock ( ) 

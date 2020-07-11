@@ -1,0 +1,18 @@
+if horse . get_grade ( ) == 0 then syschat ( "Acemi atýný çaðýrabilmek için acemi at görevini yapman gerek." ) 
+ return end if horse . get_grade ( ) == 1 then if horse . is_summon ( ) == true then 
+syschat ( "Zaten acemi atý çaðýrmýþsýn." ) 
+return 
+end 
+if pc . get_mount_vnum ( ) ~= 0 then 
+syschat ( "Zaten bir binek hayvanýna biniyorsun." ) 
+return 
+end 
+if number ( 1 , 100 ) <= horse_summon . get_horse_summon_prob_pct ( ) then 
+horse . summon ( ) 
+syschat ( "Acemi at çaðýrýldý." ) 
+else 
+syschat ( "Acemi at çaðýrýlamadý." ) 
+end 
+ return end if horse . get_grade ( ) == 2 then syschat ( "Zýrhlý atýný çaðýrabilmek için Zýrhlý At Kitabý lazým." ) 
+ return end if horse . get_grade ( ) == 3 then syschat ( "Uzman seviyedeki atlarý çaðýrmak için Asker At Kitabý lazým." ) 
+ return end 

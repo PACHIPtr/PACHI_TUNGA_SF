@@ -1,0 +1,3 @@
+if pc . in_dungeon ( ) then local setting = enchanted_forest_zone . setting ( ) 
+d . spawn_mob ( setting . boss2 , setting . spawn [ 1 ] , setting . spawn [ 2 ] ) 
+ return end 

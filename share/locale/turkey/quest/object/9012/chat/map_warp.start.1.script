@@ -1,0 +1,33 @@
+local level_cost = pc . get_level ( ) - 85 
+local cost = level_cost * 10000 
+say ( "Iþýnlayýcý " ) 
+say ( "Kýsa bir süre önce gizemli bir ada keþfedildi. Adý " ) 
+say ( "Karanlýk Ejderha Kayasý konuldu. Orada hayatta" ) 
+say ( "kalmak için yeterli tecrübeye sahip olmak gerekir." ) 
+say ( "O yüzden sadece seviye 90 üzeri oyuncularý " ) 
+say ( "götüreceðim. Yolculuða katýlmaya hazýr mýsýn?" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 2 then 
+return 
+else 
+if pc . get_gold ( ) < cost then 
+say_title ( "Iþýnlayýcý " ) 
+say ( "Yeterli yang yok." ) 
+return 
+else 
+say ( "Iþýnlayýcý " ) 
+say ( "Adaya ulaþým sadece gemilerle saðlanýyor -" ) 
+say ( "yolculuksa uzun ve yorucu. Seviyen ne kadar" ) 
+say ( "yüksekse nakliye o kadar zorludur. Bu nedenle" ) 
+say ( "senden daha yüksek bir ücret talep etmek zorundayým." ) 
+say ( "" ) 
+say_reward ( "Yolculuk için " .. cost .. " Yang harcanýr." ) 
+local ss = select ( "Evet" , "Hayýr" ) 
+if ss == 2 then 
+return 
+else 
+pc . change_gold ( - cost ) 
+pc . warp ( 1.1043e+06 , 1.7885e+06 ) 
+end 
+end 
+end 

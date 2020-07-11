@@ -1,0 +1,22 @@
+local setting = devilcatacomb_zone . setting ( ) 
+if pc . get_x ( ) > setting . floor1_s . x + setting . base . x and pc . get_y ( ) > setting . floor1_s . y + setting . base . y and pc . get_x ( ) < setting . floor1_e . x + setting . base . x and pc . get_y ( ) < setting . floor1_e . y + setting . base . y then 
+local j = number ( 1 , 100 ) 
+if j == 1 then 
+game . drop_item ( setting . rag , 1 ) 
+end 
+end 
+if npc . get_race ( ) == 8038 then local setting = devilcatacomb_zone . setting ( ) 
+if d . is_unique_dead ( "real" ) then 
+d . notice ( "Gerçek Metin Taşı'nı yok ettin! Sonraki kata geçiyorsun." ) 
+d . setf ( "bug_devam" , 0 ) 
+d . setf ( "level" , 4 ) 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 4 ) 
+timer ( "devilcatacomb_floor4_enter_timer" , 3 ) 
+else 
+d . notice ( "Yanlış Metin Taşı'nı yok ettin. Doğrusunu bul!" ) 
+end 
+ return end if npc . get_race ( ) == 2591 then local setting = devilcatacomb_zone . setting ( ) 
+game . drop_item ( setting . unlock_stone , 1 ) 
+ return end if npc . get_race ( ) == 2597 then server_timer ( "floor6_eli_check_timer_1" , 5 , d . get_map_index ( ) ) 
+ return end if npc . get_race ( ) == 2598 then server_timer ( "floor7_eli_check_timer_1" , 5 , d . get_map_index ( ) ) 
+ return end 

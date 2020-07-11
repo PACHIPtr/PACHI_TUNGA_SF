@@ -1,0 +1,6 @@
+if pc . is_gm ( ) then say_title ( "GM: Bilgi" ) 
+say ( "Harita Kodu: " .. pc . get_map_index ( ) .. "" ) 
+say ( "Maksimum Can: " .. pc . get_max_hp ( ) .. " / Mevcut Can: " .. pc . get_hp ( ) .. "" ) 
+say ( "Maksimum Mana: " .. pc . get_max_sp ( ) .. " / Mevcut Mana: " .. pc . get_sp ( ) .. "" ) 
+say ( "Seviye: " .. pc . get_level ( ) .. " / Mevcut Deneyim: " .. pc . get_exp ( ) .. "" ) 
+ return end 

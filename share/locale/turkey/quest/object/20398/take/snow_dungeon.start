@@ -1,0 +1,57 @@
+if snow_dungeon . is_nemeres_dungeon ( ) == true then 
+local set = snow_dungeon . get_settings ( ) 
+local stone_level5_count = set . StoneCount_level_5 local next_jump_time = set . NextJumpTime local vnum = item . get_vnum ( ) 
+local key_level_5 = set . Key_on_level_5 local unique_item = item . get_socket ( 1 ) 
+if ( is_test_server ( ) and snow_dungeon . is_TestServerMode ( ) == true ) then 
+d . notice ( "TESTSERVERMODE, Biraz sonra ýþýnlanacaksýnýz." ) 
+npc . purge ( ) 
+item . remove ( ) 
+server_timer ( "Jp_6" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_6.txt" ) 
+return 
+end 
+if vnum == key_level_5 then 
+local npc_vid = npc . get_vid ( ) 
+local search = d . getf ( "Stone_5_count" ) 
+local search2 = d . get_unique_vid ( "stone5_" .. search .. "" ) 
+if npc_vid == search2 then 
+if unique_item == npc_vid then 
+local new = search + 1 
+if new > stone_level5_count then 
+d . notice ( "Az sonra altýncý kata ýþýnlanacaksýnýz." ) 
+npc . purge ( ) 
+item . remove ( ) 
+server_timer ( "Jp_6" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_6.txt" ) 
+else 
+if new == 2 then 
+say ( "Baþardýnýz! Þimdi ikinci mührü açýn." ) 
+elseif new == 3 then 
+say ( "Baþardýnýz! Þimdi üçüncü mührü açýn." ) 
+elseif new == 4 then 
+say ( "Baþardýnýz! Þimdi dördüncü mührü açýn." ) 
+elseif new == 5 then 
+say ( "Baþardýnýz! Þimdi beþinci mührü açýn." ) 
+elseif new == 6 then 
+say ( "Baþardýnýz! Þimdi altýncý mührü açýn." ) 
+end 
+npc . purge ( ) 
+item . remove ( ) 
+end 
+d . setf ( "Stone_5_count" , new ) 
+else 
+say ( "Sýralama doðru! Fakat anahtar yanlýþ. Baþka" ) 
+say ( "bir anahtarý deneyin." ) 
+item . remove ( ) 
+end 
+else 
+say ( "Sýralamanýn doðru olmasýna dikkat edin! Baþka bir" ) 
+say ( "küpü deneyin." ) 
+item . remove ( ) 
+end 
+end 
+end 

@@ -1,0 +1,65 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/12zi_dog_boss/special_attack3.GR2"
+MotionDuration           3.833333
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.949311
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "12zi_dog_boss1_wp"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dog_s3_blow.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         1.930657
+        
+        DuringTime           3.000000
+        Power                200
+        AffectingRange       200
+    }
+    Group Event02
+    {
+        MotionEventType      4
+        StartingTime         1.902676
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.055961
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "12zi_dog_boss1_wp"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/12_dog_s3_making.mse"
+        EffectPosition       0.000000 50.000000 250.000000
+    }
+}

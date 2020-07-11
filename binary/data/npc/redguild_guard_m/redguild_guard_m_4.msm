@@ -1,0 +1,59 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M.GR2"
+		SourceSkin			"D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M1.DDS"
+		TargetSkin			"D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M4.DDS"
+		SourceSkin2			"D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M_weapon.dds"
+		TargetSkin2			"D:\Ymir Work\npc\redguild_guard_M\redguild_guard_M_weapon_M4.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           38.000000
+            Position         0.000000 0.000000 -10.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           50.000000
+            Position         0.000000 0.000000 -10.000000
+        }
+    }
+}

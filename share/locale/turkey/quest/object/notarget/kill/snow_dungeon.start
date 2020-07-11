@@ -1,0 +1,39 @@
+if snow_dungeon . is_nemeres_dungeon ( ) == true then 
+local set = snow_dungeon . get_settings ( ) 
+local next_jump_time = set . NextJumpTime local level = d . getf ( "level" ) 
+local stone_level_6 = set . MobVnum_level_6 local stone_level_7 = set . MobVnum_level_7 local stone_level_9 = set . NpcVnum_level_9 local boss_vnum = set . BossVnum local wait_time = set . WaitBeforOutAllOnExit local mobvnum = npc . get_race ( ) 
+if level == 2 and mobvnum >= 6101 and mobvnum <= 6108 and 1 == number ( 1 , 50 ) then 
+local v = set . key_level_2 game . drop_item ( v , 1 ) 
+elseif level == 5 and mobvnum >= 6101 and mobvnum <= 6108 and 1 == number ( 1 , 20 ) then 
+snow_dungeon . _DropKeyOnLevel5 ( ) 
+elseif level == 6 and mobvnum == stone_level_6 then 
+d . notice ( "Az sonra yedinci kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_7" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . regen_file ( "data/dungeon/ice_dungeon/zone_7.txt" ) 
+local v_MQv = set . MobVnum_level_7 local c = set . SzelCords_level_7 local n = number ( 1 , table . getn ( c ) ) 
+d . spawn_mob ( v_MQv , c [ n ] [ 1 ] , c [ n ] [ 2 ] ) 
+elseif level == 7 and mobvnum == stone_level_7 then 
+d . notice ( "Az sonra sekizinci kata ýþýnlanacaksýnýz." ) 
+server_timer ( "Jp_8" , next_jump_time , d . get_map_index ( ) ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . set_regen_file ( "data/dungeon/ice_dungeon/zone_8.txt" ) 
+elseif level == 8 and mobvnum >= 6101 and mobvnum <= 6108 and 1 == number ( 1 , 50 ) then 
+local v = set . Key_on_level_8 game . drop_item ( v , 1 ) 
+elseif level == 9 and mobvnum == stone_level_9 then 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . spawn_mob_dir ( 20397 , 849 , 670 , 1 ) 
+elseif level == 10 and mobvnum == boss_vnum then 
+game . drop_item_with_ownership ( "50034" , 1 ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . notice ( "Nemere maðlup edildi!" ) 
+d . notice ( "Bir dakika içerisinde Nemere Gözlemevi'nden dýþarý " ) 
+d . notice ( "ýþýnlanacaksýnýz." ) 
+notice_all ( "Nemere " .. pc . get_name ( ) .. " tarafýndan yok edildi." ) 
+server_timer ( "Jp_OutAll" , wait_time , d . get_map_index ( ) ) 
+end 
+end 

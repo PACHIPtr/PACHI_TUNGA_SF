@@ -1,0 +1,51 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+local registered , channel = MeleyLair . IsRegistered ( ) 
+if registered then 
+say ( string . format ( "Zaten loncanýz kayýtlý.[ENTER] CH %d.[ENTER]'den giriþ yapabilirsiniz. " , channel ) ) 
+return 
+end 
+local requirment1 , requirment2 = MeleyLair . GetRequirments ( ) 
+say ( "Sung Mahi'nin Ejderhalarý savaþmak için loncanýz kayýt " ) 
+say ( "olmalýdýr. " ) 
+say ( "" ) 
+say ( "Kayýt olmak için þunlar gerekir: " ) 
+say ( string . format ( "- Loncanýz en az %d seviyede olmalýdýr. " , requirment1 ) ) 
+say ( string . format ( "- Loncanýz en az %d lonca puaný olmalýdýr. " , requirment2 ) ) 
+say ( "" ) 
+say ( "Kayýt yaptýrmak istiyor musun? " ) 
+local menu = select ( "Evet " , "Hayýr " ) 
+if menu == 1 then 
+local result1 , result2 = MeleyLair . Register ( ) 
+if result1 == 0 then 
+setskin ( NOWINDOW ) 
+return 
+end 
+local resultMsg = { 
+[ 1 ] = "Zaten loncanýz kayýtlý.[ENTER] CH %d.[ENTER]'den giriþ yapabilirsiniz. " , 
+[ 2 ] = "Baþka loncadasýnýz,[ENTER]daha sonra deneyiniz " , 
+[ 3 ] = "Loncanýz en az %d seviye olmalýdýr. " , 
+[ 4 ] = "Loncanýz en az %d lonca puaný olmalýdýr. " , 
+[ 5 ] = "Lonca kayýtlý deðil, [ENTER]Yetkili kiþilerle görüþün. " , 
+[ 6 ] = "Ejderhalarý yenerseniz,[ENTER]%d lonca puaný iade edilcektir. " , 
+[ 7 ] = "Sadece bulunduðunuz loncayý kayýt edebilirsiniz. %s. " , 
+} 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+if result1 ~= 2 and result1 ~= 5 then 
+if result1 == 7 then 
+local hours = string . format ( "%02.f" , math . floor ( result2 / 3600 ) ) ; 
+local minutes = string . format ( "%02.f" , math . floor ( result2 / 60 - ( hours * 60 ) ) ) ; 
+local seconds = string . format ( "%02.f" , math . floor ( result2 - hours * 3600 - minutes * 60 ) ) ; 
+local timeConv = string . format ( hours .. ":" .. minutes .. ":" .. seconds ) 
+say ( string . format ( resultMsg [ result1 ] , timeConv ) ) 
+else 
+say ( string . format ( resultMsg [ result1 ] , result2 ) ) 
+end 
+else 
+say ( resultMsg [ result1 ] ) 
+end 
+else 
+setskin ( NOWINDOW ) 
+return 
+end 

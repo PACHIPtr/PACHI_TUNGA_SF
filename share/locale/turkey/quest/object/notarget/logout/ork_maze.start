@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) >= 2.45e+06 and pc . get_map_index ( ) < 2.46e+06 then pc . setf ( "ork_maze" , "dungeon_turn" , 1 ) 
+ return end 

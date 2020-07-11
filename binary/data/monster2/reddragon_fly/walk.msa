@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc_mount/reddragon_fly/walk.GR2"
+MotionDuration           1.333333
+Accumulation             0.00	-342.90	0.00
+

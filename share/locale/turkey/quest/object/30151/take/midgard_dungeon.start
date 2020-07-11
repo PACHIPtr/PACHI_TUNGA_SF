@@ -1,0 +1,23 @@
+if pc . get_map_index ( ) >= 5.07e+06 and pc . get_map_index ( ) < 5.08e+06 and item . vnum == 30368 then item . remove ( ) 
+if d . getf ( "monument_30151" ) == 1 then return end 
+local per = number ( 1 , 100 ) 
+if per <= 85 then 
+if d . getf ( "stone_count" ) == 0 then 
+d . spawn_mob ( 8163 , 297 , 903 ) 
+d . spawn_mob ( 8163 , 347 , 872 ) 
+d . spawn_mob ( 8163 , 301 , 861 ) 
+d . spawn_mob ( 8163 , 334 , 905 ) 
+d . setf ( "stone_count" , 4 ) 
+end 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(7.Görev) Mühür anıtı açarken parçalara ayrıldı, tekrar dene!" ) 
+else 
+npc . purge ( ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "(8.Görev) Patronu yok et ve haritayı tamamla!" ) 
+d . setf ( "monument_30151" , 1 ) 
+d . spawn_mob ( 4912 , 319 , 890 ) 
+end 
+ return end 

@@ -1,0 +1,14 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+clear_server_timer ( "DefanceCheckSecondFive" , d . get_map_index ( ) ) 
+local set = defance_wawe . Settings ( ) 
+local cord = set . cord local pos = set . start_pos defance_wawe . SpawnHandicap ( 0 ) 
+d . setf ( "hidra" , d . spawn_mob_ac_dir ( 3962 , 385 , 377 , 0 ) ) 
+d . set_victim_mast ( d . getf ( "hidra" ) , 0 ) 
+d . setf ( "hidracount" , 0 ) 
+defance_wawe . PurgeHidras ( ) 
+d . jump_all ( ( cord [ 1 ] + pos [ 1 ] ) , ( cord [ 2 ] + pos [ 2 ] ) ) 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "4. Dalga: Gemi direði savunmasý esnasýnda, Hidra kiþisini maðlup edin" ) 
+d . setf ( "sn" , 5 ) 
+server_loop_timer ( "DefanceCheckSecondFiveOne" , 1 , d . get_map_index ( ) ) 
+end 

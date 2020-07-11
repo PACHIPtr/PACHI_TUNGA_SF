@@ -1,0 +1,20 @@
+ScriptType			SkillDataScript
+
+Type				LOW
+Attribute			"NEED_TARGET" "ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
+Range				800
+
+Name				"정업인"
+Description			"빛의 기운으로 상처를 치유한다"
+
+IconFileName		"skill/shaman/jeongeop.sub"
+MotionIndex         2
+MotionIndexForMe    1
+
+List AffectData
+{
+	"체력 %.0f 회복" "(10 + SkillPoint * 2) * (100 + INT) / 10" ""
+}
+
+NeedSPFormula		"SkillPoint * 5"
+CoolTimeFormula		"5"

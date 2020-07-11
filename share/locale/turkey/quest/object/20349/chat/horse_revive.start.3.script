@@ -1,0 +1,14 @@
+say ( "Bu bitkiler Normasl Maymun zindanýndan toplandý. " ) 
+say ( "Senin atýný canlandýracaklar. " ) 
+say ( "Haydi önce atý çaðýralým. " ) 
+wait ( ) 
+say ( "Bitkileri ata yedir ve bekle! " ) 
+say ( "[DELAY value=400]. . .[/DELAY]" ) 
+horse . summon ( ) 
+wait ( ) 
+say ( "Atin canlanmaya baþlýyor. " ) 
+say ( "Gelecekte onu beslemeyi unutma. " ) 
+if pc . countitem ( "50058" ) >= 1 then 
+pc . removeitem ( "50058" , 1 ) 
+horse . revive ( ) 
+end 

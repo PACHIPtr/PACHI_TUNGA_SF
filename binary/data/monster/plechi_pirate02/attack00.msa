@@ -1,0 +1,32 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_pirate02\attack00.GR2"
+MotionDuration           1.366667
+
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   0.450000
+        AttackingEndTime     1.623173
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            0.450000 -80.000000 10.000000 190.000000 -0.000000 0.000000 0.000000
+            0.490000 -60.000000 -70.000000 180.000000 -0.000000 0.000000 0.000000
+            0.530000 0.000000 -120.000000 150.000000 -0.000000 0.000000 0.000000
+            0.570000 60.000000 -155.000000 120.000000 -0.000000 0.000000 0.000000
+            0.610000 110.000000 -145.000000 90.000000 -0.000000 0.000000 0.000000
+		}
+   }
+}

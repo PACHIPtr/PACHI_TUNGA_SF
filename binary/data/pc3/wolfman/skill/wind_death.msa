@@ -1,0 +1,102 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\Ymir Work\pc3\wolfman\skill\wind_death.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.749392
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wind_death_03.mse"
+        EffectPosition       0.000000 -70.000000 10.000000
+    }
+    Group Event01
+    {
+        MotionEventType      4
+        StartingTime         0.661801
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          1
+        StiffenTime          0.000000
+        InvisibleTime        0.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      3
+        Group SphereData00
+        {
+            Radius           200.000000
+            Position         0.000000 -250.000000 100.000000
+        }
+        Group SphereData01
+        {
+            Radius           175.000000
+            Position         0.000000 -450.000000 100.000000
+        }
+        Group SphereData02
+        {
+            Radius           150.000000
+            Position         0.000000 -650.000000 100.000000
+        }
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.072993
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc/warrior/effect/palbang_spin.mse"
+        EffectPosition       0.000000 150.000000 -20.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.126521
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/death_tornado_2.mse"
+        EffectPosition       0.000000 100.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         0.656934
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wind_death_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         0.759124
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/wind_death_05_3.mse"
+        EffectPosition       0.000000 -300.000000 0.000000
+    }
+}

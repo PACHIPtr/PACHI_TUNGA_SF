@@ -1,0 +1,67 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     	"D:\Ymir Work\monster2\skipa_dungeon_metinstone_1\skipa_dungeon_metinstone_1.GR2"
+
+DefaultHitSoundFileName     ""
+List DefaultHitEffectFileName
+{
+}
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 0
+}
+Group AttachingData
+{
+    AttachingDataCount       3
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "8011_bone_01a"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           80.000000
+            Position         -50.000000 0.000000 100.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "8011_bone_01a"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           90.000000
+            Position         -50.000000 0.000000 100.000000
+        }
+    }
+	
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "smdimport"
+        
+        EffectScriptName     "D:\ymir work\effect\background\krysztal_wygnancow.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

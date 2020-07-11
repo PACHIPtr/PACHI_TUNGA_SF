@@ -1,0 +1,24 @@
+restart_quest ( ) 
+say_title ( questscroll5 . get_complete_title ( ) ) 
+say ( "Görevi baþarýyla bitirdin." ) 
+say ( "Ödülün:" ) 
+say ( "" ) 
+local reward_type = questscroll5 . get_reward_type ( ) 
+if number ( 0 , 100 ) <= 90 then 
+local s = number ( 1 , 3 ) 
+if 1 == s then 
+questscroll5 . reward_exp ( reward_type ) 
+questscroll5 . reward_money ( reward_type ) 
+elseif 2 == s then 
+questscroll5 . reward_money ( reward_type ) 
+questscroll5 . reward_item ( reward_type ) 
+elseif 3 == s then 
+questscroll5 . reward_exp ( reward_type ) 
+questscroll5 . reward_item ( reward_type ) 
+end 
+else 
+questscroll5 . reward_exp ( reward_type ) 
+questscroll5 . reward_money ( reward_type ) 
+questscroll5 . reward_item ( reward_type ) 
+end 
+say ( "" ) 

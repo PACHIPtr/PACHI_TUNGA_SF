@@ -1,0 +1,90 @@
+--[[
+	Myte2 Server Files
+	PACHI | Tunga
+	https://forum.turkmmo.com/uye/2127751-pachi/
+--]]
+quest skill_reset2 begin
+    state start begin			
+        when 9006.chat."Becerileri sýfýrla." begin
+			say_title(mob_name(npc.get_race())..":")
+			say("")
+			---
+			if pc.getf("servis","muhur") - get_time() > 0 then
+				say("Becerilerin mühürlü olduðu için bu iþlemi gerçekleþtiremezsin.")
+				say("")
+				return
+			elseif(math.floor(get_global_time()/86400) == pc.getf("skill_reset2","time")) then
+				say("Becerilerini zaten sýfýrlamýþsýn. Hafýzaný ")
+				say("bu kadar yorarsan aklýný kaybedebilirsin.")
+				say("Bu deðiþim 1 Gün arayla deðiþtirebilir.")
+				return
+			elseif(pc.get_level() < 5) then
+				say("Öncelikle henüz bir çaylaksýn ve hiçbir þey")
+				say("bilmiyorsun. Git ve bir þeyler öðren!")
+				say("")
+				return
+			elseif(pc.get_skill_group() == 0) then
+				say("Hafýzan þu anda zaten boþ.")
+				say("")
+				return
+			end
+			local cost
+			if(pc.get_level() > 30) then
+				cost = 10000 + pc.level * 3000
+			else
+				cost = 10000 + pc.level * 2000
+			end
+			say("Merhaba, doðru yerdesin.")
+			say("Dertli görünüyorsun.")
+			say("Ýnsanlarýn becerilerini unutmalarýna yardýmcý ")
+			say("oluyorum. Hayata yeniden baþlýyorlar.")
+			say("Becerilerini unutup, baþtan baþlamak")
+			say("ister misin?")
+			say_reward("Fiyat : "..cost.." Yang.")
+			say("")
+			local s = select("Sýfýrla","Sýfýrlama")
+			if(s == 2) then
+				return
+			end
+			if(pc.get_money() < cost) then
+				say_title(mob_name(npc.get_race())..":")
+				say("")
+				---
+				say("Yeterli Yang'a sahip deðilsin.")
+				say("Yang olmadan sana yardým edemem,")
+				say("Yaþamak için bir þeyler yapmam gerekiyor.")
+				return
+			end
+			local horse_level = horse.get_level()
+			pc.setf("skill_reset2","time",math.floor(get_global_time()/259000))
+			pc.change_gold(-cost)
+			pc.clear_skill()
+			pc.set_skill_group(0)
+			horse.set_level(horse_level)
+			if pc.job == 4 then
+				pc.set_skill_group(1) -- !!!
+				pc.clear_skill()
+				pc.set_skill_level (170,0)
+				pc.set_skill_level (171,0)
+				pc.set_skill_level (172,0)
+				pc.set_skill_level (173,0)
+				pc.set_skill_level (174,0)
+				pc.set_skill_level (175,0)
+				pc.set_skill_level(121,20)
+				pc.set_skill_level(122,1)
+				pc.set_skill_level(123,20)
+				pc.set_skill_level(124,20)
+				pc.set_skill_level(126,20)
+				pc.set_skill_level(127,20)
+				pc.set_skill_level(128,20)
+				pc.set_skill_level(130,21)
+				pc.set_skill_level(131,20)
+				pc.set_skill_level(137,20)
+				pc.set_skill_level(138,20)
+				pc.set_skill_level(139,20)
+				horse.set_level(horse_level)
+			end
+			set_quest_state("skill_group","run")
+		end
+    end
+end

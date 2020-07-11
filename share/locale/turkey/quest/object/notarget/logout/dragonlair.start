@@ -1,0 +1,12 @@
+if pc . get_map_index ( ) == 207 then pc . delqf ( "icerdesin_1_" ) 
+pc . delqf ( "icerdesin_2_" ) 
+pc . delqf ( "ejder_sifre" ) 
+pc . delqf ( "lider" ) 
+pc . delqf ( "ejder_bug_engel333" ) 
+pc . delqf ( "ejder_bug_engel33" ) 
+pc . delqf ( "ejder_bug_engel3" ) 
+pc . delqf ( "ejder_bug_engel2" ) 
+pc . delqf ( "ejder_sifre_kontrol" ) 
+pc . setf ( "dragonlair" , "dragonlair_soguma_suresi" , get_time ( ) + ( 60 * 10 ) ) 
+pc . warp ( 180100 , 1.2204e+06 ) 
+ return end 

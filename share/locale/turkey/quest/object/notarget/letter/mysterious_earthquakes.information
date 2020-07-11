@@ -1,0 +1,6 @@
+send_letter ( "&Depremlerin sýrrý " ) 
+local v = find_npc_by_vnum ( 20011 ) 
+if 0 == v then 
+else 
+target . vid ( "__TARGET__" , v , "Uriel" ) 
+end 

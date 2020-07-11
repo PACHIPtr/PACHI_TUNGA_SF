@@ -1,0 +1,77 @@
+eggs_hunt={["start"]=0,isMetinStone= function (npcVnum)if npcVnum >= 8041 and npcVnum <= 8050 then 
+return true 
+end 
+return false 
+end ,checkLevelLimit= function (npcLevel,levelLimit)if ( npcLevel - levelLimit <= pc . get_level ( ) ) and ( pc . get_level ( ) <= npcLevel + levelLimit ) then 
+return true 
+end 
+return false 
+end ,CountItemRange= function (firstVnum,lastVnum)local amount = 0 
+for item = firstVnum , lastVnum , 1 begin 
+local i = pc . count_item ( item ) 
+amount = amount + i 
+end 
+return amount 
+end ,RemoveItemRange= function (amountLeft,firstVnum,lastVnum)if eggs_hunt . CountItemRange ( firstVnum , lastVnum ) < amountLeft then 
+return false 
+end 
+for currentVnum = firstVnum , lastVnum , 1 begin 
+local currentAmount = pc . count_item ( currentVnum ) 
+if currentAmount > 0 then 
+if currentAmount < amountLeft then 
+pc . remove_item ( currentVnum , currentAmount ) 
+amountLeft = amountLeft - currentAmount 
+else 
+pc . remove_item ( currentVnum , amountLeft ) 
+return true 
+end 
+end 
+end 
+end ,giveMagicEggReward= function ()rewardTable = { 
+{ 70102 , 1 } , { 71108 , 5 } , { 71026 , 1 } , { 72043 , 1 } , { 72304 , 1 } , 
+{ 27992 , 1 } , { 27993 , 1 } , { 27994 , 1 } , { 71094 , 1 } , { 71084 , 1 } , 
+{ 71085 , 1 } , { 72308 , 1 } , { 72724 , 1 } , { 72728 , 1 } , { 18900 , 1 } , 
+{ 100400 , 1 } 
+} 
+local rewardPos = number ( 1 , table . getn ( rewardTable ) ) 
+pc . give_item2 ( rewardTable [ rewardPos ] [ 1 ] , rewardTable [ rewardPos ] [ 2 ] ) 
+end ,getRewardByLevel= function ()rewardTable = { 
+[ 1 ] = { 
+{ 27001 , 200 } , { 27004 , 200 } , { 27100 , 20 } , { 27103 , 20 } , { 50701 , 5 } , 
+{ 30053 , 5 } , { 30073 , 5 } , { 30033 , 5 } , { 30010 , 5 } , { 30032 , 5 } , { 30031 , 5 } 
+} , 
+[ 2 ] = { 
+{ 27002 , 200 } , { 27005 , 200 } , { 27101 , 20 } , { 27104 , 20 } , { 50701 , 10 } , 
+{ 50703 , 10 } , { 50704 , 10 } , { 50702 , 10 } , { 50300 , 1 } , { 30196 , 3 } , { 30090 , 5 } 
+} , 
+[ 3 ] = { 
+{ 27003 , 200 } , { 27006 , 200 } , { 27102 , 10 } , { 27105 , 10 } , 
+{ 50701 , 15 } , { 50703 , 15 } , { 50704 , 15 } , { 50702 , 15 } , { 50706 , 15 } , { 50707 , 15 } , { 50705 , 15 } , { 50708 , 15 } , 
+{ 50300 , 1 } , { 30195 , 3 } , { 30193 , 3 } , { 30197 , 3 } 
+} , 
+[ 4 ] = { 
+{ 27003 , 200 } , { 27006 , 200 } , { 27102 , 10 } , { 27105 , 10 } , 
+{ 50701 , 15 } , { 50703 , 15 } , { 50704 , 15 } , { 50702 , 15 } , { 50706 , 15 } , { 50707 , 15 } , { 50705 , 15 } , { 50708 , 15 } , 
+{ 50300 , 1 } , { 30198 , 3 } , { 30199 , 3 } 
+} , 
+[ 5 ] = { 
+{ 27102 , 10 } , { 27105 , 10 } , { 50091 , 100 } , { 50092 , 100 } , { 50093 , 100 } , { 50094 , 100 } , 
+{ 50300 , 1 } , { 30195 , 3 } , { 30193 , 3 } , { 30197 , 3 } , { 30198 , 3 } , { 30199 , 3 } 
+} , 
+} 
+local level = 1 
+if pc . get_level ( ) <= 18 then 
+level = 1 
+elseif pc . get_level ( ) > 18 and pc . get_level ( ) <= 30 then 
+level = 2 
+elseif pc . get_level ( ) > 30 and pc . get_level ( ) <= 52 then 
+level = 3 
+elseif pc . get_level ( ) > 52 and pc . get_level ( ) <= 74 then 
+level = 4 
+elseif pc . get_level ( ) > 74 then 
+level = 5 
+end 
+local item_table = rewardTable [ level ] 
+local itemPos = number ( 1 , table . getn ( rewardTable [ level ] ) ) 
+return rewardTable [ level ] [ itemPos ] [ 1 ] , number ( 1 , rewardTable [ level ] [ itemPos ] [ 2 ] ) 
+end }

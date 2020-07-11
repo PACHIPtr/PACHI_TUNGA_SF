@@ -1,0 +1,114 @@
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+if party . is_leader ( ) or party . is_party ( ) then 
+say_reward ( "Bu zindana grup halinde giremezsin" ) 
+say_reward ( "lütfen önce bulundugun grupdan ayril !" ) 
+return 
+end 
+if ( pc . get_channel_id ( ) == 2 or pc . get_channel_id ( ) == 3 or pc . get_channel_id ( ) == 4 or pc . get_channel_id ( ) == 5 or pc . get_channel_id ( ) == 6 ) then 
+say ( "Ruhlar Mağarası:" ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Sadece 1. kanaldan giriş yapabilirsin." ) 
+return 
+end 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Ruhlar Magarası yeraltındaki en tehlikeli[ENTER]yaratıkların bulundugu bir yeraltı zindanı[ENTER]giriş yapabilmek için 110 seviyenin üstünde olman gerekiyor" ) 
+say_item ( item_name ( 31324 ) , 31324 , "" ) 
+wait ( ) 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Giriş yaptığında eşya yok olacak. " ) 
+say ( "" ) 
+say_reward ( "Devam etmek istiyor musun?" ) 
+say ( "" ) 
+local s = select ( "Evet" , "Hayır" ) 
+if s == 1 then 
+if not pc . can_warp ( ) then 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Henüz ışınlanamazsın." ) 
+say ( "" ) 
+return 
+elseif pc . count_item ( 31324 ) < 1 then 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Envanterinde yeterli miktarda yok:" ) 
+say ( string . format ( "%s." , item_name ( 31324 ) ) ) 
+say ( "" ) 
+return 
+elseif pc . level < 110 or pc . level > 120 then 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Seviyen giriş gereksinimlerini karşılamıyor. " ) 
+say ( "Gereksinimler:" ) 
+say ( string . format ( "Minimum Seviye: %d." , 110 ) ) 
+say ( string . format ( "Maksimum Seviye: %d." , 120 ) ) 
+say ( "" ) 
+return 
+elseif get_time ( ) < pc . getqf ( "md_player_time_110" ) then 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Soguma sureniz henuz dolmadi!" ) 
+say ( "Kalan süre: " .. dungeon_get_duration ( pc . getqf ( "md_player_time_110" ) - get_global_time ( ) ) .. "" ) 
+say ( "" ) 
+if ( game . get_event_flag ( "enable_time_midgard" ) == 1 ) then 
+say ( "Beta Server; süreyi sıfırlamak mı istiyorsun?" ) 
+if select ( "Evet" , "Hayır" ) == 1 then 
+pc . setqf ( "md_player_time_110" , 0 ) 
+return 
+end 
+end 
+return 
+elseif game . get_event_flag ( "enable_midgard_dungeon" ) == 1 then 
+say ( mob_name ( 20505 ) ) 
+addimage ( 35 , 35 , "ruhlar.tga" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "" ) 
+say ( "Ruhlar Magarası henüz aktif durumda değildir." ) 
+say ( "" ) 
+return 
+else 
+pc . remove_item ( 31324 , 1 ) 
+pc . setqf ( "md_player_time_110" , get_time ( ) + 60 * 60 * 2 ) 
+pc . setqf ( "join_midgard_dung" , 1 ) 
+d . new_jump ( 507 , 21144 * 100 , 17115 * 100 ) 
+end 
+end 

@@ -1,0 +1,5 @@
+say_title ( "Köy Gardiyaný:" ) 
+say ( "Burada loncaný, sýralamada loncana yakýn olan" ) 
+say ( "diðer loncalarý görebilirsin: [DELAY value;0]" ) 
+say ( "|Lonca adý |Puaný |Zaferleri |Beraberlikleri |Yenilgileri" ) 
+say ( guild . around_ranking_string ( ) .. "[/DELAY]" ) 

@@ -1,0 +1,112 @@
+#적상액						
+section						
+	item_vnum	50821				
+	apply_type	CRITICAL_PCT				
+	apply_value	20	20	20	20	20
+	apply_duration	900	900	900	900	900
+end						
+						
+#홍상액						
+section						
+	item_vnum	50822				
+	apply_type	PENETRATE_PCT				
+	apply_value	20	20	20	20	20
+	apply_duration	900	900	900	900	900
+end						
+						
+#황상액						
+section						
+	item_vnum	50823				
+	apply_type	ATTACK_SPEED				
+	apply_value	8	8	8	8	8
+	apply_duration	900	900	900	900	900
+end						
+						
+#녹상액						
+section						
+	item_vnum	50824				
+	apply_type	RESIST_MAGIC				
+	apply_value	8	8	8	8	8
+	apply_duration	900	900	900	900	900
+end						
+
+#청상액						
+section						
+	item_vnum	50825				
+	apply_type	ATT_BONUS				
+	apply_value	120	120	120	120	120
+	apply_duration	900	900	900	900	900
+end						
+
+#백상액						
+section						
+	item_vnum	50826				
+	apply_type	DEF_BONUS				
+	apply_value	200	200	200	200	200
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50827				
+	apply_type	NORMAL_HIT_DAMAGE_BONUS				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50828				
+	apply_type	ATT_BONUS_TO_MONSTER				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50829				
+	apply_type	ATTBONUS_UNDEAD				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50830				
+	apply_type	ATTBONUS_DEVIL				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50831				
+	apply_type	ATTBONUS_HUMAN				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50832				
+	apply_type	ATTBONUS_STONE				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#백상액						
+section						
+	item_vnum	50833				
+	apply_type	ATTBONUS_BOSS				
+	apply_value	12	12	12	12	12
+	apply_duration	900	900	900	900	900
+end
+
+#충기환
+section
+	item_vnum	51002
+	apply_type	ENERGY
+	apply_value	3	3	7	7	10
+	apply_duration	7200	7200	7200	7200	7200
+end
+

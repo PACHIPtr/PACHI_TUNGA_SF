@@ -1,0 +1,18 @@
+if npc . get_race ( ) == 2502 and pc . getf ( "harvest_festival" , "mob1_info" ) == 6 then 
+harvest_festival . kill_action ( 2502 , 1 ) 
+end 
+if npc . get_race ( ) == 2202 and pc . getf ( "harvest_festival" , "mob1_info" ) == 5 then 
+harvest_festival . kill_action ( 2202 , 1 ) 
+end 
+if npc . get_race ( ) == 701 and pc . getf ( "harvest_festival" , "mob1_info" ) == 4 then 
+harvest_festival . kill_action ( 701 , 1 ) 
+end 
+if npc . get_race ( ) == 501 and pc . getf ( "harvest_festival" , "mob1_info" ) == 3 then 
+harvest_festival . kill_action ( 501 , 1 ) 
+end 
+if npc . get_race ( ) == 301 and pc . getf ( "harvest_festival" , "mob1_info" ) == 2 then 
+harvest_festival . kill_action ( 301 , 1 ) 
+end 
+if npc . get_race ( ) == 105 and pc . getf ( "harvest_festival" , "mob1_info" ) == 1 then 
+harvest_festival . kill_action ( 105 , 1 ) 
+end 

@@ -1,0 +1,19 @@
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( locale . zodyak_portal_konusma ) 
+local s = select ( locale . deviltower_enter , locale . deviltower_no_enter ) 
+if s == 1 then 
+if party . is_party ( ) then 
+if zodiac_temples . CheckAnimasfer ( ) == false then 
+return 
+end 
+zodiac_temples . DeleteAnimasfer ( ) 
+else 
+if pc . get_zodiac_point ( ) < 12 then 
+say_title ( mob_name ( npc . get_race ( ) ) ) 
+say ( "Yeterince animasfere sahip deðilsin!" ) 
+return 
+end 
+pc . change_zodiac_point ( - 12 ) 
+end 
+zodiac_temple . starttemple ( 8 ) 
+end 

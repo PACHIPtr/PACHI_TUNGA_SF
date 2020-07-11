@@ -1,0 +1,2 @@
+if pc . get_level ( ) >= 1 then set_state ( "farming" ) 
+ return end 

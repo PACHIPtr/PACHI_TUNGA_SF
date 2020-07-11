@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\plechi_demon_monstrum\attack01.GR2"
+MotionDuration           2.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.000000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01"
+        FollowingEnable      0
+        EffectFileName       "D:/ymir work/effect/plechito/monster/demon_monster_attack01.mse"
+        EffectPosition       0.000000 -200.000000 -50.000000
+    }
+}
+Group AttackingData
+{
+    AttackType           0
+    HittingType          2
+    StiffenTime          0.000000
+    InvisibleTime        0.300000
+    ExternalForce        0.000000
+    HitLimitCount        2
+    
+    MotionType           2
+    HitDataCount         1
+    Group HitData00
+    {
+        AttackingStartTime   1.095000
+        AttackingEndTime     1.903173
+        AttackingBone        "Bip01"
+        WeaponLength         64.000000
+        List HitPosition
+        {
+            1.095000 0.000000 -230.000000 50.000000 -0.000000 0.000000 50.000000
+            1.105000 10.000000 -230.000000 50.000000 -0.000000 0.000000 50.000000
+            1.65000 80.000000 -230.000000 50.000000 -0.000000 0.000000 50.000000
+		}
+   }
+}

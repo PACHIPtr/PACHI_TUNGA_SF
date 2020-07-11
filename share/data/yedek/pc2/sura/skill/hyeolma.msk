@@ -1,0 +1,20 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"TOGGLE" "STANDING_SKILL"
+
+Name			"혈마각성"
+Description		"자신의 피를 불태워 마력을 강화 한다"
+
+IconFileName	"skill/sura/hyeolma.sub"
+MotionIndex		2
+
+List AffectData
+{
+	"마법 공격력 : +%.0f"	"3 + (SkillPoint / 4)"	""
+}
+
+MaxLevel				"20"
+LevelUpPoint			"4"
+NeedSPFormula			"50"
+ContinuationSPFormula	"3"

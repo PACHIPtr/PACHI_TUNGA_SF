@@ -1,0 +1,62 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\monster2\12zi_snake_boss\12zi_snake_boss.GR2"
+
+Group ShapeData
+{
+	PathName	"D:\Ymir Work\monster2\12zi_snake_boss\"
+
+	ShapeDataCount			1
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"12zi_snake_boss.gr2"
+		SourceSkin			"12zi_snake_boss1.dds"
+		TargetSkin			"12zi_snake_boss2.dds"
+		SourceSkin2			"12zi_snake_boss1_weapon.dds"
+		TargetSkin2			"12zi_snake_boss2_weapon.dds"
+	}
+}
+
+Group AttachingData
+{
+    AttachingDataCount       2
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        1
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           140.000000
+            Position         0.000000 20.000000 -20.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           150.000000
+            Position         0.000000 20.000000 -20.000000
+        }
+    }
+}

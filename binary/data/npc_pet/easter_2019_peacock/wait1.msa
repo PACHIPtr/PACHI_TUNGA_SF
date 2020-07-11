@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc_pet/easter_2019_peacock/wait1.GR2"
+MotionDuration           3.600000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.289051
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone06"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/pet/pet_peacock_wait1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.289051
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone13"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/pet/pet_peacock_wait1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.289051
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bone13(mirrored)"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/pet/pet_peacock_wait1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

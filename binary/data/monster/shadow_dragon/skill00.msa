@@ -1,0 +1,64 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\shadow_dragon\skill00.GR2"
+MotionDuration           3.600000
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         1.156089
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Jaw02_jnt_end"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/plechito/monster/shadow_dragon_skill00a2.mse"
+        EffectPosition       0.000000 150.000000 100.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.156089
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/plechito/monster/shadow_dragon_skill00b.mse"
+        EffectPosition       0.000000 -550.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      2
+        StartingTime         1.156089
+        
+        DuringTime           1.000000
+        Power                500
+        AffectingRange       400
+    }
+    Group Event03
+    {
+        MotionEventType      4
+        StartingTime         1.156089
+        DuringTime           1.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           800.000000
+            Position         0.000000 -500.000000 0.000000
+        }
+    }
+}

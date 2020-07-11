@@ -1,0 +1,2 @@
+GENERAL WAIT stay00.msa 100
+GENERAL DEAD destroy.msa 100

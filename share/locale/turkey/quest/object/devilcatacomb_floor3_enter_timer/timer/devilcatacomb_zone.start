@@ -1,0 +1,22 @@
+local setting = devilcatacomb_zone . setting ( ) 
+d . set_warp_location ( 65 , 5914 , 992 ) 
+d . exit_all_by_item_group ( "reapers_credit" ) 
+d . delete_item_in_item_group_from_all ( "reapers_credit" , 1 ) 
+d . purge ( ) 
+d . jump_all ( setting . floor3_entry . x + setting . base . x , setting . floor3_entry . y + setting . base . y ) 
+d . setf ( "level" , 3 ) 
+d . setqf2 ( "devilcatacomb_zone" , "level" , 3 ) 
+d . regen_file ( get_locale_base_path ( ) .. "/map/metin2_map_devilcatacomb/base3_regen.txt" ) 
+timer ( "warp_timer" , 3 ) 
+local position = setting . floor3_stone_pos local n = number ( 1 , 7 ) 
+for i = 1 , 7 begin 
+if ( i ~= n ) 
+then 
+d . set_unique ( "fake" .. i , d . spawn_mob ( setting . floor3_stone , position [ i ] [ 1 ] , position [ i ] [ 2 ] ) ) 
+end 
+end 
+local vid = d . spawn_mob ( setting . floor3_stone , position [ n ] [ 1 ] , position [ n ] [ 2 ] ) 
+d . set_unique ( "real" , vid ) 
+if ( is_test_server ( ) ) then 
+chat ( position [ n ] [ 1 ] , position [ n ] [ 2 ] ) 
+end 

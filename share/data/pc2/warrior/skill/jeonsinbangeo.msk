@@ -1,0 +1,17 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Name			"전신방어"
+Description		"방어에만 전념한다"
+
+IconFileName		"skill/warrior/jeonsinbangeo.sub"
+MotionIndex		5
+
+List AffectData
+{
+	"방어력 : %.0f"	"1 + ( SkillPoint / 2 )" ""
+}
+
+MaxLevel			"10"
+LevelUpPoint		"2"
+NeedSPFormula		"100"

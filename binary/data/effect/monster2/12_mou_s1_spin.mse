@@ -1,0 +1,39 @@
+BoundingSphereRadius   400.000000
+BoundingSpherePosition 0.000000 0.000000 200.000000
+
+Group Mesh
+{
+    StartTime           0.112000
+    List TimeEventPosition
+    {
+        0.000000 "MOVING_TYPE_DIRECT" 0.000000 0.000000 0.000000
+    }
+    
+    MeshFileName               	"12_mou_s1_spin.mde"
+    MeshAnimationLoopEnable    	0
+    MeshAnimationLoopCount     	0
+    MeshAnimationFrameDelay    	0.020000
+    
+    MeshElementCount           	1
+    Group MeshElement00
+    {
+        BillboardType              	0
+        BlendingEnable             	1
+        BlendingSrcType            	5
+        BlendingDestType           	2
+        
+        TextureAnimationLoopEnable 	1
+        TextureAnimationFrameDelay 	0.020000
+        TextureAnimationStartFrame 	0
+        
+        ColorOperationType         	4
+        ColorFactor                	0.501961 0.419608 0.596078 1.000000
+        List TimeEventAlpha
+        {
+            0.000000 0.000000
+            0.213333 0.432990
+            0.500000 0.670103
+            1.000000 0.000000
+        }
+    }
+}

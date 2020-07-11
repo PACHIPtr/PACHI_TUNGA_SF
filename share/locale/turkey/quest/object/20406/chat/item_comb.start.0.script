@@ -1,0 +1,13 @@
+say ( "Bonuslarýný seçtiðin kostüm 2'den kostüm 1'e" ) 
+say ( "aktarabilirsin. Önce 'kostüm bonusu aktarýmý' " ) 
+say ( "eþyasýný içine çekerek pencereyi etkinleþtir." ) 
+say ( "sonra kostümleri seçebilirsin." ) 
+say ( "Bonusun kostüm 2'den kostüm 1'e aktarýlmasý iþlemi" ) 
+say ( "Sýrasýnda Kostüm 2 yok edilir. Devam et?" ) 
+say ( "" ) 
+local confirm = select ( "Evet." , "Hayýr" ) 
+if confirm == 2 then 
+return 
+end 
+setskin ( NOWINDOW ) 
+command ( "item_comb open_costume" ) 

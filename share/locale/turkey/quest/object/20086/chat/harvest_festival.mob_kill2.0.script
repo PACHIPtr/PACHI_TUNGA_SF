@@ -1,0 +1,45 @@
+local quest_count = pc . getqf ( "harvest_festival_count" ) 
+local quest_complete = pc . getqf ( "harvest_festival_mob_complete" ) 
+if quest_count >= 10 then 
+say_title ( "Handu-Up: " ) 
+say ( "Yağmacıları kovalayıp stoklarımızı bize geri[ENTER]getirdiğin için sana minnettarız![ENTER]Sana çok borçluyuz.[ENTERSen olmasaydın büyük sıkıntılar yaşayacaktık! " ) 
+set_state ( "information" ) 
+return 
+end 
+if quest_complete == 1 then 
+pc . setqf ( "harvest_festival_count" , quest_count + 1 ) 
+pc . setqf ( "harvest_festival_mob_complete" , 0 ) 
+pc . setqf ( "mob_kill1_count" , 0 ) 
+pc . setqf ( "mob_kill2_count" , 0 ) 
+local quest_count = pc . getqf ( "harvest_festival_count" ) 
+say_title ( "Handu-Up: " ) 
+say ( "Harika! " ) 
+wait ( ) 
+local rice_count = pc . getqf ( "rice_count" ) 
+local cake_count = pc . getqf ( "cake_count" ) 
+pc . setqf ( "rice_count" , rice_count + cake_count ) 
+pc . setqf ( "cake_count" , 0 ) 
+say_title ( "Handu-Up: " ) 
+say ( string . format ( "Zaten %s Pirinç Patlağı ele geçirdin! " , rice_count ) ) 
+wait ( ) 
+if quest_count >= 10 then 
+char_log ( 0 , "EVENT_RECORD" , "harvest_festival clear" ) 
+say_title ( "Handu-Up: " ) 
+say ( "Yağmacıları kovalayıp stoklarımızı bize geri[ENTER]getirdiğin için sana minnettarız![ENTER]Sana çok borçluyuz.[ENTERSen olmasaydın büyük sıkıntılar yaşayacaktık! " ) 
+set_state ( "information" ) 
+return 
+else 
+say_title ( "Handu-Up: " ) 
+say ( "Stoklarımızın hala büyük kısmı eksik.[ENTER]Bize yardım etmeye devam edecek misin? " ) 
+end 
+local replay_set = select ( "Size yardım edeceğim! " , "Malesef yardım edemeyeceğim. " ) 
+if replay_set == 2 then 
+set_state ( "information" ) 
+return 
+end 
+local current_count = quest_count + 1 
+say_title ( "Handu-Up: " ) 
+say ( string . format ( "Cesur bir savaşçısın. Devam et![ENTER]Görev: %s[ENTER]Bu görevi toplam on kere kabul edebilirsin." , current_count ) ) 
+set_state ( "mob_kill1" ) 
+return 
+end 

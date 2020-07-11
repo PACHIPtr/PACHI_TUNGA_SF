@@ -1,0 +1,26 @@
+event_halloween={["start"]=0,pumpkin_count= function ()return 410000 + 4100 * game . get_event_flag ( "halloween_round" ) 
+end ,set_collected_pumpkin= function (a,b)mysql . query ( "update log.halloween_event set collected_pumpkin=collected_pumpkin + " .. a .. " where pid=" .. b .. "" ) 
+end ,set_round_reward= function ()mysql . query ( "update log.halloween_event set round_reward=round_reward + 1 where collected_pumpkin>=100" ) 
+end ,set_rank_reward= function ()mysql . query ( "update log.halloween_event set rank_reward=rank_reward + 1 ORDER BY collected_pumpkin DESC LIMIT 5" ) 
+end ,delete_round_reward= function (a)mysql . query ( "update log.halloween_event set round_reward=0 where pid=" .. a .. "" ) 
+end ,delete_rank_reward= function (a)mysql . query ( "update log.halloween_event set rank_reward=0 where pid=" .. a .. "" ) 
+end ,delete_collected_pumpkin= function ()mysql . query ( "update log.halloween_event set collected_pumpkin=0 where pid>0" ) 
+end ,get_collected_pumpkin= function (a)local x = mysql . query ( "select collected_pumpkin from log.halloween_event where pid=" .. a .. " ORDER BY collected_pumpkin DESC LIMIT 1" ) 
+if x == nil then 
+return 0 
+end 
+local y = tonumber ( x [ 1 ] [ 1 ] ) 
+return y 
+end ,get_round_reward= function (a)local x = mysql . query ( "select round_reward from log.halloween_event where pid=" .. a .. " ORDER BY collected_pumpkin DESC LIMIT 1" ) 
+if x == nil then 
+return 0 
+end 
+local y = tonumber ( x [ 1 ] [ 1 ] ) 
+return y 
+end ,get_rank_reward= function (a)local x = mysql . query ( "select rank_reward from log.halloween_event where pid=" .. a .. " ORDER BY collected_pumpkin DESC LIMIT 1" ) 
+if x == nil then 
+return 0 
+end 
+local y = tonumber ( x [ 1 ] [ 1 ] ) 
+return y 
+end }

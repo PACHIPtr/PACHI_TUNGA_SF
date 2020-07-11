@@ -1,0 +1,2 @@
+if pc . level > 0 then set_state ( "to_spider_2floor" ) 
+ return end 

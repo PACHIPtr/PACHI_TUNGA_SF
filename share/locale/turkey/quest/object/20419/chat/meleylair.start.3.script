@@ -1,0 +1,70 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Ýn'e Girmek istiyor musun? " ) 
+say ( "" ) 
+local agree = select ( "Evet " , "Hayýr " ) 
+if agree == 1 then 
+local registered , limit = MeleyLair . Enter ( ) 
+if not registered and limit == 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+if pc . is_guild_master ( ) then 
+say ( "Ýn'e girebilmek için [ENTER]loncanýzý kayýt etmeniz gerekmektedir. " ) 
+else 
+say ( "Lonca lideriniz in'e kayýt ettirmelidir.[ENTER]Ýn'e eriþemiyorsunuz. " ) 
+end 
+return 
+elseif pc . get_level ( ) < 75 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( string . format ( "Giriþ yapabilmek için seviyeniz %s olmalýdýr." , 75 ) ) 
+return 
+elseif not registered and limit > 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( string . format ( "Ýn'e Bu CH %d.'den eriþebilirsiniz. " , limit ) ) 
+return 
+elseif limit == 1 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( string . format ( "Þuanda odada %d lonca üyesi mevcut.[ENTER]Ýn'e eriþemiyorsun. " , MeleyLair . GetPartecipantsLimit ( ) ) ) 
+return 
+elseif limit == 2 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Bir Hata Oluþtu. Lütfen Yetkili Kiþilere Ulaþýn. " ) 
+return 
+elseif limit == 3 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Zindan Zaten Bitti. " ) 
+return 
+elseif limit == 4 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Savaþa katýlmak için; " ) 
+say ( "oyun seçeneklerinden lonca seçeneðine alýn. " ) 
+return 
+elseif limit == 5 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Senden önce bir lonca giriþ yaptý; " ) 
+say ( "Odada þuanda bir ekip bulunuyor." ) 
+return 
+elseif limit == 6 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( string . format ( "Giriþ yapabilmek için seviyeniz %s olmalýdýr." , 75 ) ) 
+return 
+elseif limit == 7 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( "" ) 
+say ( "Envanterinde geçit bileti bulamadým." ) 
+say_item_vnum ( 71201 ) 
+return 
+end 
+return 
+else 
+setskin ( NOWINDOW ) 
+return 
+end 

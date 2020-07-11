@@ -1,0 +1,17 @@
+if npc . get_guild ( ) == pc . get_guild ( ) then 
+say_title ( "Silah Ustasý:" ) 
+say ( "Görünüþe göre sen bizim loncadansýn. Bu sana %10" ) 
+say ( "baþarý þansý kazandýrýr." ) 
+say ( "Yanýsýra bizim üyelerimize %5 fiyat indirimimiz" ) 
+say ( "olur. Hoþgeldin evlat!" ) 
+say ( "Ben silahlarý geliþtirebilirim." ) 
+say ( "Þimdi bana geliþtirmek istediðin nesneyi ver." ) 
+else 
+say_title ( "Silah Ustasý:" ) 
+say ( "Benim adým Stanley. Ben silah geliþtirme " ) 
+say ( "sorumlusuyum ve bu iþi köydeki demirci ustasýndan" ) 
+say ( "daya iyi yaparým! Bana geldiðin zaman" ) 
+say ( "Bana geldiðin zaman" ) 
+say ( "geliþtirmedeki baþarý þansýn %10 daha fazla olur." ) 
+say ( "Þimdi bana geliþtirmek istediðin silahý ver." ) 
+end 

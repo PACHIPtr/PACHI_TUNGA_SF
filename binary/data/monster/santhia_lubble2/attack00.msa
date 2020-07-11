@@ -1,0 +1,21 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\monster\santhia_lubble2\attack00.GR2"
+MotionDuration           1.800000
+
+Group MotionEventData
+{
+    MotionEventDataCount     1
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.800000
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01"
+        FollowingEnable      1
+        EffectFileName       "D:/ymir work/effect/monster2/impact2_small.mse"
+        EffectPosition       0.000000 -100.000000 0.000000
+    }
+}

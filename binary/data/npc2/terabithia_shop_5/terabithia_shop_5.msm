@@ -1,0 +1,76 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc2\terabithia_shop_5\terabithia_shop_5.GR2"
+
+Group ShapeData
+{
+	PathName		 "D:\Ymir Work\npc2\terabithia_shop_5\"
+	ShapeDataCount		 2
+
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"terabithia_shop_5.GR2"
+		SourceSkin			"pa042_1a.dds"
+		TargetSkin			"pa042_1a.dds"
+		SourceSkin2			"pa047_1b.dds"
+		TargetSkin2			"pa047_1b.dds"
+	}
+	Group ShapeData01
+	{
+		ShapeIndex			0
+
+		Model				"terabithia_shop_5.GR2"
+		SourceSkin			"pa047_1a.dds"
+		TargetSkin			"pa047_1a.dds"
+	}
+}
+Group AttachingData
+{
+    AttachingDataCount       3
+    
+    Group AttachingData00
+    {
+        AttachingDataType    1
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box016"
+        
+        CollisionType        3
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           70.000000
+            Position         0.000000 0.000000 50.000000
+        }
+    }
+    
+    Group AttachingData01
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box016"
+        
+        EffectScriptName     "D:\ymir work\effect\background\trawa2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+    
+    Group AttachingData02
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Box016"
+        
+        EffectScriptName     "D:\ymir work\effect\santhia_env\motyli2.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}

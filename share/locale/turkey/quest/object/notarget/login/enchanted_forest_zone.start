@@ -1,0 +1,10 @@
+local idx = pc . get_map_index ( ) 
+local setting = enchanted_forest_zone . setting ( ) 
+if idx >= ( setting . map_index * 10000 ) and idx < ( setting . map_index * 10000 + 10000 ) then 
+pc . setf ( "enchanted_forest" , "limit_activity" , 0 ) 
+if pc . getqf ( "dungeon_enter" ) > 0 then 
+pc . setqf ( "dungeon_enter" , 0 ) 
+return 
+end 
+pc . warp ( 816700 , 1.505e+06 ) 
+end 

@@ -1,0 +1,46 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/pc3/wolfman/horse/skill_splash.GR2"
+MotionDuration           2.500000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     3
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.900243
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc3/common/effect/skill_splash_02.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.644769
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc3/common/effect/skill_splash.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.687348
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/pc3/common/effect/skill_splash_03.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

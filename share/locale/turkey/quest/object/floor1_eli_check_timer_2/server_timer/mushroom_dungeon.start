@@ -1,0 +1,11 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+if d . count_monster ( ) <= 5 then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "10 saniye içerisinde bir sonraki kata gönderileceksin !" ) 
+server_timer ( "mushroom_dungeon_end_first" , 10 , d . get_map_index ( ) ) 
+clear_server_timer ( "floor1_eli_check_timer_2" , d . get_map_index ( ) ) 
+else 
+server_timer ( "floor1_eli_check_timer" , 10 , d . get_map_index ( ) ) 
+clear_server_timer ( "floor1_eli_check_timer_2" , d . get_map_index ( ) ) 
+end 
+end 

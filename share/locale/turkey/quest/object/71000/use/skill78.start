@@ -1,0 +1,33 @@
+say_title ( item_name ( 71000 ) ) 
+if pc . get_skill_group ( ) == 0 then 
+say ( "Henüz bir eğitim'e başlamadın." ) 
+say ( "" ) 
+return 
+end 
+local check_learned = 0 
+local new_skill_list = { 221 , 222 , 223 , 224 , 225 , 226 , 227 , 228 , 229 , 236 , 237 , 238 , 239 , 240 , 241 , 242 , 243 , 244 } 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+check_learned = 1 
+end 
+end 
+if check_learned == 0 then 
+say ( "Herhangi bir korunma becerin yok." ) 
+say ( "" ) 
+return 
+end 
+say ( "Hızlandırma ve korunma beceri bilgileri unutulacak! " ) 
+say ( "Kabul ediyor musun? " ) 
+say ( "" ) 
+local confirm = select ( "Evet" , "Hayır" ) 
+if confirm == 1 then 
+for i = 1 , table . getn ( new_skill_list ) begin 
+skill_vnum = new_skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > 0 then 
+pc . set_skill_level ( skill_vnum , 0 ) 
+end 
+end 
+pc . remove_item ( item . get_vnum ( ) , 1 ) 
+end 
+return 

@@ -1,0 +1,77 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\YMIR WORK\monster3\b_pewi_diabel\skill.GR2"
+MotionDuration           3.100000
+Accumulation           0.00	-423.93	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     6
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         2.213361
+        DuringTime           0.200000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           500.000000
+            Position         0.000000 -300.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      2
+        StartingTime         2.058038
+        
+        DuringTime           0.300000
+        Power                300
+        AffectingRange       300
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.993320
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "root"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/fire_tiger_24.mse"
+        EffectPosition       0.000000 -300.000000 -10.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.194155
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01_L_Finger12"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/fire_red1.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.863883
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01_L_Finger12"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/fire_ghost_boom_small.mse"
+        EffectPosition       0.000000 0.000000 10.000000
+    }
+}

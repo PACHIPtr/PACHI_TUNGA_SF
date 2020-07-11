@@ -1,0 +1,39 @@
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Demek bineðini geliþtirmek istiyorsun, öyle mi?[ENTER]Nasýl yapýldýðýný biliyor musun?[ENTER]Hadi gel anlatayým. " ) 
+say ( "" ) 
+wait ( ) 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Bineðini geliþtirip, yabani binek hayvaný[ENTER]yapabilmen için Evrim Parþömeni arayýþýna[ENTER]çýkmalýsýn. Sonra yaban hayvanýný eðitip, cesur[ENTER]binek hayvaný yapabilmek için de Mutasyon[ENTER]Parþömeni'ni bulmalýsýn. Tehlikeli devlerin[ENTER]yaþadýðý çok uzak bir diyarda saklý[ENTER]olduklarý söylenir! " ) 
+say ( "" ) 
+wait ( ) 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Bana o parþömenlerden birini getirirsen bineðini[ENTER]geliþtireceðim. Getirdin mi yoksa? " ) 
+local s = select ( "Evet, bineðimi geliþtirmek istiyorum! " , "Hayýr, þimdi deðil. " ) 
+if 2 == s then 
+return 
+end 
+if pc . count_item ( 50067 ) > 0 or pc . count_item ( 50068 ) > 0 then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Ah, parþömenlerden birini getirmiþsin.[ENTER]Hangisini getirdin?[ENTER]Evrim parþömeniyle tecrübesiz yavru[ENTER]hayvanýný savaþ için eðitiyorsun. Sonra da[ENTER]mutasyon parþömeniyle geliþtirip cesur binek[ENTER]hayvaný yapabiliyorsun. " ) 
+else 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Üzgünüm, parþömen olmadan sana yardýmcý olamam. " ) 
+return 
+end 
+local s = select ( "Evrim Parþömeni bende. " , "Mutasyon Parþömeni bende. " , "Parþömen getirmedim. " ) 
+if 1 == s then 
+if training_mount . check_list ( 50067 , 25 , 11 ) == 1 then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Ah iþte evrim parþömeni! Binek hayvaný mührüne[ENTER]bir göz atayým. Sahtesiyle beni kandýrmaya[ENTER]çalýþan nicelerini gördüm! Ýlk önce gerçek olup[ENTER]olmadýðýna bakacaðým. Ver bakalým.[ENTER](Mührü, Seyis'in üzerine sürükle.) " ) 
+end 
+elseif 2 == s then 
+if training_mount . check_list ( 50068 , 45 , 20 ) == 1 then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Ah iþte mutasyon parþömeni! Binek hayvaný mührüne[ENTER]bir göz atayým. Sahtesiyle beni kandýrmaya[ENTER]çalýþan nicelerini gördüm! Ýlk önce gerçek olup[ENTER]olmadýðýna bakacaðým. Ver bakalým.[ENTER]Mührü, Seyis'in üzerine sürükle.) " ) 
+end 
+elseif 3 == s then 
+say_title ( "" .. mob_name ( 20349 ) .. "" ) 
+say ( "Parþömen bulduðunda bana geri gel.[ENTER] " ) 
+say ( "" ) 
+return 
+end 

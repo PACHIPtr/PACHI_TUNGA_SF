@@ -1,0 +1,9 @@
+if pc . count_item ( 30300 ) >= 1 then 
+pc . remove_item ( 30300 , pc . count_item ( 30300 ) ) 
+end 
+if pc . count_item ( 30302 ) >= 1 then 
+pc . remove_item ( 30302 , pc . count_item ( 30302 ) ) 
+end 
+if pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 then 
+pc . setf ( "devil_tower" , "dungeon_turn" , 1 ) 
+end 

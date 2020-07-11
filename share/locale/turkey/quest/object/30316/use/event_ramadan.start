@@ -1,0 +1,6 @@
+local setting = event_ramadan . setting ( ) 
+if pc . count_item ( setting . bread ) >= 10 then 
+pc . remove_item ( setting . bread , 10 ) 
+pc . remove_item ( setting . plate , 1 ) 
+pc . give_item2 ( setting . iftar , 1 ) 
+end 

@@ -1,0 +1,24 @@
+local s = 0 
+if is_test_server ( ) then 
+test_chat ( "questscroll5.use.50321" ) 
+s = select ( 
+questscroll5 . get_menu ( 50 ) , 
+questscroll5 . get_menu ( 51 ) , 
+questscroll5 . get_menu ( 52 ) , 
+questscroll5 . get_menu ( 53 ) , 
+questscroll5 . get_menu ( 54 ) , 
+questscroll5 . get_menu ( 55 ) , 
+questscroll5 . get_menu ( 56 ) , 
+questscroll5 . get_menu ( 57 ) , 
+questscroll5 . get_menu ( 58 ) , 
+questscroll5 . get_menu ( 59 ) 
+) + 50 - 1 
+else 
+s = number ( 50 , 59 ) 
+end 
+questscroll5 . set_mission ( s ) 
+if item . get_count ( ) > 1 then 
+item . set_count ( item . get_count ( ) - 1 ) 
+else 
+item . remove ( ) 
+end 

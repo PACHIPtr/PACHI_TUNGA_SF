@@ -1,0 +1,7 @@
+local sec = select ( "Meley Bugdan Kurtar" , "Kapat" ) 
+if sec == 1 then 
+say_title ( mob_name ( 20419 ) ) 
+say_reward ( "Meley giriþleri tekrar açýldý." ) 
+game . get_event_flag ( "meley_lair_dungeon_status" , 0 ) 
+game . get_event_flag ( "meley_lair_dungeon_guild" , 0 ) 
+end 

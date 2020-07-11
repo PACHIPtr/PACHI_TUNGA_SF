@@ -1,0 +1,26 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"WEAPON_LIMITATION" "CAN_CHANGE_DIRECTION"
+NeedWeapon		"SWORD" "TWO_HANDED"
+
+Name			"격산타우"
+Description		"전방의 적을 공격한다"
+
+IconFileName		"skill/warrior/gyeoksan.sub"
+MotionIndex		2
+
+List ConditionData
+{
+	"양손검일 경우 사정거리 증가"
+}
+
+List AffectData
+{
+	"파괴력 : %.1f 배"	"(SkillPoint * 15 + 100) / 100" ""
+}
+
+MaxLevel			"30"
+LevelUpPoint		"1"
+CoolTimeFormula		"8"
+NeedSPFormula		"50"

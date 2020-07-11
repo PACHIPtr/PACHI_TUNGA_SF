@@ -1,0 +1,4 @@
+local select_timer = select ( "Sýfýrla" , "Sýfýrlama" ) 
+if select_timer == 1 then 
+pc . setqf ( "cy_player_time_duration" , 0 ) 
+end 

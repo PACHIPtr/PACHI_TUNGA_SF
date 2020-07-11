@@ -1,0 +1,87 @@
+ScriptType         EnvrionmentData
+ScriptVersion      1.0000
+
+Group DirectionalLight
+{
+    Direction     0.500000 0.500000 -0.500000
+
+    Group Background
+    {
+        Enable        1
+        Diffuse       0.447059 0.227451 0.172549 1.000000
+        Ambient       0.988235 0.686275 0.537255 1.000000
+    }
+    
+    Group Character
+    {
+        Enable        1
+        Diffuse       0.447059 0.227451 0.172549 1.000000
+        Ambient       1.138235 0.836275 0.687255 1.000000
+    }
+}
+Group Material
+{
+    Diffuse       0.992157 0.827451 0.682353 1.000000
+    Ambient       0.847059 0.490196 0.396078 1.000000
+    Emissive      0.592157 0.329412 0.262745 1.000000
+}
+
+Group Fog
+{
+    Enable        1
+    NearDistance  100.000000
+    FarDistance   65000.000000
+    Color         0.560784 0.317647 0.258824 1.000000
+}
+
+Group Filter
+{
+    Enable        0
+    Color         0.298039 0.098039 0.098039 0.000000
+    AlphaSrc      2
+    AlphaDest     2
+}
+
+Group SkyBox
+{
+    bTextureRenderMode    1
+    Scale                 3500.000000 3500.000000 3500.000000
+    GradientLevelUpper    2
+    GradientLevelLower    0
+    FrontFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Front_Sunhorizon.dds"
+    BackFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Back_Sunhorizon.dds"
+    LeftFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Left_Sunhorizon.dds"
+    RightFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Right_Sunhorizon.dds"
+    TopFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Top_Sunhorizon.dds"
+    BottomFaceFileName	   "D:\ymir work\environment\skybox\skybox2\Bottom_Sunhorizon.dds"
+    
+    CloudScale            200000.000000 200000.000000
+    CloudHeight           30000.000000
+    CloudTextureScale     4.000000 4.000000
+    CloudSpeed            0.001000 0.001000
+    CloudTextureFileName  ""
+    List CloudColor
+    {
+        0.000000 0.000000 0.000000 0.000000
+        0.000000 0.000000 0.000000 0.000000
+    }
+    List Gradient
+    {
+        0.745098 0.419608 0.333333 0.000000
+        0.000000 0.000000 0.000000 0.000000
+        
+        0.474510 0.321569 0.282353 0.000000
+        0.000000 0.000000 0.000000 0.000000
+    }
+}
+
+Group LensFlare
+{
+    Enable                     0
+    BrightnessColor            0.980392 0.980392 0.980392 1.000000
+    MaxBrightness              1.000000
+    MainFlareEnable            0
+    MainFlareTextureFileName   ""
+    MainFlareSize              0.200000
+}
+

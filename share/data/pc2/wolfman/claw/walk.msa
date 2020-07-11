@@ -1,0 +1,6 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/pc3/wolfman/claw/walk.GR2"
+MotionDuration           0.800000
+Accumulation             0.00	-180.00	0.00
+

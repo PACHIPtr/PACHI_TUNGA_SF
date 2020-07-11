@@ -1,0 +1,21 @@
+ScriptType			SkillDataScript
+
+Type				LOW
+Attribute			"NEED_TARGET" "ONLY_FOR_ALLIANCE" "CAN_USE_FOR_ME"
+Range				800
+
+Name				"호신"
+Description			"돕고자 하는 자에게 보호의 진을 그려 보호한다"
+
+IconFileName		"skill/shaman/hosin.sub"
+MotionIndex         4
+MotionIndexForMe    3
+
+List AffectData
+{
+	"방어력 +%.0f" "(3 + (SkillPoint / 4)) * (100 + INT/2) / 100" ""
+	"지속 시간 %.0f초" "5 * 60 * (5 + JeungJi) / 5" ""
+}
+
+LevelUpPoint		4
+NeedSPFormula		"SkillPoint * 5"

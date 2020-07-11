@@ -1,0 +1,203 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/monster2/luck_sheep_boss/special_attack2.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     13
+    Group Event00
+    {
+        MotionEventType      4
+        StartingTime         1.381995
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -400.000000 0.000000
+        }
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.362530
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_throw.mse"
+        EffectPosition       0.000000 -150.000000 200.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         1.362530
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_n1_throw.mse"
+        EffectPosition       100.000000 -150.000000 200.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         1.362530
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip01 L Finger01"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_n1_throw.mse"
+        EffectPosition       -100.000000 -150.000000 200.000000
+    }
+    Group Event04
+    {
+        MotionEventType      4
+        StartingTime         1.411192
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -800.000000 0.000000
+        }
+    }
+    Group Event05
+    {
+        MotionEventType      4
+        StartingTime         1.440389
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -1200.000000 0.000000
+        }
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         0.038929
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_making.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event07
+    {
+        MotionEventType      1
+        StartingTime         0.423358
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 L Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_making.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event08
+    {
+        MotionEventType      1
+        StartingTime         0.053528
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_making.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event09
+    {
+        MotionEventType      1
+        StartingTime         0.433090
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 R Hand"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_making.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event10
+    {
+        MotionEventType      2
+        StartingTime         1.352798
+        
+        DuringTime           0.200000
+        Power                300
+        AffectingRange       200
+    }
+    Group Event11
+    {
+        MotionEventType      1
+        StartingTime         1.350000
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "luck_sheep_boss_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/luck_sh_s2_blow.mse"
+        EffectPosition       0.000000 -150.000000 200.000000
+    }
+    Group Event12
+    {
+        MotionEventType      4
+        StartingTime         1.464720
+        DuringTime           0.200000
+        EnableHitProcess     1
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        0.300000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           300.000000
+            Position         0.000000 -1600.000000 0.000000
+        }
+    }
+}

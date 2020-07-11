@@ -1,0 +1,2 @@
+if pc . get_map_index ( ) >= 90000 and pc . get_map_index ( ) < 99999 then pc . setf ( "Crystal" , "dungeon_turn" , 1 ) 
+ return end 

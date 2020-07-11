@@ -1,0 +1,4 @@
+if pc . level >= 30 then say ( "" ) 
+say ( "Kahramanlık Madalyası kayboldu.[ENTER]Bul ve Yu-Hwan'a geri dön. " ) 
+say ( "" ) 
+ return end 

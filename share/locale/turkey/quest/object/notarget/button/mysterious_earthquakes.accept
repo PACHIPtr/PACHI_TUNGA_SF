@@ -1,0 +1,6 @@
+say_title ( "Yongbi çölü sarsıntıları " ) 
+say ( "" ) 
+say ( "Örümcek zindanına git ve Pung-Ho hayatta mı " ) 
+say ( "öğren. Daha sonra durumunu Uriel'e bildir." ) 
+say ( "" ) 
+wait ( ) 

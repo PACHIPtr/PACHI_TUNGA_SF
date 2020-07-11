@@ -1,0 +1,68 @@
+ScriptType               MotionData
+
+MotionFileName           "d:/ymir work/monster2/esgaroth_legenda3/skill2.gr2"
+MotionDuration           3.366667
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     4
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.611482
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip001-R-Finger42"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/krag_ognia.mse"
+        EffectPosition       0.000000 -200.000000 80.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.752053
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip001-R-Finger42"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/ognista_kula.mse"
+        EffectPosition       0.000000 -200.000000 160.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         2.811413
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "Bip001-R-Finger42"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/effect/monster2/kula_wybuch.mse"
+        EffectPosition       0.000000 -950.000000 380.000000
+    }
+	Group Event03
+    {
+        MotionEventType      4
+        StartingTime         0.846715
+        DuringTime           2.000000
+        EnableHitProcess     0
+        
+        AttackType           0
+        HittingType          2
+        StiffenTime          0.000000
+        InvisibleTime        3.000000
+        ExternalForce        0.000000
+        HitLimitCount        0
+        CollisionType        4
+        
+        SphereDataCount      1
+        Group SphereData00
+        {
+            Radius           450.000000
+            Position         0.000000 0.000000 0.000000
+        }
+    }
+}

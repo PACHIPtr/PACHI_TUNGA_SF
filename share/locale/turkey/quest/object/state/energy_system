@@ -1,0 +1,20 @@
+energy_system={["start"]=0,["can_make"]=-1515020254,setting= function ()return 
+{ 
+[ "prob_acc_table" ] = 
+{ 
+[ "65to75" ] = { 30 , 55 , 70 , 80 , 90 , 95 , 97 , 98 , 99 , 100 } , 
+[ "76to85" ] = { 20 , 40 , 60 , 75 , 85 , 91 , 96 , 98 , 99 , 100 } , 
+[ "upto85" ] = { 10 , 25 , 45 , 65 , 80 , 88 , 94 , 97 , 99 , 100 } 
+} , 
+[ "item_num_table" ] = { 0 , 1 , 2 , 3 , 4 , 6 , 8 , 10 , 12 , 15 } , 
+[ "energy_stone" ] = 51001 , 
+[ "charging_stone" ] = 51002 
+} 
+end ,getItemNum= function (str,r)local setting = energy_system . setting ( ) 
+for i = 1 , 10 begin 
+if r < setting . prob_acc_table [ str ] [ i ] then 
+return setting . item_num_table [ i ] 
+end 
+end 
+return 0 
+end }

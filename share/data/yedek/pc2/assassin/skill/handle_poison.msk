@@ -1,0 +1,9 @@
+ScriptType		SkillDataScript
+
+Type			PASSIVE
+Name			"독 다루기"
+Description		"독을 다루는 능력을 강화 한다"
+
+IconFileName	"skill/assassin/handle_poison.sub"
+
+MaxLevel		30

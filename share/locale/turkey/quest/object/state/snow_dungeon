@@ -1,0 +1,144 @@
+snow_dungeon={["start"]=0,get_settings= function ()local snow_dungeon_settings = { } 
+snow_dungeon_settings . map_index = 352 
+snow_dungeon_settings . base_cord = { 5120 , 1536 } 
+snow_dungeon_settings . outside_entry_pos = { 61 , 4327 , 1668 } 
+snow_dungeon_settings . need_level = 90 
+snow_dungeon_settings . need_level_group = 90 
+snow_dungeon_settings . WaitBeforOutAllOnExit = 60 
+snow_dungeon_settings . NextJumpTime = 5 
+snow_dungeon_settings . DurationLoopTimer = 15 
+snow_dungeon_settings . wait_duration = 60 * 60 * 2 
+snow_dungeon_settings . maxlife_time_on_dungeon = 60 * 60 * 2 
+snow_dungeon_settings . DurationMaxOnReJoinGroup = 60 * 5 
+snow_dungeon_settings . key_level_2 = 30331 
+snow_dungeon_settings . NpcVnum_level_5 = 20398 
+snow_dungeon_settings . StoneCount_level_5 = 6 
+snow_dungeon_settings . Key_on_level_5 = 30332 
+snow_dungeon_settings . StoneCords_level_5 = { 
+{ 432 , 508 } , { 437 , 493 } , { 448 , 492 } , { 448 , 476 } , { 467 , 475 } , { 466 , 464 } , 
+{ 462 , 450 } , { 458 , 428 } , { 446 , 439 } , { 431 , 431 } , { 415 , 416 } , { 402 , 427 } , 
+{ 397 , 438 } , { 375 , 434 } , { 374 , 456 } , { 390 , 468 } , { 385 , 492 } , { 402 , 505 } , 
+{ 404 , 489 } , { 386 , 482 } 
+} 
+snow_dungeon_settings . MobVnum_level_6 = 8058 
+snow_dungeon_settings . MobVnum_level_7 = 6151 
+snow_dungeon_settings . SzelCords_level_7 = { 
+{ 752 , 499 } , { 758 , 479 } , { 772 , 452 } , { 763 , 444 } , { 750 , 451 } , { 728 , 441 } , 
+{ 726 , 455 } , { 718 , 482 } , { 715 , 491 } , { 731 , 473 } , { 748 , 429 } 
+} 
+snow_dungeon_settings . Key_on_level_8 = 30333 
+snow_dungeon_settings . NpcVnum_level_9 = 20399 
+snow_dungeon_settings . BossVnumGroup = 6062 
+snow_dungeon_settings . BossVnum = 6191 
+snow_dungeon_settings . Position_level_1 = { 171 , 271 } 
+snow_dungeon_settings . Position_level_2 = { 761 , 270 } 
+snow_dungeon_settings . Position_level_3 = { 187 , 491 } 
+snow_dungeon_settings . Position_level_4 = { 421 , 259 } 
+snow_dungeon_settings . Position_level_5 = { 419 , 530 } 
+snow_dungeon_settings . Position_level_6 = { 571 , 706 } 
+snow_dungeon_settings . Position_level_7 = { 746 , 534 } 
+snow_dungeon_settings . Position_level_8 = { 303 , 710 } 
+snow_dungeon_settings . Position_level_9 = { 848 , 693 } 
+snow_dungeon_settings . Position_level_10 = { 927 , 391 } 
+snow_dungeon_settings . Enable_TestServerMode = false 
+snow_dungeon_settings . IsNewga_me_re_vi_sion = true 
+return snow_dungeon_settings 
+end ,is_TestServerMode= function ()local set = snow_dungeon . get_settings ( ) 
+return set . Enable_TestServerMode end ,is_nemeres_dungeon= function ()local set = snow_dungeon . get_settings ( ) 
+local map = pc . get_map_index ( ) 
+if map >= ( set . map_index * 10000 ) and map < ( set . map_index * 10000 + 9000 ) then 
+return true 
+else 
+return false 
+end 
+end ,_ClearAlls= function ()local d_index = d . get_map_index ( ) 
+clear_server_timer ( "CheckLevelAndCountKillOnMobs" , d_index ) 
+clear_server_timer ( "Jp_1" , d_index ) 
+clear_server_timer ( "Jp_2" , d_index ) 
+clear_server_timer ( "Jp_3" , d_index ) 
+clear_server_timer ( "Jp_4" , d_index ) 
+clear_server_timer ( "Jp_5" , d_index ) 
+clear_server_timer ( "Jp_6" , d_index ) 
+clear_server_timer ( "Jp_7" , d_index ) 
+clear_server_timer ( "Jp_8" , d_index ) 
+clear_server_timer ( "Jp_9" , d_index ) 
+clear_server_timer ( "Jp_10" , d_index ) 
+clear_server_timer ( "Jp_OutAll" , d_index ) 
+clear_server_timer ( "Jp_OutAllFail" , d_index ) 
+clear_server_timer ( "Jp_OutAllFailNotice" , d_index ) 
+d . setf ( "level" , 0 ) 
+d . setf ( "party_leader_pid" , 0 ) 
+d . setf ( "Start_Time" , 0 ) 
+d . setf ( "LastTimeGetOutPut" , 0 ) 
+d . setf ( "Stone_5_count" , 0 ) 
+d . setf ( "Stone_5_item_fail" , 0 ) 
+d . clear_regen ( ) 
+d . kill_all ( ) 
+end ,_CheckMembersLevel= function ()local set = snow_dungeon . get_settings ( ) 
+local user_fail_level = { } 
+local pids = { party . get_member_pids ( ) } 
+local need_level = set . need_level_group local have_ninja = true 
+local have_shaman = true 
+if pc . get_level ( ) < need_level then 
+say ( "Seviyen yetersiz." ) 
+end 
+if ( is_test_server ( ) and snow_dungeon . is_TestServerMode ( ) == true ) then 
+return true 
+end 
+if table . getn ( user_fail_level ) == 0 then 
+return true 
+end 
+end ,_GetLastTime= function ()local c = get_global_time ( ) 
+local t = d . getf ( "Start_Time" ) - c 
+local o = d . getf ( "LastTimeGetOutPut" ) 
+if c >= o then 
+if t >= 60 then 
+d . notice ( "Nemere Gözlemevi'ndeki kalan süre: " .. math . ceil ( t / 60 ) .. " dakika" ) 
+d . notice ( "Süre bitiminde gözlemevinden dýþarý, giriþe" ) 
+d . notice ( "ýþýnlanacaksýnýz." ) 
+else 
+d . notice ( "Nemere Gözlemevi'ndeki kalan süre: " .. t .. " saniye" ) 
+d . notice ( "Süre bitiminde gözlemevinden dýþarý, giriþe" ) 
+d . notice ( "ýþýnlanacaksýnýz." ) 
+end 
+if t >= ( 60 * 10 ) then 
+d . setf ( "LastTimeGetOutPut" , c + 60 * 5 ) 
+elseif t >= ( 60 * 5 ) then 
+d . setf ( "LastTimeGetOutPut" , c + 60 * 2 ) 
+else 
+d . setf ( "LastTimeGetOutPut" , c + 10 ) 
+end 
+end 
+end ,_DropKeyOnLevel5= function ()if number ( 1 , 1000 ) >= 900 then 
+return 
+end 
+local set = snow_dungeon . get_settings ( ) 
+local count = set . StoneCount_level_5 local vnum = set . Key_on_level_5 local get_random_unique = d . get_unique_vid ( "stone5_" .. number ( 1 , count ) .. "" ) 
+local fail_count = d . getf ( "Stone_5_item_fail" ) + 1 
+local search = d . getf ( "Stone_5_count" ) 
+local search2 = d . get_unique_vid ( "stone5_" .. search .. "" ) 
+if search2 ~= get_random_unique then 
+d . setf ( "Stone_5_item_fail" , fail_count ) 
+end 
+game . drop_item_and_select ( vnum , 1 ) 
+if ( is_test_server ( ) and snow_dungeon . is_TestServerMode ( ) == true ) then 
+item . set_socket ( 1 , search2 ) 
+d . setf ( "Stone_5_item_fail" , 0 ) 
+elseif fail_count > 6 then 
+item . set_socket ( 1 , search2 ) 
+d . setf ( "Stone_5_item_fail" , 0 ) 
+else 
+item . set_socket ( 1 , get_random_unique ) 
+end 
+end ,_Create_Stones_level5= function ()local set = snow_dungeon . get_settings ( ) 
+local stone_level5_count_MQ = set . StoneCount_level_5 local c = set . StoneCords_level_5 local v = set . NpcVnum_level_5 for i = 1 , stone_level5_count_MQ , 1 begin 
+local n = number ( 1 , table . getn ( c ) ) 
+d . set_unique ( "stone5_" .. i .. "" , d . spawn_mob ( v , c [ n ] [ 1 ] , c [ n ] [ 2 ] ) ) 
+table . remove ( c , n ) 
+if i == 1 then 
+d . setf ( "Stone_5_count" , 1 ) 
+d . setf ( "Stone_5_item_fail" , 0 ) 
+end 
+end 
+end ,_ExitAll= function ()d . exit_all ( ) 
+end }

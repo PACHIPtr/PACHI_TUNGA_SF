@@ -1,0 +1,30 @@
+say_title ( "Cherie" ) 
+say ( "" ) 
+say ( "Demek yýldönümü parasý dönüþtürmek istiyorsun..." ) 
+say ( "500 Yýldönümü puaný karþýlýðýnda" ) 
+say ( "1 yýldönümü parasý alacaksýn." ) 
+say_reward ( string . format ( "Mevcut Yýldönümü Puaný: %s" , pc . get_year_round_point ( ) ) ) 
+say_reward ( "Devam etmek istiyor musun?" ) 
+local s = select ( "Evet" , "Hayýr" ) 
+if s == 1 then 
+if pc . is_busy ( ) == true then 
+say_title ( "Cherie" ) 
+say ( "" ) 
+say_reward ( "Meþgul durumdayken bunu gerçekleþtiremezsin." ) 
+elseif pc . is_dead ( ) == true then 
+say_title ( "Cherie" ) 
+say ( "" ) 
+say_reward ( "Ölü durumdayken bunu gerçekleþtiremezsin." ) 
+elseif pc . get_year_round_point ( ) < 500 then 
+say_title ( "Cherie" ) 
+say ( "" ) 
+say_reward ( "Yeterli miktarda yýldönümü puanýna sahip deðilsin." ) 
+else 
+say_title ( "Cherie" ) 
+say ( "" ) 
+say_reward ( "1 Yýldönümü parasý kazandýn." ) 
+pc . change_year_round_point ( - 500 ) 
+pc . give_item2 ( "25105" , 1 ) 
+end 
+else 
+end 

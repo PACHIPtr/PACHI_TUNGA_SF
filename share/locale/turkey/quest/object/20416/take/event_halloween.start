@@ -1,0 +1,30 @@
+if item . get_vnum ( ) == 30336 and game . get_event_flag ( "ex_halloween_drop" ) > 0 then local count = item . get_count ( ) 
+local remain = game . get_event_flag ( "collected_pumpkin" ) + count - event_halloween . pumpkin_count ( ) 
+local cur_round = game . get_event_flag ( "halloween_round" ) + 1 
+if pc . getqf ( "inserted" ) == 0 then 
+mysql . query ( "insert into log.halloween_event values('" .. pc . get_player_id ( ) .. "', '" .. pc . get_name ( ) .. "', '0', '0', '0')" ) 
+pc . setqf ( "inserted" , 1 ) 
+end 
+syschat ( "Verilen bal kabaðý fenerleri: " .. count ) 
+item . remove ( ) 
+if game . get_event_flag ( "collected_pumpkin" ) + count >= event_halloween . pumpkin_count ( ) then 
+if cur_round == game . get_event_flag ( "halloween_last_round" ) then 
+notice_all ( "Yeterince bal kabaðý feneri toplandý." ) 
+notice_all ( "Bir ödül hak edip etmediðini Sam Pumpkin'e sor." ) 
+game . set_event_flag ( "ex_halloween_drop" , 0 ) 
+game . set_event_flag ( "ex_halloween_drop_2" , 0 ) 
+game . set_event_flag ( "halloween_reward" , get_time ( ) + 12 * 60 * 60 ) 
+game . set_event_flag ( "halloween_round" , 0 ) 
+end 
+game . set_event_flag ( "collected_pumpkin" , remain ) 
+event_halloween . set_rank_reward ( ) 
+event_halloween . set_round_reward ( ) 
+event_halloween . delete_collected_pumpkin ( ) 
+event_halloween . set_collected_pumpkin ( remain , pc . get_player_id ( ) ) 
+syschat ( "Toplam bal kabaðý feneri sayýsý: " .. event_halloween . get_collected_pumpkin ( pc . get_player_id ( ) ) ) 
+return 
+end 
+event_halloween . set_collected_pumpkin ( count , pc . get_player_id ( ) ) 
+game . set_event_flag ( "collected_pumpkin" , game . get_event_flag ( "collected_pumpkin" ) + count ) 
+syschat ( "Toplam bal kabaðý feneri sayýsý: " .. event_halloween . get_collected_pumpkin ( pc . get_player_id ( ) ) ) 
+ return end 

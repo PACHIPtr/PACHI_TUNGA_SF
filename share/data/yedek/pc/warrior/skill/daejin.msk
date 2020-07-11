@@ -1,0 +1,19 @@
+ScriptType		SkillDataScript
+
+Type			LOW
+Attribute		"STANDING_SKILL"
+
+Name			"대진각"
+Description		"주위의 적을 사방으로 날려보낸다"
+
+IconFileName	"skill/warrior/daejin.sub"
+MotionIndex		1
+
+List AffectData
+{
+	"파괴력 : %.1f 배" "(SkillPoint * 20 + 100) / 100" ""
+}
+
+MaxLevel			"5"
+NeedSPFormula		"30"
+CoolTimeFormula		"5"

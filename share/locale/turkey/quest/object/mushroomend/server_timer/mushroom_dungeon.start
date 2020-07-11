@@ -1,0 +1,6 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+d . zodiac_notice_clear ( ) 
+d . zodiac_notice ( "Zindaný tamamlamakta baþarýsýz oldun. 10 saniye içerisinde dýþarý ýþýnlanýyorsun." ) 
+server_timer ( "mushroomfail" , 10 , d . get_map_index ( ) ) 
+clear_server_timer ( "mushroomend" , d . get_map_index ( ) ) 
+end 

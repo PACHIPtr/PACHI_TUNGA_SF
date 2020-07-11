@@ -1,0 +1,17 @@
+ScriptType			SkillDataScript
+
+Type				HIGH
+Attribute			"STANDING_SKILL"
+
+Name				"소환부"
+Description			"누군가를 자신의 앞으로 소환한다"
+
+IconFileName		"skill/shaman/sohwan.sub"
+MotionIndex			22
+
+List AffectData
+{
+	"성공 확률 : %.1f%%" "20 * SkillPoint - 1" ""
+}
+
+NeedSPFormula		"200"

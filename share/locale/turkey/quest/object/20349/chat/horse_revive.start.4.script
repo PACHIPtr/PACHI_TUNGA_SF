@@ -1,0 +1,13 @@
+say ( "Atını sadece (1) Hasun Zindanından " ) 
+say ( "toplanacak bitkiler ile canlandırabilirsin. " ) 
+say ( "Bitkiler maymunlar tarafından " ) 
+say ( "korunduğu için bu gerçekten zor bir görev. " ) 
+say ( "gerçekten zor bir görev. " ) 
+say ( "Maymunlar öfkeli! Bitkileri toplamak " ) 
+say ( "isteyen herkesi lanetleyerek maymuna " ) 
+say ( "dönüştürüyorlar. " ) 
+if pc . countitem ( "50059" ) >= 1 then 
+say ( "Bilgi: (3) Joongsun Zindanından toplanan bitkiler sadece ileri düzeydeki atlar içindir. " ) 
+elseif pc . countitem ( "50057" ) >= 1 then 
+say ( "Bilgi: (1) Hasun Zindanından toplanan bitkiler acemi atlar içindir. " ) 
+end 

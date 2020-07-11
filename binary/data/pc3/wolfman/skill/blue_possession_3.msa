@@ -1,0 +1,94 @@
+ScriptType               MotionData
+
+MotionFileName           "d:\Ymir Work\pc3\wolfman\skill\blue_possession.GR2"
+MotionDuration           2.000000
+Accumulation           0.00	0.00	0.00
+
+Group MotionEventData
+{
+    MotionEventDataCount     7
+    Group Event00
+    {
+        MotionEventType      1
+        StartingTime         0.389294
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_01.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         1.060827
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_05.mse"
+        EffectPosition       0.000000 0.000000 100.000000
+    }
+    Group Event02
+    {
+        MotionEventType      1
+        StartingTime         0.690998
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_03.mse"
+        EffectPosition       0.000000 0.000000 200.000000
+    }
+    Group Event03
+    {
+        MotionEventType      1
+        StartingTime         0.895377
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_04.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event04
+    {
+        MotionEventType      1
+        StartingTime         1.124088
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_06.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event05
+    {
+        MotionEventType      1
+        StartingTime         1.177616
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_07.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+    Group Event06
+    {
+        MotionEventType      1
+        StartingTime         0.549878
+        
+        IndependentFlag      0
+        AttachingEnable      0
+        AttachingBoneName    "equip_left_weapon"
+        FollowingEnable      0
+        EffectFileName       "d:/ymir work/pc3/common/effect/blue_possession_02.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}
