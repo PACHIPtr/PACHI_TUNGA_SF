@@ -393,11 +393,11 @@ public:
 	void		XmasWarpSantaReply(const char* c_pData);
 	void		LoginPing(LPDESC d, const char* c_pData);
 	void		BlockChat(const char* c_pData);
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	void		BossTracking(LPDESC d, const char* c_pData);
-#endif
 #ifdef ENABLE_OFFLINESHOP_MESSAGE_SYSTEM
 	void		SendOfflineShopMessage(LPDESC d, const char * c_pData);
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	void		BossData(LPDESC d, const char* c_pData);
 #endif
 	void		FeatureEnable(const char * c_pData);
 

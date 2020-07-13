@@ -2098,4 +2098,10 @@ void initapp()
 #else
 	PyModule_AddIntConstant(poModule, "ENABLE_ITEM_COLOR_HIGHLIGHT_SYSTEM", 0);
 #endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	PyModule_AddIntConstant(poModule, "ENABLE_BOSS_MANAGER_SYSTEM", 1);
+#else
+	PyModule_AddIntConstant(poModule, "ENABLE_BOSS_MANAGER_SYSTEM", 0);
+#endif
 }

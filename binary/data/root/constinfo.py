@@ -459,6 +459,9 @@ def IS_MOUNT_ITEM(itemVnum):
 		
 	if itemVnum == 71121:
 		return 1
+
+	if itemVnum >= 56011 and itemVnum <= 56039:
+		return 1
 		
 	return 0
 

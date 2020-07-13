@@ -53,7 +53,7 @@ while 1:
 					f.write(pathList[packName] + "/\" ")
 				else:
 					f.write("\" ")
-				f.write("ArchivePath=\"../bin-directory/pack/" + packName + "\" ")
+				f.write("ArchivePath=\"../client/pack/" + packName + "\" ")
 				f.write("XmlPath=\"bin/_create.xml\">\n")				
 				for ignore_ext in ('db','png','psd','pyexec','rar','zip',):
 					f.write("\t\t<Ignore Pattern=\"[a-zA-z0-9]+.%s\" />\n" % ignore_ext)					
@@ -84,4 +84,4 @@ while 1:
 					
 				print("Packing completed.")
 	if startm2==1:
-		os.system("cd \"" + mypath + "\\..\\bin-directory\\\" & Myte2Client.exe")
+		os.system("cd \"" + mypath + "\\..\\client\\\" & Myte2Client.exe")

@@ -1,0 +1,36 @@
+ScriptType            RaceDataScript
+
+BaseModelFileName     "D:\Ymir Work\npc2\pwahuang1\pwahuang1.GR2"
+
+Group ShapeData
+{
+    PathName 		 ""
+    ShapeDataCount 		 1
+	Group ShapeData00
+	{
+		ShapeIndex			0
+
+		Model				"D:\Ymir Work\npc2\pwahuang1\pwahuang1.gr2"
+		SourceSkin			"D:\Ymir Work\npc2\pwahuang1\pwahuang1.dds"
+		TargetSkin			"D:\Ymir Work\npc2\pwahuang1\pwahuang1_3.dds"
+	}
+}
+
+Group AttachingData
+{
+    AttachingDataCount       1
+    
+    Group AttachingData00
+    {
+        AttachingDataType    2
+        
+        isAttaching          1
+        AttachingModelIndex  0
+        AttachingBoneName    "Bip01"
+        
+        EffectScriptName     "D:\Ymir Work\effect\monster2\redblack3.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+        EffectRotation       0.000000 0.000000 0.000000
+    }
+}
+

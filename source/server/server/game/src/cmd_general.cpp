@@ -46,10 +46,6 @@
 #include "event_manager.h"
 #endif
 #include "regen.h"
-
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-#include "boss_tracking.h"
-#endif
 #include "shopEx.h"
 
 #ifdef ENABLE_ZODIAC_TEMPLE_SYSTEM
@@ -58,6 +54,10 @@
 
 #ifdef ENABLE_MOUNT_COSTUME_SYSTEM
 #include "MountSystem.h"
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+#include "boss_manager.h"
 #endif
 
 #include "features.h"
@@ -2805,7 +2805,7 @@ ACMD(do_PetChangeName)
 	LPITEM item = ch->GetInventoryItem(bCell);
 	if (!item)
 		return;
-	if (ch->CountSpecifyItem(55030) < 1)
+	if (ch->CountSpecifyItem(55008) < 1)
 		return;
 
 	if (!strcmp(arg2, "%") ||
@@ -2841,7 +2841,7 @@ ACMD(do_PetChangeName)
 
 	std::unique_ptr<SQLMsg> pMsg(DBManager::instance().DirectQuery("UPDATE new_petsystem SET name = '%s' WHERE id = '%d'", szName, item->GetID()));
 	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Pet Ismi Basarili Bir Sekilde Degistirildi!"));
-	ch->RemoveSpecifyItem(55030, 1);
+	ch->RemoveSpecifyItem(55008, 1);
 }
 
 ACMD(do_IncreasePetSkill)
@@ -5884,29 +5884,6 @@ ACMD(do_guild_history_req)
 	ch->ChatPacket(CHAT_TYPE_INFO, "History list completed!");
 }
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-ACMD(do_open_boss_tracking)
-{
-	char arg1[256];
-	one_argument(argument, arg1, sizeof(arg1));
-
-	if (!*arg1)
-		return;
-	
-	if (!features::IsFeatureEnabled(features::BOSS_TRACKING))
-	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("BOSS_TRACKING_SYSTEM_DISABLED"));
-		return;		
-	}
-
-	DWORD mob_vnum = 0;
-	str_to_number(mob_vnum, arg1);
-
-	for (int i = 0; i < 6; ++i)
-		CBossTracking::instance().SendClientPacket(ch, i, mob_vnum);
-}
-#endif
-
 #ifdef ENABLE_FAST_SKILL_SELECT_SYSTEM
 ACMD(do_skill_select)
 {
@@ -6627,5 +6604,18 @@ ACMD(do_open_soul_window)
 {
 	if (ch->DragonSoul_IsQualified())
 		ch->DragonSoul_RefineWindow_Open(ch);
+}
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+ACMD(do_get_boss_data)
+{
+	char arg1[256];
+	one_argument(argument, arg1, sizeof(arg1));
+
+	DWORD dwBossVnum = 0;
+	str_to_number(dwBossVnum, arg1);
+
+	CBossManager::instance().SendBossInformation(ch, dwBossVnum); // send to client
 }
 #endif

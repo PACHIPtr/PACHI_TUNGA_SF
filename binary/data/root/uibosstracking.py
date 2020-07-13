@@ -234,7 +234,7 @@ class BossTrackingInfoWindow(ui.ScriptWindow):
 				self.ClearGui()
 				
 			self.data = []
-			net.SendChatPacket("/open_boss_tracking %d" % int(self.dropDown.DropList.GetSelectedItem().value))
+			net.SendChatPacket("/get_boss_data %d" % int(self.dropDown.DropList.GetSelectedItem().value))
 			#self.SELECT_MOB_TIMER = app.GetTime() + 2
 		else:
 			NewGetTime = self.SELECT_MOB_TIMER - app.GetTime()
@@ -284,21 +284,21 @@ class BossTrackingInfoWindow(ui.ScriptWindow):
 			CHANNEL_COUNT = 4
 
 			if CHANNEL_COUNT < 5:
-				self.respawnInfos[6-1].SetText("CH6: Bu kanal devredýþý.")
-				self.respawnInfos[5-1].SetText("CH5: Bu kanal devredýþý.")
+				self.respawnInfos[6].SetText("CH6: Bu kanal devredýþý.")
+				self.respawnInfos[5].SetText("CH5: Bu kanal devredýþý.")
 			
 			if (int(arg4) == self.dropDown.DropList.GetSelectedItem().value):
 				self.avatarImage.LoadImage("d:/ymir work/ui/boss_follow/%d.tga" % (arg4))
 			if int(arg1) == 0:
-				self.respawnInfos[arg3-1].SetText("CH%d: Boss þuanda yaþýyor" % (int(arg3)))
+				self.respawnInfos[arg3].SetText("CH%d: Boss þuanda yaþýyor" % (int(arg3)))
 			elif (format_time < 0):
-				self.respawnInfos[arg3-1].SetText("CH%d: Boss þuanda yaþýyor" % (int(arg3)))
+				self.respawnInfos[arg3].SetText("CH%d: Boss þuanda yaþýyor" % (int(arg3)))
 			else:
-				self.respawnInfos[arg3-1].SetText("CH%d: %s" % (int(arg3), SecondToHM(format_time)))
+				self.respawnInfos[arg3].SetText("CH%d: %s" % (int(arg3), SecondToHM(format_time)))
 				
 			if CHANNEL_COUNT < 5:
-				self.respawnInfos[6-1].SetText("CH6: Bu kanal devredýþý.")
-				self.respawnInfos[5-1].SetText("CH5: Bu kanal devredýþý.")
+				self.respawnInfos[6].SetText("CH6: Bu kanal devredýþý.")
+				self.respawnInfos[5].SetText("CH5: Bu kanal devredýþý.")
 		
 			self.mapInfo.SetText(localeInfo.MINIMAP_ZONE_NAME_DICT_BY_IDX[int(self.GetMapIndex())])
 			#self.info2.SetText(nonplayer.GetMonsterName(int(arg4)))

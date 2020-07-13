@@ -10599,7 +10599,14 @@ void CHARACTER::GetSashCombineResult(DWORD & dwItemVnum, DWORD & dwMinAbs, DWORD
 				break;
 				case 3:
 				{
+#ifdef ENABLE_ACCE_ITEMS_RENEWAL
+					if (AcceAbsRenewal(dwItemVnum) == true)
+						dwMinAbs = SASH_GRADE_4_ABS_MIN_ABS;
+					else
+						dwMinAbs = SASH_GRADE_4_ABS_MIN;
+#else
 					dwMinAbs = SASH_GRADE_4_ABS_MIN;
+#endif
 					dwMaxAbs = SASH_GRADE_4_ABS_MAX_COMB;
 				}
 				break;
@@ -10678,9 +10685,14 @@ void CHARACTER::AddSashMaterial(TItemPos tPos, BYTE bPos)
 	}
 	else if ((m_bSashCombination) && (bPos == 1) && (!SashIsSameGrade(pkItem->GetValue(SASH_GRADE_VALUE_FIELD))))
 	{
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You can combine just accees of same grade."));
+		return;
+	}
+	else if ((m_bSashCombination) && (pkItem->GetSocket(SASH_ABSORPTION_SOCKET) >= SASH_GRADE_4_ABS_MAX))
+	{
 		if (Sash30Abs(pkItem->GetVnum()) == true)
 		{
-			if ((m_bSashCombination) && (pkItem->GetSocket(SASH_ABSORPTION_SOCKET) >= SASH_GRADE_NEW_ABS_30))
+			if (pkItem->GetSocket(SASH_ABSORPTION_SOCKET) >= SASH_GRADE_NEW_ABS_30)
 			{
 				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("This sash got already maximum absorption chance."));
 				return;
@@ -10691,11 +10703,6 @@ void CHARACTER::AddSashMaterial(TItemPos tPos, BYTE bPos)
 			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("This sash got already maximum absorption chance."));
 			return;
 		}
-	}
-	else if ((m_bSashCombination) && (pkItem->GetSocket(SASH_ABSORPTION_SOCKET) >= SASH_GRADE_4_ABS_MAX))
-	{
-		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("This sash got already maximum absorption chance."));
-		return;
 	}
 	else if ((bPos == 1) && (m_bSashAbsorption))
 	{

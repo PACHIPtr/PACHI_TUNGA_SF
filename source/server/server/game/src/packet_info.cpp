@@ -293,8 +293,8 @@ CPacketInfoGG::CPacketInfoGG()
 #ifdef ENABLE_FULL_NOTICE
 	Set(HEADER_GG_BIG_NOTICE, sizeof(TPacketGGNotice), "BigNotice", false);
 #endif
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	Set(HEADER_GG_BOSS_TRACKING, sizeof(TPacketGGBossTracking), "BossTracking", false);
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	Set(HEADER_GG_BOSS_DATA, sizeof(TPacketGGBossData), "BossData", false);
 #endif
 	Set(HEADER_GG_FEATURE_ENABLE, sizeof(TPacketGGFeatureEnable), "FeatureEnable", false);
 }

@@ -17,23 +17,5 @@ Group ShapeData
 }
 Group AttachingData
 {
-    AttachingDataCount       1
-    
-    Group AttachingData00
-    {
-        AttachingDataType    1
-        
-        isAttaching          1
-        AttachingModelIndex  0
-        AttachingBoneName    "Bip01"
-        
-        CollisionType        3
-        
-        SphereDataCount      1
-        Group SphereData00
-        {
-            Radius           50.000000
-            Position         0.000000 0.000000 20.000000
-        }
-    }
+    AttachingDataCount       0
 }

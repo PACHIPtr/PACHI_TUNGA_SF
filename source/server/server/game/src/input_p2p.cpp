@@ -18,10 +18,11 @@
 #include "sectree_manager.h"
 #include "buffer_manager.h"
 #include "dungeon.h"
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-#include "boss_tracking.h"
-#endif
 #include "features.h"
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+#include "boss_manager.h"
+#endif
+
 ACMD(do_reload);
 ////////////////////////////////////////////////////////////////////////////////
 // Input Processor
@@ -390,15 +391,6 @@ void CInputP2P::BlockChat(const char* c_pData)
 }
 // END_OF_BLOCK_CHAT
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-void CInputP2P::BossTracking(LPDESC d, const char* c_pData)
-{
-	TPacketGGBossTracking* p = (TPacketGGBossTracking*)c_pData;
-	CBossTracking::instance().SetDeadTime(p->channel, p->mob_vnum, p->dead_time);
-	CBossTracking::instance().SetRegenTime(p->channel, p->mob_vnum, p->regen_time);
-}
-#endif
-
 #ifdef ENABLE_OFFLINESHOP_MESSAGE_SYSTEM
 void CInputP2P::SendOfflineShopMessage(LPDESC d, const char * c_pData)
 {
@@ -440,6 +432,36 @@ void CInputP2P::FeatureEnable(const char * c_pData)
 	TPacketGGFeatureEnable* p = (TPacketGGFeatureEnable*) c_pData;
 	features::SetFeatureEnabled(p->feature_index, p->enabled, true);
 }
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+void CInputP2P::BossData(LPDESC d, const char* c_pData)
+{
+	TPacketGGBossData* pInfo = (TPacketGGBossData*)c_pData;
+
+	CCI* pkCCI = P2P_MANAGER::instance().Find(pInfo->szName);
+	if (!pkCCI)
+	{
+		sys_err("!--> cannot find pkCCI <--!");
+		return;
+	}
+	LPDESC pkDesc = pkCCI->pkDesc;
+	if (!pkDesc)
+	{
+		sys_err("!--> cannot find pkDesc <--!");
+		return;
+	}
+
+	pkDesc->SetRelay(pInfo->szName);
+	TPacketGCBossData pack;
+	pack.header = HEADER_GC_BOSS_DATA;
+	pack.regen_time = CBossManager::instance().GetRegenTime(pInfo->boss_vnum);
+	pack.dead_time = CBossManager::instance().GetDeadTime(pInfo->boss_vnum);
+	pack.channel = g_bChannel;
+	pack.boss_vnum = pInfo->boss_vnum;
+	pkDesc->Packet(&pack, sizeof(pack));
+	pkDesc->SetRelay("");
+}
+#endif
 
 int CInputP2P::Analyze(LPDESC d, BYTE bHeader, const char* c_pData)
 {
@@ -562,12 +584,6 @@ int CInputP2P::Analyze(LPDESC d, BYTE bHeader, const char* c_pData)
 		break;
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	case HEADER_GG_BOSS_TRACKING:
-		BossTracking(d, c_pData);
-		break;
-#endif
-
 #ifdef ENABLE_OFFLINESHOP_MESSAGE_SYSTEM
 	case HEADER_GG_OFFLINE_SHOP_SEND_MESSAGE:
 		SendOfflineShopMessage(d, c_pData);
@@ -577,6 +593,12 @@ int CInputP2P::Analyze(LPDESC d, BYTE bHeader, const char* c_pData)
 	case HEADER_GG_FEATURE_ENABLE:
 		FeatureEnable(c_pData);
 		break;
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	case HEADER_GG_BOSS_DATA:
+		BossData(d, c_pData);
+		break;
+#endif
 	}
 
 	return (iExtraLen);

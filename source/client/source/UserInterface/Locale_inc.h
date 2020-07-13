@@ -70,7 +70,6 @@
 #define ENABLE_EXTENDED_PET_SYSTEM									// Giyilebilir Evcil Hayvan Sistemi
 #define ENABLE_MESSENGER_TEAM										// Arkadaþ Listesinde Yönetici Sistemi
 #define ENABLE_IMPROVED_GUILD_WAR									// Geliþmiþ Lonca Savaþý Sistemi
-#define ENABLE_BOSS_TRACKING										// Patron Takip Sistemi
 #define ENABLE_BOSS_EFFECT_SYSTEM									// Patron Yaratýk Efekti Sistemi
 #define ENABLE_GRAPHIC_MASK											// Grafik Optimizasyonu Sistemi
 #define ENABLE_DROP_DIALOG_EX_SYSTEM								// Eþya Düþürme Penceresi Sistemi
@@ -107,6 +106,8 @@
 #define ENABLE_PERMA_BLEND_SYSTEM									// Perma Sebnem Sistemi
 //#define ENABLE_BLEND_ICON_SYSTEM									// Sebnem Icon Sistemi
 #define ENABLE_ITEM_COLOR_HIGHLIGHT_SYSTEM							// Renkli Parlama Sistemi
+#define ENABLE_BOSS_MANAGER_SYSTEM									// Boss tracking system
+
 /*******************************************************************/
 /*** Update Macros ***/
 /*******************************************************************/

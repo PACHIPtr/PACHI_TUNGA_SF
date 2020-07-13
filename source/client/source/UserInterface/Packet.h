@@ -288,9 +288,6 @@ enum EPacketHeaderGameClient
 	HEADER_GC_GEM_SHOP_OPEN								= 135,
 	HEADER_GC_GEM_SHOP_REFRESH							= 136,
 #endif
-#ifdef ENABLE_BOSS_TRACKING
-	HEADER_GC_BOSS_TRACKING 							= 137,
-#endif
 #ifdef ENABLE_MAIL_BOX_SYSTEM
     HEADER_GC_MAILBOX_RECEIVE							= 150,
 #endif
@@ -314,6 +311,9 @@ enum EPacketHeaderGameClient
 #endif
 #ifdef ENABLE_GUILD_RANKING_SYSTEM
 	HEADER_GC_GUILD_RANK_SYSTEM							= 158,
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	HEADER_GC_BOSS_DATA									= 159,
 #endif
 	HEADER_GC_FEATURE_ENABLE 							= 155,
 	HEADER_GC_CHARACTER_UPDATE2					= 138,	/*** Only Client ***/
@@ -3146,18 +3146,6 @@ typedef struct SPacketGCAttendanceEvent {
 } TPacketGCAttendanceEvent;
 #endif
 
-
-
-#ifdef ENABLE_BOSS_TRACKING
-typedef struct packet_boss_tracking
-{
-	BYTE	header;
-	DWORD	dead_time;
-	DWORD	regen_time;
-	BYTE	channel;
-	DWORD	mob_vnum;
-} TPacketGCBossTracking;
-#endif
 #ifdef ENABLE_MINI_GAME_CATCH_KING
 enum
 {
@@ -3428,6 +3416,17 @@ typedef struct packet_guildrank_system
 	DWORD	win;
 	DWORD	loss;
 } TPacketGCGuildRankSystem;
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+typedef struct packet_boss_data
+{
+	BYTE header;
+	DWORD regen_time;
+	DWORD dead_time;
+	BYTE channel;
+	DWORD boss_vnum;
+} TPacketGCBossData;
 #endif
 
 #pragma pack(pop)

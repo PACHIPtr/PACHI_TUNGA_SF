@@ -3543,14 +3543,12 @@ class GameWindow(ui.ScriptWindow):
 			if vid == self.targetBoard.GetTargetVID():
 				self.targetBoard.RefreshHitCount(vid)
 				
-	def BossTrackingOpenPacket(self):
-		net.SendChatPacket("/open_boss_tracking")
-		
 	def Boss_Open_Window(self):
 		self.bosstracking.Open()
 		
-	def BINARY_Boss_Tracking(self, kill_time, start_time, channel, mob_vnum):
-		self.bosstracking.SetData(kill_time, start_time, channel, mob_vnum, 0)
+	def AppendBossData(self, kill_time, start_time, channel, mob_vnum):
+		if self.bosstracking:
+			self.bosstracking.SetData(kill_time, start_time, channel, mob_vnum, 0)
 
 	if app.ENABLE_MINI_GAME:
 		if app.ENABLE_MINI_GAME_CATCH_KING:					

@@ -51,14 +51,14 @@
 #ifdef ENABLE_BUFFI_SYSTEM
 #include "support_shaman.h"
 #endif
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-#include "boss_tracking.h"
-#endif
 #include "daily_boss.h"
 #include <random>
 #include <algorithm>
 #ifdef ENABLE_ZODIAC_TEMPLE_SYSTEM
 #include "zodiac_temple.h"
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+#include "boss_manager.h"
 #endif
 
 static DWORD __GetPartyExpNP(const DWORD level)
@@ -1387,25 +1387,6 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 	}
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	if (IsMonster() && CBossTracking::instance().IsTrackingMob(GetMobTable().dwVnum) == true)
-	{
-		if (pkKiller)
-		{
-			LPREGEN pkRegen = GetRegen();
-			if (pkRegen != nullptr)
-			{
-				if (pkRegen->time != 0)
-				{
-					CBossTracking::instance().SetDeadTime(g_bChannel, GetMobTable().dwVnum, get_global_time());
-					CBossTracking::instance().SetRegenTime(g_bChannel, GetMobTable().dwVnum, pkRegen->time);
-					CBossTracking::instance().SendP2PPacket(GetMobTable().dwVnum);
-				}
-			}
-		}
-	}
-#endif
-
 #ifdef ENABLE_ZODIAC_TEMPLE_SYSTEM
 		if (IsPC() && (pkKiller && pkKiller->IsMonster()) && (GetMapIndex() >= 3580000 && GetMapIndex() < 3590000))
 		{
@@ -1422,6 +1403,20 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 				pkKiller->GetDungeon()->SetMast(nullptr);
 			}
 		}
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	if (IsMonster() && CBossManager::instance().IsRegisteredBoss(GetRaceNum()))
+	{
+		if (pkKiller && pkKiller->IsPC())
+		{
+			LPREGEN pkRegen = GetRegen();
+			if (pkRegen && pkRegen->time != 0)
+			{
+				CBossManager::instance().Dead(GetRaceNum(), pkRegen->time, get_global_time()); // we append information
+			}
+		}
+	}
 #endif
 
 	if (pkKiller && pkKiller->IsPC() &&

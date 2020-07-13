@@ -15,47 +15,12 @@ Group ShapeData
 		TargetSkin			"D:\Ymir Work\npc2\pwahuang1\pwahuang1_2.dds"
 	}
 }
+
 Group AttachingData
 {
-    AttachingDataCount       3
-    
+    AttachingDataCount       1
+
     Group AttachingData00
-    {
-        AttachingDataType    1
-        
-        isAttaching          1
-        AttachingModelIndex  0
-        AttachingBoneName    "Bip01"
-        
-        CollisionType        1
-        
-        SphereDataCount      1
-        Group SphereData00
-        {
-            Radius           40.000000
-            Position         0.000000 0.000000 0.000000
-        }
-    }
-    
-    Group AttachingData01
-    {
-        AttachingDataType    1
-        
-        isAttaching          1
-        AttachingModelIndex  0
-        AttachingBoneName    "Bip01"
-        
-        CollisionType        3
-        
-        SphereDataCount      1
-        Group SphereData00
-        {
-            Radius           45.000000
-            Position         0.000000 0.000000 0.000000
-        }
-    }
-    
-    Group AttachingData02
     {
         AttachingDataType    2
         
@@ -68,3 +33,4 @@ Group AttachingData
         EffectRotation       0.000000 0.000000 0.000000
     }
 }
+

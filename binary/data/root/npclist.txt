@@ -1945,8 +1945,11 @@
 34064	red_dragon_young1
 0	red_dragon_young2	red_dragon_young1
 34073	pwahuang1_3
+34074	pwahuang1_4
 34075	redthief2_officer_young3
+34076	redthief2_officer_young4
 34080	luck_sheep_young1
+34081	luck_sheep_young2
 34082	defensewave_hydra_pet_1
 
 34027	halloween_broom

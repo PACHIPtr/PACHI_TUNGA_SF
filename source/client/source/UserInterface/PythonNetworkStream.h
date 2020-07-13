@@ -666,10 +666,6 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 		bool RecvAttendanceEventInfo();
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING
-		bool RecvBossTracking();
-#endif
-
 		// Fishing
 		bool RecvFishing();
 
@@ -729,6 +725,11 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 #ifdef ENABLE_EXCHANGE_WINDOW_SYSTEM
 		// Trade
 		bool RecvExchangeInfoPacket();
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+protected:
+	bool RecvBossData();
 #endif
 
 #ifdef ENABLE_YOUTUBER_SYSTEM

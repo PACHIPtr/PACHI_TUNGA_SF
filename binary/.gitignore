@@ -1,0 +1,7 @@
+
+client/log.txt
+*.eix
+*.epk
+client/pack
+client/syserr
+client/metin2.cfg

@@ -85,7 +85,7 @@ CPPFILE = FSM.cpp MarkConvert.cpp MarkImage.cpp MarkManager.cpp OXEvent.cpp ani.
 		  shop_manager.cpp shopEx.cpp item_manager_read_tables.cpp New_PetSystem.cpp questlua_petnew.cpp questlua_mysql.cpp char_cards.cpp\
 		  MeleyLair.cpp questlua_MeleyLair.cpp game_events.cpp event_manager.cpp\
 		  combat_zone.cpp support_shaman.cpp questlua_supportshaman.cpp item_combination.cpp auto_event_manager.cpp\
-		  nearby_scanner.cpp minigame_attendance.cpp minigame_catch_king.cpp minigame_other.cpp boss_tracking.cpp\
+		  nearby_scanner.cpp minigame_attendance.cpp minigame_catch_king.cpp minigame_other.cpp boss_manager.cpp\
 		  daily_boss.cpp vid.cpp char_mailbox.cpp inventory.cpp char_battle_zodiac.cpp questlua_zodiac_temple.cpp\
 		  zodiac_temple.cpp abuse.cpp MountSystem.cpp cipher.cpp features.cpp questlua_utils.cpp AutoNotice.cpp auto_query.cpp main.cpp\
 

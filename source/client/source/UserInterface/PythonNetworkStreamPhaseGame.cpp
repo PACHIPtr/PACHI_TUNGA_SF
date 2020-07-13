@@ -673,11 +673,6 @@ void CPythonNetworkStream::GamePhase()
 				ret = RecvMiniGameCatchKingPacket();
 				break;
 #endif
-#ifdef ENABLE_BOSS_TRACKING
-			case HEADER_GC_BOSS_TRACKING:
-				ret = RecvBossTracking();
-				break;
-#endif // ENABLE_BOSS_TRACKING
 
 #ifdef ENABLE_MAIL_BOX_SYSTEM
 			case HEADER_GC_MAILBOX_RECEIVE:
@@ -728,6 +723,12 @@ void CPythonNetworkStream::GamePhase()
 #ifdef ENABLE_GUILD_RANKING_SYSTEM
 			case HEADER_GC_GUILD_RANK_SYSTEM:
 				ret = RecvGuildRankPacket();
+				break;
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+			case HEADER_GC_BOSS_DATA:
+				ret = RecvBossData();
 				break;
 #endif
 
@@ -5767,20 +5768,6 @@ bool CPythonNetworkStream::RecvMiniGameCatchKingPacket()
 	return true;
 }
 #endif
-#ifdef ENABLE_BOSS_TRACKING
-bool CPythonNetworkStream::RecvBossTracking()
-{
-	TPacketGCBossTracking p;
-	if (!Recv(sizeof(TPacketGCBossTracking), &p))
-	{
-		Tracenf("Recv Boss Tracking Packet Error");
-		return false;
-	}
-
-	PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "BINARY_Boss_Tracking", Py_BuildValue("(iiii)", p.dead_time, p.regen_time, p.channel, p.mob_vnum));
-	return true;
-}
-#endif // ENABLE_BOSS_TRACKING
 
 #ifdef ENABLE_MAIL_BOX_SYSTEM
 //MailBox Functions send
@@ -6192,5 +6179,20 @@ bool CPythonNetworkStream::RecvGuildRankPacket()
 	
 	PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "BINARY_OnRecvGuildRank", Py_BuildValue("(siii)", p.guild_name, p.master, p.win, p.loss));
 	return true;
+}
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+bool CPythonNetworkStream::RecvBossData()
+{
+	TPacketGCBossData pack;
+	if (!Recv(sizeof(TPacketGCBossData), &pack))
+	{
+		Tracenf("Recv Boss Data Packet Error");
+		return false;
+	}
+
+	PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "AppendBossData", Py_BuildValue("(iiii)", pack.dead_time, pack.regen_time, pack.channel, pack.boss_vnum));
+	return true; // success
 }
 #endif

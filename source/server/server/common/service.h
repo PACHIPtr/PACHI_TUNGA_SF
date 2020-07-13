@@ -67,7 +67,6 @@
 #define ENABLE_EXTENDED_BIOLOG_SYSTEM								// Gelişmiş Biyolog Sistemi
 #define ENABLE_OFFLINE_SHOP_SYSTEM									// Çevrimdışı Pazar Sistemi
 #define ENABLE_GIFTBOX_SYSTEM										// Hediye Kutusu Sistemi
-#define ENABLE_BOSS_TRACKING_SYSTEM									// Patron Takip Sistemi
 #define ENABLE_HEALTH_BOARD_SYSTEM									// Oyuncu Üzerinde Yaşam Puanı Görüntüleme Sistemi
 #define ENABLE_UPGRADE_SOCKET_SYSTEM								// Ekipmanlar İçin Yeni Soket Açma Sistemi
 #define ENABLE_MESSENGER_TEAM_SYSTEM								// Arkadaş Listesinde Yönetim Sistemi
@@ -121,6 +120,7 @@
 #define ENABLE_BOSS_GEM_SYSTEM										// Patron Gaya Sistemi
 #define ENABLE_BONUS_TO_BOSS										// Patronlara Karsi Guc
 #define ENABLE_PERMA_BLEND_SYSTEM									// Perma Sebnem Sistemi
+#define ENABLE_BOSS_MANAGER_SYSTEM									// Boss tracking system
 //#define ENABLE_BLEND_ICON_SYSTEM									// Sebnem Icon Sistemi
 /*******************************************************************/
 /*** Update Macros ***/

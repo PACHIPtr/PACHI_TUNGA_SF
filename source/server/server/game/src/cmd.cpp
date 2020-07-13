@@ -262,9 +262,6 @@ ACMD(do_next_floor);
 ACMD(do_guild_history_req);
 #endif
 ACMD(do_spawnmetinacords);
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-ACMD(do_open_boss_tracking);
-#endif
 #ifdef ENABLE_FAST_SKILL_SELECT_SYSTEM
 ACMD(do_skill_select);
 #endif
@@ -313,6 +310,9 @@ ACMD(do_get_special_gacha_item);
 #endif
 #ifdef ENABLE_FAST_SOUL_REFINE
 ACMD(do_open_soul_window);
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+ACMD(do_get_boss_data);
 #endif
 
 struct command_info cmd_info[] =
@@ -616,9 +616,6 @@ struct command_info cmd_info[] =
 #ifdef ENABLE_GUILD_HISTORY_SYSTEM
 	{"guild_history_req", do_guild_history_req, 0, POS_DEAD, GM_PLAYER},
 #endif
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	{"open_boss_tracking", do_open_boss_tracking, 0, POS_DEAD, GM_PLAYER},
-#endif
 #if defined(ENABLE_BATTLE_ZONE_SYSTEM)
 	{"restart_combat_zone",	do_restart, SCMD_RESTART_COMBAT_ZONE, POS_DEAD,	GM_PLAYER},
 #endif
@@ -677,6 +674,9 @@ struct command_info cmd_info[] =
 #endif
 #ifdef ENABLE_FAST_SOUL_REFINE
 	{ "open_soul_window", do_open_soul_window, 0, POS_DEAD, GM_PLAYER },
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	{ "get_boss_data",		do_get_boss_data,			0,			POS_DEAD,	GM_PLAYER	},
 #endif
 	{"mm", do_spawnmetinacords, 0, POS_DEAD, GM_IMPLEMENTOR},
 	{"\n", nullptr, 0, POS_DEAD, GM_IMPLEMENTOR}  /* 반드시 이 것이 마지막이어야 한다. */

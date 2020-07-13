@@ -288,9 +288,6 @@ enum EPacketGameClientHeaders
 	HEADER_GC_GEM_SHOP_OPEN = 135,
 	HEADER_GC_GEM_SHOP_REFRESH = 136,
 #endif
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	HEADER_GC_BOSS_TRACKING = 137,
-#endif
 #ifdef ENABLE_MAIL_BOX_SYSTEM
 	HEADER_GC_MAILBOX_RECEIVE = 150,
 #endif
@@ -314,6 +311,9 @@ enum EPacketGameClientHeaders
 #endif
 #ifdef ENABLE_GUILD_RANKING_SYSTEM
 	HEADER_GC_GUILD_RANK_SYSTEM = 158,
+#endif
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	HEADER_GC_BOSS_DATA	= 159,
 #endif
 	HEADER_GC_FEATURE_ENABLE = 155,
 	HEADER_GC_CHARACTER_UPDATE2 = 138,	/*** Only Client ***/
@@ -358,13 +358,13 @@ enum EPacketGameGameHeaders
 #ifdef ENABLE_FULL_NOTICE
 	HEADER_GG_BIG_NOTICE 					= 25,
 #endif
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	HEADER_GG_BOSS_TRACKING 				= 26,
-#endif
 #ifdef ENABLE_OFFLINESHOP_MESSAGE_SYSTEM
 	HEADER_GG_OFFLINE_SHOP_SEND_MESSAGE		= 27,
 #endif
 	HEADER_GG_FEATURE_ENABLE 				= 28,
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	HEADER_GG_BOSS_DATA						= 29,
+#endif
 };
 
 #pragma pack(1)
@@ -2073,6 +2073,7 @@ typedef struct SPacketGCShopSign
 	BYTE	bHeader;
 	DWORD	dwVID;
 	char	szSign[SHOP_SIGN_MAX_LEN + 1];
+	BYTE	dwKasmirTitle;
 } TPacketGCShopSign;
 
 typedef struct SPacketCGMyShop
@@ -2729,26 +2730,6 @@ typedef struct command_quest_input_long_string
 } TPacketCGQuestInputLongString;
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-typedef struct packet_boss_tracking
-{
-	BYTE	header;
-	DWORD	dead_time;
-	DWORD	regen_time;
-	BYTE	channel;
-	DWORD	mob_vnum;
-} TPacketGCBossTracking;
-
-typedef struct packet_p2p_boss_tracking
-{
-	BYTE	header;
-	DWORD	dead_time;
-	DWORD	regen_time;
-	BYTE	channel;
-	DWORD	mob_vnum;
-} TPacketGGBossTracking;
-#endif
-
 #ifdef ENABLE_MAIL_BOX_SYSTEM
 enum
 {
@@ -2975,6 +2956,24 @@ typedef struct packet_guildrank_system
 	DWORD	win;
 	DWORD	loss;
 } TPacketGCGuildRankSystem;
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+typedef struct packet_boss_data
+{
+	BYTE header;
+	DWORD regen_time;
+	DWORD dead_time;
+	BYTE channel;
+	DWORD boss_vnum;
+} TPacketGCBossData;
+
+typedef struct packet_p2p_boss_data
+{
+	BYTE header;
+	DWORD boss_vnum;
+	char szName[CHARACTER_NAME_MAX_LEN + 1];
+} TPacketGGBossData;
 #endif
 
 #pragma pack()

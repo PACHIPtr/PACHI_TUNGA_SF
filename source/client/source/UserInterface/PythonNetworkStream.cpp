@@ -220,10 +220,6 @@ class CMainPacketHeaderMap : public CNetworkPacketHeaderMap
 			Set(HEADER_GC_ATTENDANCE_EVENT_INFO, CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCAttendanceEventInfo), true));
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING
-			Set(HEADER_GC_BOSS_TRACKING, CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCBossTracking), false));
-#endif
-
 #ifdef ENABLE_MAIL_BOX_SYSTEM
 			Set(HEADER_GC_MAILBOX_RECEIVE,	CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCMailBoxReceive), false));
 #endif
@@ -252,6 +248,10 @@ class CMainPacketHeaderMap : public CNetworkPacketHeaderMap
 
 #ifdef ENABLE_GUILD_RANKING_SYSTEM
 			Set(HEADER_GC_GUILD_RANK_SYSTEM, CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCGuildRankSystem), false));
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+			Set(HEADER_GC_BOSS_DATA, CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCBossData), false));
 #endif
 		}
 };

@@ -1,0 +1,4 @@
+0713 17:01:13470 :: invalid idx 0
+0713 17:01:27250 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 9013
+0713 17:01:27250 :: CPythonCharacterManager::CreateInstance VID[15191] Race[9013]
+0713 17:02:26164 :: CRaceManager::RegisterRacePath : RACE[34075] LOAD MSMFILE[d:/ymir work/npc_pet/redthief2_officer_young1/redthief2_officer_young3.msm] ERROR. Will Find Another Path.

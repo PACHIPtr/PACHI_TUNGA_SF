@@ -277,7 +277,7 @@ bool CActorInstance::IsNPC()
 #ifdef ENABLE_GROWTH_PET_SYSTEM
 bool CActorInstance::IsNewPet()
 {
-	if (34036 == m_eRace || 34037 == m_eRace || 34041 == m_eRace || 34042 == m_eRace || 34045 == m_eRace || 34046 == m_eRace || 34049 == m_eRace || 34050 == m_eRace || 34053 == m_eRace || 34054 == m_eRace || 34064 == m_eRace || 34065 == m_eRace || 34036 == m_eRace || 34037 == m_eRace || 34073 == m_eRace || 34074 == m_eRace || 34075 == m_eRace || 34076 == m_eRace || 34080 == m_eRace || 34081 == m_eRace)
+	if (34036 == m_eRace || 34037 == m_eRace || 34041 == m_eRace || 34042 == m_eRace || 34045 == m_eRace || 34046 == m_eRace || 34049 == m_eRace || 34050 == m_eRace || 34053 == m_eRace || 34054 == m_eRace || 34064 == m_eRace || 34065 == m_eRace || 34036 == m_eRace || 34037 == m_eRace || 34073 == m_eRace || 34074 == m_eRace || 34075 == m_eRace || 34076 == m_eRace || 34080 == m_eRace || 34081 == m_eRace || 34082 == m_eRace || 34083 == m_eRace)
 		return true;
 
 	return false;

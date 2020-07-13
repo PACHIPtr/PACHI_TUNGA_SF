@@ -82,10 +82,6 @@
 #include "minigame.h"
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-#include "boss_tracking.h"
-#endif
-
 #include "daily_boss.h"
 
 #ifdef ENABLE_ZODIAC_TEMPLE_SYSTEM
@@ -98,6 +94,10 @@
 
 #ifdef ENABLE_AUTO_NOTICE
 #include "AutoNotice.h"
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+#include "boss_manager.h"
 #endif
 
 // 게임과 연결되는 소켓
@@ -278,6 +278,13 @@ void heartbeat(LPHEART ht, int pulse)
 	}
 #endif
 
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	if (!(pulse % (passes_per_sec * 5)))
+	{
+		CBossManager::instance().Update();
+	}
+#endif
+
 #ifdef ENABLE_AUTO_QUERY
 	// if (!(pulse % (passes_per_sec * 60 * 5)))
 	// {
@@ -390,10 +397,6 @@ int main(int argc, char** argv)
 	CMiniGame		mini_game;
 #endif
 
-#ifdef ENABLE_BOSS_TRACKING_SYSTEM
-	CBossTracking	BossTrackingManager;
-#endif
-
 	CDailyBoss DailyBossManager;
 	
 #ifdef ENABLE_AUTO_QUERY
@@ -402,6 +405,10 @@ int main(int argc, char** argv)
 
 #ifdef ENABLE_AUTO_NOTICE
 	CAutoNotice	AutoNoticeManager;
+#endif
+
+#ifdef ENABLE_BOSS_MANAGER_SYSTEM
+	CBossManager bossManager;
 #endif
 
 	if (!start(argc, argv))
