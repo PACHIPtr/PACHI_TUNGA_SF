@@ -2073,7 +2073,6 @@ typedef struct SPacketGCShopSign
 	BYTE	bHeader;
 	DWORD	dwVID;
 	char	szSign[SHOP_SIGN_MAX_LEN + 1];
-	BYTE	dwKasmirTitle;
 } TPacketGCShopSign;
 
 typedef struct SPacketCGMyShop
