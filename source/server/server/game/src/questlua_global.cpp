@@ -193,7 +193,10 @@ namespace quest
 		CQuestManager& q = CQuestManager::instance();
 		const char* name = lua_tostring(L, 1);
 		DWORD arg = (DWORD)lua_tonumber(L, 2);
-		q.ClearServerTimer(name, arg);
+		if (name && arg)
+			q.ClearServerTimer(name, arg);
+		else
+			sys_err("LUA PREVENT: Wrong argument on ClearServerTimer!");
 		return 0;
 	}
 
@@ -320,7 +323,10 @@ namespace quest
 		if (lua_isstring(L, 2)) how = lua_tostring(L, 2);
 		if (lua_tostring(L, 3)) hint = lua_tostring(L, 3);
 
-		LogManager::instance().CharLog(ch, what, how, hint);
+		if (ch)
+			LogManager::instance().CharLog(ch, what, how, hint);
+		else
+			sys_err("LUA PREVENT: !ch on _char_log!");
 		return 0;
 	}
 
@@ -918,8 +924,11 @@ namespace quest
 				if (ch->IsPC() && !ch->IsGM())
 				{
 					BYTE bEmpire = ch->GetEmpire();
-					if (!bEmpire)
+					if (bEmpire == 0)
+					{
+						sys_err("Unkonwn Empire %s %d ", ch->GetName(), ch->GetPlayerID());
 						return;
+					}
 					ch->WarpSet(g_start_position[bEmpire][0], g_start_position[bEmpire][1]);
 				}
 			}

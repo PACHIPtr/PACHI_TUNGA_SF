@@ -245,10 +245,8 @@ bool CPythonNetworkStream::RecvCharacterUpdatePacket()
 	kNetUpdateActorData.m_dwSash = chrUpdatePacket.awPart[CHR_EQUIPPART_SASH];
 #endif
 	kNetUpdateActorData.m_dwVID=chrUpdatePacket.dwVID;
-#ifndef ENABLE_AFFECT_PACKET_RENEWAL
 	kNetUpdateActorData.m_kAffectFlags.CopyData(0, sizeof(chrUpdatePacket.dwAffectFlag[0]), &chrUpdatePacket.dwAffectFlag[0]);
 	kNetUpdateActorData.m_kAffectFlags.CopyData(32, sizeof(chrUpdatePacket.dwAffectFlag[1]), &chrUpdatePacket.dwAffectFlag[1]);
-#endif
 	kNetUpdateActorData.m_sAlignment=chrUpdatePacket.sAlignment;
 #ifdef ENABLE_GROWTH_PET_SYSTEM
 	kNetUpdateActorData.m_dwLevel=chrUpdatePacket.dwLevel;
@@ -277,23 +275,6 @@ bool CPythonNetworkStream::RecvCharacterUpdatePacket()
 
 	return true;
 }
-
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-bool CPythonNetworkStream::RecvCharacterAffectFlagAdd()
-{
-	TPacketAddAffectFlag chrAffectPacket;
-	if (!Recv(sizeof(chrAffectPacket), &chrAffectPacket))
-		return false;
-	
-	SNetworkUpdateActorData kNetUpdateActorData;
-	kNetUpdateActorData.m_dwVID=chrAffectPacket.dwVID;
-	kNetUpdateActorData.m_kAffectFlags.CopyData(0, sizeof(chrAffectPacket.dwAffectFlag[0]), &chrAffectPacket.dwAffectFlag[0]);
-	kNetUpdateActorData.m_kAffectFlags.CopyData(32, sizeof(chrAffectPacket.dwAffectFlag[1]), &chrAffectPacket.dwAffectFlag[1]);
-	__RecvCharacterAffectFlagAdd(&kNetUpdateActorData);
-	
-	return true;
-}
-#endif
 
 void CPythonNetworkStream::__RecvCharacterAppendPacket(SNetworkActorData * pkNetActorData)
 {
@@ -362,12 +343,6 @@ void CPythonNetworkStream::__RecvCharacterUpdatePacket(SNetworkUpdateActorData *
 	}
 }
 
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-void CPythonNetworkStream::__RecvCharacterAffectFlagAdd(SNetworkUpdateActorData * pkNetUpdateActorData)
-{
-	m_rokNetActorMgr->UpdateAffects(*pkNetUpdateActorData);
-}
-#endif
 
 bool CPythonNetworkStream::RecvCharacterDeletePacket()
 {

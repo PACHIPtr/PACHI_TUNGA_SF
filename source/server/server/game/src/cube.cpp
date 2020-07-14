@@ -574,9 +574,10 @@ bool Cube_make(LPCHARACTER ch)
 				new_item->SetSocket(i, copySocket[i]);
 		}
 #endif
-
-		LogManager::instance().CubeLog(ch->GetPlayerID(), ch->GetX(), ch->GetY(),
-			reward_value->vnum, new_item->GetID(), reward_value->count, 1);
+		if (new_item)
+			LogManager::instance().CubeLog(ch->GetPlayerID(), ch->GetX(), ch->GetY(), reward_value->vnum, new_item->GetID(), reward_value->count, 1);
+		else
+			sys_err("Cannot find new_item on CUBE_MAKE!");
 		return true;
 	}
 	else
@@ -938,31 +939,18 @@ void Cube_request_result_list(LPCHARACTER ch)
 
 		resultCount = resultList.size();
 
-		if (resultCount == 0)
-			return;
+		if (resultText.size() != 0)
+			resultText.erase(resultText.size() - 1);
 
-		resultText.erase(resultText.size() - 1);
-
-		int WildFantasytFIXED;
-		if (resultText.size() < 20)
+		size_t resultTextSize = resultText.size() < 20 ? 20 - resultText.size() : resultText.size() - 20;
+		if (resultTextSize >= CHAT_MAX_LEN)
 		{
-			WildFantasytFIXED = 20 - resultText.size();
-		}
-		else
-		{
-			WildFantasytFIXED = resultText.size() - 20;
-		}
-		if (WildFantasytFIXED >= CHAT_MAX_LEN)
-		{
-			sys_err("[CubeInfo] Too long cube result list text. (NPC: %d, FIXED_size_value_exygo: %d, length: %d)", npcVNUM, WildFantasytFIXED, resultText.size());
+			sys_err("[CubeInfo] Too long cube result list text. (NPC: %d, length: %d)", npcVNUM, resultText.size());
 			resultText.clear();
 			resultCount = 0;
 		}
 	}
 
-	// 현재 NPC가 만들 수 있는 아이템들의 목록을 아래 포맷으로 전송한다.
-	// (Server -> Client) /cube r_list npcVNUM resultCount vnum1,count1/vnum2,count2,/vnum3,count3/...
-	// (Server -> Client) /cube r_list 20383 4 123,1/125,1/128,1/130,5
 
 	ch->ChatPacket(CHAT_TYPE_COMMAND, "cube r_list %d %d %s", npcVNUM, resultCount, resultText.c_str());
 }

@@ -256,11 +256,7 @@ void CHARACTER::ClearAffect(bool bSave)
 	}
 
 	if (afOld != m_afAffectFlag || wMovSpd != GetPoint(POINT_MOV_SPEED) || wAttSpd != GetPoint(POINT_ATT_SPEED))
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		UpdateAffectFlag();
-#else
 		UpdatePacket();
-#endif
 
 	CheckMaximumPoints();
 
@@ -306,11 +302,7 @@ void CHARACTER::ClearAffect_New(bool bSave)
 #endif
 
 	if (afOld != m_afAffectFlag || wMovSpd != GetPoint(POINT_MOV_SPEED) || wAttSpd != GetPoint(POINT_ATT_SPEED))
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		UpdateAffectFlag();
-#else
 		UpdatePacket();
-#endif
 
 	CheckMaximumPoints();
 
@@ -434,11 +426,7 @@ int CHARACTER::ProcessAffect()
 	{
 		if (afOld != m_afAffectFlag || lMovSpd != GetPoint(POINT_MOV_SPEED) || lAttSpd != GetPoint(POINT_ATT_SPEED))
 		{
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-			UpdateAffectFlag();
-#else
 			UpdatePacket();
-#endif
 		}
 
 		CheckMaximumPoints();
@@ -626,11 +614,7 @@ void CHARACTER::LoadAffect(DWORD dwCount, TPacketAffectElement * pElements)
 
 	if (afOld != m_afAffectFlag || lMovSpd != GetPoint(POINT_MOV_SPEED) || lAttSpd != GetPoint(POINT_ATT_SPEED))
 	{
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		UpdateAffectFlag();
-#else
 		UpdatePacket();
-#endif
 	}
 
 	StartAffectEvent();
@@ -749,11 +733,7 @@ bool CHARACTER::AddAffect(DWORD dwType, BYTE bApplyOn, long lApplyValue, DWORD d
 	ComputeAffect(pkAff, true);
 
 	if (pkAff->dwFlag || wMovSpd != GetPoint(POINT_MOV_SPEED) || wAttSpd != GetPoint(POINT_ATT_SPEED))
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		UpdateAffectFlag();
-#else
 		UpdatePacket();
-#endif
 
 	StartAffectEvent();
 
@@ -843,20 +823,10 @@ bool CHARACTER::RemoveAffect(CAffect * pkAff)
 
 	ComputeAffect(pkAff, false);
 
-	if (AFFECT_REVIVE_INVISIBLE != pkAff->dwType) {
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
+	if (AFFECT_REVIVE_INVISIBLE != pkAff->dwType && AFFECT_MOUNT != pkAff->dwType)
 		ComputePoints();
-		UpdateAffectFlag();
-#else
+	else
 		UpdatePacket();
-#endif
-	} else {
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		UpdateAffectFlag();
-#else
-		UpdatePacket();
-#endif
-	}
 	
 	CheckMaximumPoints();
 
@@ -918,6 +888,7 @@ void CHARACTER::RemoveGoodAffect()
 	RemoveAffect(SKILL_TERROR);
 	RemoveAffect(SKILL_JUMAGAP);
 	RemoveAffect(SKILL_MANASHILED);
+	RemoveAffect(SKILL_MUYEONG);
 	RemoveAffect(SKILL_HOSIN);
 	RemoveAffect(SKILL_REFLECT);
 	RemoveAffect(SKILL_KWAESOK);

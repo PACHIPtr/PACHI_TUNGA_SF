@@ -1995,13 +1995,7 @@ ACMD(do_set)
 		int gold = 0;
 		str_to_number(gold, arg3);
 		DBManager::instance().SendMoneyLog(MONEY_LOG_MISC, 3, gold);
-		int before_gold = tch->GetGold();
 		tch->PointChange(POINT_GOLD, gold, true);
-		int after_gold = tch->GetGold();
-		if (0 == after_gold && 0 != before_gold)
-		{
-			LogManager::instance().CharLog(tch, gold, "ZERO_GOLD", "GM");
-		}
 	}
 	break;
 
@@ -2112,9 +2106,9 @@ ACMD(do_set)
 		int	amount = 0;
 		str_to_number(amount, arg3);
 #ifdef ENABLE_ALIGNMENT_SYSTEM
-		tch->UpdateAlignment(amount - ch->GetRealAlignment(), true);
+		tch->UpdateAlignment(amount - tch->GetRealAlignment(), true);
 #else
-		tch->UpdateAlignment(amount - ch->GetRealAlignment());
+		tch->UpdateAlignment(amount - tch->GetRealAlignment());
 #endif
 	}
 	break;

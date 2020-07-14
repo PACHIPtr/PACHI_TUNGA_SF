@@ -258,7 +258,7 @@ const DESC_MANAGER::DESC_SET& DESC_MANAGER::GetClientSet()
 {
 	return m_set_pkDesc;
 }
-
+#include <boost/algorithm/string.hpp>
 struct name_with_desc_func
 {
 	const char* m_name;
@@ -266,10 +266,7 @@ struct name_with_desc_func
 
 	bool operator () (LPDESC d)
 	{
-		if (d->GetCharacter() && !strcmp(d->GetCharacter()->GetName(), m_name))
-			return true;
-
-		return false;
+		return d->GetCharacter() && boost::algorithm::to_lower_copy(std::string(d->GetCharacter()->GetName())) == boost::algorithm::to_lower_copy(std::string(m_name));
 	}
 };
 

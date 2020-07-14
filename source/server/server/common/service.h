@@ -135,7 +135,6 @@
 #define ENABLE_AUTO_POTION_RENEWAL									// Otopot Güncellemesi
 #define ENABLE_CUBE_EX_RENEWAL										// Arındırma Penceresi Yeni Gui
 #define ENABLE_MONSTER_DEATHBLOW_RENEWAL							// Canavar DeathBlow Güncellemesi
-//#define ENABLE_AFFECT_PACKET_RENEWAL								// Affect Paketi Yenilemesi
 #define ENABLE_WIND_SHOES_RENEWAL									// Rüzgarın Ayakkabıları Yenilemesi
 #define ENABLE_SKILL_RENEWAL										// Beceri Yenilemesi
 //#define ENABLE_CRITICAL_PCT_RENEWAL									// Kritik Hasar Yenilemesi

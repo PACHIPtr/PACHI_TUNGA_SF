@@ -480,7 +480,7 @@ bool CHARACTER::LearnSkillByBook(DWORD dwSkillVnum, BYTE bProb)
 
 	if (FN_should_check_exp(this))
 	{
-		need_exp = 0;
+		if (GetLevel() < PLAYER_MAX_LEVEL_CONST) { need_exp = 20000; }
 
 		if (GetExp() < need_exp)
 		{
@@ -2620,9 +2620,9 @@ int CHARACTER::ComputeSkill(DWORD dwVnum, LPCHARACTER pkVictim, BYTE bSkillLevel
 {
 	const bool bCanUseHorseSkill = CanUseHorseSkill();
 
-	// 말을 타고있지만 스킬은 사용할 수 없는 상태라면 return
-	if (false == bCanUseHorseSkill && true == IsRiding())
-		return BATTLE_NONE;
+	if (dwVnum != SKILL_MUYEONG)
+		if (false == bCanUseHorseSkill && true == IsRiding())
+			return BATTLE_NONE;
 
 	if (IsPolymorphed())
 		return BATTLE_NONE;
@@ -2630,24 +2630,26 @@ int CHARACTER::ComputeSkill(DWORD dwVnum, LPCHARACTER pkVictim, BYTE bSkillLevel
 	if (g_bSkillDisable)
 		return BATTLE_NONE;
 
-	CSkillProto * pkSk = CSkillManager::instance().Get(dwVnum);
+	CSkillProto* pkSk = CSkillManager::instance().Get(dwVnum);
 
 	if (!pkSk)
 		return BATTLE_NONE;
 
-	if (bCanUseHorseSkill && pkSk->dwType != SKILL_TYPE_HORSE)
-		return BATTLE_NONE;
+	if (dwVnum != SKILL_MUYEONG)
+	{
+		if (bCanUseHorseSkill && pkSk->dwType != SKILL_TYPE_HORSE)
+			return BATTLE_NONE;
 
-	if (!bCanUseHorseSkill && pkSk->dwType == SKILL_TYPE_HORSE)
-		return BATTLE_NONE;
+		if (!bCanUseHorseSkill && pkSk->dwType == SKILL_TYPE_HORSE)
+			return BATTLE_NONE;
+	}
 
-	// 상대방에게 쓰는 것이 아니면 나에게 써야 한다.
 	if (IS_SET(pkSk->dwFlag, SKILL_FLAG_SELFONLY))
 		pkVictim = this;
-#ifdef ENABLE_WOLFMAN_CHARACTER
-	if (IS_SET(pkSk->dwFlag, SKILL_FLAG_PARTY) && !GetParty() && !pkVictim)
-		pkVictim = this;
-#endif
+	// #ifdef ENABLE_WOLFMAN_CHARACTER
+		// else if (IS_SET(pkSk->dwFlag, SKILL_FLAG_PARTY))
+			// pkVictim = this;
+	// #endif
 	if (!pkVictim)
 	{
 		if (test_server)
@@ -3090,6 +3092,8 @@ bool CHARACTER::UseSkill(DWORD dwVnum, LPCHARACTER pkVictim, bool bUseGrandMaste
 		}
 	}
 	// END_OF_NO_GRANDMASTER
+	if ((dwVnum == SKILL_GEOMKYUNG || dwVnum == SKILL_GWIGEOM) && !GetWear(WEAR_WEAPON))
+		return false;
 
 	if (g_bSkillDisable)
 		return false;
@@ -3345,6 +3349,8 @@ bool CHARACTER::UseSkill(DWORD dwVnum, LPCHARACTER pkVictim, bool bUseGrandMaste
 	else if (!IS_SET(pkSk->dwFlag, SKILL_FLAG_ATTACK))
 		ComputeSkill(dwVnum, pkVictim);
 	else if (dwVnum == SKILL_BYEURAK)
+		ComputeSkill(dwVnum, pkVictim);
+	else if (dwVnum == SKILL_PAERYONG)
 		ComputeSkill(dwVnum, pkVictim);
 	else if (dwVnum == SKILL_MUYEONG || pkSk->IsChargeSkill())
 		ComputeSkill(dwVnum, pkVictim);

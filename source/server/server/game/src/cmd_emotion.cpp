@@ -7,7 +7,6 @@
 #include "buffer_manager.h"
 #include "unique_item.h"
 #include "wedding.h"
-#include "questmanager.h"
 #ifdef ENABLE_MESSENGER_BLOCK_SYSTEM
 #include "messenger_manager.h"
 #endif
@@ -43,8 +42,6 @@ struct emotion_type_s
 	{ "´í½º4",	"dance4",	0,						1.0f },
 	{ "´í½º5",	"dance5",	0,						1.0f },
 	{ "´í½º6",	"dance6",	0,						1.0f },
-	{ "´í½º2",	"afk_mod_1",	0,						1.0f },
-	{ "´í½º2",	"afk_mod_2",	0,						1.0f },
 	// END_OF_DANCE
 	{ "ÃàÇÏ",	"congratulation",	0,				1.0f	},
 	{ "¿ë¼­",	"forgive",			0,				1.0f	},
@@ -56,18 +53,11 @@ struct emotion_type_s
 	{ "ÁúÅõ",	"banter",			0,				1.0f	},
 	{ "±â»Ý",	"joy",				0,				1.0f	},
 #ifdef ENABLE_EMOTION_SYSTEM
-	{ "??",	"selfie",				0,				1.0f	},
-	{ "??",	"dance7",				0,				1.0f	},
-	{ "??",	"doze",				0,				1.0f	},
-	{ "??",	"exercise",				0,				1.0f	},
-	{ "??",	"pushup",				0,				1.0f	},
-	{ "??",	"alcohol",				0,				1.0f	},
-	{ "??",	"siren",				0,				1.0f	},
-	{ "??",	"weather1",				0,				1.0f	},
-	{ "??",	"weather2",				0,				1.0f	},
-	{ "??",	"weather3",				0,				1.0f	},
-	{ "??",	"whirl",				0,				1.0f	},
-	{ "??",	"charging",				0,				1.0f	},
+	{ "¼¿Ä«",	"selfie",				0,				1.0f	},
+	{ "´í½º7",	"dance7",				0,				1.0f	},
+	{ "¼±Àá",	"doze",				0,				1.0f	},
+	{ "¿îµ¿",	"exercise",				0,				1.0f	},
+	{ "Çª½¬ ¾÷",	"pushup",				0,				1.0f	},
 #endif
 	{ "\n",	"\n",		0,						0.0f },
 	/*
@@ -111,6 +101,7 @@ std::set<std::pair<DWORD, DWORD> > s_emotion_set;
 
 ACMD(do_emotion_allow)
 {
+	if (!ch) return;
 	if (ch->GetArena())
 	{
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù."));
@@ -161,17 +152,6 @@ ACMD(do_emotion)
 		}
 	}
 
-	quest::PC* onti = quest::CQuestManager::instance().GetPC(ch->GetPlayerID());
-	DWORD tekrar = get_global_time();
-	if (onti)
-	{
-		DWORD sontime = onti->GetFlag("tunga.sonduygu");
-		if (sontime + 5 > tekrar)
-		{
-			ch->ChatPacket(CHAT_TYPE_INFO, "Duygular arasinda 5 saniye beklemelisin.");
-			return;
-		}
-	}
 	for (i = 0; *emotion_types[i].command != '\n'; ++i)
 	{
 		if (!strcmp(cmd_info[cmd].command, emotion_types[i].command))
@@ -297,4 +277,8 @@ ACMD(do_emotion)
 	buf.write(chatbuf, len);
 
 	ch->PacketAround(buf.read_peek(), buf.size());
+	if (victim)
+		sys_log(1, "ACTION: %s TO %s", emotion_types[i].command, victim->GetName());
+	else
+		sys_log(1, "ACTION: %s", emotion_types[i].command);
 }

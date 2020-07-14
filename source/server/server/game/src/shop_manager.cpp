@@ -320,14 +320,10 @@ bool CShopManager::GemShopGetInfoById(DWORD itemId, DWORD & dwVnum, BYTE & bCoun
 
 void CShopManager::Destroy()
 {
-	TShopMap::iterator it = m_map_pkShop.begin();
 
-	while (it != m_map_pkShop.end())
-	{
-		M2_DELETE(it->second);
-		++it;
-	}
-
+	for (auto it = m_map_pkShopByNPCVnum.begin(); it != m_map_pkShopByNPCVnum.end(); ++it)
+		delete it->second;
+	m_map_pkShopByNPCVnum.clear();
 	m_map_pkShop.clear();
 }
 
@@ -1013,7 +1009,7 @@ bool CShopManager::ReadShopTableEx(const char* stFileName)
 			return false;
 		}
 
-		m_map_pkShop.insert(TShopMap::value_type (pkShopEx->GetVnum(), pkShopEx));
+		m_map_pkShop.insert(TShopMap::value_type(table.dwVnum, pkShopEx));
 		pkShopEx->AddShopTable(table);
 	}
 

@@ -219,9 +219,6 @@ class CNetworkActorManager : public CReferenceObject
 		void RemoveActor(DWORD dwVID);
 		void AppendActor(const SNetworkActorData& c_rkNetActorData);
 		void UpdateActor(const SNetworkUpdateActorData& c_rkNetUpdateActorData);
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		void UpdateAffects(const SNetworkUpdateActorData& c_rkNetUpdateActorData);
-#endif
 		void MoveActor(const SNetworkMoveActorData& c_rkNetMoveActorData);
 
 		void SyncActor(DWORD dwVID, LONG lPosX, LONG lPosY);

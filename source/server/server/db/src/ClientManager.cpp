@@ -594,6 +594,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 			if (strcmp("000000", szSafeboxPassword))
 			{
 				pkPeer->EncodeHeader(HEADER_DG_SAFEBOX_WRONG_PASSWORD, dwHandle, 0);
+				delete pSafebox;
 				delete pi;
 				return;
 			}
@@ -604,6 +605,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 			if (((!row[2] || !*row[2]) && strcmp("000000", szSafeboxPassword)) || ((row[2] && *row[2]) && strcmp(row[2], szSafeboxPassword)))
 			{
 				pkPeer->EncodeHeader(HEADER_DG_SAFEBOX_WRONG_PASSWORD, dwHandle, 0);
+				delete pSafebox;
 				delete pi;
 				return;
 			}

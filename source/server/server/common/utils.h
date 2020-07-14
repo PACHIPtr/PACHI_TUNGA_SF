@@ -59,7 +59,7 @@ inline bool str_to_number(long& out, const char* in)
 {
 	if (0 == in || 0 == in[0])	return false;
 
-	out = (long)strtol(in, NULL, 10);
+	out = strtol(in, NULL, 10);
 	return true;
 }
 
@@ -67,7 +67,7 @@ inline bool str_to_number(unsigned long& out, const char* in)
 {
 	if (0 == in || 0 == in[0])	return false;
 
-	out = (unsigned long)strtoul(in, NULL, 10);
+	out = strtoul(in, NULL, 10);
 	return true;
 }
 
@@ -75,7 +75,7 @@ inline bool str_to_number(long long& out, const char* in)
 {
 	if (0 == in || 0 == in[0])	return false;
 
-	out = (long long)strtoull(in, NULL, 10);
+	out = strtoll(in, NULL, 10);
 	return true;
 }
 

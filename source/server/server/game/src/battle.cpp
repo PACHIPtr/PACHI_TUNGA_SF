@@ -67,13 +67,11 @@ bool battle_is_attackable(LPCHARACTER ch, LPCHARACTER victim)
 	if (victim->IsDead())
 		return false;
 
-	if (victim->IsPC()) {
-		if (victim->IsObserverMode()) {
-			return false;
-		}
-	}
+	if (victim->IsObserverMode() || victim->IsStun())
+		return false;
+	if (victim->GetRaceNum() >= 30000 && victim->GetRaceNum() <= 30100)
+		return false;
 
-	// 안전지대면 중단
 	if (!ch->IsGuardNPC())
 	{
 		SECTREE* sectree = nullptr;
@@ -86,7 +84,7 @@ bool battle_is_attackable(LPCHARACTER ch, LPCHARACTER victim)
 		if (sectree && sectree->IsAttr(victim->GetX(), victim->GetY(), ATTR_BANPK))
 			return false;
 	}
-	// 내가 죽었으면 중단한다.
+
 	if (ch->IsStun() || ch->IsDead())
 		return false;
 

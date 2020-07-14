@@ -542,9 +542,7 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 #ifdef ENABLE_EVENT_INFORMATION_SYSTEM
 		bool RecvEventInfo();
 #endif
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		bool RecvCharacterAffectFlagAdd();
-#endif
+
 		bool RecvPointChange();					// Alarm to python
 		bool RecvChangeSpeedPacket();
 
@@ -789,9 +787,7 @@ protected:
 
 		void __RecvCharacterAppendPacket(SNetworkActorData * pkNetActorData);
 		void __RecvCharacterUpdatePacket(SNetworkUpdateActorData * pkNetUpdateActorData);
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-		void __RecvCharacterAffectFlagAdd(SNetworkUpdateActorData * pkNetUpdateActorData);
-#endif
+
 
 		void __FilterInsult(char* szLine, UINT uLineLen);
 

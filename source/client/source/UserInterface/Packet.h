@@ -297,9 +297,7 @@ enum EPacketHeaderGameClient
 #ifdef ENABLE_SAFEBOX_MONEY_SYSTEM
 	HEADER_GC_SAFEBOX_MONEY_CHANGE 						= 152,
 #endif
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-	HEADER_GC_AFFECT_FLAG_ADD 							= 153,
-#endif
+
 #ifdef ENABLE_AURA_SYSTEM
 	HEADER_GC_AURA										= 154,
 #endif
@@ -3300,14 +3298,6 @@ typedef struct packet_safebox_money_change
 } TPacketGCSafeboxMoneyChange;
 #endif
 
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-typedef struct packet_add_flag_affect
-{
-	BYTE bHeader;
-	DWORD dwAffectFlag[2];
-	DWORD dwVID;
-} TPacketAddAffectFlag;
-#endif
 
 #ifdef _IMPROVED_PACKET_ENCRYPTION_
 struct TPacketKeyAgreement

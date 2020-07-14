@@ -338,8 +338,8 @@ namespace fishing
 				}
 			}
 		}
-		// ¹Ì³¢¸¦ »«´Ù
-		rod->SetSocket(2, 0);
+		if (rod)
+			rod->SetSocket(2, 0);
 	}
 
 	bool PredictFish(LPCHARACTER ch)

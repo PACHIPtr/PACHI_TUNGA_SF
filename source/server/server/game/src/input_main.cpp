@@ -1627,7 +1627,11 @@ int CInputMain::Messenger(LPCHARACTER ch, const char* c_pData, size_t uiBytes)
 			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("arkadas degil"));
 			return CHARACTER_NAME_MAX_LEN;
 		}
-		MessengerManager::instance().RemoveFromList(char_name, ch->GetName());
+		else
+		{
+			MessengerManager::instance().RemoveFromList(ch->GetName(), char_name)
+			MessengerManager::instance().RemoveFromList(char_name, ch->GetName());
+		}
 	}
 	return CHARACTER_NAME_MAX_LEN;
 
@@ -2650,6 +2654,8 @@ void CInputMain::SafeboxItemMove(LPCHARACTER ch, const char* data)
 // PARTY_JOIN_BUG_FIX
 void CInputMain::PartyInvite(LPCHARACTER ch, const char* c_pData)
 {
+	if (!ch)
+		return;
 	if (ch->GetArena())
 	{
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련장에서 사용하실 수 없습니다."));
@@ -2660,7 +2666,7 @@ void CInputMain::PartyInvite(LPCHARACTER ch, const char* c_pData)
 
 	LPCHARACTER pInvitee = CHARACTER_MANAGER::instance().Find(p->vid);
 
-	if (!pInvitee || !ch->GetDesc() || !pInvitee->GetDesc())
+	if (!pInvitee || !ch->GetDesc() || !pInvitee->GetDesc() || !pInvitee->IsPC() || !ch->IsPC())
 	{
 		sys_err("PARTY Cannot find invited character");
 		return;
@@ -2682,6 +2688,8 @@ void CInputMain::PartyInvite(LPCHARACTER ch, const char* c_pData)
 
 void CInputMain::PartyInviteAnswer(LPCHARACTER ch, const char* c_pData)
 {
+	if (!ch)
+		return;
 	if (ch->GetArena())
 	{
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("대련장에서 사용하실 수 없습니다."));
@@ -2694,7 +2702,7 @@ void CInputMain::PartyInviteAnswer(LPCHARACTER ch, const char* c_pData)
 
 	// pInviter 가 ch 에게 파티 요청을 했었다.
 
-	if (!pInviter)
+	if (!pInviter || !pInviter->IsPC())
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<파티> 파티요청을 한 캐릭터를 찾을수 없습니다."));
 	else if (!p->accept)
 		pInviter->PartyInviteDeny(ch->GetPlayerID());
@@ -2953,8 +2961,8 @@ void CInputMain::PartyUseSkill(LPCHARACTER ch, const char* c_pData)
 				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Yanina getirmek istedigin oyuncu ile ayni haritada olmalisin!"));
 				return;
 			}
-
-			ch->GetParty()->SummonToLeader(pch->GetPlayerID());
+			if (pch->IsPC())
+				ch->GetParty()->SummonToLeader(pch->GetPlayerID());
 		}
 		else
 			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("<파티> 소환하려는 대상을 찾을 수 없습니다."));

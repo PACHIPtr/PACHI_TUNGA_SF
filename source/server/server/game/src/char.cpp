@@ -1259,17 +1259,6 @@ void CHARACTER::EncodeRemovePacket(LPENTITY entity)
 		sys_log(3, "EntityRemove %s(%d) FROM %s", GetName(), (DWORD)m_vid, ((LPCHARACTER)entity)->GetName());
 }
 
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-void CHARACTER::UpdateAffectFlag()
-{
-	TPacketAddAffectFlag pack;
-	pack.bHeader = HEADER_GC_AFFECT_FLAG_ADD;
-	pack.dwVID = m_vid;
-	pack.dwAffectFlag[0] = m_afAffectFlag.bits[0];
-	pack.dwAffectFlag[1] = m_afAffectFlag.bits[1];
-	PacketAround(&pack, sizeof(pack));
-}
-#endif
 
 void CHARACTER::UpdatePacket()
 {
@@ -1309,10 +1298,8 @@ void CHARACTER::UpdatePacket()
 	pack.bMovingSpeed = GetLimitPoint(POINT_MOV_SPEED);
 	pack.bAttackSpeed = GetLimitPoint(POINT_ATT_SPEED);
 	pack.bStateFlag = m_bAddChrState;
-#ifndef ENABLE_AFFECT_PACKET_RENEWAL
 	pack.dwAffectFlag[0] = m_afAffectFlag.bits[0];
 	pack.dwAffectFlag[1] = m_afAffectFlag.bits[1];
-#endif
 	pack.dwGuildID = 0;
 	pack.sAlignment = m_iAlignment / 10;
 	if (IsPC())
@@ -2281,22 +2268,21 @@ void CHARACTER::SetPlayerProto(const TPlayerTable * t)
 
 	ComputePoints();
 
-	SetHP(GetMaxHP()); // -32k hp bugu fix
-	SetSP(GetMaxSP()); // -32k sp bugu fix
+	SetHP(t->hp);
+	SetSP(t->sp);
 	SetStamina(t->stamina);
 #ifdef ENABLE_YOUTUBER_SYSTEM
 	Yayinci_Liste();
 #endif
 
 	//GM일때 보호모드
-	if (!test_server)
+
+	if (GetGMLevel() > GM_PLAYER || test_server)
 	{
-		if (GetGMLevel() > GM_LOW_WIZARD)
-		{
-			m_afAffectFlag.Set(AFF_YMIR);
-			m_bPKMode = PK_MODE_PROTECT;
-		}
+		m_afAffectFlag.Set(AFF_YMIR);
+		m_bPKMode = PK_MODE_PROTECT;
 	}
+
 
 	if (GetLevel() < PK_PROTECT_LEVEL)
 		m_bPKMode = PK_MODE_PROTECT;
@@ -3719,10 +3705,8 @@ int CHARACTER::GetPoint(BYTE type) const
 	}
 
 	if (val > max_val) 
-	{
-		sys_err("POINT_ERROR: %s type %d val %d (max: %d)", GetName(), val, max_val);
-		val = max_val;
-	}
+		sys_err("POINT_ERROR: %s type %d val %d (max: %d)", GetName(), type, val, max_val);
+
 
 	return (val);
 }
@@ -3773,10 +3757,8 @@ int CHARACTER::GetLimitPoint(BYTE type) const
 	}
 
 	if (val > max_val)
-	{
 		sys_err("POINT_ERROR: %s type %d val %d (max: %d)", GetName(), type, val, max_val);
-		val = max_val;
-	}
+
 	
 	if (val > limit)
 		val = limit;

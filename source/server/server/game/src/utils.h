@@ -65,7 +65,6 @@ extern const char* two_arguments(const char* argument, char* first_arg, size_t f
 extern const char* three_arguments(const char* argument, char* first_arg, size_t first_size, char* second_arg, size_t second_size, char* third_flag, size_t third_size);
 extern const char* four_arguments(const char* argument, char* first_arg, size_t first_size, char* second_arg, size_t second_size, char* third_flag, size_t third_size, char* four_flag, size_t four_size);
 extern const char* six_arguments(const char* argument, char* first_arg, size_t first_size, char* second_arg, size_t second_size, char* third_flag, size_t third_size, char* four_flag, size_t four_size, char* five_flag, size_t five_size, char* six_flag, size_t six_size);
-extern const char* pvp_arguments(const char* argument, char* arg1, size_t arg1_size, char* arg2, size_t arg2_size, char* arg3, size_t arg3_size, char* arg4, size_t arg4_size, char* arg5, size_t arg5_size, char* arg6, size_t arg6_size, char* arg7, size_t arg7_size, char* arg8, size_t arg8_size, char* arg9, size_t arg9_size, char* arg10, size_t arg10_size);
 extern const char* first_cmd(const char* argument, char* first_arg, size_t first_arg_size, size_t * first_arg_len_result);
 extern void split_argument(const char* argument, std::vector<std::string> & vecArgs);
 

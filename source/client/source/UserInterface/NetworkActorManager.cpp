@@ -534,30 +534,7 @@ void CNetworkActorManager::RemoveActor(DWORD dwVID)
 	m_kNetActorDict.erase(f);
 }
 
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-void CNetworkActorManager::UpdateAffects(const SNetworkUpdateActorData& c_rkNetUpdateActorData)
-{
-	std::map<DWORD, SNetworkActorData>::iterator f=m_kNetActorDict.find(c_rkNetUpdateActorData.m_dwVID);
-	if (m_kNetActorDict.end()==f)
-	{
-#ifdef _DEBUG
-		TraceError("CNetworkActorManager::UpdateActor(dwVID=%d) - NOT EXIST VID", c_rkNetUpdateActorData.m_dwVID);
-#endif
-		return;
-	}
-	
-	SNetworkActorData& rkNetActorData=f->second;
-	CInstanceBase* pkInstFind=__FindActor(rkNetActorData);
-	if (pkInstFind) {
-		CAffectFlagContainer kAffectFlagContainer;
-		kAffectFlagContainer.CopyInstance(pkInstFind->GetAffectFlags());
-		pkInstFind->__ClearAffects();
-		pkInstFind->SetAffectFlagContainer(kAffectFlagContainer);
-		pkInstFind->SetAffectFlagContainer(c_rkNetUpdateActorData.m_kAffectFlags);
-	}
-	rkNetActorData.m_kAffectFlags=c_rkNetUpdateActorData.m_kAffectFlags;
-}
-#endif
+
 
 void CNetworkActorManager::UpdateActor(const SNetworkUpdateActorData& c_rkNetUpdateActorData)
 {
@@ -596,9 +573,7 @@ void CNetworkActorManager::UpdateActor(const SNetworkUpdateActorData& c_rkNetUpd
 		pkInstFind->ChangeAura(c_rkNetUpdateActorData.m_dwAura);
 #endif
 		pkInstFind->ChangeGuild(c_rkNetUpdateActorData.m_dwGuildID);
-#ifndef ENABLE_AFFECT_PACKET_RENEWAL
 		pkInstFind->SetAffectFlagContainer(c_rkNetUpdateActorData.m_kAffectFlags);
-#endif
 		pkInstFind->SetMoveSpeed(c_rkNetUpdateActorData.m_dwMovSpd);
 		pkInstFind->SetAttackSpeed(c_rkNetUpdateActorData.m_dwAtkSpd);
 		pkInstFind->SetAlignment(c_rkNetUpdateActorData.m_sAlignment);
@@ -616,9 +591,7 @@ void CNetworkActorManager::UpdateActor(const SNetworkUpdateActorData& c_rkNetUpd
 #endif
 	}
 
-#ifndef ENABLE_AFFECT_PACKET_RENEWAL
 	rkNetActorData.m_kAffectFlags=c_rkNetUpdateActorData.m_kAffectFlags;
-#endif
 #if defined(ENABLE_BATTLE_ZONE_SYSTEM)
 	rkNetActorData.combat_zone_points = c_rkNetUpdateActorData.combat_zone_points;
 #endif

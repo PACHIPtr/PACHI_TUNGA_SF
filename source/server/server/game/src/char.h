@@ -672,9 +672,6 @@ protected:
 public:
 	LPCHARACTER			FindCharacterInView(const char* name, bool bFindPCOnly);
 	void				UpdatePacket();
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-	void				UpdateAffectFlag();
-#endif
 
 	//////////////////////////////////////////////////////////////////////////////////
 	// FSM (Finite State Machine) ฐüทร

@@ -861,7 +861,8 @@ bool Set_Proto_Item_Table(TItemTable * itemTable, cCsvTable & csvTable, std::map
 	}
 	itemTable->bType = dataArray[2];
 	itemTable->bSubType = dataArray[3];
-	itemTable->bSize = dataArray[4];
+	//itemTable->bSize = dataArray[4];
+	itemTable->bSize = MINMAX(1, dataArray[4], 3);
 	itemTable->dwAntiFlags = dataArray[5];
 	itemTable->dwFlags = dataArray[6];
 	itemTable->dwWearFlags = dataArray[7];

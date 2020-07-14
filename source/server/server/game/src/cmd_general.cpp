@@ -1783,11 +1783,9 @@ ACMD(do_war)
 	{
 		str_to_number(type, arg2);
 
-		if (type >= GUILD_WAR_TYPE_MAX_NUM)
+		if ((type >= GUILD_WAR_TYPE_MAX_NUM) || (type < 0))
 			type = GUILD_WAR_TYPE_FIELD;
 
-		if (type < 0) //war crash fix
-			return;
 	}
 
 	//길드의 마스터 아이디를 얻어온뒤
@@ -2529,10 +2527,10 @@ static const char* FN_point_string(int apply_number)
 		return LC_TEXT("경험치 %d%%");
 
 	case POINT_MALL_ITEMBONUS:
-		return LC_TEXT("아이템 드롭율 %.1f배");
+		return LC_TEXT("아이템 드롭율 %d배");
 
 	case POINT_MALL_GOLDBONUS:
-		return LC_TEXT("돈 드롭율 %.1f배");
+		return LC_TEXT("돈 드롭율 %d배");
 
 	case POINT_MAX_HP_PCT:
 		return LC_TEXT("최대 생명력 +%d%%");
@@ -2579,7 +2577,7 @@ static const char* FN_point_string(int apply_number)
 	case POINT_ATTBONUS_BOW:	return LC_TEXT("Bow resistance: %d%%");
 #endif
 	default:
-		return nullptr;
+		return "UNK_ID %d%%";
 	}
 }
 

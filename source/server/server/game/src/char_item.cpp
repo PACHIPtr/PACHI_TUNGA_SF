@@ -112,7 +112,7 @@ static bool IS_MONKEY_DUNGEON(int map_index)
 	case 45:
 	case 108:
 	case 109:
-		return true;;
+		return true;
 	}
 
 	return false;
@@ -5791,10 +5791,13 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 			break;
 #else
 			case 71107: // Ãµµµº¹¼þ¾Æ
+			case 39032:
 			{
 				int val = item->GetValue(0);
 				int interval = item->GetValue(1);
 				quest::PC* pPC = quest::CQuestManager::instance().GetPC(GetPlayerID());
+				if (!pPC)
+					return false;
 				int last_use_time = pPC->GetFlag("mythical_peach.last_use_time");
 
 				if (get_global_time() - last_use_time < interval * 60 * 60)
@@ -12047,9 +12050,10 @@ LPITEM CHARACTER::AutoGiveItem(DWORD dwItemVnum, BYTE bCount, int iRarePct, bool
 					if (inv_item->GetSocket(0) == item->GetSocket(0) &&
 						inv_item->GetSocket(1) == item->GetSocket(1) &&
 						inv_item->GetSocket(2) == item->GetSocket(2) &&
-						inv_item->GetCount() < ITEM_MAX_COUNT)
+						inv_item->GetCount() + item->GetCount() <= ITEM_MAX_COUNT)
 					{
 						inv_item->SetCount(inv_item->GetCount() + item->GetCount());
+						M2_DESTROY_ITEM(item);
 						return inv_item;
 					}
 				}

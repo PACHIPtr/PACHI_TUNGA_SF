@@ -692,12 +692,6 @@ void CPythonNetworkStream::GamePhase()
 				break;
 #endif
 
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-			case HEADER_GC_AFFECT_FLAG_ADD:
-				ret = RecvCharacterAffectFlagAdd();
-				break;
-#endif
-
 #ifdef ENABLE_AURA_SYSTEM
 			case HEADER_GC_AURA:
 				ret = RecvAuraPacket();

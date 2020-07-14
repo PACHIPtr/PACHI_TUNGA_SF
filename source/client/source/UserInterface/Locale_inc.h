@@ -121,7 +121,6 @@
 #define ENABLE_WHISPER_RENEWAL										// PM De Yazýyor Güncellemesi
 #define ENABLE_CUBE_EX_RENEWAL										// Arýndýrma Penceresi Yeni GUI
 #define ENABLE_SHOW_DAMAGE_RENEWAL									// Hasar Gösterimi Yenilenmesi
-//#define ENABLE_AFFECT_PACKET_RENEWAL								// Affect Paketi Yenilemesi
 #define ENABLE_WIND_SHOES_RENEWAL									// Rüzgarin Ayakkabilari Yenilemesi
 #define ENABLE_SKILL_RENEWAL										// Beceri kitabi yenilemesi
 #define ENABLE_CUBE_PERCENT_RENEWAL									// Cube Penceresi Sans Gorunumu

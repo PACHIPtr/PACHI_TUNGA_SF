@@ -130,11 +130,6 @@ const char* six_arguments(const char* argument, char* first_arg, size_t first_si
 	return (one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(argument, first_arg, first_size), second_arg, second_size), third_arg, third_size), four_arg, four_size), five_arg, five_size), six_arg, six_size));
 }
 
-const char* pvp_arguments(const char* argument, char* arg1, size_t arg1_size, char* arg2, size_t arg2_size, char* arg3, size_t arg3_size, char* arg4, size_t arg4_size, char* arg5, size_t arg5_size, char* arg6, size_t arg6_size, char* arg7, size_t arg7_size, char* arg8, size_t arg8_size, char* arg9, size_t arg9_size, char* arg10, size_t arg10_size)
-{
-	return (one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(one_argument(argument, arg1, arg1_size), arg2, arg2_size), arg3, arg3_size), arg4, arg4_size), arg5, arg5_size), arg6, arg6_size), arg7, arg7_size), arg8, arg8_size), arg9, arg9_size), arg10, arg10_size));
-}
-
 const char* first_cmd(const char* argument, char* first_arg, size_t first_arg_size, size_t * first_arg_len_result)
 {
 	size_t cur_len = 0;

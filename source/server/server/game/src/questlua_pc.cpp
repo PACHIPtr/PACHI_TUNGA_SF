@@ -1847,7 +1847,7 @@ namespace quest
 		{
 			CQuestManager::instance().GetPC(new_ch->GetPlayerID());
 
-			lua_pushnumber(L, (DWORD)ch->GetVID());
+			lua_pushnumber(L, ch ? (DWORD)ch->GetVID() : 0);
 		}
 		else
 		{

@@ -30,9 +30,7 @@ class CMainPacketHeaderMap : public CNetworkPacketHeaderMap
 			Set(HEADER_GC_CHAR_ADDITIONAL_INFO,	CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCCharacterAdditionalInfo), false));
 			Set(HEADER_GC_CHARACTER_ADD2,		CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCCharacterAdd2), false));
 			Set(HEADER_GC_CHARACTER_UPDATE,		CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCCharacterUpdate), false));
-#ifdef ENABLE_AFFECT_PACKET_RENEWAL
-			Set(HEADER_GC_AFFECT_FLAG_ADD,		CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketAddAffectFlag), false));
-#endif
+
 			Set(HEADER_GC_CHARACTER_UPDATE2,	CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCCharacterUpdate2), false));
 			Set(HEADER_GC_CHARACTER_DEL,		CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCCharacterDelete), false));
 			Set(HEADER_GC_CHARACTER_MOVE,		CNetworkPacketHeaderMap::TPacketType(sizeof(TPacketGCMove), false));
