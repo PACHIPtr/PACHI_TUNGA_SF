@@ -64,10 +64,9 @@ bool timed_event_cancel(LPCHARACTER ch)
 bool battle_is_attackable(LPCHARACTER ch, LPCHARACTER victim)
 {
 	// 상대방이 죽었으면 중단한다.
-	if (victim->IsDead())
+	if (victim->IsDead() || victim->IsObserverMode())
 		return false;
-
-	if (victim->IsObserverMode() || victim->IsStun())
+	if (ch->IsStun() || ch->IsDead() || ch->IsObserverMode())
 		return false;
 	if (victim->GetRaceNum() >= 30000 && victim->GetRaceNum() <= 30100)
 		return false;
