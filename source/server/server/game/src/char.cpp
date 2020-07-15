@@ -8985,7 +8985,7 @@ struct CheckShopPos
 		if (ent->IsType(ENTITY_CHARACTER))
 		{
 			LPCHARACTER ch = (LPCHARACTER)ent;
-			if (ch->GetRaceNum() != 30000 && ch->GetRaceNum() != 30001 && ch->GetRaceNum() != 30002 && ch->GetRaceNum() != 30003 && ch->GetRaceNum() != 30004 && ch->GetRaceNum() != 30005 && ch->GetRaceNum() != 30006 && ch->GetRaceNum() != 30007 && ch->GetRaceNum() != 30008 && ch->GetRaceNum() != 30009 && ch->GetRaceNum() != 30010 && ch->GetRaceNum() != 30011 && ch->GetRaceNum() != 30012 && ch->GetRaceNum() != 30013 && ch->GetRaceNum() != 30014) //shop mob vnum
+			if (ch->GetRaceNum() < 30000 && ch->GetRaceNum() > 30014)
 				return;
 
 			if (DISTANCE_APPROX(ch->GetX() - m_ch->GetX(), ch->GetY() - m_ch->GetY()) < 400) //distance between shops

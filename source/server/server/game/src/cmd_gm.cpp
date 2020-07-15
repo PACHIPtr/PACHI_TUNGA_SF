@@ -987,11 +987,12 @@ struct FuncPurge
 			return;
 #endif
 
+
+		if (pkChr->GetRaceNum() < 30000 && pkChr->GetRaceNum() > 30014 && pkChr->IsNPC() && !pkChr->IsPet() && !pkChr->IsSupportShaman() && !pkChr->IsMount() && pkChr->GetRider() == nullptr
 #ifdef ENABLE_GROWTH_PET_SYSTEM
-		if (pkChr->GetRaceNum() != 30000 && pkChr->IsNPC() && !pkChr->IsPet() && !pkChr->IsSupportShaman() && !pkChr->IsMount() && !pkChr->IsNewPet() && pkChr->GetRider() == nullptr)
-#else
-		if (pkChr->GetRaceNum() != 30000 && pkChr->IsNPC() && &&!pkChr->IsPet() && !pkChr->IsSupportShaman() && !pkChr->IsMount() && pkChr->GetRider() == nullptr)
+		&& !pkChr->IsNewPet()
 #endif
+		)
 		{
 			M2_DESTROY_CHARACTER(pkChr);
 		}

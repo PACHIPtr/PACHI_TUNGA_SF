@@ -1403,121 +1403,20 @@ ACMD(do_gift_refresh)
 void DeleteShop(DWORD id)
 {
 	CharacterVectorInteractor i;
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30000, i))
+	for (int shopvnum = 30000; shopvnum <= 30014; shopvnum++)
 	{
-		CharacterVectorInteractor::iterator it = i.begin();
+		if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(shopvnum, i))
+		{
+			CharacterVectorInteractor::iterator it = i.begin();
 
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30000 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30001, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30001 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30002, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30002 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30003, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30003 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30004, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30004 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30005, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30005 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30006, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30006 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30007, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30007 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
-		}
-	}
-	if (CHARACTER_MANAGER::instance().GetCharactersByRaceNum(30008, i))
-	{
-		CharacterVectorInteractor::iterator it = i.begin();
-
-		while (it != i.end()) {
-			LPCHARACTER pc = *it++;
-			if (pc)
-				if (pc->GetRaceNum() == 30008 && pc->GetPrivShop() == id) {
-					pc->DeleteMyShop();
-					return;
-				}
+			while (it != i.end()) {
+				LPCHARACTER pc = *it++;
+				if (pc)
+					if (pc->GetRaceNum() == shopvnum && pc->GetPrivShop() == id) {
+						pc->DeleteMyShop();
+						return;
+					}
+			}
 		}
 	}
 	TPacketShopClose packet;
