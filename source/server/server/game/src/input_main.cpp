@@ -1629,7 +1629,7 @@ int CInputMain::Messenger(LPCHARACTER ch, const char* c_pData, size_t uiBytes)
 		}
 		else
 		{
-			MessengerManager::instance().RemoveFromList(ch->GetName(), char_name)
+			MessengerManager::instance().RemoveFromList(ch->GetName(), char_name);
 			MessengerManager::instance().RemoveFromList(char_name, ch->GetName());
 		}
 	}
