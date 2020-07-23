@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}</ProjectGuid>
+    <RootNamespace>lzo</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="alloc.c" />
+    <ClCompile Include="io.c" />
+    <ClCompile Include="lzo1.c" />
+    <ClCompile Include="lzo1_99.c" />
+    <ClCompile Include="lzo1a.c" />
+    <ClCompile Include="lzo1a_99.c" />
+    <ClCompile Include="lzo1b_1.c" />
+    <ClCompile Include="lzo1b_2.c" />
+    <ClCompile Include="lzo1b_3.c" />
+    <ClCompile Include="lzo1b_4.c" />
+    <ClCompile Include="lzo1b_5.c" />
+    <ClCompile Include="lzo1b_6.c" />
+    <ClCompile Include="lzo1b_7.c" />
+    <ClCompile Include="lzo1b_8.c" />
+    <ClCompile Include="lzo1b_9.c" />
+    <ClCompile Include="lzo1b_99.c" />
+    <ClCompile Include="lzo1b_9x.c" />
+    <ClCompile Include="lzo1b_cc.c" />
+    <ClCompile Include="lzo1b_d1.c" />
+    <ClCompile Include="lzo1b_d2.c" />
+    <ClCompile Include="lzo1b_rr.c" />
+    <ClCompile Include="lzo1b_xx.c" />
+    <ClCompile Include="lzo1c_1.c" />
+    <ClCompile Include="lzo1c_2.c" />
+    <ClCompile Include="lzo1c_3.c" />
+    <ClCompile Include="lzo1c_4.c" />
+    <ClCompile Include="lzo1c_5.c" />
+    <ClCompile Include="lzo1c_6.c" />
+    <ClCompile Include="lzo1c_7.c" />
+    <ClCompile Include="lzo1c_8.c" />
+    <ClCompile Include="lzo1c_9.c" />
+    <ClCompile Include="lzo1c_99.c" />
+    <ClCompile Include="lzo1c_9x.c" />
+    <ClCompile Include="lzo1c_cc.c" />
+    <ClCompile Include="lzo1c_d1.c" />
+    <ClCompile Include="lzo1c_d2.c" />
+    <ClCompile Include="lzo1c_rr.c" />
+    <ClCompile Include="lzo1c_xx.c" />
+    <ClCompile Include="lzo1f_1.c" />
+    <ClCompile Include="lzo1f_9x.c" />
+    <ClCompile Include="lzo1f_d1.c" />
+    <ClCompile Include="lzo1f_d2.c" />
+    <ClCompile Include="lzo1x_1.c" />
+    <ClCompile Include="lzo1x_1k.c" />
+    <ClCompile Include="lzo1x_1l.c" />
+    <ClCompile Include="lzo1x_1o.c" />
+    <ClCompile Include="lzo1x_9x.c" />
+    <ClCompile Include="lzo1x_d1.c" />
+    <ClCompile Include="lzo1x_d2.c" />
+    <ClCompile Include="lzo1x_d3.c" />
+    <ClCompile Include="lzo1x_o.c" />
+    <ClCompile Include="lzo1y_1.c" />
+    <ClCompile Include="lzo1y_9x.c" />
+    <ClCompile Include="lzo1y_d1.c" />
+    <ClCompile Include="lzo1y_d2.c" />
+    <ClCompile Include="lzo1y_d3.c" />
+    <ClCompile Include="lzo1y_o.c" />
+    <ClCompile Include="lzo1z_9x.c" />
+    <ClCompile Include="lzo1z_d1.c" />
+    <ClCompile Include="lzo1z_d2.c" />
+    <ClCompile Include="lzo1z_d3.c" />
+    <ClCompile Include="lzo2a_9x.c" />
+    <ClCompile Include="lzo2a_d1.c" />
+    <ClCompile Include="lzo2a_d2.c" />
+    <ClCompile Include="lzo_crc.c" />
+    <ClCompile Include="lzo_dll.c" />
+    <ClCompile Include="lzo_init.c" />
+    <ClCompile Include="lzo_ptr.c" />
+    <ClCompile Include="lzo_str.c" />
+    <ClCompile Include="lzo_util.c" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compr1b.h" />
+    <ClInclude Include="compr1c.h" />
+    <ClInclude Include="config1.h" />
+    <ClInclude Include="config1a.h" />
+    <ClInclude Include="config1b.h" />
+    <ClInclude Include="config1c.h" />
+    <ClInclude Include="config1f.h" />
+    <ClInclude Include="config1x.h" />
+    <ClInclude Include="config1y.h" />
+    <ClInclude Include="config1z.h" />
+    <ClInclude Include="config2a.h" />
+    <ClInclude Include="fake16.h" />
+    <ClInclude Include="lzo1.h" />
+    <ClInclude Include="lzo16bit.h" />
+    <ClInclude Include="lzo1a.h" />
+    <ClInclude Include="lzo1a_de.h" />
+    <ClInclude Include="lzo1b.h" />
+    <ClInclude Include="lzo1b_cc.h" />
+    <ClInclude Include="lzo1b_de.h" />
+    <ClInclude Include="lzo1c.h" />
+    <ClInclude Include="lzo1c_cc.h" />
+    <ClInclude Include="lzo1f.h" />
+    <ClInclude Include="lzo1x.h" />
+    <ClInclude Include="lzo1y.h" />
+    <ClInclude Include="lzo1z.h" />
+    <ClInclude Include="lzo2a.h" />
+    <ClInclude Include="lzo_conf.h" />
+    <ClInclude Include="lzo_dict.h" />
+    <ClInclude Include="lzo_ptr.h" />
+    <ClInclude Include="lzo_util.h" />
+    <ClInclude Include="lzoconf.h" />
+    <ClInclude Include="lzoutil.h" />
+    <ClInclude Include="stats1a.h" />
+    <ClInclude Include="stats1b.h" />
+    <ClInclude Include="stats1c.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

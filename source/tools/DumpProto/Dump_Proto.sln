@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dump_proto", "dump_proto\dump_proto.vcxproj", "{DBCC99BC-1D68-4271-AC99-62EBBE37890F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lzo", "lzo\lzo.vcxproj", "{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBCC99BC-1D68-4271-AC99-62EBBE37890F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DBCC99BC-1D68-4271-AC99-62EBBE37890F}.Debug|Win32.Build.0 = Debug|Win32
+		{DBCC99BC-1D68-4271-AC99-62EBBE37890F}.Release|Win32.ActiveCfg = Release|Win32
+		{DBCC99BC-1D68-4271-AC99-62EBBE37890F}.Release|Win32.Build.0 = Release|Win32
+		{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}.Debug|Win32.Build.0 = Debug|Win32
+		{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}.Release|Win32.ActiveCfg = Release|Win32
+		{3AE0E6E6-B750-4769-9A6E-0D47012F1B40}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
