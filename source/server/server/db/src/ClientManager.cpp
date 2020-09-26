@@ -650,7 +650,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 		pi->pSafebox = pSafebox;
 		char szQuery[756];
 #ifdef ENABLE_CHANGELOOK_SYSTEM
-		snprintf(szQuery, sizeof(szQuery), "SELECT id, window+0, pos, count, vnum, is_basic, transmutation, socket0, socket1, socket2, socket3, attrtype0, attrvalue0, attrtype1, attrvalue1, attrtype2, attrvalue2, attrtype3, attrvalue3, attrtype4, attrvalue4, attrtype5, attrvalue5, attrtype6, attrvalue6, applytype0, applyvalue0, applytype1, applyvalue1, applytype2, applyvalue2, applytype3, applyvalue3, applytype4, applyvalue4, applytype5, applyvalue5, applytype6, applyvalue6, applytype7, applyvalue7, sealbind FROM item%s WHERE owner_id=%d AND window='%s'", GetTablePostfix(), pi->account_id, pi->ip[0] == 0 ? "SAFEBOX" : "MALL");
+		snprintf(szQuery, sizeof(szQuery), "SELECT id, window+0, pos, count, vnum, socket0, socket1, socket2, socket3, attrtype0, attrvalue0, attrtype1, attrvalue1, attrtype2, attrvalue2, attrtype3, attrvalue3, attrtype4, attrvalue4, attrtype5, attrvalue5, attrtype6, attrvalue6, applytype0, applyvalue0, applytype1, applyvalue1, applytype2, applyvalue2, applytype3, applyvalue3, applytype4, applyvalue4, applytype5, applyvalue5, applytype6, applyvalue6, applytype7, applyvalue7, is_basic, transmutation, sealbind FROM item%s WHERE owner_id=%d AND window='%s'", GetTablePostfix(), pi->account_id, pi->ip[0] == 0 ? "SAFEBOX" : "MALL");
 #else
 		snprintf(szQuery, sizeof(szQuery), "SELECT id, window+0, pos, count, vnum, socket0, socket1, socket2, socket3, attrtype0, attrvalue0, attrtype1, attrvalue1, attrtype2, attrvalue2, attrtype3, attrvalue3, attrtype4, attrvalue4, attrtype5, attrvalue5, attrtype6, attrvalue6, applytype0, applyvalue0, applytype1, applyvalue1, applytype2, applyvalue2, applytype3, applyvalue3, applytype4, applyvalue4, applytype5, applyvalue5, applytype6, applyvalue6, applytype7, applyvalue7, sealbind FROM item%s WHERE owner_id=%d AND window='%s'", GetTablePostfix(), pi->account_id, pi->ip[0] == 0 ? "SAFEBOX" : "MALL");
 #endif
@@ -879,7 +879,7 @@ void CClientManager::RESULT_SAFEBOX_LOAD(CPeer * pkPeer, SQLMsg * msg)
 
 					item.id = pmsg->Get()->uiInsertID;
 					item.window = pi->ip[0] == 0 ? SAFEBOX : MALL,
-						item.pos = iPos;
+					item.pos = iPos;
 					item.count = pItemAward->dwCount;
 					item.vnum = pItemAward->dwVnum;
 					item.alSockets[0] = pItemAward->dwSocket0;

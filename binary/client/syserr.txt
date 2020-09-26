@@ -1,4 +1,21 @@
-0713 17:01:13470 :: invalid idx 0
-0713 17:01:27250 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 9013
-0713 17:01:27250 :: CPythonCharacterManager::CreateInstance VID[15191] Race[9013]
-0713 17:02:26164 :: CRaceManager::RegisterRacePath : RACE[34075] LOAD MSMFILE[d:/ymir work/npc_pet/redthief2_officer_young1/redthief2_officer_young3.msm] ERROR. Will Find Another Path.
+0926 16:23:04686 :: invalid idx 0
+Exception AttributeError: "'NoneType' object has no attribute 'ScriptWindow'" in <bound method DungeonInfo.__del__ of <uiDungeonInfo.DungeonInfo object at 0x2C540FF0>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x05336970>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x05336F10>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D09530>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x05141B30>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D7D190>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D7D1B0>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D7D3D0>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D7D970>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D7DF70>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D81430>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D81450>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D816F0>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D81810>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D81A50>> ignored
+Exception AttributeError: "'NoneType' object has no attribute '__del__'" in <bound method NumberLine.__del__ of <ui.NumberLine object at 0x04D89030>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method CursorImage.__del__ of <mouseModule.CursorImage object at 0x04D75EF0>> ignored
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr

@@ -1,0 +1,6 @@
+
+*.db-wal
+*.opendb
+*.db-shm
+*.recipe
+*.res

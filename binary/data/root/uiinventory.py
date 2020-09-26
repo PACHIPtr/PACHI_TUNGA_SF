@@ -2375,7 +2375,7 @@ class InventoryWindow(ui.ScriptWindow):
 
 		item.SelectItem(dstItemVNum)
 		
-		if not item.GetItemType() in (item.ITEM_TYPE_WEAPON, item.ITEM_TYPE_ARMOR):	 
+		if not item.GetItemType() in (item.ITEM_TYPE_WEAPON, item.ITEM_TYPE_ARMOR):	
 			return False
 
 		for i in xrange(player.METIN_SOCKET_MAX_NUM):

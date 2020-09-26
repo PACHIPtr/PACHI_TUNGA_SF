@@ -2502,40 +2502,24 @@ class BuildGuildBuildingWindow(ui.ScriptWindow):
 		self.previewButton.SetUp()
 
 	def __IsEnoughMoney(self):
-
-		if app.IsEnableTestServerFlag():
-			return True
-
 		curMoney = player.GetMoney()
 		if curMoney < self.needMoney:
 			return False
 		return True
 
 	def __IsEnoughMaterialStone(self):
-
-		if app.IsEnableTestServerFlag():
-			return True
-
 		curStoneCount = player.GetItemCountByVnum(MATERIAL_STONE_ID)
 		if curStoneCount < self.needStoneCount:
 			return False
 		return True
 
 	def __IsEnoughMaterialLog(self):
-
-		if app.IsEnableTestServerFlag():
-			return True
-
 		curLogCount = player.GetItemCountByVnum(MATERIAL_LOG_ID)
 		if curLogCount < self.needLogCount:
 			return False
 		return True
 
 	def __IsEnoughMaterialPlywood(self):
-
-		if app.IsEnableTestServerFlag():
-			return True
-
 		curPlywoodCount = player.GetItemCountByVnum(MATERIAL_PLYWOOD_ID)
 		if curPlywoodCount < self.needPlywoodCount:
 			return False

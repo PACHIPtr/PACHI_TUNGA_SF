@@ -3903,6 +3903,9 @@ void CInputMain::SafeboxMoney(LPCHARACTER ch, const char * data)
 		return;		
 	}
 
+	if (quest::CQuestManager::instance().GetPCForce(ch->GetPlayerID())->IsRunning() == true)
+		return;
+
 	switch (p->bState)
 	{
 		case SAFEBOX_MONEY_STATE_SAVE:
@@ -3977,6 +3980,9 @@ void CInputMain::SafeboxCheque(LPCHARACTER ch, const char * data)
 		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("SAFEBOX_MONEY_SYSTEM_DISABLED"));
 		return;		
 	}
+
+	if (quest::CQuestManager::instance().GetPCForce(ch->GetPlayerID())->IsRunning() == true)
+		return;
 
 	switch (p->bState)
 	{

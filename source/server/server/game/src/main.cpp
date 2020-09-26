@@ -88,10 +88,6 @@
 #include "zodiac_temple.h"
 #endif
 
-#ifdef ENABLE_AUTO_QUERY
-#include "auto_query.h"
-#endif
-
 #ifdef ENABLE_AUTO_NOTICE
 #include "AutoNotice.h"
 #endif
@@ -285,21 +281,6 @@ void heartbeat(LPHEART ht, int pulse)
 	}
 #endif
 
-#ifdef ENABLE_AUTO_QUERY
-	// if (!(pulse % (passes_per_sec * 60 * 5)))
-	// {
-		// CAutoQueryManager::instance().UpdateQuestFlags();
-	// }
-	// if (!(pulse % (passes_per_sec * 60 * 30)))
-	// {
-		// CAutoQueryManager::instance().UpdateItems();
-	// }
-	// if (!(pulse % (passes_per_sec * 60 * 120)))
-	// {
-		// CAutoQueryManager::instance().OldProcess();
-	// }
-#endif
-
 	s_dwProfiler[PROF_HEARTBEAT] += (get_dword_time() - t);
 
 	DBManager::instance().Process();
@@ -398,10 +379,6 @@ int main(int argc, char** argv)
 #endif
 
 	CDailyBoss DailyBossManager;
-	
-#ifdef ENABLE_AUTO_QUERY
-	CAutoQueryManager	AutoQueryManager;
-#endif
 
 #ifdef ENABLE_AUTO_NOTICE
 	CAutoNotice	AutoNoticeManager;
@@ -463,9 +440,6 @@ int main(int argc, char** argv)
 #endif
 #ifdef ENABLE_AUTO_EVENT_SYSTEM
 		EventsManager.Initialize();
-#endif
-#ifdef ENABLE_AUTO_QUERY
-		AutoQueryManager.Initialize();
 #endif
 	}
 

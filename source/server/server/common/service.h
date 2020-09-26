@@ -106,7 +106,6 @@
 #define ENABLE_DUNGEON_BACK_SYSTEM									// Dungeon Geri Don Sistemi
 #define ENABLE_DUNGEON_INFO_SYSTEM									// Zindan Takip Sistemi
 #define ENABLE_AUTO_NOTICE											// Otomatik Duyuru Sistemi
-#define ENABLE_AUTO_QUERY											// Otomatik Temizleme Sistemi
 #define ENABLE_AFFECT_POLYMORPH_REMOVE								// Donusumden Cikma Sistemi
 #define ENABLE_SKILL_AFFECT_REMOVE									// Skillden Cikma Sistemi
 #define ENABLE_FAST_CHEQUE_GOLD_TRANSFER							// Hizli Won Yang Cevirme Sistemi

@@ -1,5 +1,5 @@
 import app
-SERVER_IP = "192.168.1.32"
+SERVER_IP = "192.168.1.11"
 SERVER_1 = "TurkmmoMyte2"
 CLIENT_VERSION = "4"
 CH_1_NAME	= "CH1   "

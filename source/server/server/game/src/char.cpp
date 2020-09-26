@@ -8972,30 +8972,6 @@ void CHARACTER::RefreshGift()
 }
 #endif
 
-struct CheckShopPos
-{
-	LPCHARACTER m_ch;
-	CheckShopPos(LPCHARACTER ch)
-	{
-		m_ch = ch;
-	}
-
-	void operator()(LPENTITY ent)
-	{
-		if (ent->IsType(ENTITY_CHARACTER))
-		{
-			LPCHARACTER ch = (LPCHARACTER)ent;
-			if (ch->GetRaceNum() < 30000 && ch->GetRaceNum() > 30014)
-				return;
-
-			if (DISTANCE_APPROX(ch->GetX() - m_ch->GetX(), ch->GetY() - m_ch->GetY()) < 400) //distance between shops
-			{
-				m_ch->SetShopValidPos(false);
-			}
-		}
-	}
-};
-
 #ifdef ENABLE_OFFLINE_SHOP_SYSTEM
 extern std::map<DWORD, DWORD> g_ShopIndexCount;
 extern std::map<int, TShopCost> g_ShopCosts;
@@ -9017,21 +8993,6 @@ void CHARACTER::OpenMyShop(const char* c_pszSign, TShopItemTable * pTable, BYTE 
 	{
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("다른 거래중(창고,교환,상점)에는 개인상점을 사용할 수 없습니다."));
 		return;
-	}
-	LPSECTREE sectree = nullptr;
-	sectree = GetSectree();
-	if (sectree)
-	{
-		SetShopValidPos(true);
-
-		CheckShopPos f(this);
-		sectree->ForEachAround(f);
-
-		if (!GetShopValidPos())
-		{
-			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("You cannot open a shop here (too close to other shop)."));
-			return;
-		}
 	}
 #if defined(ENABLE_BATTLE_ZONE_SYSTEM)
 	if (CCombatZoneManager::Instance().IsCombatZoneMap(GetMapIndex()))

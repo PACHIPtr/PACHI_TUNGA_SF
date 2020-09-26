@@ -18,7 +18,7 @@ TARGET = ../lib/libsql.a
 
 # Compile phase for .cpp
 $(OBJDIR)/%.o: %.cpp
-	@echo -e "\033[0;36m [Mythsia] Compiling:\033[0m" $<
+	@echo compile $<
 	@$(CXX) $(INCDIR) $(CFLAGS) -c $^ -o $@
 
 $(TARGET): $(CPPOBJS)

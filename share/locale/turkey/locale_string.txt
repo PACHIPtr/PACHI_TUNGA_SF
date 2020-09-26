@@ -4534,3 +4534,6 @@
 
 "SAFEBOX_CHEQUE_MUCH";
 "Deponda çok fazla Won taþýyorsun.";
+
+"%sESYA_TOPLANDI";
+"Yeni bir eþya kazandýn: %s";

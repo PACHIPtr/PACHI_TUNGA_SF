@@ -7400,7 +7400,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 					item2->ChangeAttribute(aiChangeProb);
 				}
 #ifdef ENABLE_TALISMAN_ATTR
-				else if (item->GetVnum() == 19984)
+				else if (item->GetVnum() == 19983)
 				{
 					if (item2->GetType() == ITEM_UNIQUE && item2->GetSubType() == USE_CHARM)
 					{
@@ -7510,7 +7510,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 					}
 					
 #ifdef ENABLE_TALISMAN_ATTR
-					if (item->GetVnum() == 19983)
+					if (item->GetVnum() == 19984)
 					{
 						if (item2->GetType() == ITEM_UNIQUE && item2->GetSubType() == USE_CHARM)
 						{
@@ -7715,16 +7715,22 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 							{
 								item2->SetAccessorySocketGrade(item2->GetAccessorySocketGrade() + 1, true);
 								item->SetCount(item->GetCount() - 1);
+								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("장착에 성공하였습니다."));
+								return true;
 							}
 							else if (item2->GetSocket(2) == 31 && item->GetVnum() == 18901)
 							{
 								item2->SetAccessorySocketGrade(item2->GetAccessorySocketGrade() + 1, true);
 								item->SetCount(item->GetCount() - 1);
+								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("장착에 성공하였습니다."));
+								return true;
 							}
 							else if (item2->GetSocket(2) != 31 && item->GetVnum() >= 50634 && item->GetVnum() <= 50640)
 							{
 								item2->SetAccessorySocketGrade(item2->GetAccessorySocketGrade() + 1, false);
 								item->SetCount(item->GetCount() - 1);
+								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("장착에 성공하였습니다."));
+								return true;
 							}
 							else if (item2->GetSocket(2) != 31 && item->GetVnum() == 18901)
 							{
@@ -7734,6 +7740,8 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 							{
 								item2->SetAccessorySocketGrade(item2->GetAccessorySocketGrade() + 1, false);
 								item->SetCount(item->GetCount() - 1);
+								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("장착에 성공하였습니다."));
+								return true;
 							}
 #else
 							item2->SetAccessorySocketGrade(item2->GetAccessorySocketGrade() + 1);

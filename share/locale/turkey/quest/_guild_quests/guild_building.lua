@@ -63,7 +63,7 @@ quest guild_building begin
                                 say("")
                                         say("Bu arazi baþka loncaya satýldý. ")
                                         say("Özür dilerim.")
-                                elseif pc.gold < price then
+                                elseif pc.get_gold() < price then
                                     say_title("Emlakçý:")
                                 say("")
                                         say("Ben Emlakçýyým, fiyatý ben belirlemiyorum.")

@@ -1024,7 +1024,7 @@ void CItem::ModifyPoints(bool bAdd)
 			{
 				long lDefGrade = pkItemAbsorbed->alValues[1] + long(pkItemAbsorbed->alValues[5] * 2);
 				double dValue = lDefGrade * (float(GetSocket(AURA_ABSORPTION_SOCKET) / 10.0f));
-				dValue = (double)dValue / 100;
+				dValue = (double)dValue / 1000;
 				dValue = (double)dValue + .5;
 				lDefGrade = (long)dValue;
 				if (((pkItemAbsorbed->alValues[1] > 0) && (lDefGrade <= 0)) || ((pkItemAbsorbed->alValues[5] > 0) && (lDefGrade < 1)))
@@ -1036,7 +1036,7 @@ void CItem::ModifyPoints(bool bAdd)
 
 				long lDefMagicBonus = pkItemAbsorbed->alValues[0];
 				dValue = lDefMagicBonus * (float(GetSocket(AURA_ABSORPTION_SOCKET) / 10.0f));
-				dValue = (double)dValue / 100;
+				dValue = (double)dValue / 1000;
 				dValue = (double)dValue + .5;
 				lDefMagicBonus = (long)dValue;
 				if ((pkItemAbsorbed->alValues[0] > 0) && (lDefMagicBonus < 1))
@@ -1118,7 +1118,7 @@ void CItem::ModifyPoints(bool bAdd)
 					continue;
 
 				double dValue = value * (float(GetSocket(AURA_ABSORPTION_SOCKET) / 10.0f));
-				dValue = (double)dValue / 100;
+				dValue = (double)dValue / 1000;
 				dValue = (double)dValue + .5;
 				value = (long)dValue;
 				if ((pkItemAbsorbed->aApplies[i].lValue > 0) && (value <= 0))
@@ -1144,8 +1144,6 @@ void CItem::ModifyPoints(bool bAdd)
 				if (m_pOwner)
 					m_pOwner->ApplyPoint(bType2, bAdd ? value2 : -value2);
 			}
-			else
-				continue;
 		}
 #endif
 
@@ -1194,7 +1192,7 @@ void CItem::ModifyPoints(bool bAdd)
 				if ((GetType() == ITEM_COSTUME) && (GetSubType() == COSTUME_AURA))
 				{
 					double dValue = sValue * GetSocket(AURA_ABSORPTION_SOCKET);
-					dValue = (double)dValue / 100;
+					dValue = (double)dValue / 1000;
 					dValue = (double)dValue + .5;
 					sValue = (long)dValue;
 					if ((ia.sValue > 0) && (sValue <= 0))

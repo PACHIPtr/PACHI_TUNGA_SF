@@ -3,7 +3,7 @@
 	PACHI | Tunga
 	https://forum.turkmmo.com/uye/2127751-pachi/
 --]]
-quest guild_building begin
+quest guild_manage begin
         state start begin
                 when guild_man1.chat."GM: Yeniden kaydolma.." or guild_man2.chat."GM: Yeniden kaydolma.." or guild_man3.chat."GM: Yeniden kaydolma.."
                         with pc.is_gm() begin
